@@ -1,0 +1,65 @@
+import Link from "next/link";
+import Image from "next/image";
+
+export function Footer() {
+  return (
+    <footer className="w-full border-t border-black/5 bg-background py-12 dark:border-white/10 dark:bg-black">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="flex flex-col gap-4">
+            <Link href="/" className="flex items-center gap-2">
+              <div className="relative h-8 w-12 flex items-center justify-center">
+                <Image 
+                  src="/logo/logo-light-transparent.svg" 
+                  alt="Real Solutions PH" 
+                  fill
+                  className="object-contain dark:hidden"
+                />
+                <Image 
+                  src="/logo/logo-dark-transparent.svg" 
+                  alt="Real Solutions PH" 
+                  fill
+                  className="object-contain hidden dark:block"
+                />
+              </div>
+              <span className="font-bold tracking-tight text-foreground">
+                Real Solutions PH
+              </span>
+            </Link>
+            <p className="max-w-xs text-sm text-muted-foreground">
+              We connect your tools. We keep them running. Stop gluing your business together with spreadsheets.
+            </p>
+          </div>
+          <div className="flex flex-col gap-2">
+            <h4 className="font-semibold">Services</h4>
+            <Link href="#services" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">Integration Audit</Link>
+            <Link href="#services" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">Custom Integrations</Link>
+            <Link href="#services" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">Managed Operations</Link>
+          </div>
+          <div className="flex flex-col gap-2">
+            <h4 className="font-semibold">Company</h4>
+            <Link href="#about" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">About Us</Link>
+            <Link href="#how-it-works" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">How It Works</Link>
+            <Link href="#contact" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">Contact</Link>
+          </div>
+          <div className="flex flex-col gap-2">
+            <h4 className="font-semibold">Legal</h4>
+            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">Privacy Policy</Link>
+            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">Terms of Service</Link>
+          </div>
+        </div>
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-black/5 pt-8 text-center text-sm text-muted-foreground dark:border-white/10 md:flex-row md:text-left">
+          <p>© {new Date().getFullYear()} Real Solutions PH. All rights reserved. Batangas, Philippines.</p>
+          <div className="flex gap-4">
+            <Link href="#" className="hover:text-foreground">
+              LinkedIn
+            </Link>
+            <Link href="#" className="hover:text-foreground">
+              GitHub
+            </Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
