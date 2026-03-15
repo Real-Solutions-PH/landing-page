@@ -7,24 +7,21 @@ export function Footer() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col gap-4">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="relative h-8 w-12 flex items-center justify-center">
+            <Link href="/" className="flex items-center">
+              <div className="relative h-10 w-48">
                 <Image 
-                  src="/logo/logo-light-transparent.svg" 
+                  src="/logo/logo-header-light-transparent 1.svg" 
                   alt="Real Solutions PH" 
                   fill
-                  className="object-contain dark:hidden"
+                  className="object-contain object-left dark:hidden"
                 />
                 <Image 
-                  src="/logo/logo-dark-transparent.svg" 
+                  src="/logo/logo-header-dark-transparent 1.svg" 
                   alt="Real Solutions PH" 
                   fill
-                  className="object-contain hidden dark:block"
+                  className="object-contain object-left hidden dark:block"
                 />
               </div>
-              <span className="font-bold tracking-tight text-foreground">
-                Real Solutions PH
-              </span>
             </Link>
             <p className="max-w-xs text-sm text-muted-foreground">
               We connect your tools. We keep them running. Stop gluing your business together with spreadsheets.
