@@ -12,6 +12,12 @@ export const metadata: Metadata = {
   title: "Real Solutions PH | We connect your tools",
   description: "Real Solutions PH designs, builds, and maintains custom integrations between the software tools your business already uses.",
   keywords: ["integration", "automation", "software development", "Philippines", "SME solutions"],
+  metadataBase: new URL("https://realsolutions.ph"),
+  icons: {
+    icon: "/logo/logo-dark-transparent.svg",
+    shortcut: "/logo/logo-dark-transparent.svg",
+    apple: "/logo/logo-dark-transparent.svg",
+  },
   openGraph: {
     title: "Real Solutions PH | Custom Integrations for SMEs",
     description: "Connect your POS, inventory, online shop, HR, and accounting into a single coherent flow.",
@@ -19,6 +25,20 @@ export const metadata: Metadata = {
     siteName: "Real Solutions PH",
     locale: "en_PH",
     type: "website",
+    images: [
+      {
+        url: "/logo/logo-header-light.svg",
+        width: 932,
+        height: 621,
+        alt: "Real Solutions PH Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Real Solutions PH | Custom Integrations for SMEs",
+    description: "Connect your POS, inventory, online shop, HR, and accounting into a single coherent flow.",
+    images: ["/logo/logo-header-light.svg"],
   },
 };
 
