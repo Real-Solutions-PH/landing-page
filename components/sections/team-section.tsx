@@ -1,19 +1,33 @@
 "use client";
 
+import { useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 
-const FOUNDERS = [
+interface Founder {
+  name: string;
+  role: string;
+  image?: string;
+  description: string;
+  expertise: string[];
+}
+
+const FOUNDERS: Founder[] = [
   {
-    name: "Founder A",
+    name: "Ervin Piol",
     role: "Head of Delivery & Growth",
-    description: "Startup experience; builds the systems and grows the brand.",
+    image: "/founder-profiles/ervin-piol-profile.png",
+    description:
+      "Ervin is a seasoned software engineer with a proven track record of building scalable and maintainable systems. He has a deep understanding of the latest technologies and frameworks, and is always looking for new ways to improve the quality of his work.",
     expertise: ["Full-Stack Dev", "Mobile App Dev", "SEO", "UX/UI Design", "Project Management"],
   },
   {
-    name: "Founder B",
+    name: "Kairus Noah Tecson",
     role: "CEO & Chief Architect",
-    description: "Acting CEO and tech lead experience; designs and ships production AI systems.",
+    image: "/founder-profiles/kairus-tecson-profile.png",
+    description:
+      "Kairus is a seasoned software engineer with a proven track record of building scalable and maintainable systems. He has a deep understanding of the latest technologies and frameworks, and is always looking for new ways to improve the quality of his work.",
     expertise: ["AI Engineering", "Cloud Infrastructure", "DevOps", "Cybersecurity", "Architecture"],
   },
 ];
@@ -30,12 +44,34 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: "easeOut" as const }
+    transition: { duration: 0.7, ease: "easeOut" as const },
   },
 };
+
+function FounderAvatar({ founder }: { founder: Founder }) {
+  const [imgError, setImgError] = useState(false);
+  const showImage = !!founder.image && !imgError;
+
+  return (
+    <div className="mt-auto flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl bg-white shadow-md dark:bg-card">
+      {showImage ? (
+        <Image
+          src={founder.image!}
+          alt={`${founder.name} profile photo`}
+          width={64}
+          height={64}
+          className="h-full w-full object-cover"
+          onError={() => setImgError(true)}
+        />
+      ) : (
+        <span className="text-xl font-bold text-primary">{founder.name.charAt(0)}</span>
+      )}
+    </div>
+  );
+}
 
 export function TeamSection() {
   return (
@@ -74,9 +110,7 @@ export function TeamSection() {
                 className="flex flex-col overflow-hidden rounded-[32px] border border-black/5 bg-white shadow-[0_8px_30px_rgba(0,0,0,0.04)] dark:border-white/10 dark:bg-card/50"
               >
                 <div className="flex h-32 w-full flex-col bg-gradient-to-br from-primary/10 to-accent/10 p-6 dark:from-primary/20 dark:to-accent/20">
-                  <div className="mt-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-md dark:bg-card">
-                    <span className="text-xl font-bold text-primary">{founder.name.charAt(0)}</span>
-                  </div>
+                  <FounderAvatar founder={founder} />
                 </div>
                 <div className="flex flex-col p-8 text-left">
                   <h3 className="text-xl font-bold text-foreground">{founder.name}</h3>
