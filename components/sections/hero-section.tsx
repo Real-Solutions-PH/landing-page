@@ -43,8 +43,8 @@ export function HeroSection() {
                 <span className="relative z-10 px-2 lg:px-4 pb-1 pt-1 text-[#F7FAFC] bg-[#193B76] dark:bg-[#2A5CAA] rounded-sm">
                   You run your business.
                 </span>
-                <span className="absolute -bottom-4 -right-5 text-[#F59E0B] opacity-80 z-20 transform rotate-12 hidden md:block">
-                   <svg width="35" height="35" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <span className="absolute -bottom-4 -right-10 text-[#F59E0B] opacity-80 z-20 transform rotate-12 hidden md:block">
+                   <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M20 50 Q 50 10 90 20" stroke="currentColor" strokeWidth="8" strokeLinecap="round" fill="none"/>
                       <path d="M80 10 L 95 20 L 80 35" stroke="currentColor" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
                    </svg>
