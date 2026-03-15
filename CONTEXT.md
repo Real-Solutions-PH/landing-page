@@ -275,6 +275,7 @@ Since the company is at startup stage, use these trust-builders:
 
 11. FOOTER
     - Company name, location, email, social links
+    - Email: executives.realsolutionsph@gmail.com
     - Links: Services | Privacy Policy | Terms
 ```
 

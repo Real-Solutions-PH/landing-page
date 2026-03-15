@@ -6,7 +6,6 @@ import { ProcessSection } from "@/components/sections/process-section";
 import { WhyUsSection } from "@/components/sections/why-us-section";
 import { TeamSection } from "@/components/sections/team-section";
 import { CtaSection } from "@/components/sections/cta-section";
-import { Footer } from "@/components/layout/footer";
 
 export default function Home() {
   return (
@@ -19,7 +18,6 @@ export default function Home() {
       <WhyUsSection />
       <TeamSection />
       <CtaSection />
-      <Footer />
     </main>
   );
 }

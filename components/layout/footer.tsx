@@ -41,8 +41,8 @@ export function Footer() {
           </div>
           <div className="flex flex-col gap-2">
             <h4 className="font-semibold">Legal</h4>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">Privacy Policy</Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">Terms of Service</Link>
+            <Link href="/privacy-policy" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">Privacy Policy</Link>
+            <Link href="/terms-of-service" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">Terms of Service</Link>
           </div>
         </div>
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-black/5 pt-8 text-center text-sm text-muted-foreground dark:border-white/10 md:flex-row md:text-left">
