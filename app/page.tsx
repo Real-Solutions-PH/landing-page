@@ -10,7 +10,7 @@ import { Footer } from "@/components/layout/footer";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center bg-background">
+    <main className="flex min-h-screen flex-col w-full bg-background">
       <HeroSection />
       <ProblemSection />
       <SolutionSection />
