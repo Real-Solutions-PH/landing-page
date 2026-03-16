@@ -77,7 +77,7 @@ export default function TermsOfService() {
             <div className="mt-4 p-6 rounded-2xl border border-black/5 bg-black/5 dark:border-white/10 dark:bg-white/5">
               <p className="font-semibold">Real Solutions PH</p>
               <p>Batangas, Philippines</p>
-              <p>Email: executives.realsolutionsph@gmail.com</p>
+              <p>Email: executives.realsolutions.ph@gmail.com</p>
             </div>
           </section>
         </div>

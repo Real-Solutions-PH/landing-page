@@ -1,11 +1,45 @@
 "use client";
 
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
+type FormValues = {
+  name: string;
+  email: string;
+  tools: string;
+  problem: string;
+};
+
 export function CtaSection() {
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<FormValues>();
+
+  async function onSubmit(data: FormValues) {
+    setStatus("loading");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error();
+      setStatus("success");
+      reset();
+    } catch {
+      setStatus("error");
+    }
+  }
+
   return (
     <section id="contact" className="relative w-full overflow-hidden bg-zinc-50 py-16 dark:bg-zinc-950 sm:py-24">
       <div className="container mx-auto px-4 md:px-6">
@@ -30,31 +64,75 @@ export function CtaSection() {
           </div>
 
           <div className="w-full max-w-md rounded-[32px] bg-white p-8 shadow-[0_20px_40px_rgba(0,0,0,0.1)] dark:bg-card">
-            <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
-              <div className="grid gap-2">
-                <label htmlFor="name" className="text-sm font-medium">Full Name</label>
-                <Input id="name" placeholder="Juan Dela Cruz" className="rounded-xl h-12" />
+            {status === "success" ? (
+              <div className="flex flex-col items-center justify-center gap-4 py-8 text-center">
+                <span className="flex h-14 w-14 items-center justify-center rounded-full bg-green-100 text-2xl">✅</span>
+                <h3 className="text-xl font-bold text-zinc-900 dark:text-white">We got your message!</h3>
+                <p className="text-sm text-zinc-500">We&apos;ll reach out within 1 business day to set up your free discovery call.</p>
+                <Button variant="outline" className="mt-2 rounded-xl" onClick={() => setStatus("idle")}>
+                  Submit another
+                </Button>
               </div>
-              <div className="grid gap-2">
-                <label htmlFor="email" className="text-sm font-medium">Email Address</label>
-                <Input id="email" type="email" placeholder="juan@company.com" className="rounded-xl h-12" />
-              </div>
-              <div className="grid gap-2">
-                <label htmlFor="tools" className="text-sm font-medium">Tools you use (e.g., Shopify, Xero)</label>
-                <Input id="tools" placeholder="Shopify, Xero, POS..." className="rounded-xl h-12" />
-              </div>
-              <div className="grid gap-2">
-                <label htmlFor="problem" className="text-sm font-medium">Biggest operational problem?</label>
-                <Textarea 
-                  id="problem" 
-                  placeholder="Tell us what's broken or takes too much time..." 
-                  className="rounded-xl min-h-[100px] resize-none" 
-                />
-              </div>
-              <Button size="lg" className="mt-2 h-12 rounded-xl text-base w-full shadow-sm shadow-primary/20 hover:-translate-y-0.5" type="submit">
-                Get Your Free Estimate
-              </Button>
-            </form>
+            ) : (
+              <form className="flex flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
+                <div className="grid gap-2">
+                  <label htmlFor="name" className="text-sm font-medium">Full Name</label>
+                  <Input
+                    id="name"
+                    placeholder="Juan Dela Cruz"
+                    className="rounded-xl h-12"
+                    {...register("name", { required: true })}
+                  />
+                  {errors.name && <p className="text-xs text-red-500">Full name is required.</p>}
+                </div>
+
+                <div className="grid gap-2">
+                  <label htmlFor="email" className="text-sm font-medium">Email Address</label>
+                  <Input
+                    id="email"
+                    type="email"
+                    placeholder="juan@company.com"
+                    className="rounded-xl h-12"
+                    {...register("email", { required: true, pattern: /^\S+@\S+\.\S+$/ })}
+                  />
+                  {errors.email && <p className="text-xs text-red-500">A valid email address is required.</p>}
+                </div>
+
+                <div className="grid gap-2">
+                  <label htmlFor="tools" className="text-sm font-medium">Tools you use (e.g., Shopify, Xero)</label>
+                  <Input
+                    id="tools"
+                    placeholder="Shopify, Xero, POS..."
+                    className="rounded-xl h-12"
+                    {...register("tools")}
+                  />
+                </div>
+
+                <div className="grid gap-2">
+                  <label htmlFor="problem" className="text-sm font-medium">Biggest operational problem?</label>
+                  <Textarea
+                    id="problem"
+                    placeholder="Tell us what's broken or takes too much time..."
+                    className="rounded-xl min-h-[100px] resize-none"
+                    {...register("problem", { required: true })}
+                  />
+                  {errors.problem && <p className="text-xs text-red-500">Please describe your problem.</p>}
+                </div>
+
+                {status === "error" && (
+                  <p className="text-xs text-red-500 text-center">Something went wrong. Please try again or email us directly.</p>
+                )}
+
+                <Button
+                  size="lg"
+                  className="mt-2 h-12 rounded-xl text-base w-full shadow-sm shadow-primary/20 hover:-translate-y-0.5"
+                  type="submit"
+                  disabled={status === "loading"}
+                >
+                  {status === "loading" ? "Sending…" : "Get Your Free Estimate"}
+                </Button>
+              </form>
+            )}
           </div>
         </motion.div>
       </div>
