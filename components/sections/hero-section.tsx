@@ -58,10 +58,10 @@ export function HeroSection() {
 
             <div className="flex flex-col gap-4 w-full sm:w-auto">
               <Button size="lg" className="h-14 rounded-md px-8 text-base shadow-[0_8px_24px_rgba(25,59,118,0.25)] flex items-center justify-center gap-2 bg-[#F59E0B] hover:bg-[#D97706] text-white border-0 transition-transform hover:scale-105" asChild>
-                <Link href="#contact">
+                <a href="https://calendly.com/executives-realsolutions-ph/30min" target="_blank" rel="noopener noreferrer">
                   <Zap className="h-5 w-5 fill-current" />
                   <span className="font-semibold text-white">Book a Discovery Call</span>
-                </Link>
+                </a>
               </Button>
               <div className="flex items-center gap-2 text-sm text-muted-foreground text-left w-full pl-1">
                 <span className="inline-flex items-center border border-green-600/30 bg-green-600/10 text-green-700 dark:text-green-500 font-bold px-1.5 py-0.5 rounded text-[10px] uppercase">

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 const SERVICES = [
@@ -156,14 +157,26 @@ export function ServicesSection() {
                 </div>
 
                 <div className="pt-6 mt-auto border-t border-border">
-                  <Button 
-                    variant={service.popular ? "default" : "outline"} 
-                    className="w-full rounded-xl h-12"
-                    disabled={service.comingSoon}
-                  >
-                    {service.cta}
-                    {!service.comingSoon && <ArrowRight className="ml-2 h-4 w-4" />}
-                  </Button>
+                  {service.comingSoon ? (
+                    <Button 
+                      variant={service.popular ? "default" : "outline"} 
+                      className="w-full rounded-xl h-12"
+                      disabled={service.comingSoon}
+                    >
+                      {service.cta}
+                    </Button>
+                  ) : (
+                    <Button 
+                      variant={service.popular ? "default" : "outline"} 
+                      className="w-full rounded-xl h-12"
+                      asChild
+                    >
+                      <a href="https://calendly.com/executives-realsolutions-ph/30min" target="_blank" rel="noopener noreferrer">
+                        {service.cta}
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </a>
+                    </Button>
+                  )}
                 </div>
               </motion.div>
             ))}

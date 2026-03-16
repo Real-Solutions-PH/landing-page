@@ -74,7 +74,7 @@ export function Navbar() {
           {/* Desktop CTA + Hamburger */}
           <div className="flex items-center gap-4">
             <Button variant="default" className="hidden rounded-full sm:flex" asChild>
-              <Link href="#contact">Book a Free Call</Link>
+              <a href="https://calendly.com/executives-realsolutions-ph/30min" target="_blank" rel="noopener noreferrer">Book a Free Call</a>
             </Button>
             <Button
               variant="ghost"
@@ -126,9 +126,9 @@ export function Navbar() {
 
           <div className="mt-4 pt-4 border-t border-border">
             <Button variant="default" className="w-full rounded-full" asChild>
-              <Link href="#contact" onClick={closeMenu}>
+              <a href="https://calendly.com/executives-realsolutions-ph/30min" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
                 Book a Free Call
-              </Link>
+              </a>
             </Button>
           </div>
         </div>
