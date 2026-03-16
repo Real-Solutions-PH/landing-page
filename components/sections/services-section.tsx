@@ -166,15 +166,22 @@ export function ServicesSection() {
                       {service.cta}
                     </Button>
                   ) : (
-                    <Button 
-                      variant={service.popular ? "default" : "outline"} 
+                    <Button
+                      variant={service.popular ? "default" : "outline"}
                       className="w-full rounded-xl h-12"
                       asChild
                     >
-                      <a href="https://calendly.com/executives-realsolutions-ph/30min" target="_blank" rel="noopener noreferrer">
-                        {service.cta}
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </a>
+                      {service.cta === "Get a Free Estimate" || service.cta === "Ask About Retainers" ? (
+                        <a href="#contact">
+                          {service.cta}
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </a>
+                      ) : (
+                        <a href="https://calendly.com/executives-realsolutions-ph/30min" target="_blank" rel="noopener noreferrer">
+                          {service.cta}
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </a>
+                      )}
                     </Button>
                   )}
                 </div>

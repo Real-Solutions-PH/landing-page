@@ -48,10 +48,10 @@ export function Footer() {
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-black/5 pt-8 text-center text-sm text-muted-foreground dark:border-white/10 md:flex-row md:text-left">
           <p>© {new Date().getFullYear()} Real Solutions PH. All rights reserved. Batangas, Philippines.</p>
           <div className="flex gap-4">
-            <Link href="#" className="hover:text-foreground">
+            <Link href="https://www.linkedin.com/company/real-solutions-ph" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">
               LinkedIn
             </Link>
-            <Link href="#" className="hover:text-foreground">
+            <Link href="https://github.com/Real-Solutions-PH" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">
               GitHub
             </Link>
           </div>
