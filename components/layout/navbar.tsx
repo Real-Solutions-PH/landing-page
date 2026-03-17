@@ -3,18 +3,26 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
   { href: "#services", label: "Services" },
+  { href: "/work", label: "Work" },
   { href: "#how-it-works", label: "How It Works" },
   { href: "#about", label: "About" },
 ];
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  const resolveHref = (href: string) => {
+    if (href.startsWith("#") && pathname !== "/") return `/${href}`;
+    return href;
+  };
 
   // Close menu when viewport resizes to desktop
   useEffect(() => {
@@ -33,12 +41,20 @@ export function Navbar() {
 
   const closeMenu = () => setIsOpen(false);
 
+  const handleLogoClick = (e: React.MouseEvent) => {
+    closeMenu();
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 flex h-20 items-center justify-center pt-4 px-4 sm:px-6 lg:px-8">
         <nav className="flex w-full max-w-5xl items-center justify-between rounded-full border border-black/5 bg-white/80 px-6 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.04)] backdrop-blur-md dark:border-white/10 dark:bg-black/60">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2" onClick={closeMenu}>
+          <Link href="/" className="flex items-center gap-2" onClick={handleLogoClick}>
             <div className="relative h-8 w-12 flex items-center justify-center">
               <Image
                 src="/logo/logo-light-transparent.svg"
@@ -63,7 +79,7 @@ export function Navbar() {
             {navLinks.map(({ href, label }) => (
               <Link
                 key={href}
-                href={href}
+                href={resolveHref(href)}
                 className="text-muted-foreground transition-colors hover:text-foreground"
               >
                 {label}
@@ -74,7 +90,7 @@ export function Navbar() {
           {/* Desktop CTA + Hamburger */}
           <div className="flex items-center gap-4">
             <Button variant="default" className="hidden rounded-full sm:flex" asChild>
-              <a href="#contact">Get a Free Estimate</a>
+              <Link href={resolveHref("#contact")}>Get a Free Estimate</Link>
             </Button>
             <Button
               variant="ghost"
@@ -115,7 +131,7 @@ export function Navbar() {
             {navLinks.map(({ href, label }) => (
               <Link
                 key={href}
-                href={href}
+                href={resolveHref(href)}
                 onClick={closeMenu}
                 className="rounded-xl px-4 py-3 text-base font-medium text-foreground transition-colors hover:bg-accent/10 hover:text-accent active:bg-accent/20"
               >
@@ -126,9 +142,9 @@ export function Navbar() {
 
           <div className="mt-4 pt-4 border-t border-border">
             <Button variant="default" className="w-full rounded-full" asChild>
-              <a href="#contact" onClick={closeMenu}>
+              <Link href={resolveHref("#contact")} onClick={closeMenu}>
                 Get a Free Estimate
-              </a>
+              </Link>
             </Button>
           </div>
         </div>
