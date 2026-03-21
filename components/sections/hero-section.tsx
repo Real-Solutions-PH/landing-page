@@ -64,7 +64,7 @@ export function HeroSection() {
                 </Link>
               </Button>
               <Button variant="outline" className="h-14 rounded-md px-8 text-base shadow-sm flex items-center justify-center gap-2 transition-transform hover:scale-105 bg-background hover:bg-muted hover:text-foreground" asChild>
-                <Link href="/how-it-works">
+                <Link href="/#how-it-works">
                   <span className="font-semibold">See how it works</span>
                 </Link>
               </Button>

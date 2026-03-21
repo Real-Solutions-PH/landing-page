@@ -3,9 +3,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { ArrowRight, Zap } from "lucide-react";
+import Image from "next/image";
+import { ArrowUpRight, TrendingUp } from "lucide-react";
+import { CtaSection } from "@/components/sections/cta-section";
 import { PROJECTS, ACCENT_CLASSES } from "@/lib/projects";
 
 const ALL_TAGS = ["All", ...Array.from(new Set(PROJECTS.flatMap((p) => p.tags)))];
@@ -26,6 +26,46 @@ const itemVariants = {
     transition: { duration: 0.6, ease: "easeOut" as const },
   },
 };
+
+function ProjectPlaceholder({
+  letter,
+  gradient,
+}: {
+  letter: string;
+  gradient: string;
+}) {
+  return (
+    <div
+      className={`w-full h-full bg-gradient-to-br ${gradient} flex items-center justify-center relative overflow-hidden`}
+    >
+      <svg
+        className="absolute inset-0 w-full h-full opacity-10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <pattern
+            id={`wk-grid-${letter}`}
+            width="24"
+            height="24"
+            patternUnits="userSpaceOnUse"
+          >
+            <path
+              d="M 24 0 L 0 0 0 24"
+              fill="none"
+              stroke="white"
+              strokeWidth="0.5"
+            />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill={`url(#wk-grid-${letter})`} />
+      </svg>
+      <div className="absolute w-32 h-32 rounded-full bg-white/15 blur-2xl" />
+      <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-2xl bg-white/20 backdrop-blur-sm border border-white/30 text-2xl font-black text-white shadow-lg">
+        {letter}
+      </div>
+    </div>
+  );
+}
 
 export default function WorkPage() {
   const [activeTag, setActiveTag] = useState("All");
@@ -106,40 +146,60 @@ export default function WorkPage() {
                 <motion.div
                   key={project.id}
                   variants={itemVariants}
-                  className="group flex flex-col gap-5 rounded-[32px] border border-black/5 bg-white p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] transition-all hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] dark:border-white/10 dark:bg-card/50"
+                  className="group flex flex-col overflow-hidden rounded-[24px] border border-black/5 bg-white shadow-[0_8px_30px_rgba(0,0,0,0.04)] transition-all hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] dark:border-white/10 dark:bg-card/50"
                 >
-                  {/* Header */}
-                  <div className="flex items-start gap-4">
-                    <div
-                      className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-xl font-black ${accent.bg} ${accent.text}`}
-                    >
-                      {project.letter}
-                    </div>
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                  {/* Image */}
+                  <div className="relative h-44 w-full shrink-0 overflow-hidden">
+                    {project.image ? (
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    ) : (
+                      <ProjectPlaceholder
+                        letter={project.letter}
+                        gradient={project.coverGradient}
+                      />
+                    )}
+                    <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+                      <span className="rounded-full bg-black/40 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
                         {project.clientType}
-                      </p>
-                      <h2 className="mt-0.5 text-lg font-bold leading-snug">
-                        {project.title}
-                      </h2>
+                      </span>
+                      {project.url && (
+                        <a
+                          href={project.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1 rounded-full bg-black/40 px-2.5 py-1 text-[10px] font-semibold text-white backdrop-blur-sm hover:bg-black/60 transition-colors"
+                        >
+                          Live site
+                          <ArrowUpRight className="h-3 w-3" />
+                        </a>
+                      )}
                     </div>
                   </div>
 
-                  {/* Description */}
-                  <p className="flex-1 text-sm leading-relaxed text-muted-foreground">
-                    {project.description}
-                  </p>
+                  {/* Card body */}
+                  <div className="flex flex-1 flex-col gap-4 p-6 text-left">
+                    <h2 className="text-base font-bold leading-snug">
+                      {project.title}
+                    </h2>
 
-                  {/* Outcome */}
-                  <div className="flex items-center gap-2 rounded-xl border border-black/5 bg-zinc-50 px-4 py-3 dark:border-white/10 dark:bg-white/5">
-                    <div className={`h-2 w-2 shrink-0 rounded-full ${accent.dot}`} />
-                    <span className="text-sm font-semibold text-foreground">
-                      {project.outcome}
-                    </span>
-                  </div>
+                    <p className="flex-1 text-sm leading-relaxed text-muted-foreground">
+                      {project.description}
+                    </p>
 
-                  {/* Tags + Service */}
-                  <div className="flex flex-col gap-3 pt-1 border-t border-black/5 dark:border-white/10">
+                    {/* Metric stat */}
+                    <div className="flex items-center gap-2 rounded-xl border border-black/5 bg-zinc-50 px-4 py-3 dark:border-white/10 dark:bg-white/5">
+                      <TrendingUp className={`h-3.5 w-3.5 shrink-0 ${accent.text}`} />
+                      <span className="text-sm font-semibold text-foreground">
+                        {project.outcome}
+                      </span>
+                    </div>
+
+                    {/* Tags */}
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag) => (
                         <span
@@ -150,12 +210,6 @@ export default function WorkPage() {
                         </span>
                       ))}
                     </div>
-                    <p className="text-xs text-muted-foreground/70">
-                      Service:{" "}
-                      <span className="font-medium text-muted-foreground">
-                        {project.service}
-                      </span>
-                    </p>
                   </div>
                 </motion.div>
               );
@@ -170,51 +224,7 @@ export default function WorkPage() {
         </div>
       </section>
 
-      {/* CTA banner */}
-      <section className="w-full bg-zinc-50 py-16 dark:bg-zinc-950 sm:py-20">
-        <div className="container mx-auto px-4 md:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="flex flex-col items-center justify-between gap-8 rounded-[32px] border border-primary/20 bg-primary/5 p-10 text-center shadow-[0_20px_40px_rgba(25,59,118,0.08)] dark:bg-primary/10 md:flex-row md:text-left"
-          >
-            <div className="flex flex-col gap-2 max-w-xl">
-              <h2 className="text-2xl font-bold sm:text-3xl">
-                Want results like these?
-              </h2>
-              <p className="text-muted-foreground">
-                Book a free 30-minute discovery call. We&apos;ll map out which integrations
-                will have the biggest impact on your business — no commitment required.
-              </p>
-            </div>
-            <div className="flex flex-col gap-3 shrink-0">
-              <Button
-                size="lg"
-                className="h-14 rounded-md px-8 text-base shadow-[0_8px_24px_rgba(25,59,118,0.25)] flex items-center justify-center gap-2 bg-[#F59E0B] hover:bg-[#D97706] text-white border-0 transition-transform hover:scale-105"
-                asChild
-              >
-                <a
-                  href="https://calendly.com/executives-realsolutions-ph/30min"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Zap className="h-5 w-5 fill-current" />
-                  <span className="font-semibold">Book a Discovery Call</span>
-                </a>
-              </Button>
-              <Link
-                href="/#services"
-                className="flex items-center justify-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                View our services
-                <ArrowRight className="h-3.5 w-3.5" />
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <CtaSection />
     </main>
   );
 }

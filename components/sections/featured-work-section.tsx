@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, ArrowUpRight, TrendingUp } from "lucide-react";
 import { PROJECTS, ACCENT_CLASSES } from "@/lib/projects";
 
 const featured = PROJECTS.filter((p) => p.featured);
@@ -25,6 +26,50 @@ const itemVariants = {
     transition: { duration: 0.7, ease: "easeOut" as const },
   },
 };
+
+function ProjectPlaceholder({
+  letter,
+  gradient,
+  accentColor,
+}: {
+  letter: string;
+  gradient: string;
+  accentColor: string;
+}) {
+  // accentColor used to pick text shade if needed in the future
+  void accentColor;
+  return (
+    <div
+      className={`w-full h-full bg-gradient-to-br ${gradient} flex items-center justify-center relative overflow-hidden`}
+    >
+      <svg
+        className="absolute inset-0 w-full h-full opacity-10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <pattern
+            id={`fw-grid-${letter}`}
+            width="24"
+            height="24"
+            patternUnits="userSpaceOnUse"
+          >
+            <path
+              d="M 24 0 L 0 0 0 24"
+              fill="none"
+              stroke="white"
+              strokeWidth="0.5"
+            />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill={`url(#fw-grid-${letter})`} />
+      </svg>
+      <div className="absolute w-28 h-28 rounded-full bg-white/15 blur-2xl" />
+      <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/20 backdrop-blur-sm border border-white/30 text-2xl font-black text-white shadow-lg">
+        {letter}
+      </div>
+    </div>
+  );
+}
 
 export function FeaturedWorkSection() {
   return (
@@ -48,7 +93,8 @@ export function FeaturedWorkSection() {
               Real integrations, real results
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              Here&apos;s a sample of what we&apos;ve built for Philippine and SEA businesses.
+              Here&apos;s a sample of what we&apos;ve built for Philippine and
+              SEA businesses.
             </p>
           </motion.div>
 
@@ -65,44 +111,79 @@ export function FeaturedWorkSection() {
                 <motion.div
                   key={project.id}
                   variants={itemVariants}
-                  className="flex flex-col gap-5 rounded-[32px] border border-black/5 bg-white p-8 text-left shadow-[0_8px_30px_rgba(0,0,0,0.04)] transition-all hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] dark:border-white/10 dark:bg-card/50"
+                  className="group flex flex-col overflow-hidden rounded-[24px] border border-black/5 bg-white shadow-[0_8px_30px_rgba(0,0,0,0.04)] transition-all hover:shadow-[0_24px_48px_rgba(0,0,0,0.10)] dark:border-white/10 dark:bg-card/50"
                 >
-                  <div className="flex items-center gap-4">
-                    <div
-                      className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-xl font-black ${accent.bg} ${accent.text}`}
-                    >
-                      {project.letter}
-                    </div>
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                  {/* Image */}
+                  <div className="relative h-56 w-full shrink-0 overflow-hidden">
+                    {project.image ? (
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    ) : (
+                      <ProjectPlaceholder
+                        letter={project.letter}
+                        gradient={project.coverGradient}
+                        accentColor={project.accentColor}
+                      />
+                    )}
+                    {/* Bottom gradient overlay */}
+                    <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/10 to-transparent" />
+                    {/* Client type + live link row */}
+                    <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+                      <span className="rounded-full bg-white/15 border border-white/20 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
                         {project.clientType}
+                      </span>
+                      {project.url && (
+                        <a
+                          href={project.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1 rounded-full bg-white/15 border border-white/20 px-2.5 py-1 text-[10px] font-semibold text-white backdrop-blur-sm hover:bg-white/25 transition-colors"
+                        >
+                          Live site
+                          <ArrowUpRight className="h-3 w-3" />
+                        </a>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Card body */}
+                  <div className="flex flex-col gap-4 p-6 text-left">
+                    <div>
+                      <p className="mb-1 text-[10px] font-semibold uppercase tracking-widest text-muted-foreground/60">
+                        {project.service}
                       </p>
-                      <h3 className="mt-0.5 text-base font-bold leading-snug">
+                      <h3 className="text-base font-bold leading-snug">
                         {project.title}
                       </h3>
                     </div>
-                  </div>
 
-                  <p className="text-sm leading-relaxed text-muted-foreground flex-1">
-                    {project.description}
-                  </p>
+                    <p className="flex-1 text-sm leading-relaxed text-muted-foreground">
+                      {project.description}
+                    </p>
 
-                  <div className="flex items-center gap-2 rounded-xl border border-black/5 bg-zinc-50 px-4 py-3 dark:border-white/10 dark:bg-white/5">
-                    <div className={`h-2 w-2 shrink-0 rounded-full ${accent.dot}`} />
-                    <span className="text-sm font-semibold text-foreground">
-                      {project.outcome}
-                    </span>
-                  </div>
-
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-full border border-black/5 bg-zinc-100 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground dark:border-white/10 dark:bg-white/10"
-                      >
-                        {tag}
+                    {/* Metric stat */}
+                    <div className={`flex items-start gap-3 rounded-xl ${accent.bg} px-4 py-3`}>
+                      <TrendingUp className={`mt-0.5 h-4 w-4 shrink-0 ${accent.text}`} />
+                      <span className={`text-sm font-bold leading-snug ${accent.text}`}>
+                        {project.outcome}
                       </span>
-                    ))}
+                    </div>
+
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-1.5 pt-1 border-t border-black/5 dark:border-white/10">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded-full border border-black/5 bg-zinc-100 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground dark:border-white/10 dark:bg-white/10"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </motion.div>
               );

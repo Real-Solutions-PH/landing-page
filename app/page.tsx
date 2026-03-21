@@ -3,6 +3,7 @@ import { ProblemSection } from "@/components/sections/problem-section";
 import { ServicesSection } from "@/components/sections/services-section";
 import { ProcessSection } from "@/components/sections/process-section";
 import { WhyUsSection } from "@/components/sections/why-us-section";
+import { PortfolioIntroSection } from "@/components/sections/portfolio-intro-section";
 import { TeamSection } from "@/components/sections/team-section";
 import { CtaSection } from "@/components/sections/cta-section";
 
@@ -14,8 +15,10 @@ export default function Home() {
       <ServicesSection />
       <ProcessSection />
       <WhyUsSection />
+      <PortfolioIntroSection />
       <TeamSection />
       <CtaSection />
     </main>
   );
 }
+

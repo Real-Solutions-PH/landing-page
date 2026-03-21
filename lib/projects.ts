@@ -9,86 +9,62 @@ export type Project = {
   featured: boolean;
   accentColor: string;
   letter: string;
+  /** Public-relative path to a screenshot, e.g. /projects/pos-xero.png */
+  image?: string;
+  /** Live URL for the project */
+  url?: string;
+  /** Tailwind gradient classes used for the placeholder card cover */
+  coverGradient: string;
 };
 
 export const PROJECTS: Project[] = [
   {
-    id: "restaurant-pos-xero",
-    title: "POS ↔ Xero Accounting Sync",
-    clientType: "Food & Beverage Chain",
+    id: "artemis",
+    title: "Artemis — Smart Waste Management Platform",
+    clientType: "IoT / Operations",
     description:
-      "Automated daily sales reconciliation between a multi-branch restaurant POS system and Xero. Eliminated manual journal entry and end-of-day errors across 5 branches.",
-    outcome: "Saved 25 hrs/week in manual bookkeeping",
-    tags: ["Accounting", "POS", "Xero"],
-    service: "Custom Integration Project",
-    featured: true,
-    accentColor: "blue",
-    letter: "F",
-  },
-  {
-    id: "ecommerce-inventory-sync",
-    title: "Multi-channel Inventory Sync",
-    clientType: "E-commerce Retailer",
-    description:
-      "Real-time inventory deduction across Shopee, Lazada, and a physical store. Orders from any channel instantly update stock levels and trigger reorder alerts.",
-    outcome: "Zero overselling incidents since launch",
-    tags: ["E-commerce", "Inventory", "Shopee", "Lazada"],
-    service: "Custom Integration Project",
+      "Smart waste management platform combining software, mobile access, and IoT-enabled trash bins. Helps organizations monitor waste in real time, automate reporting, and improve collection efficiency. Built the fullstack from the ground up: frontend, mobile, backend, and IoT integration.",
+    outcome: "From manual rounds to real-time monitoring — collection time cut by 60%",
+    tags: ["IoT", "Mobile", "Backend", "Frontend", "System Integration"],
+    service: "Custom Software & System Integration",
     featured: true,
     accentColor: "emerald",
-    letter: "E",
-  },
-  {
-    id: "hr-payroll-biometrics",
-    title: "HR & Payroll Biometrics Integration",
-    clientType: "BPO / Staffing Company",
-    description:
-      "Connected biometric time-and-attendance hardware to an HRIS and payroll engine. Automated overtime computation, leave deductions, and government contribution reports.",
-    outcome: "Cut payroll processing from 3 days to 4 hours",
-    tags: ["HR", "Payroll", "Biometrics"],
-    service: "Custom Integration Project",
-    featured: true,
-    accentColor: "purple",
-    letter: "H",
-  },
-  {
-    id: "crm-lead-automation",
-    title: "CRM Lead Capture Automation",
-    clientType: "Real Estate Developer",
-    description:
-      "Unified lead capture from Facebook Lead Ads, a website inquiry form, and a property portal into HubSpot. Auto-assigned leads to agents with follow-up email sequences.",
-    outcome: "Lead response time reduced from 24 hrs to 5 min",
-    tags: ["CRM", "Email", "Lead Management"],
-    service: "Custom Integration Project",
-    featured: false,
-    accentColor: "orange",
-    letter: "C",
-  },
-  {
-    id: "logistics-fulfillment",
-    title: "Order ↔ Fulfillment Webhook",
-    clientType: "3PL / Logistics Provider",
-    description:
-      "Webhook pipeline connecting a client's Shopify store to a third-party logistics partner. Orders auto-create pick-and-pack tasks, and tracking numbers sync back to the storefront.",
-    outcome: "Fulfillment errors dropped by 90%",
-    tags: ["Logistics", "E-commerce", "Shopify"],
-    service: "Custom Integration Project",
-    featured: false,
-    accentColor: "sky",
-    letter: "L",
-  },
-  {
-    id: "integration-audit-retail",
-    title: "Integration Audit & Roadmap",
-    clientType: "Multi-branch Retail Chain",
-    description:
-      "Two-week discovery engagement mapping 11 disconnected tools across purchasing, inventory, sales, and finance. Delivered a phased integration roadmap with cost estimates.",
-    outcome: "Identified ₱2.4M/yr in operational waste",
-    tags: ["Audit", "Roadmap", "Strategy"],
-    service: "Integration Audit & Roadmap",
-    featured: false,
-    accentColor: "amber",
     letter: "A",
+    coverGradient: "from-emerald-600 via-teal-500 to-cyan-400",
+    image: "/projects/artemis-1 copy.png",
+    url: "https://artemis-b18ae.web.app/",
+  },
+  {
+    id: "evolve-talents",
+    title: "Evolve Talents — Recruitment & VA Platform",
+    clientType: "HR / Recruitment",
+    description:
+      "Premium recruitment and virtual assistant service that helps businesses scale by matching them with vetted remote professionals. Built the company website and handled SEO, positioning Evolve Talents as an end-to-end hiring partner covering recruiting, vetting, payroll, onboarding, and ongoing support.",
+    outcome: "SEO-optimized launch — ranking for target keywords within 30 days",
+    tags: ["Website", "SEO", "Marketing"],
+    service: "Website & Web Application Development",
+    featured: true,
+    accentColor: "blue",
+    letter: "E",
+    coverGradient: "from-blue-600 via-blue-500 to-sky-400",
+    image: "/projects/evolve-talents-1.png",
+    url: "https://evolve-talents-sample.netlify.app/",
+  },
+  {
+    id: "bath-and-bark",
+    title: "Bath & Bark — Pet Care Platform",
+    clientType: "Retail / Pet Care",
+    description:
+      "Premium pet care business in Batangas offering grooming, wellness, and health support for dogs and other pets. Built the website, admin and members system, backend, and integrated an AI chatbot to handle customer inquiries and bookings.",
+    outcome: "AI chatbot handles 80% of customer inquiries without human intervention",
+    tags: ["Website", "Admin System", "Backend", "AI Integration"],
+    service: "Custom Software & AI Integration",
+    featured: true,
+    accentColor: "orange",
+    letter: "B",
+    coverGradient: "from-orange-500 via-amber-500 to-yellow-400",
+    image: "/projects/bath-and-bark-1.png",
+    url: "https://bathandbark.realsolutionsph.com/",
   },
 ];
 
