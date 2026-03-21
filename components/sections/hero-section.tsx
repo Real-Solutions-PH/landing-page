@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Zap } from "lucide-react";
+import Image from "next/image";
 
 export function HeroSection() {
   return (
@@ -38,10 +38,10 @@ export function HeroSection() {
             */}
 
             <h1 className="mb-6 text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl xl:text-[3.25rem] leading-[1.2] sm:leading-[1.15] z-20 relative pr-4">
-              We connect your tools. <br className="hidden sm:block" />
+              Your business software, <br className="hidden sm:block" />
               <span className="relative flex mt-3 w-max max-w-full">
                 <span className="relative z-10 px-2 lg:px-4 pb-1 pt-1 text-[#F7FAFC] bg-[#193B76] dark:bg-[#2A5CAA] rounded-sm">
-                  You run your business.
+                  built right,
                 </span>
                 <span className="absolute -bottom-4 -right-10 text-[#F59E0B] opacity-80 z-20 transform rotate-12 hidden md:block">
                    <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -50,25 +50,28 @@ export function HeroSection() {
                    </svg>
                 </span>
               </span>
+              <span className="mt-3 block">and managed for you.</span>
             </h1>
             
             <p className="mb-8 max-w-lg text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Stop gluing your business together with spreadsheets. We design, build, and maintain custom integrations so your data flows automatically.
+              We build tailored business software that brings your operations into one system, gives you real-time visibility, and removes the day-to-day burden of holding disconnected tools together.
             </p>
 
-            <div className="flex flex-col gap-4 w-full sm:w-auto">
-              <Button size="lg" className="h-14 rounded-md px-8 text-base shadow-[0_8px_24px_rgba(25,59,118,0.25)] flex items-center justify-center gap-2 bg-[#F59E0B] hover:bg-[#D97706] text-white border-0 transition-transform hover:scale-105" asChild>
-                <a href="https://calendly.com/executives-realsolutions-ph/30min" target="_blank" rel="noopener noreferrer">
-                  <Zap className="h-5 w-5 fill-current" />
-                  <span className="font-semibold text-white">Book a Discovery Call</span>
-                </a>
+            <div className="flex flex-col gap-4 w-full sm:w-auto sm:flex-row">
+              <Button className="h-14 rounded-md px-8 text-base shadow-[0_8px_24px_rgba(25,59,118,0.25)] flex items-center justify-center gap-2 bg-[#F59E0B] hover:bg-[#D97706] text-white border-0 transition-transform hover:scale-105" asChild>
+                <Link href="/contact">
+                  <span className="font-semibold text-white">Book a Discovery Audit</span>
+                </Link>
               </Button>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground text-left w-full pl-1">
-                <span className="inline-flex items-center border border-green-600/30 bg-green-600/10 text-green-700 dark:text-green-500 font-bold px-1.5 py-0.5 rounded text-[10px] uppercase">
-                  Free
-                </span>
-                <span className="font-medium">30-minute integration audit <span className="text-muted-foreground/60 line-through">(₱15k value)</span></span>
-              </div>
+              <Button variant="outline" className="h-14 rounded-md px-8 text-base shadow-sm flex items-center justify-center gap-2 transition-transform hover:scale-105 bg-background hover:bg-muted hover:text-foreground" asChild>
+                <Link href="/how-it-works">
+                  <span className="font-semibold">See how it works</span>
+                </Link>
+              </Button>
+            </div>
+            
+            <div className="mt-4 flex items-center gap-2 text-sm text-muted-foreground text-left w-full pl-1">
+              <span className="font-medium">No commitment. Just clarity on what to build and how to get there.</span>
             </div>
 
             {/* Avatar Group / Makers 
@@ -201,8 +204,8 @@ export function HeroSection() {
                 animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               >
-                <img src="/logo/logo-light-transparent.svg" alt="Real Solutions PH" className="w-full h-full object-contain dark:hidden" />
-                <img src="/logo/logo-dark-transparent.svg" alt="Real Solutions PH" className="hidden w-full h-full object-contain dark:block" />
+                <Image src="/logo/logo-light-transparent.svg" alt="Real Solutions PH" width={80} height={80} className="w-full h-full object-contain dark:hidden" />
+                <Image src="/logo/logo-dark-transparent.svg" alt="Real Solutions PH" width={80} height={80} className="hidden w-full h-full object-contain dark:block" />
               </motion.div>
 
               {/* Fun terminal text pointing outside the blob */}

@@ -24,21 +24,22 @@ export function Footer() {
               </div>
             </Link>
             <p className="max-w-xs text-sm text-muted-foreground">
-              We connect your tools. We keep them running. Stop gluing your business together with spreadsheets.
+              Real Solutions PH is a prototype-first managed software partner for SMEs that need production-grade custom software and integrations.
             </p>
           </div>
           <div className="flex flex-col gap-2">
             <h4 className="font-semibold">Services</h4>
-            <Link href="#services" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">Integration Audit</Link>
-            <Link href="#services" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">Custom Integrations</Link>
-            <Link href="#services" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">Managed Operations</Link>
+            <Link href="/#services" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">System Integration</Link>
+            <Link href="/#services" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">Custom Software</Link>
+            <Link href="/#services" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">Web & Mobile Apps</Link>
+            <Link href="/#services" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">AI Integration</Link>
           </div>
           <div className="flex flex-col gap-2">
             <h4 className="font-semibold">Company</h4>
-            <Link href="#about" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">About Us</Link>
-            <Link href="/work" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">Our Work</Link>
-            <Link href="#how-it-works" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">How It Works</Link>
-            <Link href="#contact" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">Contact</Link>
+            <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">About Us</Link>
+            <Link href="/#how-it-works" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">How It Works</Link>
+            <Link href="/pricing" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">Pricing</Link>
+            <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">Book a Discovery</Link>
           </div>
           <div className="flex flex-col gap-2">
             <h4 className="font-semibold">Legal</h4>

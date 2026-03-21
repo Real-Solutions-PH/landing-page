@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY || "dummy_key");
 
 export async function POST(req: NextRequest) {
-  const { name, email, tools, problem } = await req.json();
+  const { name, email, company, problem } = await req.json();
 
   if (!name || !email || !problem) {
     return NextResponse.json({ error: "Missing required fields." }, { status: 400 });
@@ -42,10 +42,10 @@ export async function POST(req: NextRequest) {
             </tr>
             <tr>
               <td style="padding: 12px 0; border-bottom: 1px solid #f1f5f9;">
-                <span style="font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em;">Tools Used</span>
+                <span style="font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em;">Company</span>
               </td>
               <td style="padding: 12px 0; border-bottom: 1px solid #f1f5f9;">
-                <span style="font-size: 15px; color: #1e293b;">${tools || "Not specified"}</span>
+                <span style="font-size: 15px; color: #1e293b;">${company || "Not specified"}</span>
               </td>
             </tr>
           </table>

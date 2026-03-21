@@ -9,10 +9,10 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { href: "#services", label: "Services" },
-  { href: "/work", label: "Work" },
-  { href: "#how-it-works", label: "How It Works" },
-  { href: "#about", label: "About" },
+  { href: "/#services", label: "Services" },
+  { href: "/#how-it-works", label: "How It Works" },
+  { href: "/pricing", label: "Pricing" },
+  { href: "/about", label: "About" },
 ];
 
 export function Navbar() {
@@ -90,7 +90,7 @@ export function Navbar() {
           {/* Desktop CTA + Hamburger */}
           <div className="flex items-center gap-4">
             <Button variant="default" className="hidden rounded-full sm:flex" asChild>
-              <Link href={resolveHref("#contact")}>Get a Free Estimate</Link>
+              <Link href="/contact">Book a Discovery</Link>
             </Button>
             <Button
               variant="ghost"
@@ -142,8 +142,8 @@ export function Navbar() {
 
           <div className="mt-4 pt-4 border-t border-border">
             <Button variant="default" className="w-full rounded-full" asChild>
-              <Link href={resolveHref("#contact")} onClick={closeMenu}>
-                Get a Free Estimate
+              <Link href="/contact" onClick={closeMenu}>
+                Book a Discovery
               </Link>
             </Button>
           </div>

@@ -3,65 +3,84 @@
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+
+import { ArrowRight, CheckCircle2, Network, AppWindow, Globe, Smartphone, Bot } from "lucide-react";
 
 const SERVICES = [
   {
-    title: "Integration Audit & Roadmap",
-    description: "A 1–2 week discovery engagement to map your systems, identify inefficiencies, and design the ideal integration architecture.",
-    priceHint: "Starts at ₱15,000",
+    icon: Network,
+    title: "System Integration Development",
+    description: "Connect your POS, inventory, HR, payroll, CRM, accounting, and e-commerce. We build secure APIs, webhooks, and workflow automations.",
+    priceHint: "Flagship Service",
     features: [
-      "Complete tool inventory",
-      "Current state data flow diagram",
-      "Prioritized integration roadmap",
-      "Phased cost estimate report",
+      "API & webhook integrations",
+      "Workflow automation",
+      "Operational dashboards",
+      "Internal business systems",
     ],
     cta: "Book a Discovery Audit",
-    popular: false,
-    comingSoon: false,
-  },
-  {
-    title: "Custom Integration Projects",
-    description: "We design, build, test, deploy, and document custom robust integrations connecting your scattered systems.",
-    priceHint: "Custom Scoped",
-    features: [
-      "POS ↔ Inventory ↔ Accounting",
-      "E-commerce ↔ Fulfillment",
-      "HR System ↔ Payroll ↔ Biometrics",
-      "CRM ↔ Email/SMS ↔ Lead Forms",
-    ],
-    cta: "Get a Free Estimate",
     popular: true,
     comingSoon: false,
   },
   {
-    title: "Managed Integration Operations",
-    description: "Monthly ongoing support and maintenance. Integration isn't a one-time job, we ensure continuous uptime.",
-    priceHint: "Monthly Retainer",
+    icon: AppWindow,
+    title: "Custom Software Systems",
+    description: "Internal tools, admin panels, portals, industry-specific operational systems, and management platforms tailored exactly to your workflows.",
+    priceHint: "Scalable Solutions",
     features: [
-      "24/7 API uptime monitoring",
-      "Rapid incident response",
-      "Routine bug fixes & updates",
-      "Monthly health reports",
+      "Custom Admin Panels",
+      "Client Portals",
+      "Industry-specific systems",
+      "Production-grade architecture",
     ],
-    cta: "Ask About Retainers",
+    cta: "Get a Free Estimate",
     popular: false,
     comingSoon: false,
   },
   {
-    title: "Productized Connectors",
-    description: "Pre-built, plug-and-play connectors for the most common Philippine and SEA business tool combinations.",
-    priceHint: "Setup + Subscription",
+    icon: Globe,
+    title: "Website & Web Apps",
+    description: "High-performance marketing websites, lead-generation websites, portals, and web-based operational applications.",
+    priceHint: "Modern Web",
     features: [
-      "Local POS ↔ Xero/QuickBooks",
-      "Shopee/Lazada ↔ Inventory",
-      "BIR-ready accounting hooks",
-      "Instant deployment",
+      "Marketing Websites",
+      "Lead-gen platforms",
+      "Web operations apps",
+      "SEO optimized & fast",
     ],
-    cta: "Join Waitlist",
+    cta: "Get a Free Estimate",
     popular: false,
-    comingSoon: true,
+    comingSoon: false,
+  },
+  {
+    icon: Smartphone,
+    title: "Mobile App Development",
+    description: "Customer-facing mobile apps, internal operations apps, staff tools, and hybrid mobile systems tied to your backend platforms.",
+    priceHint: "iOS & Android",
+    features: [
+      "Customer-facing apps",
+      "Internal staff tools",
+      "Cross-platform capability",
+      "Backend integration",
+    ],
+    cta: "Get a Free Estimate",
+    popular: false,
+    comingSoon: false,
+  },
+  {
+    icon: Bot,
+    title: "AI Integration",
+    description: "AI-assisted internal workflows, document and knowledge assistants, embedded AI chat systems, and AI-powered automation.",
+    priceHint: "Future Ready",
+    features: [
+      "Knowledge Assistants",
+      "AI-assisted workflows",
+      "Embedded AI chat",
+      "Smart automation",
+    ],
+    cta: "Get a Free Estimate",
+    popular: false,
+    comingSoon: false,
   },
 ];
 
@@ -99,7 +118,7 @@ export function ServicesSection() {
             <Badge variant="outline" className="mb-6 uppercase tracking-widest text-[10px] text-muted-foreground border-border bg-background shadow-sm">
               Our Services
             </Badge>
-            <h2 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+            <h2 className="mb-6 text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl">
               Solutions that scale with you
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
@@ -112,7 +131,7 @@ export function ServicesSection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="grid w-full max-w-7xl gap-6 md:grid-cols-2 xl:grid-cols-4"
+            className="grid w-full gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
           >
             {SERVICES.map((service, index) => (
               <motion.div
@@ -136,7 +155,10 @@ export function ServicesSection() {
                 )}
                 
                 <div className="flex flex-col gap-2">
-                  <h3 className="text-xl font-bold">{service.title}</h3>
+                  <div className={`mb-2 inline-flex h-12 w-12 items-center justify-center rounded-2xl ${service.popular ? "bg-primary text-white shadow-md" : "bg-primary/10 text-primary dark:bg-primary/20"}`}>
+                    <service.icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="text-lg font-semibold tracking-tight text-foreground">{service.title}</h3>
                   <p className="text-sm font-medium text-accent dark:text-accent-foreground/80">{service.priceHint}</p>
                 </div>
                 

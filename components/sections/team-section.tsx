@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
+import { ExternalLink } from "lucide-react";
 
 interface Founder {
   name: string;
@@ -11,24 +12,25 @@ interface Founder {
   image?: string;
   description: string;
   expertise: string[];
+  website?: string;
 }
 
 const FOUNDERS: Founder[] = [
   {
     name: "Ervin Piol",
-    role: "Head of Delivery & Growth",
+    role: "Local Clients, BD, Full-stack & Mobile",
     image: "/founder-profiles/ervin-piol-profile.png",
-    description:
-      "Ervin is a seasoned software engineer with a proven track record of building scalable and maintainable systems. He has a deep understanding of the latest technologies and frameworks, and is always looking for new ways to improve the quality of his work.",
-    expertise: ["Full-Stack Dev", "Mobile App Dev", "SEO", "UX/UI Design", "Project Management"],
+    description: "Ervin specializes in full-stack and mobile engineering, bridging technical solutions with business development and client relations for local SMEs.",
+    expertise: ["Full-Stack Dev", "Mobile App Dev", "Client Relations", "Business Development"],
+    website: "https://ervin-piol.netlify.app/",
   },
   {
     name: "Kairus Noah Tecson",
-    role: "CEO & Chief Architect",
+    role: "International Clients, Cloud & AI Engineering",
     image: "/founder-profiles/kairus-tecson-profile.png",
-    description:
-      "Kairus is a seasoned software engineer with a proven track record of building scalable and maintainable systems. He has a deep understanding of the latest technologies and frameworks, and is always looking for new ways to improve the quality of his work.",
-    expertise: ["AI Engineering", "Cloud Infrastructure", "DevOps", "Cybersecurity", "Architecture"],
+    description: "Kairus leads architecture, cloud, and AI engineering, focusing on scalable infrastructure and advanced integrations for both local and international clients.",
+    expertise: ["AI Engineering", "Cloud Infrastructure", "Architecture", "International Clients"],
+    website: "https://www.schadenkai.space/",
   },
 ];
 
@@ -88,7 +90,7 @@ export function TeamSection() {
             <Badge variant="outline" className="mb-6 uppercase tracking-widest text-[10px] text-muted-foreground border-border bg-background shadow-sm">
               The Team
             </Badge>
-            <h2 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+            <h2 className="mb-6 text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl">
               Built by engineers
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
@@ -113,8 +115,21 @@ export function TeamSection() {
                   <FounderAvatar founder={founder} />
                 </div>
                 <div className="flex flex-col p-8 text-left">
-                  <h3 className="text-xl font-bold text-foreground">{founder.name}</h3>
-                  <p className="mb-4 text-sm font-medium text-primary">{founder.role}</p>
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-lg font-semibold tracking-tight text-foreground">{founder.name}</h3>
+                    {founder.website && (
+                      <a 
+                        href={founder.website} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                        aria-label={`${founder.name}'s personal website`}
+                      >
+                        <ExternalLink className="h-4 w-4" />
+                      </a>
+                    )}
+                  </div>
+                  <p className="mb-4 mt-1 text-sm font-medium text-primary">{founder.role}</p>
                   <p className="mb-6 text-sm leading-relaxed text-muted-foreground">
                     {founder.description}
                   </p>

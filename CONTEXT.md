@@ -1,298 +1,213 @@
-# Real Solutions PH — Landing Page Build Context
-
-## 1. Company Overview
-
-**Company Name:** Real Solutions PH
-**Tagline (Primary):** *"We connect your tools. We keep them running."*
-**Tagline (Alternative):** *"Stop gluing your business together with spreadsheets."*
-**Type:** Service-first software company specializing in custom integrations and automation for SMEs
-**Location:** Batangas, Philippines (remote-first, serves local and international clients)
-**Website Purpose:** Marketing/lead generation landing page — goal is to drive Discovery Audit bookings and consultation form submissions
-
-***
-
-## 2. Brand Identity
-
-### 2.1 Brand Personality
-- **Professional** but not corporate — approachable, real, no-BS
-- **Confident and technical** — speaks the language of builders and operators
-- **Local pride, global standard** — proudly Filipino but positioned internationally
-
-### 2.2 Brand Voice & Tone
-- Direct, conversational, solutions-first
-- Avoid heavy jargon unless explaining a technical benefit
-- Use active voice: "We build", "We connect", "You focus on your business"
-- Empathetic to the pain (manual work, broken data, wasted money)
-
-### 2.3 Color Palette (Suggested)
-- **Primary:** Deep navy blue `#0F1F3D` — trust, professionalism, technology
-- **Accent:** Electric blue / cyan `#0EA5E9` — modern, tech-forward
-- **Secondary:** Warm white `#F8FAFC` — clean background
-- **Highlight / CTA:** Vibrant amber/orange `#F59E0B` — energy, action, call-to-action buttons
-- **Text body:** Dark slate `#1E293B`
-- **Muted text:** `#64748B`
-
-### 2.4 Typography (Suggested)
-- **Headings:** Inter Bold / Sora Bold (modern, geometric, clean)
-- **Body:** Inter Regular or Plus Jakarta Sans
-- **Code / tech accents:** JetBrains Mono (for any code snippets or technical callouts)
-
-### 2.5 Logo Concept
-- Wordmark: **Real Solutions PH** — bold, clean sans-serif
-- Optional icon: Interlocking nodes / connection graphic (represents integration/linking)
-- Works on light and dark backgrounds
-
-***
-
-## 3. Value Proposition
-
-### 3.1 Core Value Proposition
-> Real Solutions PH designs, builds, and maintains custom integrations between the software tools your business already uses — so your data flows automatically, your team stops doing manual work, and you stop wasting money on AI-generated code that breaks in production.
-
-### 3.2 Value Pillars (use as section headers or cards on landing page)
-
-| Pillar | Headline | Description |
-|---|---|---|
-| Integration | **One system. All your tools.** | We connect your POS, inventory, online shop, HR, payroll, and accounting into a single coherent flow. |
-| Done-For-You | **We build it. You use it.** | No DIY automation that breaks. No wasted AI credits. A team of engineers who deliver production-grade work. |
-| Affordable | **Senior-level engineering. Philippine rates.** | 60–70% less than hiring a Western agency — without compromising code quality, security, or delivery. |
-| Ongoing Ops | **We keep it running.** | Monthly retainers for monitoring, maintenance, and continuous improvement. Integration isn't a one-time job. |
-
-***
-
-## 4. Problem Statement (Use in Hero / Problem Section)
-
-### The Problem Your Audience Recognizes:
-
-**"Your business runs on 6+ tools — and none of them talk to each other."**
-
-Supporting pain points to display:
-- Your POS doesn't sync with your inventory system
-- Your online shop orders don't automatically update your stock
-- Your employee shifts aren't connected to payroll
-- You copy-paste data between systems daily
-- You hired someone to "automate" it using AI tools — and it still breaks every week
-- You're paying for 8 different SaaS subscriptions to run one business
-
-**The false solutions they've tried:**
-- DIY with Zapier/Make (works for simple things, breaks at scale)
-- Asked a developer to vibe-code it with Cursor or Replit (technical debt, insecure)
-- Tried an all-in-one ERP (doesn't support half the tools they already use)
-- Nothing — still doing it manually
-
-***
-
-## 5. Target Market
-
-### 5.1 Primary (Philippine Market)
-- **Who:** Owners and operations managers of growing SMEs
-- **Business types:**
-  - Multi-branch retail stores
-  - Restaurants, cafés, food service chains
-  - Wholesale/distribution businesses
-  - Small BPO/KPO operations
-  - E-commerce sellers on Lazada, Shopee, own website
-- **Size:** 5–200 employees
-- **Pain level:** High — they feel the manual work every day
-- **Budget awareness:** Cost-sensitive but willing to invest if ROI is clear
-- **Location:** CALABARZON, Metro Manila, and beyond
-
-### 5.2 Secondary (International / Remote Market)
-- **Who:** Founders and COOs of tech-enabled SMEs internationally
-- **Business types:** SaaS companies, remote-first agencies, e-commerce brands
-- **Characteristic:** Already comfortable working with offshore teams, need integration work done properly
-- **Budget:** USD-denominated, can pay $3k–$30k+ for integration projects
-
-### 5.3 Psychographic Profile (for copy tone)
-- Frustrated with manual work and operational inefficiency
-- Have tried solving it before and failed
-- Understands technology enough to know what they want, not how to build it
-- Values reliability and accountability in a tech partner
-- Wants to feel confident the solution will actually work in production
-
-***
-
-## 6. Services Overview (for Services Section)
-
-### Service 1: Integration Audit & Roadmap
-- **What it is:** A paid 1–2 week discovery engagement
-- **What they get:** Tool inventory, data flow diagram, prioritized integration roadmap, phased cost estimate — all in a professional PDF/Notion report
-- **Price range:** ₱15,000–₱50,000 / $300–$1,000
-- **CTA:** "Book a Discovery Audit"
-
-### Service 2: Custom Integration Projects
-- **What it is:** We design, build, test, deploy, and document the integrations
-- **Examples:**
-  - POS ↔ Inventory ↔ Accounting
-  - Shopify/Lazada/Shopee ↔ Inventory ↔ Fulfillment
-  - HR System ↔ Payroll ↔ Biometrics
-  - CRM ↔ Email/SMS ↔ Lead Forms
-- **Price range:** ₱150k–₱1.5M+ / $3k–$50k+ depending on scope
-- **CTA:** "Get a Free Estimate"
-
-### Service 3: Managed Integration Operations (Retainer)
-- **What it is:** Monthly ongoing support and maintenance
-- **What's included:** 24/7 uptime monitoring, incident response, bug fixes, minor enhancements, monthly health report
-- **Price range:** ₱15,000–₱100,000/month / $500–$2,000/month
-- **CTA:** "Ask About Retainers"
-
-### Service 4: Productized Integrations *(Coming Soon badge)*
-- **What it is:** Pre-built connectors for common PH/SEA business tool combinations
-- **Examples:** Local POS ↔ Xero, Shopee/Lazada ↔ Inventory, BIR-ready accounting hooks
-- **Model:** Setup fee + monthly subscription
-
-***
-
-## 7. How It Works (Process Section)
-
-Present as a numbered step flow:
-
-1. **Book a Discovery Call** — 30-minute free call to understand your business tools and pain points
-2. **Integration Audit** — We map your systems, identify inefficiencies, and design the ideal integration architecture
-3. **We Build It** — Sprint-based development with weekly updates and demos — you see progress in real time
-4. **We Go Live Together** — Shadow mode testing, team training, and go-live support
-5. **We Keep It Running** — Optional retainer for monitoring, maintenance, and continuous improvement
-
-***
-
-## 8. Team / Expertise Section
-
-### Founder A
-- **Role:** Head of Delivery & Growth
-- **Expertise:** Full-stack engineering, mobile development, web & SEO, social media, UX/UI, project management
-- **Stack:** React, Next.js, TypeScript, mobile (React Native/Flutter), SEO tools, social media platforms
-- **Background:** Startup experience; builds the systems and grows the brand
-
-### Founder B
-- **Role:** CEO & Chief Architect
-- **Expertise:** AI engineering, cloud infrastructure, DevOps, software architecture, system design, tech leadership
-- **Stack:** Python, FastAPI, LangChain/LangGraph, vector databases, PostgreSQL, Docker, GCP/AWS, CI/CD
-- **Background:** Acting CEO and tech lead experience in startup environments; has designed and shipped production AI systems
-
-### Team Expertise Highlights (use as icon grid or badge cards):
-- ✅ Full-Stack Development (Web + Mobile)
-- ✅ AI & LLM Integration
-- ✅ Cloud Architecture (GCP, AWS)
-- ✅ DevOps & CI/CD Pipelines
-- ✅ API & Webhook Engineering
-- ✅ Database Architecture & Optimization
-- ✅ UX/UI & Mockup Design
-- ✅ SEO & Digital Marketing
-
-***
-
-## 9. Company Positioning Context
+This document contains all context an AI software engineer needs to build the company website for Real Solutions PH. Read this fully before writing a single line of code.
 
-### Positioning Statement
-Real Solutions PH sits in the white space between:
-- **Self-serve platforms** (Zapier, Make, n8n) — require businesses to build their own automations; breaks at complexity
-- **Enterprise consultancies** (Accenture, IBM) — prohibitively expensive for SMEs
-- **All-in-one ERPs** (Odoo, Zoho One) — can't support every niche tool a business already uses
-
-**Real Solutions PH is the done-for-you integration partner for growing businesses that need custom work at accessible prices.**
-
-### Competitive Advantage Points (use in "Why Us" section):
-- 🇵🇭 **Philippine engineering talent** — 60–70% cost savings vs. Western agencies
-- 🤖 **AI-accelerated delivery** — we use AI tools internally with proper engineering discipline (no tech debt passed to you)
-- 🔒 **Production-grade quality** — code reviews, automated testing, security scanning, proper logging
-- 🔄 **Ongoing accountability** — we're not a one-project-and-done shop; we own the outcome long-term
-- 🌐 **Local + global fluency** — we understand Filipino business tools, compliance, and culture; we also work internationally
-
-***
-
-## 10. Social Proof / Trust Signals (Placeholder Section)
-
-Since the company is at startup stage, use these trust-builders:
-
-- "Built by engineers with X+ years of combined startup experience"
-- Logos or names of tools they're expert in (Next.js, FastAPI, Python, AWS, GCP, React Native, LangChain, etc.)
-- Future: client logos, case study result cards (e.g., "Saved 30 hrs/month of manual data entry for a Batangas retail chain")
-- Link to founders' GitHub and LinkedIn profiles
-- DTI / SEC registration badge once registered
-
-***
-
-## 11. Call-to-Action Strategy
-
-### Primary CTA (above the fold + sticky nav)
-> **"Book a Free Discovery Call"** → Opens Calendly or contact form modal
-
-### Secondary CTA (mid-page and footer)
-> **"Get a Free Integration Estimate"** → Short form: Name, Business Type, Tools Used, Biggest Problem
-
-### Micro CTA (after each service)
-> **"Learn More"** or **"Talk to Us About This"** → Scrolls to contact form
-
-### Form Fields (keep short):
-- Full name
-- Business name
-- Email address
-- What tools are you using? (multi-select or text)
-- What's your biggest operational problem right now? (text area)
-- Optional: Monthly budget range
-
-***
-
-## 12. Page Sections & Suggested Structure
-
-```
-1. NAV BAR
-   - Logo | Services | How It Works | About | Contact
-   - CTA Button: "Book a Free Call"
-
-2. HERO SECTION
-   - Headline: "We Connect Your Tools. You Run Your Business."
-   - Sub-headline: Pain statement + value proposition
-   - Primary CTA button
-   - Hero visual: animated data flow / integration diagram (nodes connecting)
-
-3. PROBLEM SECTION
-   - "Does this sound familiar?" — bulleted pain points
-   - Short paragraph on the AI coding trap
-
-4. SOLUTION SECTION
-   - 3–4 value pillars (icon cards)
-
-5. SERVICES SECTION
-   - Cards for each service with title, description, price range hint, CTA
-
-6. HOW IT WORKS
-   - 5-step numbered flow
-
-7. WHY REAL SOLUTIONS PH
-   - Competitive differentiators grid
-   - Cost comparison callout (PH vs Western rates)
-
-8. TEAM / EXPERTISE
-   - Two founder cards + expertise badges
-
-9. TRUST SIGNALS / SOCIAL PROOF
-   - Tech stack logos, experience highlights
-
-10. CTA SECTION (Full-Width)
-    - Headline: "Ready to connect your business?"
-    - Subtext + form or Calendly embed
-
-11. FOOTER
-    - Company name, location, email, social links
-    - Email: executives.realsolutions.ph@gmail.com
-    - Links: Services | Privacy Policy | Terms
-```
-
-***
-
-## 13. Technical Build Notes for the Agent
-
-- **Framework:** Next.js 14+ (App Router) with TypeScript
-- **Styling:** Tailwind CSS + shadcn/ui components
-- **Animations:** Framer Motion for scroll reveals and hero animations
-- **Forms:** React Hook Form + form submission to Formspree / Resend / custom API route
-- **Deployment:** Vercel (preferred for Next.js)
-- **SEO:** metadata API (title, description, OG tags), structured data (LocalBusiness schema)
-- **Performance targets:** Lighthouse score 90+, Core Web Vitals compliant
-- **Responsive:** Mobile-first, must look great on phones (majority of PH users are mobile)
-- **Font:** Load Inter via `next/font` for performance
-- **Images:** Use `next/image` with proper sizing and WebP format
-- **Analytics:** Google Analytics 4 / Vercel Analytics
-- **Contact/Calendly:** Embed Calendly inline widget or use a modal trigger
-- **Dark mode:** Optional but nice to have — Navy/dark theme as primary is an optionz
+# 1. Company Overview
+
+Company name: Real Solutions PH
+
+Type: Custom software and system integration company
+
+Location: Batangas, Philippines (remote-first)
+
+Founders: Ervin Piol and Kairus Noah Tecson — both former lead full-stack engineers and heads of engineering at an AI startup
+
+Primary market: Philippine SMEs in retail, food, distribution, and service operations
+
+Secondary market: International SMEs and startups seeking cost-efficient senior engineering and rapid MVP delivery
+
+## 2. Brand Positioning & Core Message
+
+The website must communicate one primary message above everything else:
+
+Real Solutions PH helps SMEs get from operational problem to working, production-grade software — fully built, integrated, and managed — without the overhead of doing it themselves.
+
+The four problems the website must resonate with visitors around:
+
+1. Operational overhead — disconnected systems (POS, inventory, HR, CRM, accounting) causing duplicated work, bad reporting, and slow decisions
+
+2. Build complexity — SMEs cannot spec, architect, or QA scalable production-grade software on their own; freelancers and cheap vendors fail at scale
+
+3. Management burden — after launch, software needs maintenance, monitoring, and evolution; most vendors disappear after delivery
+
+4. Decision blindness — without integrated data infrastructure, business owners run on gut, miss early warning signs, and fail without knowing why
+
+Tone: Confident, direct, senior. Not startup-hype, not corporate-formal. Think: senior engineer who also understands business. Clear value, no buzzword padding.
+
+Positioning statement (use verbatim on the website): Real Solutions PH is a prototype-first managed software partner for SMEs that need production-grade custom software and integrations — fully built, scalable, and maintained — without the operational overhead, build complexity, management burden, or decision blindness of doing it themselves.
+
+## 3. Services Offered
+
+These are the exact services the website must list and explain. Each service page or section should connect back to the four pain layers above.
+
+Flagship service: System Integration Development
+
+This is the primary brand anchor and the most important service to highlight. Includes: POS, inventory, HR, payroll, CRM, accounting, and e-commerce integrations — API and webhook integrations — workflow automation — operational dashboards — internal business operations systems
+
+Custom Software Systems Development
+
+Internal tools, admin panels, portals, industry-specific operational systems, management platforms
+
+Website and Web Application Development
+
+Marketing websites, lead-generation websites, portals, web-based operational applications
+
+Mobile Application Development
+
+Customer-facing mobile apps, internal operations apps, staff tools, hybrid mobile systems tied to backend platforms
+
+AI Integration and Custom AI Development
+
+AI-assisted internal workflows, document and knowledge assistants, embedded AI chat systems, AI-powered automation inside business software
+
+## 4. Engagement Model (How It Works)
+
+This is a core section of the website. It must be presented as a clear 4-step client journey, not just a list. Each step should show what the client gets and what risk it eliminates.
+
+Step 1: Discovery Audit
+
+What: Paid discovery session. We map the client's current tools, workflows, integration gaps, pain points, and software opportunities. Deliverables: workflow audit, requirements summary, solution roadmap, and project estimate. Duration: 3–7 days. Price: ₱15,000–₱40,000 (PH) / $300–$800 (International). Note: Discovery fee can be credited toward the MVP build if client proceeds.
+
+Step 2: Prototype Sprint
+
+What: Fast interactive prototype or live mockup. Client sees and reacts to the solution before production code is written. Deliverables: clickable prototype or working mockup, refined requirements, solution direction. Duration: 1–2 weeks. Price: ₱40,000–₱120,000 (PH) / $800–$2,500 (International). Best for: high-ambiguity or complex ideas.
+
+Step 3: MVP Build
+
+What: Production-ready MVP using proper engineering practices — architecture review, CI/CD pipelines, secure implementation, automated testing, cloud deployment. Deliverables: production code, backend, auth, core business workflows, tests, deployment. Duration: 3–8 weeks. Price: ₱150,000–₱900,000+ (PH) / $3,000–$18,000+ (International). Note: Fixed scope or hybrid fixed + T&M depending on complexity.
+
+Step 4: Retainer (Managed Growth)
+
+What: Ongoing partnership after launch. Two tiers: Maintenance Retainer (keep system stable — bug fixes, minor updates, monitoring, support) and Growth Retainer (continuous feature development, new integrations, roadmap advisory). Price: Maintenance: ₱15,000–₱60,000/month (PH) / $500–$1,500/month (International). Growth: ₱40,000–₱120,000/month (PH) / $1,000–$3,000/month (International).
+
+## 5. Website Pages & Required Sections
+
+The website should be a marketing/lead-generation site. It is not an app. Primary goals: (1) communicate value clearly to a business owner who landed from a referral or search, (2) get them to book a Discovery Audit or reach out.
+
+### Page: Home
+
+Sections required:
+
+Hero — Bold headline that names the problem and the solution. Subheadline with the positioning statement. Primary CTA: Book a Discovery Audit. Secondary CTA: See how it works.
+
+Pain section — Visually call out the four pain layers. Short, punchy. Make the visitor feel seen.
+
+What we do — Brief overview of the service offering. Link to Services page.
+
+How it works — The 4-step engagement model (Discovery → Prototype → MVP → Retainer). Visual timeline or step flow.
+
+Why Real Solutions PH — The 4 competitive advantages mapped to the 4 problems.
+
+Founders section — Brief intro to Ervin and Kairus. Humanizes the brand. Reinforces senior credibility.
+
+CTA banner — Strong closing CTA. Book a Discovery Audit. Brief reassurance copy (e.g. no commitment, just clarity).
+
+### Page: Services
+
+List all 5 service categories. Each service should have: name, 1–2 sentence description of what it solves, what’s included (bullet list), who it’s for, indicative timeline. Flagship (System Integration) should appear first and be visually differentiated.
+
+### Page: How It Works
+
+Expanded version of the 4-step engagement model. Each step gets: name, what happens, what the client does, what we deliver, what risk it eliminates, timeline, and pricing range. End with a CTA to start with a Discovery Audit.
+
+### Page: Pricing
+
+Present the full pricing ladder clearly. Use two columns for PH and International pricing. Note: do not hide pricing. SME buyers self-qualify faster when they can see ranges. Include a note that Discovery can be credited toward the MVP.
+
+### Page: About
+
+Company story (brief). Founder profiles: Ervin Piol (local clients, BD, client relations, full-stack and mobile engineering) and Kairus Noah Tecson (international clients, cloud engineering, AI engineering, architecture). Mission: To make tailored business software practical, fast, and convenient for SMEs. Vision: To become a leading managed software and systems integration partner for Philippine SMEs and selected international clients, then evolve into a hybrid service-plus-product company.
+
+### Page: Contact / Book a Discovery
+
+Simple contact form. Fields: Name, Company, Email, Brief description of their problem or what they need. CTA copy: Start with a Discovery Audit — we’ll map your problem and show you what’s possible. No commitment required.
+
+## 6. Copy Guidelines & Key Phrases
+
+Use these exact phrases where appropriate. Do not rephrase or soften them.
+
+Hero headline options (choose one or test):
+
+"Your business software, built right, and managed for you.”
+
+"From disconnected tools to a system that actually works.”
+
+"Stop running your business blind. Build software that tells you the truth.”
+
+Pain framing copy:
+
+"Your POS doesn’t talk to your inventory. Your CRM has no idea what accounting knows. Every gap is costing you time, money, and clarity.”
+
+"Most businesses that close didn’t know they were in trouble. They had no data. No dashboards. No early warning. Just instinct — until it was too late.”
+
+"Building custom software is hard. Most freelancers and cheap vendors produce things that work once and break at scale.”
+
+Value framing copy:
+
+"We don’t just build. We own the full lifecycle — from problem definition to working software to long-term stability.”
+
+"Prototype first. Build second. Never waste budget on the wrong thing.”
+
+"Production-grade from day one. CI/CD, testing, architecture, security — not bolted on later.”
+
+"After we launch, we stay. Retainers keep your software alive, improving, and accountable to the same team that built it.”
+
+## 7. Tech Stack Recommendation
+
+The website is a marketing site, not a product app. Stack should be fast to build, easy to maintain, and performant.
+
+Recommended: Next.js (App Router) + Tailwind CSS. Deploy on Vercel or Cloudflare Pages. Use TypeScript. No heavy CMS needed at this stage — static or MDX-based content is fine.
+
+Contact form: Use a form backend (e.g. Resend, Formspree, or a simple Next.js API route to send email). Do not use a third-party form widget that looks cheap.
+
+Analytics: Add Plausible or Vercel Analytics. No Google Analytics bloat unless required.
+
+No auth, no database, no dynamic user features required at launch. This is a pure marketing site.
+
+## 8. Design Direction
+
+Aesthetic: Clean, modern, professional. Not a startup landing page with generic gradients. Think: premium tech consultancy. Confident whitespace. Sharp typography. Minimal but substantial.
+
+Color palette direction: Dark/neutral base (deep navy, charcoal, or near-black) with a strong accent color (teal, electric blue, or clean orange). White space used aggressively. Avoid neon gradients, generic stock photos, and crowded layouts.
+
+Typography: Use a modern sans-serif (Inter, Geist, or similar). Headlines should be large, bold, and direct. Body text must be readable at comfortable line height.
+
+Imagery: No generic stock photos of people in suits. Use abstract system/tech visuals, clean diagrams, or illustrations of connected systems and workflows. If using photos, use real founder photos on the About page.
+
+Mobile-first: The site must be fully responsive. Many Philippine SME owners will visit on mobile.
+
+Animations: Subtle scroll-triggered fade-ins only. No heavy animation libraries. Performance is more important than visual flair.
+
+## 9. SEO & Lead Generation Context
+
+Primary conversion goal: Book a Discovery Audit. Every page should have this CTA visible.
+
+Target keywords (use naturally in headings and copy):
+
+custom software development Philippines, system integration Philippines, business software for SMEs Philippines, managed software partner Philippines, AI integration Philippines, MVP development Philippines, software integration company Batangas
+
+Meta title format: Real Solutions PH | [Page Topic]
+
+Meta description (homepage): Real Solutions PH builds production-grade custom software and system integrations for Philippine SMEs — prototype-first, fully managed, from discovery to long-term retainer.
+
+OG image: Include a clean branded card with the company name, tagline, and positioning statement. Used for LinkedIn and social sharing.
+
+## 10. What NOT to Do
+
+Do not position the company as a generic outsourcing or freelancing agency.
+
+Do not use phrases like: we build software fast and cheap, AI-powered (without context), we are a team of passionate developers, one-stop-shop, end-to-end solutions, or innovative.
+
+Do not hide pricing. Show ranges. Transparency builds trust with SME buyers.
+
+Do not use a chatbot widget or intrusive popups on load.
+
+Do not make the site about the technology. Make it about the client's problem and relief.
+
+Do not skip the pain section on the homepage. It is the most important section for conversion.
+
+## 11. Primary CTA Everywhere
+
+Every page must have at least one instance of this CTA: Book a Discovery Audit
+
+Supporting copy for the CTA: No commitment. Just clarity on what to build and how to get there.
+
+The contact/booking form is the end goal. All content on the site should funnel toward it.
