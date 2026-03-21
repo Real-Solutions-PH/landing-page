@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: "Book a Discovery Audit — Real Solutions PH",
     description: "Free 30-minute discovery call. We map your problem and show you what's possible, no commitment.",
     url: "https://www.realsolutionsph.com/contact",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Book a Discovery Audit" }],
+    images: [{ url: "/api/og-image", width: 1200, height: 630, alt: "Book a Discovery Audit" }],
   },
 };
 

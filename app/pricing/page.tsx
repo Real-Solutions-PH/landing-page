@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "Real Solutions PH Pricing",
     description: "Transparent, phase-based pricing for SME software integrations. Discovery, Prototype, MVP, and Retainer.",
     url: "https://www.realsolutionsph.com/pricing",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Real Solutions PH Pricing" }],
+    images: [{ url: "/api/og-image", width: 1200, height: 630, alt: "Real Solutions PH Pricing" }],
   },
 };
 

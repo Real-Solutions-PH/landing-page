@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/api/og-image",
         width: 1200,
         height: 630,
         alt: "Real Solutions PH — Custom Software & Integrations for Philippine SMEs",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Real Solutions PH | Custom Software & Integrations for SMEs",
     description: "Connect your POS, inventory, online shop, HR, and accounting into a single coherent system.",
-    images: ["/og-image.png"],
+    images: ["/api/og-image"],
   },
 };
 

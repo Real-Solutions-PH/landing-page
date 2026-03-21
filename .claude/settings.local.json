@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -L -o \"c:/Users/kairu/Documents/Github/landing-page/public/fonts/Inter-Regular.ttf\" \"https://github.com/google/fonts/raw/main/ofl/inter/static/Inter-Regular.ttf\")",
+      "Bash(curl -L -o \"c:/Users/kairu/Documents/Github/landing-page/public/fonts/Inter-ExtraBold.ttf\" \"https://github.com/google/fonts/raw/main/ofl/inter/static/Inter-ExtraBold.ttf\")",
+      "Bash(curl -L -o \"c:/Users/kairu/Documents/Github/landing-page/public/fonts/Inter-Regular.ttf\" \"https://raw.githubusercontent.com/google/fonts/main/ofl/inter/static/Inter-Regular.ttf\")",
+      "Bash(pnpm add:*)"
+    ]
+  }
+}
