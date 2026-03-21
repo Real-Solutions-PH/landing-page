@@ -142,7 +142,7 @@ export function Navbar() {
           </nav>
 
           <div className="mt-4 pt-4 border-t border-border">
-            <Button variant="default" className="w-full rounded-full" asChild>
+            <Button variant="default" className="w-full rounded-full py-3 h-auto text-base" asChild>
               <Link href="/contact" onClick={closeMenu}>
                 Book a Discovery
               </Link>

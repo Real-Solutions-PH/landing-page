@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, TrendingUp } from "lucide-react";
+import { ArrowRight, ArrowUpRight, TrendingUp } from "lucide-react";
 import { PROJECTS, ACCENT_CLASSES } from "@/lib/projects";
 
 const featured = PROJECTS.filter((p) => p.featured);
@@ -145,11 +145,22 @@ export function PortfolioIntroSection() {
                       accentColor={project.accentColor}
                     />
                   )}
-                  {/* Client type pill overlaid */}
-                  <div className="absolute bottom-3 left-3">
+                  {/* Client type pill + live site button overlaid */}
+                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
                     <span className="rounded-full bg-black/40 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
                       {project.clientType}
                     </span>
+                    {project.url && (
+                      <a
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 rounded-full bg-black/40 px-2.5 py-1 text-[10px] font-semibold text-white backdrop-blur-sm hover:bg-black/60 transition-colors"
+                      >
+                        Live site
+                        <ArrowUpRight className="h-3 w-3" />
+                      </a>
+                    )}
                   </div>
                 </div>
 
