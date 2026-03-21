@@ -218,8 +218,8 @@ export function PortfolioIntroSection() {
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
-          <p className="text-xs text-muted-foreground">
-            6 projects across integration, automation, and software development
+          <p className="text-center text-xs text-muted-foreground">
+            {PROJECTS.length} projects across integration, automation, and software development
           </p>
         </motion.div>
       </div>
