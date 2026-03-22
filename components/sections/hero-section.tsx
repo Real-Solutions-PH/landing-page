@@ -63,10 +63,19 @@ export function HeroSection() {
                   <span className="font-semibold text-white">Book a Discovery Audit</span>
                 </Link>
               </Button>
-              <Button variant="outline" className="h-14 rounded-md px-8 text-base shadow-sm flex items-center justify-center gap-2 transition-transform hover:scale-105 bg-background hover:bg-muted hover:text-foreground" asChild>
-                <Link href="/#how-it-works">
-                  <span className="font-semibold">See how it works</span>
-                </Link>
+              <Button
+                variant="outline"
+                className="h-14 rounded-md px-8 text-base shadow-sm flex items-center justify-center gap-2 transition-transform hover:scale-105 bg-background hover:bg-muted hover:text-foreground"
+                onClick={() => {
+                  const el = document.getElementById("how-it-works");
+                  if (el) {
+                    const offset = 80; // account for fixed navbar height
+                    const top = el.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: "smooth" });
+                  }
+                }}
+              >
+                <span className="font-semibold">See how it works</span>
               </Button>
             </div>
             

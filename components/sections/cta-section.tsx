@@ -123,14 +123,33 @@ export function CtaSection() {
                   <p className="text-xs text-red-500 text-center">Something went wrong. Please try again or email us directly.</p>
                 )}
 
-                <Button
-                  size="lg"
-                  className="mt-2 h-12 rounded-xl text-base w-full shadow-sm shadow-primary/20 hover:-translate-y-0.5"
-                  type="submit"
-                  disabled={status === "loading"}
-                >
-                  {status === "loading" ? "Sending…" : "Get Your Free Estimate"}
-                </Button>
+                <div className="flex flex-col gap-3 mt-2">
+                  <Button
+                    size="lg"
+                    className="h-12 rounded-xl text-base w-full shadow-sm shadow-primary/20 hover:-translate-y-0.5"
+                    type="submit"
+                    disabled={status === "loading"}
+                  >
+                    {status === "loading" ? "Sending…" : "Get Your Free Estimate"}
+                  </Button>
+                  
+                  <div className="relative flex items-center py-1">
+                    <div className="flex-grow border-t border-zinc-200 dark:border-zinc-800"></div>
+                    <span className="flex-shrink-0 mx-4 text-xs font-medium text-zinc-500 uppercase tracking-widest">Or</span>
+                    <div className="flex-grow border-t border-zinc-200 dark:border-zinc-800"></div>
+                  </div>
+
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="lg"
+                    className="h-12 rounded-xl text-base w-full"
+                  >
+                    <a href="https://calendly.com/executives-realsolutions-ph/30min" target="_blank" rel="noopener noreferrer">
+                      Book a Call Instead
+                    </a>
+                  </Button>
+                </div>
               </form>
             )}
           </div>

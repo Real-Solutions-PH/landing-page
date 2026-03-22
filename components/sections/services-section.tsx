@@ -131,7 +131,7 @@ export function ServicesSection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="grid w-full gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
+            className="grid w-full gap-6 sm:grid-cols-2 lg:grid-cols-3"
           >
             {SERVICES.map((service, index) => (
               <motion.div
@@ -139,7 +139,7 @@ export function ServicesSection() {
                 variants={itemVariants}
                 className={`relative flex flex-col gap-6 rounded-[32px] border p-8 text-left transition-all hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] 
                   ${service.popular 
-                    ? "border-primary/50 bg-primary/5 shadow-lg dark:bg-primary/10" 
+                    ? "border-primary/50 bg-primary/5 shadow-lg dark:bg-primary/10 sm:col-span-2 lg:col-span-1" 
                     : "border-black/5 bg-white shadow-[0_8px_30px_rgba(0,0,0,0.04)] dark:border-white/10 dark:bg-card/50"
                   }`}
               >
