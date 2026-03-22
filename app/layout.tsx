@@ -14,7 +14,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: {
     default: "Real Solutions PH - Custom Software & Integrations for SMEs",
-    template: "%s | Real Solutions PH",
+    template: "%s - Real Solutions PH",
   },
   description: "Real Solutions PH designs, builds, and maintains custom software integrations for Filipino SMEs — connecting your POS, inventory, CRM, HR, and accounting into one seamless system.",
   keywords: [
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   icons: {
-    icon: "/logo/logo-dark-transparent.svg",
-    shortcut: "/logo/logo-dark-transparent.svg",
-    apple: "/logo/logo-dark-transparent.svg",
+    icon: "/logo/logo-dark.svg",
+    shortcut: "/logo/logo-dark.svg",
+    apple: "/logo/logo-dark.svg",
   },
   openGraph: {
     title: "Real Solutions PH - Custom Software & Integrations for SMEs",
