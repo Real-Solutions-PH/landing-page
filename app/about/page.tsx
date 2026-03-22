@@ -28,11 +28,10 @@ export default function AboutPage() {
               Our Team
             </Badge>
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-              The team behind<br className="hidden sm:block" /> the tech
+              The engineers behind<br className="hidden sm:block" /> Real Solutions PH
             </h1>
             <p className="mx-auto max-w-2xl text-lg text-white/60">
-              We&apos;re engineers who understand both clean architecture and
-              business reality — builders who deliver, not just consultants who advise.
+              A software company in the Philippines built by former startup engineering leaders — we understand both clean architecture and business reality. Builders who deliver, not just consultants who advise.
             </p>
           </motion.div>
         </div>

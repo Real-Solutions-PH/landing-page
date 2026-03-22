@@ -19,17 +19,17 @@ export function AboutSection() {
               Our Story
             </Badge>
             <h2 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl">
-              Engineering for real business problems
+              A software company in the Philippines built for real business problems
             </h2>
             <div className="flex flex-col gap-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Real Solutions PH was built by former startup engineering leaders who realized that the most impactful software isn&apos;t always the flashiest consumer app. It&apos;s the operational glue that keeps a growing business from falling apart.
+                Real Solutions PH is a custom software and system integration company based in Batangas, Philippines. Founded by former startup engineering leaders, we build production-grade software for Philippine SMEs and international clients who need serious engineering — not freelancer-grade workarounds.
               </p>
               <p>
-                For SMEs in the Philippines and abroad, building that technical glue hasn&apos;t been easy. You&apos;re forced to choose between exorbitant enterprise consultancies, cheap freelancers who leave behind unstable code, or trying to piece it together yourself with fragile no-code workarounds.
+                For SMEs in the Philippines and abroad, building operational software hasn&apos;t been easy. You&apos;re forced to choose between exorbitant enterprise consultancies, cheap freelancers who leave behind unstable code, or fragile no-code workarounds that break at scale.
               </p>
               <p>
-                We started Real Solutions PH to eliminate those trade-oﬀs. We provide production-grade architecture, rigorous testing, and serious engineering—made accessible and packaged specifically for the scale of SMEs.
+                We started Real Solutions PH to eliminate those trade-offs. Senior engineers, Philippine rates, production-grade output — accessible to the businesses that need it most.
               </p>
             </div>
           </motion.div>

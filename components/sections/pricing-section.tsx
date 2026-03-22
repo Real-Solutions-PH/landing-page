@@ -393,10 +393,10 @@ export function PricingSection() {
               Pricing Roadmap
             </Badge>
             <h2 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-              Investment exactly as it scales
+              Custom software &amp; integration pricing — Philippines &amp; International
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              We do not hide our pricing. SME buyers need to know the numbers to make decisions. Our engagement model guides you securely from discovery to scaled operations.
+              We do not hide our pricing. Philippine SMEs and international clients need to know the numbers to make decisions. Our engagement model guides you from discovery to scaled operations.
             </p>
           </motion.div>
         </div>

@@ -96,11 +96,10 @@ export default function WorkPage() {
               Our Portfolio
             </Badge>
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-              Real integrations,<br className="hidden sm:block" /> real results
+              Software portfolio —<br className="hidden sm:block" /> Real Solutions PH, Philippines
             </h1>
             <p className="mx-auto max-w-2xl text-lg text-white/60">
-              Every project here is a business that stopped copying and pasting and started
-              scaling. Here&apos;s how we did it.
+              Every project here is a Philippine or international business that stopped copying and pasting and started scaling. Here&apos;s how we did it.
             </p>
           </motion.div>
         </div>
@@ -153,7 +152,7 @@ export default function WorkPage() {
                     {project.image ? (
                       <Image
                         src={project.image}
-                        alt={project.title}
+                        alt={`${project.title} — Real Solutions PH, Philippines`}
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />

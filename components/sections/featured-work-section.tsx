@@ -118,7 +118,7 @@ export function FeaturedWorkSection() {
                     {project.image ? (
                       <Image
                         src={project.image}
-                        alt={project.title}
+                        alt={`${project.title} — Real Solutions PH, Philippines`}
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />

@@ -55,11 +55,11 @@ export function CtaSection() {
               Ready to connect your business?
             </h2>
             <p className="mb-8 text-lg text-primary-foreground/80">
-              Stop letting manual data entry hold your business back. Get a free estimate for your integration project today.
+              Stop letting manual data entry hold your business back. Start with a Discovery Audit — we map your problem and show you exactly what to build.
             </p>
             <div className="flex items-center gap-4 text-sm font-medium">
               <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20">📞</span>
-              <span>Free 30-min Discovery Call</span>
+              <span>No commitment. Just clarity on what to build and how to get there.</span>
             </div>
           </div>
 

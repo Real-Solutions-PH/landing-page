@@ -119,10 +119,10 @@ export function ServicesSection() {
               Our Services
             </Badge>
             <h2 className="mb-6 text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl">
-              Solutions that scale with you
+              Custom software &amp; integration services for Philippine SMEs and international clients
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              From initial technical audits to fully managed operations, we provide the engineering horsepower your business has been missing.
+              From system integration and custom software to AI and mobile — fully built, deployed, and managed. We provide the senior engineering your business has been missing.
             </p>
           </motion.div>
 

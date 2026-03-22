@@ -27,11 +27,11 @@ export default function PricingPage() {
               Transparent Pricing
             </Badge>
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-              Simple, honest,<br className="hidden sm:block" /> phase-based pricing
+              Software development pricing<br className="hidden sm:block" /> — Philippines & International
             </h1>
             <p className="mx-auto max-w-2xl text-lg text-white/60">
               No hidden fees. No lock-in surprises. Know exactly what you&apos;re
-              paying — and what you&apos;re getting — before you commit.
+              paying for custom software, system integration, and managed retainers — before you commit.
             </p>
           </motion.div>
         </div>
