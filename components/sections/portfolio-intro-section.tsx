@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, ArrowUpRight, TrendingUp } from "lucide-react";
 import { PROJECTS, ACCENT_CLASSES } from "@/lib/projects";
+import { ProjectImageCarousel } from "@/components/ui/project-image-carousel";
 
 const featured = PROJECTS.filter((p) => p.featured);
 
@@ -131,7 +132,12 @@ export function PortfolioIntroSection() {
               >
                 {/* Image / Placeholder area */}
                 <div className="relative h-44 w-full shrink-0 overflow-hidden">
-                  {project.image ? (
+                  {project.images && project.images.length > 0 ? (
+                    <ProjectImageCarousel
+                      images={project.images}
+                      alt={`${project.title} — Real Solutions PH, Philippines`}
+                    />
+                  ) : project.image ? (
                     <Image
                       src={project.image}
                       alt={`${project.title} — Real Solutions PH, Philippines`}

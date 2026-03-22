@@ -11,6 +11,8 @@ export type Project = {
   letter: string;
   /** Public-relative path to a screenshot, e.g. /projects/pos-xero.png */
   image?: string;
+  /** Multiple screenshots for the carousel */
+  images?: string[];
   /** Live URL for the project */
   url?: string;
   /** Tailwind gradient classes used for the placeholder card cover */
@@ -32,6 +34,15 @@ export const PROJECTS: Project[] = [
     letter: "A",
     coverGradient: "from-emerald-600 via-teal-500 to-cyan-400",
     image: "/projects/artemis-1 copy.png",
+    images: [
+      "/projects/artemis-1 copy.png",
+      "/projects/artemis-2.png",
+      "/projects/artemis-3.png",
+      "/projects/artemis-4.png",
+      "/projects/artemis-5.png",
+      "/projects/artemis-6.png",
+      "/projects/artemis-7.png",
+    ],
     url: "https://artemis-b18ae.web.app/",
   },
   {
@@ -48,6 +59,12 @@ export const PROJECTS: Project[] = [
     letter: "E",
     coverGradient: "from-blue-600 via-blue-500 to-sky-400",
     image: "/projects/evolve-talents-1.png",
+    images: [
+      "/projects/evolve-talents-1.png",
+      "/projects/evolve-talents-2.png",
+      "/projects/evolve-talents-3.png",
+      "/projects/evolve-talents-4.png",
+    ],
     url: "https://evolve-talents-sample.netlify.app/",
   },
   {
@@ -64,6 +81,11 @@ export const PROJECTS: Project[] = [
     letter: "B",
     coverGradient: "from-orange-500 via-amber-500 to-yellow-400",
     image: "/projects/bath-and-bark-1.png",
+    images: [
+      "/projects/bath-and-bark-1.png",
+      "/projects/bath-and-bark-2.png",
+      "/projects/bath-and-bark-3.png",
+    ],
     url: "https://bathandbark.realsolutionsph.com/",
   },
 ];

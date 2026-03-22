@@ -7,6 +7,7 @@ import Image from "next/image";
 import { ArrowUpRight, TrendingUp } from "lucide-react";
 import { CtaSection } from "@/components/sections/cta-section";
 import { PROJECTS, ACCENT_CLASSES } from "@/lib/projects";
+import { ProjectImageCarousel } from "@/components/ui/project-image-carousel";
 
 const ALL_TAGS = ["All", ...Array.from(new Set(PROJECTS.flatMap((p) => p.tags)))];
 
@@ -149,7 +150,12 @@ export default function WorkPage() {
                 >
                   {/* Image */}
                   <div className="relative h-44 w-full shrink-0 overflow-hidden">
-                    {project.image ? (
+                    {project.images && project.images.length > 0 ? (
+                      <ProjectImageCarousel
+                        images={project.images}
+                        alt={`${project.title} — Real Solutions PH, Philippines`}
+                      />
+                    ) : project.image ? (
                       <Image
                         src={project.image}
                         alt={`${project.title} — Real Solutions PH, Philippines`}
