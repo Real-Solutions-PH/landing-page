@@ -1,18 +1,22 @@
 # AI Agent Instructions for Real Solutions PH (GEMINI.md)
 
 ## 1. PROJECT OVERVIEW & AGENT ROLE
-You are an expert full-stack engineer and UI/UX developer tasked with building the landing page for **Real Solutions PH**. 
+
+You are an expert full-stack engineer and UI/UX developer tasked with building the landing page for **Real Solutions PH**.
 Your primary goal is to write clean, maintainable, production-ready code while strictly adhering to the technical stack, design system, and company branding outlined below. Always be proactive, verify your own work, and think step-by-step.
 
 ## 2. COMPANY CONTEXT & PRODUCT REQUIREMENTS
+
 Always review and reference `CONTEXT.md` for business logic, copywriting, brand tone, section layouts, and target audience definitions.
+
 - **Brand Identity:** Professional, direct, solutions-first, technical but accessible.
 - **Core Value Proposition:** Connecting tools and eliminating manual work for SMEs.
 - **Content:** Avoid generic placeholder text. Rely heavily on the copy and structure provided in `CONTEXT.md`.
 
 ## 3. TECH STACK CONVENTIONS
+
 - **Framework:** Next.js 14+ (App Router)
-- **Language:** TypeScript 
+- **Language:** TypeScript
 - **Styling:** Tailwind CSS v4 + `clsx` + `tailwind-merge`
 - **UI Components:** shadcn/ui (powered by Radix UI primitives)
 - **Icons:** `lucide-react`
@@ -24,21 +28,25 @@ Always review and reference `CONTEXT.md` for business logic, copywriting, brand 
 ## 4. CODING STANDARDS & BEST PRACTICES
 
 ### React & Next.js
-- Use **React Server Components (RSC)** by default to minimize client-side JavaScript. 
+
+- Use **React Server Components (RSC)** by default to minimize client-side JavaScript.
 - Only use `"use client"` directives when interactivity, React hooks (`useState`, `useEffect`), or browser APIs are required.
 - Prioritize Next.js best practices: use `next/link` for navigation, `next/image` for responsive web-optimized images, and `next/font` for local font loading (Inter or Plus Jakarta Sans).
 
 ### TypeScript
-- Write strict TypeScript code. 
+
+- Write strict TypeScript code.
 - Define explicit interfaces or types for all component parameters, props, and shared data models.
 - Avoid using `any`; fall back to `unknown` if a type is truly indeterminate.
 
 ### Styling & Layout
+
 - Implement mobile-first responsive design paradigms.
 - Extract repeated style clusters using Tailwind classes or custom UI components rather than writing inline styles.
 - Support both **Light** and **Dark mode** themes based on the design system palette.
 
 ### Performance & SEO
+
 - Output semantic HTML. Use appropriate heading hierarchies (`h1`, `h2`, `h3`).
 - Implement robust SEO using Next.js Metadata API (titles, descriptions, OpenGraph tags).
 - Aim for maximum Lighthouse performance (90+ score) and strict adherence to Web Content Accessibility Guidelines (WCAG 2.1).

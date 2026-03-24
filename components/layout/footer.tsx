@@ -9,60 +9,134 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex items-center">
               <div className="relative h-10 w-48">
-                <Image 
-                  src="/logo/logo-header-light-transparent 1.svg" 
-                  alt="Real Solutions PH" 
+                <Image
+                  src="/logo/logo-header-light-transparent 1.svg"
+                  alt="Real Solutions PH"
                   fill
                   className="object-contain object-left dark:hidden"
                 />
-                <Image 
-                  src="/logo/logo-header-dark-transparent 1.svg" 
-                  alt="Real Solutions PH" 
+                <Image
+                  src="/logo/logo-header-dark-transparent 1.svg"
+                  alt="Real Solutions PH"
                   fill
                   className="object-contain object-left hidden dark:block"
                 />
               </div>
             </Link>
             <p className="max-w-xs text-sm text-muted-foreground">
-              Real Solutions PH is a prototype-first managed software partner for SMEs that need production-grade custom software and integrations.
+              Real Solutions PH is a prototype-first managed software partner
+              for SMEs that need production-grade custom software and
+              integrations.
             </p>
           </div>
           <div className="flex flex-col gap-2">
             <h4 className="font-semibold">Services</h4>
-            <Link href="/#services" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">System Integration Development</Link>
-            <Link href="/#services" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">Custom Software Systems</Link>
-            <Link href="/#services" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">Website &amp; Web Apps</Link>
-            <Link href="/#services" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">Mobile App Development</Link>
-            <Link href="/#services" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">AI Integration</Link>
+            <Link
+              href="/#services"
+              className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4"
+            >
+              System Integration Development
+            </Link>
+            <Link
+              href="/#services"
+              className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4"
+            >
+              Custom Software Systems
+            </Link>
+            <Link
+              href="/#services"
+              className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4"
+            >
+              Website &amp; Web Apps
+            </Link>
+            <Link
+              href="/#services"
+              className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4"
+            >
+              Mobile App Development
+            </Link>
+            <Link
+              href="/#services"
+              className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4"
+            >
+              AI Integration
+            </Link>
           </div>
           <div className="flex flex-col gap-2">
             <h4 className="font-semibold">Company</h4>
-            <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">About Us</Link>
-            <Link href="/#how-it-works" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">How It Works</Link>
-            <Link href="/pricing" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">Pricing</Link>
-            <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">Book a Discovery</Link>
+            <Link
+              href="/about"
+              className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4"
+            >
+              About Us
+            </Link>
+            <Link
+              href="/#how-it-works"
+              className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4"
+            >
+              How It Works
+            </Link>
+            <Link
+              href="/pricing"
+              className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4"
+            >
+              Pricing
+            </Link>
+            <Link
+              href="/contact"
+              className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4"
+            >
+              Book a Discovery
+            </Link>
           </div>
           <div className="flex flex-col gap-2">
             <h4 className="font-semibold">Legal</h4>
-            <Link href="/privacy-policy" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">Privacy Policy</Link>
-            <Link href="/terms-of-service" className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4">Terms of Service</Link>
+            <Link
+              href="/privacy-policy"
+              className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              href="/terms-of-service"
+              className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4"
+            >
+              Terms of Service
+            </Link>
           </div>
         </div>
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-black/5 pt-8 text-center text-sm text-muted-foreground dark:border-white/10 md:flex-row md:text-left">
           <div className="flex flex-col gap-1">
-            <p>© {new Date().getFullYear()} Real Solutions PH. All rights reserved.</p>
+            <p>
+              © {new Date().getFullYear()} Real Solutions PH. All rights
+              reserved.
+            </p>
             <address className="not-italic text-xs text-muted-foreground/70">
-              <span>Real Solutions PH</span> &middot; <span>Batangas, Philippines</span> &middot;{" "}
-              <a href="mailto:executives.realsolutions.ph@gmail.com" className="hover:text-foreground transition-colors">
+              <span>Real Solutions PH</span> &middot;{" "}
+              <span>Batangas, Philippines</span> &middot;{" "}
+              <a
+                href="mailto:executives.realsolutions.ph@gmail.com"
+                className="hover:text-foreground transition-colors"
+              >
                 executives.realsolutions.ph@gmail.com
               </a>
             </address>
           </div>
           <div className="flex gap-4">
-            <Link href="https://www.linkedin.com/company/real-solutions-ph" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">
+            <Link
+              href="https://www.linkedin.com/company/real-solutions-ph"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-foreground"
+            >
               LinkedIn
             </Link>
-            <Link href="https://github.com/Real-Solutions-PH" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">
+            <Link
+              href="https://github.com/Real-Solutions-PH"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-foreground"
+            >
               GitHub
             </Link>
           </div>

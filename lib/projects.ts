@@ -17,6 +17,8 @@ export type Project = {
   url?: string;
   /** Tailwind gradient classes used for the placeholder card cover */
   coverGradient: string;
+  /** Tailoring image fit, especially useful for portrait screenshots */
+  imageFit?: "cover" | "contain";
 };
 
 export const PROJECTS: Project[] = [
@@ -26,7 +28,8 @@ export const PROJECTS: Project[] = [
     clientType: "IoT / Operations",
     description:
       "Smart waste management platform combining software, mobile access, and IoT-enabled trash bins. Helps organizations monitor waste in real time, automate reporting, and improve collection efficiency. Built the fullstack from the ground up: frontend, mobile, backend, and IoT integration.",
-    outcome: "From manual rounds to real-time monitoring — collection time cut by 60%",
+    outcome:
+      "From manual rounds to real-time monitoring — collection time cut by 60%",
     tags: ["IoT", "Mobile", "Backend", "Frontend", "System Integration"],
     service: "Custom Software & System Integration",
     featured: true,
@@ -51,7 +54,8 @@ export const PROJECTS: Project[] = [
     clientType: "HR / Recruitment",
     description:
       "Premium recruitment and virtual assistant service that helps businesses scale by matching them with vetted remote professionals. Built the company website and handled SEO, positioning Evolve Talents as an end-to-end hiring partner covering recruiting, vetting, payroll, onboarding, and ongoing support.",
-    outcome: "SEO-optimized launch — ranking for target keywords within 30 days",
+    outcome:
+      "SEO-optimized launch — ranking for target keywords within 30 days",
     tags: ["Website", "SEO", "Marketing"],
     service: "Website & Web Application Development",
     featured: true,
@@ -73,7 +77,8 @@ export const PROJECTS: Project[] = [
     clientType: "Retail / Pet Care",
     description:
       "Premium pet care business in Batangas offering grooming, wellness, and health support for dogs and other pets. Built the website, admin and members system, backend, and integrated an AI chatbot to handle customer inquiries and bookings.",
-    outcome: "AI chatbot handles 80% of customer inquiries without human intervention",
+    outcome:
+      "AI chatbot handles 80% of customer inquiries without human intervention",
     tags: ["Website", "Admin System", "Backend", "AI Integration"],
     service: "Custom Software & AI Integration",
     featured: true,
@@ -87,6 +92,35 @@ export const PROJECTS: Project[] = [
       "/projects/bath-and-bark-3.png",
     ],
     url: "https://bathandbark.realsolutionsph.com/",
+  },
+  {
+    id: "aura",
+    title: "Aura — AI-Powered Dating App",
+    clientType: "Consumer App / AI",
+    description:
+      "A premium cross-platform mobile dating application completely designed and built using React Native and Expo. Aura leverages advanced AI integrations (including Google GenAI, ElevenLabs, and AssemblyAI) to provide personalized matchmaking and interactive voice-enabled AI assistants. The app features a stunning glassmorphic UI, comprehensive multi-language support, fluid animations, and robust OTP-based authentication.",
+    outcome:
+      "Seamless real-time AI integration, delivering a highly immersive and personalized user experience",
+    tags: [
+      "Mobile",
+      "React Native",
+      "AI",
+      "Frontend / UI",
+      "Voice Integration",
+    ],
+    service: "Mobile Application Development",
+    featured: true,
+    accentColor: "purple",
+    letter: "A",
+    coverGradient: "from-purple-600 via-fuchsia-500 to-pink-400",
+    image: "/projects/aura-1.png",
+    images: [
+      "/projects/aura-1.png",
+      "/projects/aura-2.png",
+      "/projects/aura-3.png",
+      "/projects/aura-4.png",
+    ],
+    imageFit: "contain",
   },
 ];
 

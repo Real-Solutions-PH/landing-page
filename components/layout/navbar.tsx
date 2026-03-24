@@ -37,7 +37,9 @@ export function Navbar() {
   // Prevent body scroll when menu is open
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [isOpen]);
 
   const closeMenu = () => setIsOpen(false);
@@ -55,7 +57,11 @@ export function Navbar() {
       <header className="fixed top-0 left-0 right-0 z-50 flex h-20 items-center justify-center pt-4 px-4 sm:px-6 lg:px-8">
         <nav className="flex w-full max-w-5xl items-center justify-between rounded-full border border-black/5 bg-white/80 px-6 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.04)] backdrop-blur-md dark:border-white/10 dark:bg-black/60">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2" onClick={handleLogoClick}>
+          <Link
+            href="/"
+            className="flex items-center gap-2"
+            onClick={handleLogoClick}
+          >
             <div className="relative h-8 w-12 flex items-center justify-center">
               <Image
                 src="/logo/logo-light-transparent.svg"
@@ -90,7 +96,11 @@ export function Navbar() {
 
           {/* Desktop CTA + Hamburger */}
           <div className="flex items-center gap-4">
-            <Button variant="default" className="hidden rounded-full sm:flex" asChild>
+            <Button
+              variant="default"
+              className="hidden rounded-full sm:flex"
+              asChild
+            >
               <Link href="/contact">Book a Discovery</Link>
             </Button>
             <Button
@@ -101,7 +111,11 @@ export function Navbar() {
               aria-label={isOpen ? "Close menu" : "Open menu"}
               aria-expanded={isOpen}
             >
-              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {isOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
             </Button>
           </div>
         </nav>
@@ -111,7 +125,9 @@ export function Navbar() {
       <div
         className={cn(
           "fixed inset-0 z-40 flex flex-col md:hidden transition-all duration-300",
-          isOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
+          isOpen
+            ? "pointer-events-auto opacity-100"
+            : "pointer-events-none opacity-0",
         )}
       >
         {/* Backdrop */}
@@ -125,7 +141,7 @@ export function Navbar() {
         <div
           className={cn(
             "relative mt-20 mx-4 rounded-2xl border border-black/5 bg-white/95 px-6 py-6 shadow-2xl backdrop-blur-md dark:border-white/10 dark:bg-[#0d1f38]/95 transition-all duration-300",
-            isOpen ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"
+            isOpen ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0",
           )}
         >
           <nav className="flex flex-col gap-1">
@@ -142,7 +158,11 @@ export function Navbar() {
           </nav>
 
           <div className="mt-4 pt-4 border-t border-border">
-            <Button variant="default" className="w-full rounded-full py-3 h-auto text-base" asChild>
+            <Button
+              variant="default"
+              className="w-full rounded-full py-3 h-auto text-base"
+              asChild
+            >
               <Link href="/contact" onClick={closeMenu}>
                 Book a Discovery
               </Link>

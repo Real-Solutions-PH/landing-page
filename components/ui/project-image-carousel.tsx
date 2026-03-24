@@ -7,12 +7,14 @@ interface ProjectImageCarouselProps {
   images: string[];
   alt: string;
   interval?: number;
+  imageClassName?: string;
 }
 
 export function ProjectImageCarousel({
   images,
   alt,
   interval = 3000,
+  imageClassName = "object-cover",
 }: ProjectImageCarouselProps) {
   const [current, setCurrent] = useState(0);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -37,7 +39,7 @@ export function ProjectImageCarousel({
           src={src}
           alt={`${alt} — screenshot ${i + 1}`}
           fill
-          className={`object-cover transition-opacity duration-700 ${
+          className={`${imageClassName} transition-opacity duration-700 ${
             i === current ? "opacity-100" : "opacity-0"
           }`}
         />

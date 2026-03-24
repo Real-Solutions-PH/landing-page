@@ -9,7 +9,10 @@ import { CtaSection } from "@/components/sections/cta-section";
 import { PROJECTS, ACCENT_CLASSES } from "@/lib/projects";
 import { ProjectImageCarousel } from "@/components/ui/project-image-carousel";
 
-const ALL_TAGS = ["All", ...Array.from(new Set(PROJECTS.flatMap((p) => p.tags)))];
+const ALL_TAGS = [
+  "All",
+  ...Array.from(new Set(PROJECTS.flatMap((p) => p.tags))),
+];
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -97,10 +100,13 @@ export default function WorkPage() {
               Our Portfolio
             </Badge>
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-              Software portfolio —<br className="hidden sm:block" /> Real Solutions PH, Philippines
+              Software portfolio —<br className="hidden sm:block" /> Real
+              Solutions PH, Philippines
             </h1>
             <p className="mx-auto max-w-2xl text-lg text-white/60">
-              Every project here is a Philippine or international business that stopped copying and pasting and started scaling. Here&apos;s how we did it.
+              Every project here is a Philippine or international business that
+              stopped copying and pasting and started scaling. Here&apos;s how
+              we did it.
             </p>
           </motion.div>
         </div>
@@ -109,7 +115,6 @@ export default function WorkPage() {
       {/* Filter + Grid */}
       <section className="relative w-full py-16 sm:py-24 bg-background">
         <div className="container mx-auto px-4 md:px-6">
-
           {/* Filter tabs */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -149,18 +154,33 @@ export default function WorkPage() {
                   className="group flex flex-col overflow-hidden rounded-[24px] border border-black/5 bg-white shadow-[0_8px_30px_rgba(0,0,0,0.04)] transition-all hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] dark:border-white/10 dark:bg-card/50"
                 >
                   {/* Image */}
-                  <div className="relative h-44 w-full shrink-0 overflow-hidden">
+                  <div
+                    className={`relative h-60 w-full shrink-0 overflow-hidden ${
+                      project.imageFit === "contain"
+                        ? "bg-zinc-100/50 dark:bg-black/20"
+                        : ""
+                    }`}
+                  >
                     {project.images && project.images.length > 0 ? (
                       <ProjectImageCarousel
                         images={project.images}
                         alt={`${project.title} — Real Solutions PH, Philippines`}
+                        imageClassName={
+                          project.imageFit === "contain"
+                            ? "object-contain"
+                            : "object-cover"
+                        }
                       />
                     ) : project.image ? (
                       <Image
                         src={project.image}
                         alt={`${project.title} — Real Solutions PH, Philippines`}
                         fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        className={`transition-transform duration-500 group-hover:scale-105 ${
+                          project.imageFit === "contain"
+                            ? "object-contain"
+                            : "object-cover"
+                        }`}
                       />
                     ) : (
                       <ProjectPlaceholder
@@ -198,7 +218,9 @@ export default function WorkPage() {
 
                     {/* Metric stat */}
                     <div className="flex items-center gap-2 rounded-xl border border-black/5 bg-zinc-50 px-4 py-3 dark:border-white/10 dark:bg-white/5">
-                      <TrendingUp className={`h-3.5 w-3.5 shrink-0 ${accent.text}`} />
+                      <TrendingUp
+                        className={`h-3.5 w-3.5 shrink-0 ${accent.text}`}
+                      />
                       <span className="text-sm font-semibold text-foreground">
                         {project.outcome}
                       </span>

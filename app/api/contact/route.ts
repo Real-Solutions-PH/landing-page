@@ -7,7 +7,10 @@ export async function POST(req: NextRequest) {
   const { name, email, company, problem } = await req.json();
 
   if (!name || !email || !problem) {
-    return NextResponse.json({ error: "Missing required fields." }, { status: 400 });
+    return NextResponse.json(
+      { error: "Missing required fields." },
+      { status: 400 },
+    );
   }
 
   const { error } = await resend.emails.send({
@@ -67,7 +70,10 @@ export async function POST(req: NextRequest) {
 
   if (error) {
     console.error("Resend error:", error);
-    return NextResponse.json({ error: "Failed to send email." }, { status: 500 });
+    return NextResponse.json(
+      { error: "Failed to send email." },
+      { status: 500 },
+    );
   }
 
   return NextResponse.json({ success: true });

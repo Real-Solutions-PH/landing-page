@@ -10,10 +10,21 @@ export const metadata: Metadata = {
     description:
       "Real integrations, real results. Projects built for Philippine and international businesses — from IoT waste management platforms to AI-powered pet care systems and recruitment platforms.",
     url: "https://www.realsolutionsph.com/work",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Real Solutions PH Portfolio — Software Projects Philippines" }],
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Real Solutions PH Portfolio — Software Projects Philippines",
+      },
+    ],
   },
 };
 
-export default function WorkLayout({ children }: { children: React.ReactNode }) {
+export default function WorkLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return <>{children}</>;
 }

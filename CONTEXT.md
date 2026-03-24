@@ -195,18 +195,21 @@ OG image: Include a clean branded card with the company name, tagline, and posit
 These are real projects built by Real Solutions PH. Use them in any Work/Portfolio section or as case study references.
 
 ### Artemis
+
 Smart waste management platform that combines software, mobile access, and IoT-enabled trash bins to help organizations monitor waste in real time, automate reporting, and improve collection efficiency. Built the fullstack from the ground up: frontend, mobile app, backend, and IoT integration.
 URL: https://artemis-b18ae.web.app/
 Images: /projects/artemis-1.png, artemis-2.png, artemis-3.png, artemis-4.png, artemis-5.png
 Services demonstrated: Custom Software Systems, Mobile App Development, IoT/System Integration
 
 ### Evolve Talents
+
 Premium recruitment and virtual assistant service platform. The company matches businesses with vetted remote professionals across administrative, technical, executive, onboarding, compliance, marketing, customer success, and finance roles. Positions itself as an end-to-end hiring partner handling recruiting, vetting, payroll, onboarding, and ongoing support. We built the company website and handled SEO.
 URL: https://evolve-talents-sample.netlify.app/
 Images: /projects/evolve-talents-1.png, evolve-talents-2.png, evolve-talents-3.png, evolve-talents-4.png
 Services demonstrated: Website Development, SEO
 
 ### Bath & Bark
+
 Premium pet care business in Batangas offering grooming, wellness, and basic pet health support for dogs and other pets, along with retail of pet products (treats, toys, accessories). High-end, safety-focused brand built around certified groomers, gentle handling, and organic products. We built the website, admin and members system, backend, and AI chatbot integration.
 URL: https://bathandbark.realsolutionsph.com/
 Images: /projects/bath-and-bark-1.png, bath-and-bark-2.png, bath-and-bark-3.png

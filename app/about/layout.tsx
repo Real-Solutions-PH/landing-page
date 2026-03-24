@@ -11,11 +11,20 @@ export const metadata: Metadata = {
       "Engineers who bridge technical solutions with business needs. Meet Ervin and Kairus, the founders of Real Solutions PH.",
     url: "https://www.realsolutionsph.com/about",
     images: [
-      { url: "/og-image.png", width: 1200, height: 630, alt: "Real Solutions PH Team" },
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Real Solutions PH Team",
+      },
     ],
   },
 };
 
-export default function AboutLayout({ children }: { children: React.ReactNode }) {
+export default function AboutLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return <>{children}</>;
 }

@@ -172,9 +172,15 @@ export function FeaturedWorkSection() {
                     </p>
 
                     {/* Metric stat */}
-                    <div className={`flex items-start gap-3 rounded-xl ${accent.bg} px-4 py-3`}>
-                      <TrendingUp className={`mt-0.5 h-4 w-4 shrink-0 ${accent.text}`} />
-                      <span className={`text-sm font-bold leading-snug ${accent.text}`}>
+                    <div
+                      className={`flex items-start gap-3 rounded-xl ${accent.bg} px-4 py-3`}
+                    >
+                      <TrendingUp
+                        className={`mt-0.5 h-4 w-4 shrink-0 ${accent.text}`}
+                      />
+                      <span
+                        className={`text-sm font-bold leading-snug ${accent.text}`}
+                      >
                         {project.outcome}
                       </span>
                     </div>
@@ -203,7 +209,11 @@ export function FeaturedWorkSection() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-12"
           >
-            <Button variant="outline" className="rounded-full h-12 px-8" asChild>
+            <Button
+              variant="outline"
+              className="rounded-full h-12 px-8"
+              asChild
+            >
               <Link href="/work">
                 See all projects
                 <ArrowRight className="ml-2 h-4 w-4" />

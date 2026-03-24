@@ -131,7 +131,7 @@ export function PortfolioIntroSection() {
                 className="group flex flex-col overflow-hidden rounded-2xl border border-black/[0.06] bg-white shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(0,0,0,0.10)] dark:border-white/10 dark:bg-card/60"
               >
                 {/* Image / Placeholder area */}
-                <div className="relative h-44 w-full shrink-0 overflow-hidden">
+                <div className="relative h-80 w-full shrink-0 overflow-hidden">
                   {project.images && project.images.length > 0 ? (
                     <ProjectImageCarousel
                       images={project.images}
@@ -225,7 +225,8 @@ export function PortfolioIntroSection() {
             </Link>
           </Button>
           <p className="text-center text-xs text-muted-foreground">
-            {PROJECTS.length} projects across integration, automation, and software development
+            {PROJECTS.length} projects across integration, automation, and
+            software development
           </p>
         </motion.div>
       </div>

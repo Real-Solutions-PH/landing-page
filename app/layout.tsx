@@ -13,10 +13,12 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Real Solutions PH | Custom Software & System Integration for Philippine SMEs",
+    default:
+      "Real Solutions PH | Custom Software & System Integration for Philippine SMEs",
     template: "%s | Real Solutions PH",
   },
-  description: "Real Solutions PH is a managed software and system integration company in the Philippines. We connect your POS, inventory, CRM, HR, and accounting — production-grade, fully built, and managed for you. Serving Philippine SMEs and international clients.",
+  description:
+    "Real Solutions PH is a managed software and system integration company in the Philippines. We connect your POS, inventory, CRM, HR, and accounting — production-grade, fully built, and managed for you. Serving Philippine SMEs and international clients.",
   keywords: [
     "custom software Philippines",
     "system integration Philippines",
@@ -51,8 +53,10 @@ export const metadata: Metadata = {
     apple: "/logo/logo-dark.svg",
   },
   openGraph: {
-    title: "Real Solutions PH | Custom Software & System Integration for Philippine SMEs",
-    description: "Connect your POS, inventory, online shop, HR, and accounting into a single coherent system. Built right, managed for you. Serving Philippine SMEs and international clients.",
+    title:
+      "Real Solutions PH | Custom Software & System Integration for Philippine SMEs",
+    description:
+      "Connect your POS, inventory, online shop, HR, and accounting into a single coherent system. Built right, managed for you. Serving Philippine SMEs and international clients.",
     url: "https://www.realsolutionsph.com",
     siteName: "Real Solutions PH",
     locale: "en_PH",
@@ -68,8 +72,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Real Solutions PH | Custom Software & System Integration for Philippine SMEs",
-    description: "Connect your POS, inventory, online shop, HR, and accounting into a single coherent system. Serving Philippine SMEs and international clients.",
+    title:
+      "Real Solutions PH | Custom Software & System Integration for Philippine SMEs",
+    description:
+      "Connect your POS, inventory, online shop, HR, and accounting into a single coherent system. Serving Philippine SMEs and international clients.",
     images: ["/og-image.png"],
   },
 };
@@ -121,7 +127,8 @@ export default function RootLayout({
                       itemOffered: {
                         "@type": "Service",
                         name: "System Integration Development",
-                        description: "Connect POS, inventory, HR, payroll, CRM, accounting, and e-commerce systems. API and webhook integrations, workflow automation, and operational dashboards.",
+                        description:
+                          "Connect POS, inventory, HR, payroll, CRM, accounting, and e-commerce systems. API and webhook integrations, workflow automation, and operational dashboards.",
                       },
                     },
                     {
@@ -129,7 +136,8 @@ export default function RootLayout({
                       itemOffered: {
                         "@type": "Service",
                         name: "Custom Software Systems Development",
-                        description: "Internal tools, admin panels, portals, industry-specific operational systems, and management platforms.",
+                        description:
+                          "Internal tools, admin panels, portals, industry-specific operational systems, and management platforms.",
                       },
                     },
                     {
@@ -137,7 +145,8 @@ export default function RootLayout({
                       itemOffered: {
                         "@type": "Service",
                         name: "Website and Web Application Development",
-                        description: "Marketing websites, lead-generation websites, portals, and web-based operational applications.",
+                        description:
+                          "Marketing websites, lead-generation websites, portals, and web-based operational applications.",
                       },
                     },
                     {
@@ -145,7 +154,8 @@ export default function RootLayout({
                       itemOffered: {
                         "@type": "Service",
                         name: "Mobile Application Development",
-                        description: "Customer-facing mobile apps, internal operations apps, staff tools, and hybrid mobile systems.",
+                        description:
+                          "Customer-facing mobile apps, internal operations apps, staff tools, and hybrid mobile systems.",
                       },
                     },
                     {
@@ -153,7 +163,8 @@ export default function RootLayout({
                       itemOffered: {
                         "@type": "Service",
                         name: "AI Integration and Custom AI Development",
-                        description: "AI-assisted internal workflows, document and knowledge assistants, embedded AI chat systems, and AI-powered automation.",
+                        description:
+                          "AI-assisted internal workflows, document and knowledge assistants, embedded AI chat systems, and AI-powered automation.",
                       },
                     },
                   ],
@@ -169,7 +180,8 @@ export default function RootLayout({
                 "@id": "https://www.realsolutionsph.com/#website",
                 url: "https://www.realsolutionsph.com",
                 name: "Real Solutions PH",
-                description: "Custom software and system integration company in the Philippines serving Philippine SMEs and international clients.",
+                description:
+                  "Custom software and system integration company in the Philippines serving Philippine SMEs and international clients.",
                 publisher: {
                   "@id": "https://www.realsolutionsph.com/#organization",
                 },
@@ -177,7 +189,8 @@ export default function RootLayout({
                   "@type": "SearchAction",
                   target: {
                     "@type": "EntryPoint",
-                    urlTemplate: "https://www.realsolutionsph.com/?q={search_term_string}",
+                    urlTemplate:
+                      "https://www.realsolutionsph.com/?q={search_term_string}",
                   },
                   "query-input": "required name=search_term_string",
                 },
@@ -186,7 +199,9 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.variable} font-sans antialiased bg-background text-foreground selection:bg-accent/20`}>
+      <body
+        className={`${inter.variable} font-sans antialiased bg-background text-foreground selection:bg-accent/20`}
+      >
         <Navbar />
         {children}
         <Analytics />

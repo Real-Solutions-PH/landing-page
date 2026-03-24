@@ -7,22 +7,26 @@ import { Blocks, Code2, HeartHandshake, Zap } from "lucide-react";
 const PILLARS = [
   {
     title: "One system. All your tools.",
-    description: "We connect your POS, inventory, online shop, HR, payroll, and accounting into a single coherent flow.",
+    description:
+      "We connect your POS, inventory, online shop, HR, payroll, and accounting into a single coherent flow.",
     icon: Blocks,
   },
   {
     title: "We build it. You use it.",
-    description: "No DIY automation that breaks. No wasted AI credits. A team of engineers who deliver production-grade work.",
+    description:
+      "No DIY automation that breaks. No wasted AI credits. A team of engineers who deliver production-grade work.",
     icon: Code2,
   },
   {
     title: "Senior-level engineering. Philippine rates.",
-    description: "60–70% less than hiring a Western agency — without compromising code quality, security, or delivery.",
+    description:
+      "60–70% less than hiring a Western agency — without compromising code quality, security, or delivery.",
     icon: Zap,
   },
   {
     title: "We keep it running.",
-    description: "Monthly retainers for monitoring, maintenance, and continuous improvement. Integration isn't a one-time job.",
+    description:
+      "Monthly retainers for monitoring, maintenance, and continuous improvement. Integration isn't a one-time job.",
     icon: HeartHandshake,
   },
 ];
@@ -39,10 +43,10 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" as const }
+    transition: { duration: 0.6, ease: "easeOut" as const },
   },
 };
 
@@ -58,14 +62,18 @@ export function SolutionSection() {
             transition={{ duration: 0.8 }}
             className="mb-16"
           >
-            <Badge variant="outline" className="mb-6 uppercase tracking-widest text-[10px] text-muted-foreground bg-white dark:bg-black shadow-sm">
+            <Badge
+              variant="outline"
+              className="mb-6 uppercase tracking-widest text-[10px] text-muted-foreground bg-white dark:bg-black shadow-sm"
+            >
               The Solution
             </Badge>
             <h2 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
               Why Real Solutions PH?
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              We don&apos;t just sell you a new software tool. We engineer a cohesive system out of the ones you already have.
+              We don&apos;t just sell you a new software tool. We engineer a
+              cohesive system out of the ones you already have.
             </p>
           </motion.div>
 

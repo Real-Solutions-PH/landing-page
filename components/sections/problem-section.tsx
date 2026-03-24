@@ -7,28 +7,36 @@ import { Badge } from "@/components/ui/badge";
 const PAINS = [
   {
     title: "Operational Overhead",
-    description: "Disconnected systems (POS, inventory, HR, CRM, accounting) causing duplicated work, bad reporting, and slow decisions.",
-    quote: "Your POS doesn’t talk to your inventory. Your CRM has no idea what accounting knows. Every gap is costing you time, money, and clarity.",
-    icon: Layers
+    description:
+      "Disconnected systems (POS, inventory, HR, CRM, accounting) causing duplicated work, bad reporting, and slow decisions.",
+    quote:
+      "Your POS doesn’t talk to your inventory. Your CRM has no idea what accounting knows. Every gap is costing you time, money, and clarity.",
+    icon: Layers,
   },
   {
     title: "Build Complexity",
-    description: "SMEs cannot spec, architect, or QA scalable production-grade software on their own; freelancers and cheap vendors fail at scale.",
-    quote: "Building custom software is hard. Most freelancers and cheap vendors produce things that work once and break at scale.",
-    icon: Target
+    description:
+      "SMEs cannot spec, architect, or QA scalable production-grade software on their own; freelancers and cheap vendors fail at scale.",
+    quote:
+      "Building custom software is hard. Most freelancers and cheap vendors produce things that work once and break at scale.",
+    icon: Target,
   },
   {
     title: "Management Burden",
-    description: "After launch, software needs maintenance, monitoring, and evolution; most vendors disappear after delivery.",
-    quote: "Retainers keep your software alive, improving, and accountable to the same team that built it.",
-    icon: Briefcase
+    description:
+      "After launch, software needs maintenance, monitoring, and evolution; most vendors disappear after delivery.",
+    quote:
+      "Retainers keep your software alive, improving, and accountable to the same team that built it.",
+    icon: Briefcase,
   },
   {
     title: "Decision Blindness",
-    description: "Without integrated data infrastructure, business owners run on gut, miss early warning signs, and fail without knowing why.",
-    quote: "Most businesses that close didn’t know they were in trouble. They had no data. No dashboards. No early warning. Just instinct — until it was too late.",
-    icon: Activity
-  }
+    description:
+      "Without integrated data infrastructure, business owners run on gut, miss early warning signs, and fail without knowing why.",
+    quote:
+      "Most businesses that close didn’t know they were in trouble. They had no data. No dashboards. No early warning. Just instinct — until it was too late.",
+    icon: Activity,
+  },
 ];
 
 export function ProblemSection() {
@@ -42,7 +50,10 @@ export function ProblemSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <Badge variant="outline" className="mb-4 uppercase tracking-widest text-[10px] text-muted-foreground border-border bg-background shadow-sm">
+            <Badge
+              variant="outline"
+              className="mb-4 uppercase tracking-widest text-[10px] text-muted-foreground border-border bg-background shadow-sm"
+            >
               The Problem
             </Badge>
             <h2 className="mb-6 text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl">
@@ -70,11 +81,11 @@ export function ProblemSection() {
                       {pain.title}
                     </h3>
                   </div>
-                  
+
                   <p className="mb-6 text-sm text-muted-foreground leading-relaxed">
                     {pain.description}
                   </p>
-                  
+
                   <div className="mt-auto relative">
                     <div className="absolute -left-1 -top-4 text-4xl text-muted-foreground/10 font-serif leading-none transition-colors group-hover:text-primary/10">
                       &quot;
