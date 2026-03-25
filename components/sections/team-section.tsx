@@ -28,7 +28,7 @@ const FOUNDERS: Founder[] = [
       "Client Relations",
       "Business Development",
     ],
-    website: "https://ervin-piol.netlify.app/",
+    website: "https://ervinpiol.realsolutionsph.com/",
   },
   {
     name: "Kairus Noah Tecson",
