@@ -87,7 +87,7 @@ export default function WorkPage() {
           <div className="absolute h-[400px] w-[400px] -left-20 top-10 rounded-full bg-sky-400/20 blur-[120px]" />
           <div className="absolute h-[300px] w-[300px] right-0 bottom-0 rounded-full bg-primary/20 blur-[100px]" />
         </div>
-        <div className="container relative z-10 mx-auto px-4 md:px-6 text-center">
+        <div className="container relative z-10 mx-auto px-4 md:px-6 max-w-7xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -114,7 +114,7 @@ export default function WorkPage() {
 
       {/* Filter + Grid */}
       <section className="relative w-full py-16 sm:py-24 bg-background">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           {/* Filter tabs */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}

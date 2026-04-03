@@ -71,13 +71,6 @@ export function HeroSection() {
               <span className="mt-3 block">and managed for you.</span>
             </h1>
 
-            <p className="mb-8 max-w-lg text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Real Solutions PH is a prototype-first managed software partner
-              for SMEs that need production-grade custom software and
-              integrations — fully built, scalable, and maintained — without the
-              operational overhead, build complexity, management burden, or
-              decision blindness of doing it themselves.
-            </p>
             <p className="mb-8 max-w-lg text-sm leading-relaxed text-muted-foreground">
               Based in the Philippines. Serving local SMEs and international
               clients seeking senior engineering at cost-effective rates.

@@ -47,7 +47,7 @@ const comparisonData = [
 export function WhyUsSection() {
   return (
     <section className="relative w-full overflow-hidden bg-background py-16 sm:py-24">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 max-w-7xl">
         <div className="flex flex-col items-center justify-center text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

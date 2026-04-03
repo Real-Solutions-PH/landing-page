@@ -9,7 +9,7 @@ import { ArrowRight, ArrowUpRight, TrendingUp } from "lucide-react";
 import { PROJECTS, ACCENT_CLASSES } from "@/lib/projects";
 import { ProjectImageCarousel } from "@/components/ui/project-image-carousel";
 
-const featured = PROJECTS.filter((p) => p.featured);
+const featured = PROJECTS.filter((p) => p.featured).slice(0, 3);
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -89,7 +89,7 @@ export function PortfolioIntroSection() {
         <div className="absolute bottom-0 left-0 h-[300px] w-[300px] rounded-full bg-accent/5 blur-[100px]" />
       </div>
 
-      <div className="container relative z-10 mx-auto px-4 md:px-6">
+      <div className="container relative z-10 mx-auto px-4 md:px-6 max-w-7xl">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
