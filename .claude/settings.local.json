@@ -11,7 +11,15 @@
       "Bash(xargs kill:*)",
       "Bash(grep -r \"dark:\" /Users/kairusnoahtecson/Documents/Github/landing-page/components/sections/*.tsx)",
       "Bash(source ~/.nvm/nvm.sh)",
-      "Bash(source ~/.zshrc)"
+      "Bash(source ~/.zshrc)",
+      "Bash(PATH=\"$HOME/.local/share/pnpm:$HOME/.nvm/versions/node/*/bin:/opt/homebrew/bin:/usr/local/bin:$PATH\")",
+      "Bash(/opt/homebrew/bin/npx next:*)",
+      "Read(//Users/kairusnoahtecson/Documents/Github/landing-page/$HOME/.local/share/**)",
+      "Read(//Users/kairusnoahtecson/Documents/Github/landing-page/$HOME/Library/**)",
+      "Bash(command -v pnpm)",
+      "Read(//opt/homebrew/bin/**)",
+      "Read(//usr/local/bin/**)",
+      "Bash(corepack enable:*)"
     ]
   }
 }

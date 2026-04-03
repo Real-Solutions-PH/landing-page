@@ -3,8 +3,9 @@
   "configurations": [
     {
       "name": "dev",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
+      "runtimeExecutable": "/Users/kairusnoahtecson/.nvm/versions/node/v22.19.0/bin/node",
+      "runtimeArgs": ["node_modules/.bin/next", "dev"],
+      "env": { "PATH": "/Users/kairusnoahtecson/.nvm/versions/node/v22.19.0/bin:/usr/bin:/bin" },
       "port": 3000,
       "autoPort": true
     }

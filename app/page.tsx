@@ -10,22 +10,22 @@ import { CtaSection } from "@/components/sections/cta-section";
 
 export const metadata: Metadata = {
   title:
-    "Real Solutions PH | Custom Software & System Integration Company in the Philippines",
+    "Real Solutions PH | Custom Software Development & System Integration Company in the Philippines",
   description:
-    "Real Solutions PH builds production-grade custom software and system integrations for Philippine SMEs and international clients — prototype-first, fully managed, from discovery to long-term retainer. Based in Batangas, Philippines.",
+    "Real Solutions PH is a custom software development company in Batangas, Philippines. We build production-grade software, system integrations, mobile apps, and AI solutions for Philippine SMEs and international clients. Affordable rates, senior engineers, fully managed — from discovery audit to long-term retainer.",
   alternates: { canonical: "/" },
   openGraph: {
     title:
-      "Real Solutions PH | Custom Software & System Integration Company in the Philippines",
+      "Real Solutions PH | Custom Software Development & System Integration in the Philippines",
     description:
-      "Prototype-first managed software partner for Philippine SMEs and international clients. We connect your POS, inventory, CRM, HR, and accounting — built right, fully managed.",
+      "Custom software development company in the Philippines. We connect your POS, inventory, CRM, HR, and accounting into one system. Affordable software development for SMEs — built right, fully managed.",
     url: "https://www.realsolutionsph.com",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Real Solutions PH — Custom Software & System Integration for Philippine SMEs",
+        alt: "Real Solutions PH — Custom Software Development & System Integration for Philippine SMEs",
       },
     ],
   },

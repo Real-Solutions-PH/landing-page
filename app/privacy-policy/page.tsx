@@ -3,9 +3,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata = {
-  title: "Privacy Policy | Real Solutions PH",
+  title: "Privacy Policy",
   description:
-    "Privacy Policy for Real Solutions PH. Learn how we collect, use, and protect your data.",
+    "Privacy Policy for Real Solutions PH. Learn how we collect, use, and protect your personal data when using our custom software development and system integration services.",
+  alternates: { canonical: "/privacy-policy" },
 };
 
 export default function PrivacyPolicy() {

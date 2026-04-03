@@ -3,9 +3,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata = {
-  title: "Terms of Service | Real Solutions PH",
+  title: "Terms of Service",
   description:
-    "Terms of Service for Real Solutions PH. Please read these terms carefully before using our services.",
+    "Terms of Service for Real Solutions PH. Please read these terms carefully before engaging our custom software development and system integration services.",
+  alternates: { canonical: "/terms-of-service" },
 };
 
 export default function TermsOfService() {

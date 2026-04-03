@@ -229,7 +229,7 @@ export function ServicesSection() {
                     >
                       {service.cta === "Get a Free Estimate" ||
                       service.cta === "Ask About Retainers" ? (
-                        <a href="#contact">
+                        <a href="/contact">
                           {service.cta}
                           <ArrowRight className="ml-2 h-4 w-4" />
                         </a>
