@@ -76,12 +76,12 @@ export function Footer() {
             >
               How It Works
             </Link>
-            <Link
+            {/* <Link
               href="/pricing"
               className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4"
             >
               Pricing
-            </Link>
+            </Link> */}
             <Link
               href="/contact"
               className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4"

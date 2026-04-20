@@ -12,7 +12,7 @@ const navLinks = [
   { href: "/#services", label: "Services" },
   { href: "/#how-it-works", label: "How It Works" },
   { href: "/work", label: "Work" },
-  { href: "/pricing", label: "Pricing" },
+  // { href: "/pricing", label: "Pricing" },
   { href: "/about", label: "About" },
 ];
 
@@ -127,7 +127,7 @@ export function Navbar() {
           "fixed inset-0 z-40 flex flex-col md:hidden transition-all duration-300",
           isOpen
             ? "pointer-events-auto opacity-100"
-            : "pointer-events-none opacity-0",
+            : "pointer-events-none opacity-0"
         )}
       >
         {/* Backdrop */}
@@ -141,7 +141,7 @@ export function Navbar() {
         <div
           className={cn(
             "relative mt-20 mx-4 rounded-2xl border border-black/5 bg-white/95 px-6 py-6 shadow-2xl backdrop-blur-md dark:border-white/10 dark:bg-[#0d1f38]/95 transition-all duration-300",
-            isOpen ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0",
+            isOpen ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"
           )}
         >
           <nav className="flex flex-col gap-1">
