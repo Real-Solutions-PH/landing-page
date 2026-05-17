@@ -35,9 +35,9 @@ const comparisonData = [
   {
     title: "Real Solutions PH",
     items: [
-      "We start with discovery, so the right problem gets solved.",
-      "We prototype before full build, reducing waste and misalignment.",
+      "We do fast prototype before full build, reducing waste and misalignment in a short amount of time.",
       "We deliver production-grade software and stay to maintain it.",
+      "Senior engineers paired with AI, internal templates, and design systems keep builds lean — so you get competitive pricing and fast MVP delivery without sacrificing quality.",
       "You get a tailored system and a long-term technical partner.",
     ],
     highlight: true,

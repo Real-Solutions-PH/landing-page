@@ -122,6 +122,100 @@ export const PROJECTS: Project[] = [
     ],
     imageFit: "contain",
   },
+  {
+    id: "food-costing-system",
+    title: "Food Costing System",
+    clientType: "Food & Beverage / Operations",
+    description:
+      "A comprehensive food costing and recipe management system built for restaurants and food businesses. Enables accurate ingredient cost tracking, recipe costing, and menu profitability analysis to help operators make data-driven pricing decisions and control food costs.",
+    outcome:
+      "Accurate, real-time food cost visibility across all menu items",
+    tags: ["Web App", "Backend", "Dashboard", "Operations"],
+    service: "Custom Software Development",
+    featured: true,
+    accentColor: "amber",
+    letter: "F",
+    coverGradient: "from-amber-500 via-orange-400 to-yellow-300",
+    image: "/projects/food-costing-system-1.png",
+    images: [
+      "/projects/food-costing-system-1.png",
+      "/projects/food-costing-system-2.png",
+      "/projects/food-costing-system-3.png",
+      "/projects/food-costing-system-4.png",
+    ],
+  },
+  {
+    id: "osms",
+    title: "Orders & Subscription Management System",
+    clientType: "E-Commerce / SaaS",
+    description:
+      "A full-featured orders and subscription management platform that handles the complete lifecycle of customer orders and recurring subscriptions. Includes order tracking, subscription billing, customer management, and reporting dashboards to streamline operations for subscription-based businesses.",
+    outcome:
+      "Fully automated subscription lifecycle management from sign-up to renewal",
+    tags: ["Web App", "Backend", "Subscriptions", "E-Commerce"],
+    service: "Custom Software Development",
+    featured: true,
+    accentColor: "sky",
+    letter: "O",
+    coverGradient: "from-sky-600 via-cyan-500 to-teal-400",
+    image: "/projects/osms-1.png",
+    images: [
+      "/projects/osms-1.png",
+      "/projects/osms-2.png",
+      "/projects/osms-3.png",
+      "/projects/osms-4.png",
+      "/projects/osms-5.png",
+    ],
+  },
+  {
+    id: "hydroguide",
+    title: "HydroGuide — Hydroponics Farm Management App",
+    clientType: "AgriTech / Mobile",
+    description:
+      "A mobile app for iOS and Android built to help hydroponics growers manage crop guides, planting cycles, daily farm tasks, and inventory — all in one place. Designed for hobbyist to small commercial growers using DFT, NFT, Dutch bucket, and similar setups. Features setup management, plant batch tracking, a crop guide library, a setup-aware daily checklist engine, inventory with low-stock alerts, and a reporting dashboard.",
+    outcome:
+      "One app replaces spreadsheets and guesswork — growers always know what to do today",
+    tags: ["Mobile", "Flutter", "Backend", "AgriTech", "IoT-Ready"],
+    service: "Mobile Application Development",
+    featured: true,
+    accentColor: "green",
+    letter: "H",
+    coverGradient: "from-green-600 via-lime-500 to-emerald-400",
+    imageFit: "contain",
+    image: "/projects/hydroguide-1.png",
+    images: [
+      "/projects/hydroguide-1.png",
+      "/projects/hydroguide-2.png",
+      "/projects/hydroguide-3.png",
+      "/projects/hydroguide-4.png",
+      "/projects/hydroguide-5.png",
+      "/projects/hydroguide-6.png",
+      "/projects/hydroguide-7.png",
+      "/projects/hydroguide-8.png",
+      "/projects/hydroguide-9.png",
+    ],
+  },
+  {
+    id: "stocksense",
+    title: "StockSense — Inventory Management System",
+    clientType: "Retail / Operations",
+    description:
+      "A smart inventory management system designed to give businesses real-time stock visibility and control. Features include stock level tracking, low-inventory alerts, purchase order management, and analytics to minimize waste and prevent stockouts.",
+    outcome:
+      "Real-time inventory visibility leading to reduced stockouts and overstock",
+    tags: ["Web App", "Backend", "Dashboard", "Inventory"],
+    service: "Custom Software Development",
+    featured: true,
+    accentColor: "emerald",
+    letter: "S",
+    coverGradient: "from-emerald-500 via-green-400 to-teal-300",
+    image: "/projects/stocksense-1.png",
+    images: [
+      "/projects/stocksense-1.png",
+      "/projects/stocksense-2.png",
+      "/projects/stocksense-3.png",
+    ],
+  },
 ];
 
 export const ACCENT_CLASSES: Record<
@@ -157,5 +251,10 @@ export const ACCENT_CLASSES: Record<
     bg: "bg-amber-100 dark:bg-amber-900/50",
     text: "text-amber-600 dark:text-amber-400",
     dot: "bg-amber-400",
+  },
+  green: {
+    bg: "bg-green-100 dark:bg-green-900/50",
+    text: "text-green-600 dark:text-green-400",
+    dot: "bg-green-400",
   },
 };
