@@ -2,23 +2,33 @@ import { Metadata } from "next";
 import { CtaSection } from "@/components/sections/cta-section";
 
 export const metadata: Metadata = {
-  title: "Book a Discovery Audit — Get a Free Software Estimate",
+  title: "Book a Discovery Audit",
   description:
-    "Start with a Discovery Audit from Real Solutions PH. We map your workflow gaps, identify custom software and system integration opportunities, and deliver a clear roadmap with estimates. Software development consultation in the Philippines.",
+    "Book a Discovery Audit with Real Solutions PH. We map your workflow, identify integration opportunities, and deliver a clear roadmap with estimates.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Book a Discovery Audit — Real Solutions PH, Philippines",
+    title: "Book a Discovery Audit",
     description:
-      "Get a software development consultation from Real Solutions PH. We map your operational problems and deliver a full solution roadmap — custom software, system integration, and managed services.",
+      "Book a Discovery Audit with Real Solutions PH. We map your workflow, identify integration opportunities, and deliver a clear roadmap with estimates.",
     url: "https://www.realsolutionsph.com/contact",
+    siteName: "Real Solutions PH",
+    locale: "en_PH",
+    type: "website",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Book a Discovery Audit — Real Solutions PH Software Consultation",
+        alt: "Book a Discovery Audit — Real Solutions PH",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Book a Discovery Audit",
+    description:
+      "Book a Discovery Audit with Real Solutions PH. We map your workflow, identify integration opportunities, and deliver a clear roadmap with estimates.",
+    images: ["/og-image.png"],
   },
 };
 

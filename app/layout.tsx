@@ -14,11 +14,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: {
     default:
-      "Real Solutions PH | Custom Software & System Integration for Philippine SMEs",
+      "Real Solutions PH — Custom Software & System Integration",
     template: "%s | Real Solutions PH",
   },
   description:
-    "Real Solutions PH is a managed software and system integration company in Batangas, Philippines. We build custom software, connect your POS, inventory, CRM, HR, and accounting — production-grade, fully built, and managed for you. Affordable software development for Philippine SMEs and international clients.",
+    "Custom software development and system integration in Batangas, Philippines. We connect POS, inventory, CRM, HR, and accounting for SMEs and global clients.",
   keywords: [
     // Tier 1: High-intent commercial
     "custom software development Philippines",
@@ -74,9 +74,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Real Solutions PH | Custom Software & System Integration for Philippine SMEs",
+      "Real Solutions PH — Custom Software & System Integration",
     description:
-      "Custom software development and system integration company in the Philippines. Connect your POS, inventory, online shop, HR, and accounting into a single coherent system. Built right, managed for you. Serving Philippine SMEs and international clients.",
+      "Custom software and system integration in Batangas, Philippines. Connect POS, inventory, CRM, HR, and accounting for SMEs and global clients.",
     url: "https://www.realsolutionsph.com",
     siteName: "Real Solutions PH",
     locale: "en_PH",
@@ -86,17 +86,30 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Real Solutions PH — Custom Software & System Integration for Philippine SMEs",
+        alt: "Real Solutions PH — Custom Software & System Integration",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
+    site: "@realsolutionsph",
+    creator: "@realsolutionsph",
     title:
-      "Real Solutions PH | Custom Software & System Integration for Philippine SMEs",
+      "Real Solutions PH — Custom Software & System Integration",
     description:
-      "Custom software development and system integration company in the Philippines. Connect your POS, inventory, online shop, HR, and accounting into a single coherent system. Serving Philippine SMEs and international clients.",
+      "Custom software and system integration in Batangas, Philippines. Connect POS, inventory, CRM, HR, and accounting for SMEs and global clients.",
     images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 
@@ -115,7 +128,7 @@ export default function RootLayout({
               // Organization + ProfessionalService schema
               {
                 "@context": "https://schema.org",
-                "@type": ["ProfessionalService", "SoftwareApplication"],
+                "@type": "ProfessionalService",
                 "@id": "https://www.realsolutionsph.com/#organization",
                 name: "Real Solutions PH",
                 url: "https://www.realsolutionsph.com",
@@ -243,7 +256,8 @@ export default function RootLayout({
                 description:
                   "Custom software development and system integration company in Batangas, Philippines. Affordable software solutions for SMEs.",
                 url: "https://www.realsolutionsph.com",
-                telephone: "",
+                image:
+                  "https://www.realsolutionsph.com/og-image.png",
                 email: "executives.realsolutions.ph@gmail.com",
                 address: {
                   "@type": "PostalAddress",

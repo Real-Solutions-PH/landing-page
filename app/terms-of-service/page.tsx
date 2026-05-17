@@ -2,11 +2,37 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 
-export const metadata = {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
   title: "Terms of Service",
   description:
-    "Terms of Service for Real Solutions PH. Please read these terms carefully before engaging our custom software development and system integration services.",
+    "Terms governing use of Real Solutions PH custom software development, system integration, and managed services in the Philippines and internationally.",
   alternates: { canonical: "/terms-of-service" },
+  openGraph: {
+    title: "Terms of Service",
+    description:
+      "Terms governing use of Real Solutions PH custom software development, system integration, and managed services in the Philippines and internationally.",
+    url: "https://www.realsolutionsph.com/terms-of-service",
+    siteName: "Real Solutions PH",
+    locale: "en_PH",
+    type: "article",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Real Solutions PH Terms of Service",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms of Service",
+    description:
+      "Terms governing use of Real Solutions PH custom software development, system integration, and managed services in the Philippines and internationally.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function TermsOfService() {
@@ -88,6 +114,51 @@ export default function TermsOfService() {
 
           <section>
             <h2 className="text-2xl font-semibold text-foreground mb-4">
+              4a. Warranties and Disclaimers
+            </h2>
+            <p>
+              We warrant that the services will be performed in a professional
+              and workmanlike manner, consistent with generally accepted
+              industry standards. Except as expressly stated in these terms,
+              all services are provided on an &quot;as is&quot; and &quot;as
+              available&quot; basis without warranties of any kind, either
+              express or implied, including but not limited to warranties of
+              merchantability, fitness for a particular purpose, or
+              non-infringement.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold text-foreground mb-4">
+              4b. Client Responsibilities
+            </h2>
+            <p>
+              You agree to provide timely access to information, systems,
+              credentials, and personnel reasonably required for us to perform
+              the services. You are responsible for the accuracy and legality
+              of all data, content, and materials you provide. You will
+              maintain appropriate backups of any data we may access or
+              process. Delays caused by client unresponsiveness may result in
+              extended project timelines and additional fees.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold text-foreground mb-4">
+              4c. Confidentiality
+            </h2>
+            <p>
+              Each party agrees to maintain the confidentiality of any
+              proprietary or non-public information disclosed by the other
+              party during the course of the engagement. Confidential
+              information will not be disclosed to third parties without prior
+              written consent, except as required by law. This obligation
+              survives termination of the agreement.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold text-foreground mb-4">
               5. Limitation of Liability
             </h2>
             <p>
@@ -95,7 +166,26 @@ export default function TermsOfService() {
               not be liable for any indirect, incidental, special,
               consequential, or punitive damages, or any loss of profits or
               revenues, whether incurred directly or indirectly, resulting from
-              your use of clinical services or third-party integrations.
+              your use of our services or third-party integrations. Our
+              aggregate liability for any claim arising under these terms shall
+              not exceed the fees paid by you for the specific service giving
+              rise to the claim during the three (3) months preceding the
+              event.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold text-foreground mb-4">
+              5a. Termination
+            </h2>
+            <p>
+              Either party may terminate an engagement with written notice
+              under the conditions described in the applicable service
+              agreement. Upon termination, you will pay for all work performed
+              up to the termination date. Sections of these terms that by
+              their nature should survive termination — including intellectual
+              property, confidentiality, and limitation of liability — will
+              continue to apply.
             </p>
           </section>
 

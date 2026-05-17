@@ -1,27 +1,3 @@
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Pricing",
-  description:
-    "Transparent, phase-based pricing for Philippine SMEs and international clients. Custom software, system integrations, AI development, mobile apps — know exactly what you're paying before you commit.",
-  alternates: { canonical: "/pricing" },
-  openGraph: {
-    title:
-      "Software Development Pricing — Philippines & International | Real Solutions PH",
-    description:
-      "Transparent pricing for custom software, system integration, AI development, and managed retainers. Serving Philippine SMEs and international clients.",
-    url: "https://www.realsolutionsph.com/pricing",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Real Solutions PH Pricing — Software Development Philippines",
-      },
-    ],
-  },
-};
-
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",

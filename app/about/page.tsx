@@ -5,25 +5,33 @@ import { TeamSection } from "@/components/sections/team-section";
 import { CtaSection } from "@/components/sections/cta-section";
 
 export const metadata: Metadata = {
-  title:
-    "About Us — Software Engineers & Developers in the Philippines",
+  title: "About Our Software Engineers",
   description:
-    "Meet the engineers behind Real Solutions PH — a custom software development company in Batangas, Philippines. Former startup engineering leaders building production-grade software, system integrations, and managed solutions for Philippine SMEs and international clients.",
+    "Meet the engineers behind Real Solutions PH — former startup leaders building production-grade software for Philippine SMEs and international clients.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title:
-      "About Real Solutions PH — Software Engineers in the Philippines",
+    title: "About Our Software Engineers",
     description:
-      "A Philippine software company built by former startup engineering leaders. We build production-grade custom software and system integrations for SMEs — fully managed, from discovery to long-term retainer.",
+      "Meet the engineers behind Real Solutions PH — former startup leaders building production-grade software for Philippine SMEs and international clients.",
     url: "https://www.realsolutionsph.com/about",
+    siteName: "Real Solutions PH",
+    locale: "en_PH",
+    type: "website",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "About Real Solutions PH — Software Engineers in the Philippines",
+        alt: "About Real Solutions PH",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Our Software Engineers",
+    description:
+      "Meet the engineers behind Real Solutions PH — former startup leaders building production-grade software for Philippine SMEs and international clients.",
+    images: ["/og-image.png"],
   },
 };
 

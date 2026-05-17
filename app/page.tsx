@@ -10,24 +10,35 @@ import { CtaSection } from "@/components/sections/cta-section";
 
 export const metadata: Metadata = {
   title:
-    "Real Solutions PH | Custom Software Development & System Integration Company in the Philippines",
+    "Custom Software Development & System Integration PH",
   description:
-    "Real Solutions PH is a custom software development company in Batangas, Philippines. We build production-grade software, system integrations, mobile apps, and AI solutions for Philippine SMEs and international clients. Affordable rates, senior engineers, fully managed — from discovery audit to long-term retainer.",
+    "Real Solutions PH builds custom software and connects POS, inventory, CRM, HR, and accounting for Philippine SMEs and international clients.",
   alternates: { canonical: "/" },
   openGraph: {
     title:
-      "Real Solutions PH | Custom Software Development & System Integration in the Philippines",
+      "Custom Software Development & System Integration PH",
     description:
-      "Custom software development company in the Philippines. We connect your POS, inventory, CRM, HR, and accounting into one system. Affordable software development for SMEs — built right, fully managed.",
+      "Real Solutions PH builds custom software and connects POS, inventory, CRM, HR, and accounting for Philippine SMEs and international clients.",
     url: "https://www.realsolutionsph.com",
+    siteName: "Real Solutions PH",
+    locale: "en_PH",
+    type: "website",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Real Solutions PH — Custom Software Development & System Integration for Philippine SMEs",
+        alt: "Real Solutions PH — Custom Software & System Integration",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Custom Software Development & System Integration PH",
+    description:
+      "Real Solutions PH builds custom software and connects POS, inventory, CRM, HR, and accounting for Philippine SMEs and international clients.",
+    images: ["/og-image.png"],
   },
 };
 

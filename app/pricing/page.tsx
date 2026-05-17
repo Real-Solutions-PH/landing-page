@@ -4,25 +4,33 @@ import { PricingSection } from "@/components/sections/pricing-section";
 import { CtaSection } from "@/components/sections/cta-section";
 
 export const metadata: Metadata = {
-  title:
-    "Software Development Pricing — Philippines & International Rates",
+  title: "Pricing — Software Development Rates",
   description:
-    "Transparent software development pricing from Real Solutions PH. Custom software from ₱42,000, system integration from ₱10,000, managed retainers from ₱3,500/month. Serving Philippine SMEs and international clients from Batangas, Philippines.",
+    "Transparent software development pricing. Custom software, integration, AI, mobile apps, and retainers for Philippine SMEs and international clients.",
   alternates: { canonical: "/pricing" },
   openGraph: {
-    title:
-      "Software Development Pricing — Real Solutions PH",
+    title: "Pricing — Software Development Rates",
     description:
-      "Transparent pricing for custom software, system integration, and managed retainers. No hidden fees, no lock-in. Philippine SME and international rates available.",
+      "Transparent software development pricing. Custom software, integration, AI, mobile apps, and retainers for Philippine SMEs and international clients.",
     url: "https://www.realsolutionsph.com/pricing",
+    siteName: "Real Solutions PH",
+    locale: "en_PH",
+    type: "website",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Software Development Pricing — Real Solutions PH",
+        alt: "Real Solutions PH Pricing",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pricing — Software Development Rates",
+    description:
+      "Transparent software development pricing. Custom software, integration, AI, mobile apps, and retainers for Philippine SMEs and international clients.",
+    images: ["/og-image.png"],
   },
 };
 

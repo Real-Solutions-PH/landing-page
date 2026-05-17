@@ -3,25 +3,33 @@ import { WorkContent } from "@/components/sections/work-content";
 import { CtaSection } from "@/components/sections/cta-section";
 
 export const metadata: Metadata = {
-  title:
-    "Software Portfolio — Custom Software Projects in the Philippines",
+  title: "Software Portfolio & Case Studies",
   description:
-    "View our portfolio of custom software projects — system integrations, web applications, mobile apps, and AI solutions built for Philippine SMEs and international clients. Real Solutions PH delivers production-grade software from Batangas, Philippines.",
+    "Real Solutions PH portfolio — system integrations, web apps, mobile apps, and AI projects for Philippine SMEs and international clients.",
   alternates: { canonical: "/work" },
   openGraph: {
-    title:
-      "Software Portfolio — Real Solutions PH, Philippines",
+    title: "Software Portfolio & Case Studies",
     description:
-      "Custom software, system integrations, mobile apps, and AI solutions built for Philippine SMEs and international clients. See real projects with real results.",
+      "Real Solutions PH portfolio — system integrations, web apps, mobile apps, and AI projects for Philippine SMEs and international clients.",
     url: "https://www.realsolutionsph.com/work",
+    siteName: "Real Solutions PH",
+    locale: "en_PH",
+    type: "website",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Software Portfolio — Real Solutions PH, Philippines",
+        alt: "Real Solutions PH Portfolio",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Software Portfolio & Case Studies",
+    description:
+      "Real Solutions PH portfolio — system integrations, web apps, mobile apps, and AI projects for Philippine SMEs and international clients.",
+    images: ["/og-image.png"],
   },
 };
 
