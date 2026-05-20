@@ -170,8 +170,8 @@ function RotatingQuotes() {
   const story = PAIN_STORIES[active];
 
   return (
-    <div className="relative flex flex-col items-center justify-center">
-      <div className="relative w-full max-w-md">
+    <div className="relative flex w-full flex-col items-center justify-center">
+      <div className="relative w-full max-w-md min-h-[380px] sm:min-h-[340px]">
         <AnimatePresence mode="wait">
           <motion.div
             key={active}
@@ -179,7 +179,7 @@ function RotatingQuotes() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, filter: "blur(4px)" }}
             transition={{ duration: 0.4 }}
-            className="rounded-2xl border border-border bg-card/60 p-8 backdrop-blur-sm sm:p-10"
+            className="absolute inset-0 rounded-2xl border border-border bg-card/60 p-8 backdrop-blur-sm sm:p-10"
           >
             {/* Large decorative quote mark */}
             <div className="mb-1 select-none font-serif text-6xl leading-none text-foreground/10">
@@ -269,7 +269,7 @@ function RotatingQuotes() {
 
 export function ProblemSection() {
   return (
-    <section className="relative flex h-screen w-full items-center overflow-hidden bg-zinc-50 dark:bg-zinc-950">
+    <section className="relative flex min-h-screen w-full items-center overflow-hidden bg-zinc-50 dark:bg-zinc-950 py-24 lg:py-0">
       <div className="container relative mx-auto max-w-7xl px-4 md:px-6">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* ── LEFT COLUMN: Header + Stats ── */}
@@ -349,7 +349,7 @@ export function ProblemSection() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex flex-col items-center justify-center"
+            className="flex w-full flex-col items-center justify-center"
           >
             <motion.p
               initial={{ opacity: 0 }}
