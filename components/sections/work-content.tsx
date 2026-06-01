@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import { ArrowUpRight, TrendingUp } from "lucide-react";
 import { PROJECTS, ACCENT_CLASSES } from "@/lib/projects";
 import { ProjectImageCarousel } from "@/components/ui/project-image-carousel";
+import { PageHero, GradientText } from "@/components/sections/page-hero";
 
 const ALL_TAGS = [
   "All",
@@ -81,35 +81,19 @@ export function WorkContent() {
   return (
     <>
       {/* Hero */}
-      <section className="relative w-full overflow-hidden bg-[#102A52] pt-40 pb-20">
-        <div className="pointer-events-none absolute inset-0 opacity-30">
-          <div className="absolute h-[400px] w-[400px] -left-20 top-10 rounded-full bg-sky-400/20 blur-[120px]" />
-          <div className="absolute h-[300px] w-[300px] right-0 bottom-0 rounded-full bg-primary/20 blur-[100px]" />
-        </div>
-        <div className="container relative z-10 mx-auto px-4 md:px-6 max-w-7xl text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <Badge
-              variant="outline"
-              className="mb-6 uppercase tracking-widest text-[10px] border-white/20 bg-white/10 text-white/70 shadow-sm"
-            >
-              Our Portfolio
-            </Badge>
-            <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-              Custom software projects —<br className="hidden sm:block" /> Built
-              in the Philippines
-            </h1>
-            <p className="mx-auto max-w-2xl text-lg text-white/60">
-              Real-world software solutions for Philippine SMEs and international
-              clients. System integrations, custom platforms, mobile apps, and AI
-              — all production-grade.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Our Portfolio"
+        maxWidth="max-w-5xl"
+        titleClassName="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl leading-[1.1]"
+        title={
+          <>
+            Custom software projects —
+            <br className="hidden sm:block" />{" "}
+            <GradientText>Built in the Philippines</GradientText>
+          </>
+        }
+        description="Real-world software solutions for Philippine SMEs and international clients. System integrations, custom platforms, mobile apps, and AI — all production-grade."
+      />
 
       {/* Filter + Grid */}
       <section className="relative w-full py-16 sm:py-24 bg-background">
@@ -154,7 +138,7 @@ export function WorkContent() {
                 >
                   {/* Image */}
                   <div
-                    className={`relative h-60 w-full shrink-0 overflow-hidden ${
+                    className={`relative h-44 w-full shrink-0 overflow-hidden ${
                       project.imageFit === "contain"
                         ? "bg-zinc-100/50 dark:bg-black/20"
                         : ""
