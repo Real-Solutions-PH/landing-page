@@ -25,14 +25,16 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Force canonical host: non-www -> www (matches canonical tags + sitemap)
       {
-        source: "/portfolio",
-        destination: "/work",
+        source: "/:path*",
+        has: [{ type: "host", value: "realsolutionsph.com" }],
+        destination: "https://www.realsolutionsph.com/:path*",
         permanent: true,
       },
       {
-        source: "/services",
-        destination: "/#services",
+        source: "/portfolio",
+        destination: "/work",
         permanent: true,
       },
     ];

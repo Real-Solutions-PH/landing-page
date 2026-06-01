@@ -9,10 +9,10 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { href: "/#services", label: "Services" },
-  { href: "/#how-it-works", label: "How It Works" },
+  { href: "/services", label: "Services" },
+  { href: "/how-we-work", label: "How We Work" },
   { href: "/work", label: "Work" },
-  // { href: "/pricing", label: "Pricing" },
+  { href: "/blog", label: "Insights" },
   { href: "/about", label: "About" },
 ];
 

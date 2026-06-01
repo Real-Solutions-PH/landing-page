@@ -8,6 +8,8 @@ export const metadata: Metadata = {
   description:
     "Transparent software development pricing. Custom software, integration, AI, mobile apps, and retainers for Philippine SMEs and international clients.",
   alternates: { canonical: "/pricing" },
+  // Page is intentionally hidden from nav; keep it out of the index until relaunched.
+  robots: { index: false, follow: true },
   openGraph: {
     title: "Pricing — Software Development Rates",
     description:

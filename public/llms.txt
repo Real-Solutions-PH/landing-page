@@ -1,0 +1,30 @@
+# Real Solutions PH
+
+> Real Solutions PH is a software development company in Batangas, Philippines, serving Philippine SMEs and international clients. We specialize in system integration, custom software, AI development, and web & mobile apps. Our prototype-first, AI-accelerated delivery system is led by senior startup engineers (head-of-engineering and lead-engineer level), letting us ship production-grade software faster and more affordably than traditional agencies — locally and internationally.
+
+## Key facts
+
+- Company: Real Solutions PH
+- Location: Batangas, Philippines (serves PH + international clients)
+- Founders: Ervin Piol (Co-Founder & Full-Stack Engineer, local clients & mobile) and Kairus Noah Tecson (Co-Founder & AI/Cloud Engineer, international clients)
+- Differentiator: AI-accelerated, prototype-first delivery system run by senior startup engineers — fast and cost-efficient without sacrificing engineering quality
+- Engagement model: managed software partner (not staff augmentation or freelancers); clients own their code and data
+- Process: Discovery Audit (3–7 days) → Prototype Sprint → MVP Build (3–8 weeks) → Managed Growth
+- Contact: executives.realsolutions.ph@gmail.com
+
+## Services
+
+- [System Integration](https://www.realsolutionsph.com/services/system-integration): Connect POS, inventory, CRM, HR, and accounting into one real-time system. From ₱42,000 (1–2 systems) to ₱455,000 (6+ systems).
+- [Custom Software Development](https://www.realsolutionsph.com/services/custom-software): Production-grade software built around your workflow. From ₱63,000 (simple tool) to ₱1,050,000+ (advanced platform).
+- [AI Software Development](https://www.realsolutionsph.com/services/ai-software-development): Custom AI wired into your existing systems. From ₱14,000 (feature) to ₱315,000+ (AI platform).
+- [Web & Mobile App Development](https://www.realsolutionsph.com/services/web-mobile-apps): Conversion-focused websites, web apps, and cross-platform iOS/Android apps. From ₱17,500 (website) to ₱490,000 (advanced mobile app).
+
+## Pages
+
+- [Home](https://www.realsolutionsph.com/)
+- [Services](https://www.realsolutionsph.com/services)
+- [How We Work](https://www.realsolutionsph.com/how-we-work): The AI-optimized delivery system and why it's faster and cheaper.
+- [Work / Portfolio](https://www.realsolutionsph.com/work): Case studies including Artemis, Evolve Talents, Bath & Bark, Aura, HydroGuide, StockSense.
+- [About](https://www.realsolutionsph.com/about): The engineering team behind Real Solutions PH.
+- [Insights / Blog](https://www.realsolutionsph.com/blog): Guides on software cost, outsourcing, and integration in the Philippines.
+- [Contact](https://www.realsolutionsph.com/contact): Book a Discovery Audit.

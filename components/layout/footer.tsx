@@ -32,34 +32,34 @@ export function Footer() {
           <div className="flex flex-col gap-2">
             <h4 className="font-semibold">Services</h4>
             <Link
-              href="/#services"
+              href="/services/system-integration"
               className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4"
             >
-              System Integration Development
+              System Integration
             </Link>
             <Link
-              href="/#services"
+              href="/services/custom-software"
               className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4"
             >
-              Custom Software Systems
+              Custom Software
             </Link>
             <Link
-              href="/#services"
+              href="/services/ai-software-development"
               className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4"
             >
-              Website &amp; Web Apps
+              AI Development
             </Link>
             <Link
-              href="/#services"
+              href="/services/web-mobile-apps"
               className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4"
             >
-              Mobile App Development
+              Web &amp; Mobile Apps
             </Link>
             <Link
-              href="/#services"
+              href="/services"
               className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4"
             >
-              AI Integration
+              All Services
             </Link>
           </div>
           <div className="flex flex-col gap-2">
@@ -71,16 +71,22 @@ export function Footer() {
               About Us
             </Link>
             <Link
-              href="/#how-it-works"
+              href="/how-we-work"
               className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4"
             >
-              How It Works
+              How We Work
             </Link>
             <Link
               href="/work"
               className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4"
             >
               Portfolio
+            </Link>
+            <Link
+              href="/blog"
+              className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4"
+            >
+              Insights
             </Link>
             {/* <Link
               href="/pricing"
