@@ -224,6 +224,303 @@ export const posts: Post[] = [
       },
     ],
   },
+  {
+    slug: "business-process-automation-philippines-sme",
+    title:
+      "Business Process Automation for Philippine SMEs: Where to Start",
+    metaTitle:
+      "Business Process Automation for Philippine SMEs (2026 Guide)",
+    description:
+      "The manual tasks quietly costing your team hours every week — and a practical, low-risk way for Philippine SMEs to start automating business processes in 2026.",
+    keywords: [
+      "business process automation Philippines",
+      "business automation software Philippines",
+      "workflow automation small business",
+      "automate business processes Philippines",
+      "SME automation Philippines",
+    ],
+    date: "2026-06-02",
+    dateLabel: "June 2, 2026",
+    excerpt:
+      "The repetitive work quietly draining your team's hours — and a practical, low-risk way for Philippine SMEs to start automating it.",
+    readMinutes: 6,
+    body: [
+      {
+        type: "p",
+        text: "Every growing business runs on a hidden pile of manual work: copying orders into a spreadsheet, sending the same follow-up messages, compiling the same weekly report, chasing approvals over chat. None of it is hard. All of it eats hours, invites mistakes, and doesn't scale. Business process automation is about handing that repetitive work to software so your team can spend its time on the things that actually need a human.",
+      },
+      {
+        type: "h2",
+        text: "What business process automation really is",
+      },
+      {
+        type: "p",
+        text: "Automation isn't about replacing people or buying one giant platform. It's about finding the repeatable, rules-based steps in how your business runs and letting software do them reliably. A new order automatically creates an invoice and a delivery task. A paid invoice updates your books. A submitted form routes to the right person for approval. Small automations, compounding across a whole team, free up serious time.",
+      },
+      {
+        type: "h2",
+        text: "Where Philippine SMEs lose the most time",
+      },
+      {
+        type: "ul",
+        items: [
+          "Re-typing data between apps that don't talk to each other.",
+          "Manual reporting — exporting and stitching spreadsheets every week.",
+          "Repetitive customer messages: confirmations, reminders, and follow-ups.",
+          "Approval chains that live in group chats and get forgotten.",
+          "Inventory and reorder tracking done by hand.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "How to start without betting the business",
+      },
+      {
+        type: "p",
+        text: "The right way to begin is small and measurable. Pick one painful, high-frequency process — not ten. Map exactly how it works today, automate that single workflow, and measure the hours saved. Once it's proven, expand. This keeps risk low and builds trust with the team, who see the benefit before anything bigger changes.",
+      },
+      {
+        type: "ul",
+        items: [
+          "List your most repetitive weekly tasks and roughly how long each takes.",
+          "Pick the one that's frequent, rules-based, and error-prone.",
+          "Automate just that, then measure the time saved over a few weeks.",
+          "Reinvest the saved hours — and the proof — into the next workflow.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "What it costs — and what it returns",
+      },
+      {
+        type: "p",
+        text: "Automation is one of the highest-ROI software investments an SME can make, because the cost is largely one-time while the time savings recur every week. Many automations are built as part of a system integration (from around ₱42,000) or a small custom tool. The honest first step is a Discovery Audit (₱10,000–₱22,000, or $700–$1,200 internationally), where we map your workflows and tell you which automations will actually pay for themselves — and which aren't worth it yet.",
+      },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "What's the difference between automation and integration?",
+            a: "Integration connects your systems so data flows between them; automation adds the rules and actions on top — what should happen automatically when that data changes. They're closely related and often delivered together.",
+          },
+          {
+            q: "Do I need to replace my current tools to automate?",
+            a: "Usually not. Most automation is built around the tools you already use, connecting and extending them rather than replacing them.",
+          },
+          {
+            q: "What's a realistic first automation?",
+            a: "Something frequent and rules-based — automatic order-to-invoice, weekly report generation, or customer follow-up messages. We help you pick the one with the best payoff in a Discovery Audit.",
+          },
+        ],
+      },
+      {
+        type: "links",
+        heading: "Related",
+        items: [
+          { label: "Custom Software Development service", href: "/services/custom-software" },
+          { label: "System Integration service", href: "/services/system-integration" },
+          { label: "How we work", href: "/how-we-work" },
+          { label: "Book a Discovery Audit", href: "/contact" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ai-for-business-philippines",
+    title:
+      "AI for Philippine Businesses: Practical Uses That Actually Pay Off",
+    metaTitle:
+      "AI for Business in the Philippines: Practical Uses (2026)",
+    description:
+      "Beyond the hype — concrete, ROI-positive ways Philippine SMEs are using AI in 2026, and how to add it to the systems you already run.",
+    keywords: [
+      "AI integration Philippines",
+      "AI for business Philippines",
+      "AI automation Philippines",
+      "AI software development Philippines",
+      "AI for small business Philippines",
+    ],
+    date: "2026-06-05",
+    dateLabel: "June 5, 2026",
+    excerpt:
+      "Beyond the hype: concrete, ROI-positive ways Philippine SMEs are using AI in 2026 — and how to add it to the systems you already run.",
+    readMinutes: 6,
+    body: [
+      {
+        type: "p",
+        text: "AI is having a moment, and most of the advice about it is either breathless hype or vague fear. For a business owner the real question is simpler: where can AI save money or make money right now, without a science project? In 2026, the answer for most Philippine SMEs isn't a flashy chatbot on the homepage — it's quietly embedding AI into the workflows you already run.",
+      },
+      {
+        type: "h2",
+        text: "Where AI earns its keep for SMEs",
+      },
+      {
+        type: "ul",
+        items: [
+          "Document and data handling: pulling figures off invoices, receipts, and forms automatically instead of typing them.",
+          "Internal knowledge assistants: a chat tool that answers staff questions from your own SOPs, manuals, and product data.",
+          "Customer support triage: drafting replies and routing enquiries so your team handles the exceptions, not every message.",
+          "Summarising and reporting: turning long threads, tickets, or sales data into a clear weekly summary.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "What to ignore (for now)",
+      },
+      {
+        type: "p",
+        text: "Plenty of AI ideas look impressive in a demo and disappoint in production. Fully autonomous systems making high-stakes decisions, AI that needs perfectly clean data you don't have, and 'AI for AI's sake' features that don't map to a real cost or revenue lever — these usually aren't worth it yet. The test is simple: can you name the hour saved or the peso earned? If not, wait.",
+      },
+      {
+        type: "h2",
+        text: "AI works best on top of connected systems",
+      },
+      {
+        type: "p",
+        text: "AI is only as good as the data it can reach. A model that can't see your orders, inventory, or customer history can't do much for your business. That's why AI integration and system integration go hand in hand — once your systems are connected, adding an AI layer that reads and acts on that data becomes far more powerful and far cheaper.",
+      },
+      {
+        type: "h2",
+        text: "How to add AI without a research budget",
+      },
+      {
+        type: "p",
+        text: "The practical path mirrors any good software project: start with a paid Discovery Audit to find the one or two AI use-cases with real payoff, prototype quickly so you can react to something concrete, then build the smallest version that delivers value — and only expand once it's proven. At Real Solutions PH, AI is delivered like any other production system: senior-led, integrated with your existing tools, and owned by you.",
+      },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "Is AI worth it for a small business in the Philippines?",
+            a: "Yes, when it's pointed at a specific, repetitive, costly task — document handling, support triage, internal Q&A. It's not worth it as a vague 'add AI' initiative with no clear payoff.",
+          },
+          {
+            q: "Do I need a lot of data to use AI?",
+            a: "Less than people assume. Many high-value uses — reading documents, answering questions from your own manuals, drafting replies — work with the data you already have, especially once your systems are connected.",
+          },
+          {
+            q: "Can you add AI to my existing software?",
+            a: "Yes. Most of our AI work is embedded into clients' existing tools and workflows rather than built as a separate product. Connected systems make this faster and cheaper.",
+          },
+        ],
+      },
+      {
+        type: "links",
+        heading: "Related",
+        items: [
+          { label: "AI Software Development service", href: "/services/ai-software-development" },
+          { label: "System Integration service", href: "/services/system-integration" },
+          { label: "How we work", href: "/how-we-work" },
+          { label: "Book a Discovery Audit", href: "/contact" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "system-integration-small-business-philippines",
+    title:
+      "System Integration for Small Businesses in the Philippines: Connect Your POS, Inventory & Accounting",
+    metaTitle:
+      "System Integration in the Philippines: Connect POS, Inventory & Accounting",
+    description:
+      "How system integration connects the POS, inventory, CRM, and accounting tools you already use — what it costs in the Philippines, and how it's built.",
+    keywords: [
+      "system integration Philippines",
+      "system integration company Philippines",
+      "connect POS and accounting Philippines",
+      "POS integration Philippines",
+      "business systems integration small business Philippines",
+    ],
+    date: "2026-06-09",
+    dateLabel: "June 9, 2026",
+    excerpt:
+      "Your POS, inventory, and accounting don't talk to each other — so someone re-types everything. Here's what system integration costs and how it works.",
+    readMinutes: 7,
+    body: [
+      {
+        type: "p",
+        text: "Most growing businesses don't have a software problem — they have a disconnection problem. Your POS knows what sold, your inventory sheet knows what's in stock, your accounting software knows what was paid, and none of them talk to each other. So someone re-types the same numbers three times, reports are always a day behind, and nobody fully trusts the data. System integration fixes exactly this.",
+      },
+      {
+        type: "h2",
+        text: "What system integration actually means",
+      },
+      {
+        type: "p",
+        text: "System integration connects the tools you already use so data flows between them automatically. Instead of replacing your POS, inventory, CRM, HR, and accounting with one giant platform, integration wires them together — a sale in your POS updates stock, posts to accounting, and shows up on a single dashboard without anyone copying a cell. You keep the tools your team already knows; they just stop working in isolation.",
+      },
+      {
+        type: "h2",
+        text: "Signs your business needs integration",
+      },
+      {
+        type: "ul",
+        items: [
+          "Your staff re-enter the same data into two or more systems every day.",
+          "Your stock levels, sales, and cash position never quite agree.",
+          "Reporting means exporting spreadsheets from several apps and stitching them by hand.",
+          "You've outgrown manual processes, but an all-in-one ERP feels too expensive and disruptive.",
+          "You're making decisions on numbers that are days old.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "What system integration costs in the Philippines",
+      },
+      {
+        type: "p",
+        text: "Integration is usually far cheaper than custom-building or replacing systems, because you're connecting things that already work. At Real Solutions PH, integration projects start from around ₱42,000 for connecting one or two systems (for example, POS + accounting) and scale to ₱455,000+ for an advanced suite linking six or more. International rates run roughly $3,500 to $32,000+. Most integration MVPs ship in two to twelve weeks, depending on how many systems are involved and how clean the data is.",
+      },
+      {
+        type: "h2",
+        text: "How an integration is actually built",
+      },
+      {
+        type: "ul",
+        items: [
+          "APIs and webhooks: when a system exposes a modern API, we connect directly so changes sync in real time.",
+          "Middleware: when systems don't speak the same language, a lightweight service in between translates and routes the data.",
+          "Automation rules: the logic that decides what happens when — a paid invoice triggers a stock adjustment; a low stock level triggers a reorder alert.",
+          "A single dashboard: one place to see sales, stock, and cash, instead of five browser tabs.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Connect first, replace only if you must",
+      },
+      {
+        type: "p",
+        text: "The most common — and most expensive — mistake is ripping out working tools to chase a single all-in-one platform. That means migration risk, retraining, and a big bill, often to solve a problem that integration would have solved for a fraction of the cost. We start by mapping your current stack in a Discovery Audit, then connect what works and only rebuild what genuinely holds you back.",
+      },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "What systems can you integrate?",
+            a: "Common ones include POS, inventory, e-commerce (Shopify, Lazada), accounting (Xero, QuickBooks), CRM, and HR/payroll. If a system has an API — and most modern ones do — it can usually be integrated. If it doesn't, we can often still connect it through middleware or scheduled syncs.",
+          },
+          {
+            q: "Is integration cheaper than building new software?",
+            a: "Almost always. You're reusing tools you already pay for and only building the connections between them. That's why integration projects start at around ₱42,000, well below a full custom build.",
+          },
+          {
+            q: "How long does a system integration take?",
+            a: "Most integrations ship in two to twelve weeks. A simple two-system connection is on the short end; a multi-system suite with messy historical data takes longer. A Discovery Audit gives you a firm timeline before any build begins.",
+          },
+        ],
+      },
+      {
+        type: "links",
+        heading: "Related",
+        items: [
+          { label: "System Integration service", href: "/services/system-integration" },
+          { label: "What custom software costs in the Philippines", href: "/blog/custom-software-development-cost-philippines" },
+          { label: "How we work", href: "/how-we-work" },
+          { label: "Book a Discovery Audit", href: "/contact" },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getPost(slug: string): Post | undefined {
