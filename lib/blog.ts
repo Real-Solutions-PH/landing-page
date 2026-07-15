@@ -24,29 +24,29 @@ export type Post = {
 
 export const posts: Post[] = [
   {
-    slug: "custom-software-development-cost-philippines",
-    title:
-      "How Much Does Custom Software Development Cost in the Philippines?",
-    metaTitle:
-      "Custom Software Development Cost in the Philippines (2026 Guide)",
+    // Slug preserved for URL/search-authority continuity — legacy identifier, not a
+    // market signal. Content below targets an international AI-buyer audience only.
+    slug: "custom-software-development-cost-philippines", // positioning-guard:allow-ph
+    title: "What an AI MVP Actually Costs in 2026",
+    metaTitle: "What an AI MVP Costs in 2026 — Real Pricing Anchors",
     description:
-      "A transparent 2026 breakdown of custom software development costs in the Philippines — from simple business tools to advanced platforms, with real price ranges and what drives them.",
+      "A transparent breakdown of what it costs to ship a production AI MVP in 2026 — real 'from' pricing anchors, what drives the number up or down, and why the cheapest quote is rarely the cheapest outcome.",
     keywords: [
-      "custom software development cost Philippines",
-      "software development price Philippines",
-      "how much does software cost Philippines",
-      "app development cost Philippines",
-      "MVP cost Philippines",
+      "AI MVP cost",
+      "how much does an AI MVP cost",
+      "cost to build an AI agent",
+      "AI software development pricing",
+      "RAG system development cost",
     ],
     date: "2026-05-12",
     dateLabel: "May 12, 2026",
     excerpt:
-      "Real price ranges for custom software in the Philippines in 2026 — simple tools, MVPs, and platforms — plus the factors that actually move the number.",
+      "Real 'from' pricing for a production AI MVP in 2026 — feature add-ons, full builds, and multi-tenant platforms — plus what actually moves the number.",
     readMinutes: 7,
     body: [
       {
         type: "p",
-        text: "If you've asked three software companies in the Philippines how much a custom system costs, you've probably gotten three wildly different answers — and a lot of \"it depends.\" It does depend, but not on anything mysterious. This guide gives you real 2026 price ranges and explains exactly what moves the number, so you can budget with confidence.",
+        text: "Ask three AI vendors what an MVP costs and you'll get three different numbers, usually with more hedging than math behind them. Some of that variance is real — a single AI feature bolted onto an existing product and a multi-tenant platform with provable data isolation are not the same job. Here's what the number actually depends on, with real anchors instead of vague ranges.",
       },
       {
         type: "h2",
@@ -54,7 +54,7 @@ export const posts: Post[] = [
       },
       {
         type: "p",
-        text: "In 2026, custom software development in the Philippines typically ranges from around ₱63,000 for a simple internal business tool to ₱1,050,000+ for an advanced, multi-module business platform. For international clients, the same work runs roughly $6,000 to $75,000+. Most growing SMEs land in the middle: a focused MVP between ₱154,000 and ₱455,000.",
+        text: "A single AI feature added to a product you already run starts from $5,000 and ships in 2–4 weeks. A complete AI MVP — model integration, retrieval, a working front end, a user in front of it — starts from $5,000 and ships in 4 weeks. A multi-tenant platform built to survive a compliance review starts from $13,000 and takes 6–10 weeks. These are floors, not averages: the figure moves up from there depending on scope, never down.",
       },
       {
         type: "h2",
@@ -63,10 +63,11 @@ export const posts: Post[] = [
       {
         type: "ul",
         items: [
-          "Simple business tool: ₱63,000–₱154,000 ($6,000–$13,000), 3–5 weeks — one workflow, a few user roles, basic reporting.",
-          "Custom software MVP: ₱154,000–₱455,000 ($13,000–$36,000), 6–10 weeks — a real product with multiple modules and integrations.",
-          "Advanced business platform: ₱455,000–₱1,050,000+ ($36,000–$75,000+), 10–16 weeks — complex logic, many roles, heavy integration.",
-          "System integration (connecting existing tools): from ₱42,000 for 1–2 systems up to ₱455,000 for 6+ systems.",
+          "Website or portal, no AI in scope: from $3,000, 1–3 weeks — a marketing site or a client-facing portal.",
+          "Integration, connecting an AI system to what you already run: from $3,500, 2–4 weeks.",
+          "AI feature add-on: from $5,000, 2–4 weeks — one model-backed feature shipped into an existing product.",
+          "AI MVP build: from $5,000, 4 weeks — a new AI product end to end: retrieval, model integration, a usable interface.",
+          "Custom platform: from $13,000, 6–10 weeks — multi-tenant, with the isolation and audit guarantees a regulated buyer will actually ask for.",
         ],
       },
       {
@@ -75,38 +76,38 @@ export const posts: Post[] = [
       },
       {
         type: "p",
-        text: "Five things move the price more than anything else: the number of distinct workflows and user roles, how many external systems you need to integrate, the volume and quality of your existing data, whether you need a mobile app (and on which platforms), and how much ongoing change you expect after launch. A single-workflow tool with no integrations is cheap and fast. A platform that has to sync with your POS, accounting, and CRM in real time is not.",
+        text: "Five things move the price more than anything else: how much of your data is clean enough to retrieve against, how many existing systems the AI layer needs to read from or write to, whether you need provable tenant isolation and an audit trail — a regulated buyer's requirement, not a nice-to-have — how much of the surrounding product (auth, billing, admin) already exists versus needs building, and how much ongoing change you expect after launch. A single feature reading from data you already have is fast and cheap. A platform that has to prove to an auditor that one tenant can never see another's data is a different job.",
       },
       {
         type: "h2",
-        text: "Why cheap-by-default usually costs more",
+        text: "Why the cheapest quote usually costs more",
       },
       {
         type: "p",
-        text: "Research on SME outsourcing found that roughly half of outsourced projects either fail outright or fail to meet expectations — often because the buyer optimized for the lowest sticker price and got burned. The cheapest quote frequently hides junior developers, no testing, and no maintenance plan, which means you pay twice: once to build, once to rebuild. The goal isn't the lowest price; it's the lowest total cost of ownership.",
+        text: "The lowest quote in your inbox is usually missing something, not doing the same work for less. A cut-rate AI build commonly skips the parts that make output trustworthy: no check that the model's numbers are actually grounded in your data, no server-side citation construction, no isolation tests. That gap doesn't show up in the demo — it shows up the first time the model invents a figure in front of a customer, or an auditor asks how a decision was made and nobody can answer. Fixing that after launch costs more than building it correctly the first time.",
       },
       {
         type: "h2",
-        text: "How Real Solutions PH keeps cost down without cutting corners",
+        text: "How we keep the estimate honest",
       },
       {
         type: "p",
-        text: "We deliver fast and affordably by running an optimized delivery system, not by hiring juniors. Senior engineers are amplified by AI tooling and reusable internal frameworks, and a paid Discovery Audit plus an interactive prototype removes misalignment before it becomes expensive rework. You also own your code and data, so there's no vendor lock-in inflating your long-term cost.",
+        text: "Two senior architects scope and review every engagement personally — there is no bench of juniors the estimate is quietly built on. AI-assisted development is part of how we move at this speed, and every deviation from the agreed scope still becomes a numbered ADR citing exactly what changed and why, so the speed doesn't come at the cost of a record you can audit. You own your code and your data on delivery, so there's no lock-in inflating the real cost later.",
       },
       {
         type: "faq",
         items: [
           {
-            q: "What is the cheapest custom software you can build?",
-            a: "A simple single-workflow business tool starts at around ₱63,000 (about $6,000) and takes 3–5 weeks. Below that, you're usually better served by configuring an off-the-shelf tool — which we'll tell you honestly during a Discovery Audit.",
+            q: "What's the cheapest AI feature you can ship?",
+            a: "A single model-backed feature added to a product you already run starts from $5,000 and takes 2–4 weeks. If your use case doesn't need a custom build, we'll tell you plainly on a scoping call — sometimes an off-the-shelf tool genuinely serves you better.",
           },
           {
-            q: "Why is custom software cheaper in the Philippines than the US or Australia?",
-            a: "Lower operating costs let Philippine teams charge significantly less for the same engineering quality. At Real Solutions PH, an AI-accelerated delivery system widens that gap further while keeping work senior-led.",
+            q: "Why do AI project quotes vary so much between vendors?",
+            a: "Mostly because they're not quoting the same scope. Model and infrastructure costs are a small part of it — the real variables are how much data-readiness work is needed, how many systems the AI layer touches, and whether the build includes provable isolation and an audit trail or just a working demo.",
           },
           {
             q: "How do I get an exact quote?",
-            a: "Book a Discovery Audit. In 3–7 days you receive a workflow audit, a solution roadmap, and a fixed project estimate based on your actual scope.",
+            a: "Book a call. We scope your actual use case, tell you honestly whether it's worth building, and return a fixed estimate tied to real requirements — not a placeholder range.",
           },
         ],
       },
@@ -114,38 +115,38 @@ export const posts: Post[] = [
         type: "links",
         heading: "Related",
         items: [
-          { label: "Custom Software Development service", href: "/services/custom-software" },
-          { label: "System Integration service", href: "/services/system-integration" },
+          { label: "AI Software Development service", href: "/services/ai-software-development" },
+          { label: "AI MVP Development service", href: "/services/ai-mvp-development" },
           { label: "How we work", href: "/how-we-work" },
-          { label: "Book a Discovery Audit", href: "/contact" },
+          { label: "Get in touch", href: "/contact" },
         ],
       },
     ],
   },
   {
-    slug: "offshore-vs-local-software-development-philippines",
-    title:
-      "Offshore vs Local Software Development in the Philippines: How to Choose",
-    metaTitle:
-      "Offshore vs Local Software Development Philippines | Cost & Quality",
+    // Slug preserved for URL/search-authority continuity — legacy identifier, not a
+    // market signal. Content below targets an international AI-buyer audience only.
+    slug: "offshore-vs-local-software-development-philippines", // positioning-guard:allow-ph
+    title: "Offshore vs Local AI Engineering: What Actually Matters",
+    metaTitle: "Offshore vs Local AI Engineering: What Actually Matters",
     description:
-      "Comparing offshore, local, and managed software development in the Philippines — on cost, quality, communication, and risk — so you choose the right model for your project.",
+      "Remote, in-house, or a managed AI engineering partner — a practical comparison on seniority, timezone overlap, and how to verify quality when you can't watch the team work.",
     keywords: [
-      "offshore software development Philippines",
-      "hire Filipino developers",
-      "local vs offshore developers",
-      "software outsourcing Philippines",
-      "Philippine software company",
+      "offshore AI engineering",
+      "remote AI development team",
+      "hire AI engineers remotely",
+      "managed AI development partner",
+      "AI engineering pod for hire",
     ],
     date: "2026-05-26",
     dateLabel: "May 26, 2026",
     excerpt:
-      "Offshore, local, or a managed partner? A practical comparison on cost, quality, and risk to help you pick the right software development model.",
+      "Remote engineering is normal now. The question isn't where your AI team sits — it's how you verify the work when you can't watch it happen.",
     readMinutes: 6,
     body: [
       {
         type: "p",
-        text: "The Philippines is one of the world's most popular destinations for software outsourcing — strong English, deep technical talent, and favorable rates. But \"hiring in the Philippines\" can mean very different things, and the model you choose has a bigger impact on outcome than the country does. Here's how the main options compare.",
+        text: "Remote AI engineering is the default now, not the exception. The real decision was never really about geography — it's about which model of engagement puts the risk in the right place, and how you verify quality in a team you can't watch over someone's shoulder. Here's how the options actually compare.",
       },
       {
         type: "h2",
@@ -154,26 +155,34 @@ export const posts: Post[] = [
       {
         type: "ul",
         items: [
-          "Offshore staff augmentation: you rent individual developers, usually managed by you. Cheapest hourly rate, but you carry the project management, architecture, and quality risk.",
-          "Freelancers / cheapest bidders: lowest sticker price, highest variance. Great for tiny tasks, risky for anything your business depends on.",
-          "Managed software partner: a senior-led team owns delivery end-to-end — discovery, architecture, build, and maintenance. Higher than raw offshore hourly rates, but far lower total cost of ownership.",
+          "In-house hire: full day-to-day control, slowest to start, most expensive per unit of shipped work, and hard to scale down once the project ends.",
+          "Staff augmentation or freelancers: the cheapest hourly rate, but you carry the architecture, project management, and quality risk yourself.",
+          "Managed AI engineering partner: a senior team owns delivery end to end — architecture through deployment. Higher than a raw hourly rate, far lower total cost when something needs to actually work.",
         ],
       },
       {
         type: "h2",
-        text: "Cost: sticker price vs total cost",
+        text: "Timezone overlap matters more than the map",
       },
       {
         type: "p",
-        text: "Raw offshore developers look cheapest on an hourly basis. But that price excludes the work someone still has to do: scoping, architecture, code review, testing, project management, and fixing what breaks. When projects fail — and industry research suggests around half of outsourced SME projects do — the savings evaporate. A managed partner folds all of that into one accountable price.",
+        text: "The question worth asking isn't which country your engineering partner is in — it's whether their working hours overlap enough with yours for live architecture reviews and a fast response when something breaks. A team with strong overlap and asynchronous, written handoffs between sessions can outperform a team down the street that's hard to reach and doesn't write anything down.",
       },
       {
         type: "h2",
-        text: "Quality and seniority",
+        text: "Why seniority matters more than distance",
       },
       {
         type: "p",
-        text: "The single biggest predictor of software quality is who is actually writing it. Cheap engagements are often staffed by juniors learning on your budget. At Real Solutions PH, every build is led by head-of-engineering and lead-engineer level talent from startups, using proper engineering practices — architecture review, CI/CD, automated testing, and cloud deployment.",
+        text: "The single biggest predictor of quality in an AI system is who is actually designing and reviewing it. A cut-rate engagement, wherever it's based, is often staffed by people learning on your codebase with no one senior checking their work. Two architects reviewing every architectural decision catches drift before it ships — that has nothing to do with location and everything to do with who's in the room.",
+      },
+      {
+        type: "h2",
+        text: "The discipline artifacts that let you verify quality remotely",
+      },
+      {
+        type: "p",
+        text: "You can't watch a remote team code, so the honest answer is you verify through what they produce, not through proximity. A numbered ADR for every deviation from spec, citing the exact clause it departs from and who signed off. A grounding guard that rejects any model output citing a number the underlying system didn't actually produce. Isolation tests that carry positive controls, so an empty result can't be mistaken for a broken query that happens to return nothing. A security review across every surface before handover. Those are the receipts a remote team can hand you that a local team asking for trust cannot.",
       },
       {
         type: "h2",
@@ -182,9 +191,9 @@ export const posts: Post[] = [
       {
         type: "ul",
         items: [
-          "Choose staff augmentation if you already have strong in-house technical leadership and just need more hands.",
-          "Choose a freelancer for a small, well-defined, low-risk task.",
-          "Choose a managed partner when the software matters to your business and you want one team accountable for the result — from idea to maintenance.",
+          "Choose an in-house hire if you need day-to-day availability and already have the technical leadership to direct the work.",
+          "Choose staff augmentation or a freelancer for a small, well-defined, low-risk task.",
+          "Choose a managed partner when the system matters to the business and you want one team accountable for the result, verifiable through what they hand over rather than where they sit.",
         ],
       },
       {
@@ -193,22 +202,22 @@ export const posts: Post[] = [
       },
       {
         type: "p",
-        text: "Real Solutions PH sits between DIY tools, traditional agencies, and building your own team. You get a tailored system, production-grade engineering, competitive pricing from an AI-accelerated delivery model, and a partner that stays to maintain and grow what it builds — without the overhead of hiring and managing an in-house team.",
+        text: "We sit between hiring in-house and rolling the dice on a freelancer marketplace: two senior architects use AI leverage to move fast, with every deviation from spec still recorded as a numbered ADR and every build covered by a security review before handover. You get a system built the same way whether or not anyone's watching, and you own the code and the data at the end of it.",
       },
       {
         type: "faq",
         items: [
           {
-            q: "Is offshore software development in the Philippines reliable?",
-            a: "It can be excellent — the Philippines has world-class engineers. Reliability depends far more on the engagement model and team seniority than on location. A senior-led, managed model is the most reliable.",
+            q: "Is offshore AI engineering reliable?",
+            a: "It depends far more on seniority and process than on location. A senior-led team that hands you ADRs, isolation tests, and a security review is more verifiable than a local team that asks you to take its word for it.",
           },
           {
-            q: "How much can I save working with a Philippine software company?",
-            a: "Compared to US or Australian agencies, Philippine teams typically cost a fraction for equivalent quality. Real Solutions PH widens that gap with an AI-accelerated delivery system while keeping work senior-led.",
+            q: "How do you prove the work is good without being in the room?",
+            a: "Through artifacts, not proximity: a grounding guard on model output, isolation tests with positive controls, and a numbered ADR trail for every deviation from spec. All of it is checkable after the fact.",
           },
           {
-            q: "Do you work with international clients?",
-            a: "Yes. We serve both Philippine SMEs and international clients, with one co-founder focused specifically on international cloud and AI engineering engagements.",
+            q: "Do you work across time zones?",
+            a: "Yes. We keep hours that overlap with EU and US working days for live reviews, and hand off asynchronously through written ADRs so nothing depends on someone being awake at the same time.",
           },
         ],
       },
@@ -217,9 +226,9 @@ export const posts: Post[] = [
         heading: "Related",
         items: [
           { label: "How we work", href: "/how-we-work" },
-          { label: "Our services", href: "/services" },
+          { label: "AI Software Development service", href: "/services/ai-software-development" },
           { label: "See our work", href: "/work" },
-          { label: "Book a Discovery Audit", href: "/contact" },
+          { label: "Get in touch", href: "/contact" },
         ],
       },
     ],
@@ -326,81 +335,84 @@ export const posts: Post[] = [
     ],
   },
   {
-    slug: "ai-for-business-philippines",
-    title:
-      "AI for Philippine Businesses: Practical Uses That Actually Pay Off",
-    metaTitle:
-      "AI for Business in the Philippines: Practical Uses (2026)",
+    // Slug preserved for URL/search-authority continuity — legacy identifier, not a
+    // market signal. Content below targets an international AI-buyer audience only.
+    slug: "ai-for-business-philippines", // positioning-guard:allow-ph
+    title: "AI That Survives Contact With Production",
+    metaTitle: "AI That Survives Contact With Production",
     description:
-      "Beyond the hype — concrete, ROI-positive ways Philippine SMEs are using AI in 2026, and how to add it to the systems you already run.",
+      "Why most AI demos fall apart in production, and the engineering practice — grounding, isolation, audit trails — that makes the difference between a demo and a system you can trust.",
     keywords: [
-      "AI integration Philippines",
-      "AI for business Philippines",
-      "AI automation Philippines",
-      "AI software development Philippines",
-      "AI for small business Philippines",
+      "AI in production",
+      "why AI demos fail in production",
+      "production-ready AI system",
+      "grounded AI output",
+      "AI system security review",
     ],
     date: "2026-06-05",
     dateLabel: "June 5, 2026",
     excerpt:
-      "Beyond the hype: concrete, ROI-positive ways Philippine SMEs are using AI in 2026 — and how to add it to the systems you already run.",
+      "Most AI demos fall apart the week they meet real users. Here's the engineering practice that makes the difference between a demo and a system that survives production.",
     readMinutes: 6,
     body: [
       {
         type: "p",
-        text: "AI is having a moment, and most of the advice about it is either breathless hype or vague fear. For a business owner the real question is simpler: where can AI save money or make money right now, without a science project? In 2026, the answer for most Philippine SMEs isn't a flashy chatbot on the homepage — it's quietly embedding AI into the workflows you already run.",
+        text: "Every AI vendor has a demo that looks impressive in a sales call. Far fewer have a system that survives real users, real data, and a compliance review. The gap between the two isn't a bigger model — it's engineering discipline that most AI vendors skip because it doesn't show up in a demo.",
       },
       {
         type: "h2",
-        text: "Where AI earns its keep for SMEs",
-      },
-      {
-        type: "ul",
-        items: [
-          "Document and data handling: pulling figures off invoices, receipts, and forms automatically instead of typing them.",
-          "Internal knowledge assistants: a chat tool that answers staff questions from your own SOPs, manuals, and product data.",
-          "Customer support triage: drafting replies and routing enquiries so your team handles the exceptions, not every message.",
-          "Summarising and reporting: turning long threads, tickets, or sales data into a clear weekly summary.",
-        ],
-      },
-      {
-        type: "h2",
-        text: "What to ignore (for now)",
+        text: "Why demos break in production",
       },
       {
         type: "p",
-        text: "Plenty of AI ideas look impressive in a demo and disappoint in production. Fully autonomous systems making high-stakes decisions, AI that needs perfectly clean data you don't have, and 'AI for AI's sake' features that don't map to a real cost or revenue lever — these usually aren't worth it yet. The test is simple: can you name the hour saved or the peso earned? If not, wait.",
+        text: "A demo only has to work once, in front of an audience that isn't trying to break it. Production is different: the model gets asked something it should refuse to guess at, a document from one customer ends up next to another's, and eventually someone with compliance authority asks how a decision was actually made. Most AI builds have no answer to any of that, because nobody built one.",
       },
       {
         type: "h2",
-        text: "AI works best on top of connected systems",
+        text: "Grounding: refusing to invent numbers",
       },
       {
         type: "p",
-        text: "AI is only as good as the data it can reach. A model that can't see your orders, inventory, or customer history can't do much for your business. That's why AI integration and system integration go hand in hand — once your systems are connected, adding an AI layer that reads and acts on that data becomes far more powerful and far cheaper.",
+        text: "The fix isn't a better prompt — it's a guard between the model and the user. Any number, percentage, or stated fact in the output is checked against what the underlying system actually produced; anything that doesn't match is rejected and replaced with deterministic fallback copy instead of a guess. The check that verifies this runs in CI against the same primitives as the runtime guard, so the two can't quietly drift apart.",
       },
       {
         type: "h2",
-        text: "How to add AI without a research budget",
+        text: "Isolation: proving one tenant can't see another's data",
       },
       {
         type: "p",
-        text: "The practical path mirrors any good software project: start with a paid Discovery Audit to find the one or two AI use-cases with real payoff, prototype quickly so you can react to something concrete, then build the smallest version that delivers value — and only expand once it's proven. At Real Solutions PH, AI is delivered like any other production system: senior-led, integrated with your existing tools, and owned by you.",
+        text: "\"We tested it and it works\" isn't proof; a UI check that hides another tenant's data is not the same as data that can't be reached. Real isolation lives at the database layer — Postgres row-level security enforced through a per-transaction session variable, with a bleed-guard so an unset variable reads back as NULL and matches no rows: the failure mode is an empty result, never someone else's data. The application role can't bypass that policy and doesn't own the tables. Every isolation test carries a positive control, so an empty result can't quietly pass as a working query that happens to return nothing.",
+      },
+      {
+        type: "h2",
+        text: "Why \"it worked in the demo\" isn't proof",
+      },
+      {
+        type: "p",
+        text: "The same discipline extends past grounding and isolation. When the system doesn't know something, it should say so — an honest \"we don't know,\" not a confident guess, and estimates that don't move on data the system was never given. And every departure from the original plan gets written down: a numbered ADR citing the exact clause it deviates from and who approved it, so \"why does it work this way\" has an answer six months later.",
+      },
+      {
+        type: "h2",
+        text: "How to ship AI that survives contact with production",
+      },
+      {
+        type: "p",
+        text: "Start with the one or two use cases that have a real, nameable payoff — not AI for its own sake. Prototype quickly so you're reacting to something concrete instead of a spec. Build the smallest version that actually delivers the guarantees above, not the biggest version that fits the budget. Two senior architects use AI leverage to move at this pace, with a security review across every surface before handover and the ADR trail behind every decision — which is what makes the speed something you can audit rather than something you have to take on faith.",
       },
       {
         type: "faq",
         items: [
           {
-            q: "Is AI worth it for a small business in the Philippines?",
-            a: "Yes, when it's pointed at a specific, repetitive, costly task — document handling, support triage, internal Q&A. It's not worth it as a vague 'add AI' initiative with no clear payoff.",
+            q: "Do I need a data science team to use AI in production?",
+            a: "No. Most production AI work today is engineering — grounding, isolation, integration with the systems you already run — not research. The test is simple: can you name the specific cost or hour this saves? If not, it's not ready to build yet.",
           },
           {
-            q: "Do I need a lot of data to use AI?",
-            a: "Less than people assume. Many high-value uses — reading documents, answering questions from your own manuals, drafting replies — work with the data you already have, especially once your systems are connected.",
+            q: "How do you stop the model from making things up?",
+            a: "A grounding guard sits between the model and the user and checks every number or stated fact against what the underlying system actually produced. Anything ungrounded is rejected and replaced with deterministic copy, so the model refuses to answer rather than inventing one.",
           },
           {
-            q: "Can you add AI to my existing software?",
-            a: "Yes. Most of our AI work is embedded into clients' existing tools and workflows rather than built as a separate product. Connected systems make this faster and cheaper.",
+            q: "Can AI be added to a product we already run?",
+            a: "Yes — most AI work is embedding a model-backed feature into something that already exists, not building a new product from scratch. The better your existing data and systems are connected, the faster and safer that is to do.",
           },
         ],
       },
@@ -409,9 +421,9 @@ export const posts: Post[] = [
         heading: "Related",
         items: [
           { label: "AI Software Development service", href: "/services/ai-software-development" },
-          { label: "System Integration service", href: "/services/system-integration" },
+          { label: "AI MVP Development service", href: "/services/ai-mvp-development" },
           { label: "How we work", href: "/how-we-work" },
-          { label: "Book a Discovery Audit", href: "/contact" },
+          { label: "Get in touch", href: "/contact" },
         ],
       },
     ],
