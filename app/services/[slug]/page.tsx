@@ -83,8 +83,8 @@ export default async function ServicePage({
     offers: service.pricing.map((p) => ({
       "@type": "Offer",
       name: p.label,
-      priceCurrency: "PHP",
-      description: `${p.label}: ${p.php} (${p.intl}), ${p.timeline}`,
+      priceCurrency: "USD",
+      description: `${p.label}: from ${p.from}, ${p.timeline}`,
     })),
   };
 
