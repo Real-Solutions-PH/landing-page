@@ -234,107 +234,6 @@ export const posts: Post[] = [
     ],
   },
   {
-    slug: "business-process-automation-philippines-sme",
-    title:
-      "Business Process Automation for Philippine SMEs: Where to Start",
-    metaTitle:
-      "Business Process Automation for Philippine SMEs (2026 Guide)",
-    description:
-      "The manual tasks quietly costing your team hours every week — and a practical, low-risk way for Philippine SMEs to start automating business processes in 2026.",
-    keywords: [
-      "business process automation Philippines",
-      "business automation software Philippines",
-      "workflow automation small business",
-      "automate business processes Philippines",
-      "SME automation Philippines",
-    ],
-    date: "2026-06-02",
-    dateLabel: "June 2, 2026",
-    excerpt:
-      "The repetitive work quietly draining your team's hours — and a practical, low-risk way for Philippine SMEs to start automating it.",
-    readMinutes: 6,
-    body: [
-      {
-        type: "p",
-        text: "Every growing business runs on a hidden pile of manual work: copying orders into a spreadsheet, sending the same follow-up messages, compiling the same weekly report, chasing approvals over chat. None of it is hard. All of it eats hours, invites mistakes, and doesn't scale. Business process automation is about handing that repetitive work to software so your team can spend its time on the things that actually need a human.",
-      },
-      {
-        type: "h2",
-        text: "What business process automation really is",
-      },
-      {
-        type: "p",
-        text: "Automation isn't about replacing people or buying one giant platform. It's about finding the repeatable, rules-based steps in how your business runs and letting software do them reliably. A new order automatically creates an invoice and a delivery task. A paid invoice updates your books. A submitted form routes to the right person for approval. Small automations, compounding across a whole team, free up serious time.",
-      },
-      {
-        type: "h2",
-        text: "Where Philippine SMEs lose the most time",
-      },
-      {
-        type: "ul",
-        items: [
-          "Re-typing data between apps that don't talk to each other.",
-          "Manual reporting — exporting and stitching spreadsheets every week.",
-          "Repetitive customer messages: confirmations, reminders, and follow-ups.",
-          "Approval chains that live in group chats and get forgotten.",
-          "Inventory and reorder tracking done by hand.",
-        ],
-      },
-      {
-        type: "h2",
-        text: "How to start without betting the business",
-      },
-      {
-        type: "p",
-        text: "The right way to begin is small and measurable. Pick one painful, high-frequency process — not ten. Map exactly how it works today, automate that single workflow, and measure the hours saved. Once it's proven, expand. This keeps risk low and builds trust with the team, who see the benefit before anything bigger changes.",
-      },
-      {
-        type: "ul",
-        items: [
-          "List your most repetitive weekly tasks and roughly how long each takes.",
-          "Pick the one that's frequent, rules-based, and error-prone.",
-          "Automate just that, then measure the time saved over a few weeks.",
-          "Reinvest the saved hours — and the proof — into the next workflow.",
-        ],
-      },
-      {
-        type: "h2",
-        text: "What it costs — and what it returns",
-      },
-      {
-        type: "p",
-        text: "Automation is one of the highest-ROI software investments an SME can make, because the cost is largely one-time while the time savings recur every week. Many automations are built as part of a system integration (from around ₱42,000) or a small custom tool. The honest first step is a Discovery Audit (₱10,000–₱22,000, or $700–$1,200 internationally), where we map your workflows and tell you which automations will actually pay for themselves — and which aren't worth it yet.",
-      },
-      {
-        type: "faq",
-        items: [
-          {
-            q: "What's the difference between automation and integration?",
-            a: "Integration connects your systems so data flows between them; automation adds the rules and actions on top — what should happen automatically when that data changes. They're closely related and often delivered together.",
-          },
-          {
-            q: "Do I need to replace my current tools to automate?",
-            a: "Usually not. Most automation is built around the tools you already use, connecting and extending them rather than replacing them.",
-          },
-          {
-            q: "What's a realistic first automation?",
-            a: "Something frequent and rules-based — automatic order-to-invoice, weekly report generation, or customer follow-up messages. We help you pick the one with the best payoff in a Discovery Audit.",
-          },
-        ],
-      },
-      {
-        type: "links",
-        heading: "Related",
-        items: [
-          { label: "Custom Software Development service", href: "/services/custom-software" },
-          { label: "System Integration service", href: "/services/system-integration" },
-          { label: "How we work", href: "/how-we-work" },
-          { label: "Book a Discovery Audit", href: "/contact" },
-        ],
-      },
-    ],
-  },
-  {
     // Slug preserved for URL/search-authority continuity — legacy identifier, not a
     // market signal. Content below targets an international AI-buyer audience only.
     slug: "ai-for-business-philippines", // positioning-guard:allow-ph
@@ -429,95 +328,90 @@ export const posts: Post[] = [
     ],
   },
   {
-    slug: "system-integration-small-business-philippines",
-    title:
-      "System Integration for Small Businesses in the Philippines: Connect Your POS, Inventory & Accounting",
-    metaTitle:
-      "System Integration in the Philippines: Connect POS, Inventory & Accounting",
+    slug: "proving-tenant-isolation-postgres-rls",
+    title: "How to Actually Prove Postgres Row-Level Security Works",
+    metaTitle: "Postgres RLS Tenant Isolation: Proving It, Not Asserting It",
     description:
-      "How system integration connects the POS, inventory, CRM, and accounting tools you already use — what it costs in the Philippines, and how it's built.",
+      "A per-transaction session variable, a nullif bleed-guard, and a database role that can't bypass its own policy — how Postgres row-level security becomes isolation you can prove, not just configure and hope.",
     keywords: [
-      "system integration Philippines",
-      "system integration company Philippines",
-      "connect POS and accounting Philippines",
-      "POS integration Philippines",
-      "business systems integration small business Philippines",
+      "Postgres RLS tenant isolation",
+      "multi-tenant RAG platform",
+      "row-level security multi-tenant",
+      "tenant isolation testing",
+      "Postgres bleed-guard",
     ],
-    date: "2026-06-09",
-    dateLabel: "June 9, 2026",
+    date: "2026-06-16",
+    dateLabel: "June 16, 2026",
     excerpt:
-      "Your POS, inventory, and accounting don't talk to each other — so someone re-types everything. Here's what system integration costs and how it works.",
-    readMinutes: 7,
+      "A tenant_id filter is a convention every engineer has to remember, forever. Here's how a session variable, a bleed-guard, and a positive-control test turn isolation into something the database enforces instead.",
+    readMinutes: 9,
     body: [
       {
         type: "p",
-        text: "Most growing businesses don't have a software problem — they have a disconnection problem. Your POS knows what sold, your inventory sheet knows what's in stock, your accounting software knows what was paid, and none of them talk to each other. So someone re-types the same numbers three times, reports are always a day behind, and nobody fully trusts the data. System integration fixes exactly this.",
+        text: "A multi-tenant system usually starts with a WHERE clause. Every query filters on tenant_id, every engineer knows to add it, and for a while that's enough. Then the codebase grows past the size where one person reviews every query, a new endpoint ships without the filter, and the failure mode isn't a crash — it's tenant A quietly reading tenant B's rows through an endpoint that returns 200 OK. That's the specific risk that turns a demo into a liability the moment a multi-tenant RAG platform starts serving more than one paying customer, and it's why isolation has to live below the application code a future engineer might get wrong.",
       },
       {
         type: "h2",
-        text: "What system integration actually means",
+        text: "An application-layer filter is a convention, not a control",
       },
       {
         type: "p",
-        text: "System integration connects the tools you already use so data flows between them automatically. Instead of replacing your POS, inventory, CRM, HR, and accounting with one giant platform, integration wires them together — a sale in your POS updates stock, posts to accounting, and shows up on a single dashboard without anyone copying a cell. You keep the tools your team already knows; they just stop working in isolation.",
+        text: "The tenant_id = ? clause is enforced by discipline: every developer, on every query, forever, including the query someone writes late at night to unblock a demo. Discipline doesn't scale, and a missing filter doesn't show up in a diff review as an obvious gap — it shows up as a row that shouldn't be there. Moving isolation into the database means a query that forgets the filter can't return the wrong tenant's data, because the database itself won't hand over rows the current session isn't allowed to see, regardless of what the application code asked for.",
       },
       {
         type: "h2",
-        text: "Signs your business needs integration",
-      },
-      {
-        type: "ul",
-        items: [
-          "Your staff re-enter the same data into two or more systems every day.",
-          "Your stock levels, sales, and cash position never quite agree.",
-          "Reporting means exporting spreadsheets from several apps and stitching them by hand.",
-          "You've outgrown manual processes, but an all-in-one ERP feels too expensive and disruptive.",
-          "You're making decisions on numbers that are days old.",
-        ],
-      },
-      {
-        type: "h2",
-        text: "What system integration costs in the Philippines",
+        text: "A policy keyed to a session variable, not a login",
       },
       {
         type: "p",
-        text: "Integration is usually far cheaper than custom-building or replacing systems, because you're connecting things that already work. At Real Solutions PH, integration projects start from around ₱42,000 for connecting one or two systems (for example, POS + accounting) and scale to ₱455,000+ for an advanced suite linking six or more. International rates run roughly $3,500 to $32,000+. Most integration MVPs ship in two to twelve weeks, depending on how many systems are involved and how clean the data is.",
+        text: "Postgres row-level security policies filter rows against a plain SQL predicate, evaluated on every SELECT, UPDATE, and DELETE, no matter which query path reaches the table. Rather than tie a policy to which database login is connected — impractical when every tenant shares the same connection pool — the predicate reads a session-scoped setting, issued once at the start of each transaction from a value already authenticated upstream: SET LOCAL app.tenant_id to the current tenant's id. The policy itself is just a comparison against that setting, evaluated transparently on every row, whether the query above it remembered to filter or not.",
       },
       {
         type: "h2",
-        text: "How an integration is actually built",
-      },
-      {
-        type: "ul",
-        items: [
-          "APIs and webhooks: when a system exposes a modern API, we connect directly so changes sync in real time.",
-          "Middleware: when systems don't speak the same language, a lightweight service in between translates and routes the data.",
-          "Automation rules: the logic that decides what happens when — a paid invoice triggers a stock adjustment; a low stock level triggers a reorder alert.",
-          "A single dashboard: one place to see sales, stock, and cash, instead of five browser tabs.",
-        ],
-      },
-      {
-        type: "h2",
-        text: "Connect first, replace only if you must",
+        text: "The bleed-guard: an unset session variable must fail closed",
       },
       {
         type: "p",
-        text: "The most common — and most expensive — mistake is ripping out working tools to chase a single all-in-one platform. That means migration risk, retraining, and a big bill, often to solve a problem that integration would have solved for a fraction of the cost. We start by mapping your current stack in a Discovery Audit, then connect what works and only rebuild what genuinely holds you back.",
+        text: "SET LOCAL is what makes this safe under connection pooling: it's scoped to the transaction and reverts automatically the moment that transaction ends, so a pooled connection handed to the next tenant's request starts with no inherited value rather than whatever the previous tenant set. But \"no inherited value\" has to resolve to something specific inside the policy, and this is where an isolation design either fails safe or fails open. Reading the setting with its missing-value flag set returns NULL when it was truly never touched in the session, but some connection-bootstrapping paths instead leave it as an empty string, and a policy that doesn't handle that case might error out — or coerce into something that matches an unintended row. Wrapping the read in nullif against an empty string collapses both the NULL case and the empty-string case to the same NULL, and a comparison against NULL is never true under ordinary SQL three-valued logic. The policy excludes every row. A request that forgot to set the tenant context doesn't get a stranger's document back — it gets nothing, which is a bug the first QA pass will catch, not a breach a customer reports.",
+      },
+      {
+        type: "h2",
+        text: "The role has to be unable to cheat",
+      },
+      {
+        type: "p",
+        text: "None of the policy logic matters if the role running the query owns the table or carries the bypass-RLS attribute — Postgres exempts both from row-level security entirely, on every query, silently. The application's database role is created explicitly as LOGIN NOBYPASSRLS, and migrations run under a separate owning role the application never authenticates as. That split means a future engineer adding a fast path, a reporting query, or an admin script under the application's own credentials can't accidentally reach across tenants no matter what the query says, because the role itself has no bypass to fall back on.",
+      },
+      {
+        type: "h2",
+        text: "An empty result is not proof — a positive control is",
+      },
+      {
+        type: "p",
+        text: "Here's the trap: an isolation test that only checks \"tenant A can't see tenant B's row\" will happily pass against a completely broken table — a typo'd table name, a query that returns zero rows for every tenant, a join that silently drops everything. Zero rows looks identical whether isolation is working or the query is simply wrong. The fix is to seed known data for two tenants and assert both directions in the same test: under tenant A's session context, tenant A's own row comes back — exactly the row expected, proving the query mechanism actually works — and tenant B's row count is zero. Only the pair together rules out the false pass; the negative assertion alone proves nothing you can act on.",
+      },
+      {
+        type: "h2",
+        text: "What this buys a multi-tenant RAG platform specifically",
+      },
+      {
+        type: "p",
+        text: "The stakes are sharper in retrieval than in a typical CRUD table, because a leak in a RAG system doesn't surface as a wrong number on a dashboard — it surfaces as one tenant's private document appearing, verbatim, in another tenant's answer. Chunk and embedding tables carry the same policy and the same bleed-guard as every other tenant-scoped table, so a retrieval query that omits a filter — easy to do when a query is assembled dynamically from a vector similarity search plus metadata conditions — still can't return another tenant's chunks. The database enforces the boundary the retrieval code is supposed to respect, instead of trusting that every code path remembered to.",
       },
       {
         type: "faq",
         items: [
           {
-            q: "What systems can you integrate?",
-            a: "Common ones include POS, inventory, e-commerce (Shopify, Lazada), accounting (Xero, QuickBooks), CRM, and HR/payroll. If a system has an API — and most modern ones do — it can usually be integrated. If it doesn't, we can often still connect it through middleware or scheduled syncs.",
+            q: "Doesn't row-level security slow down every query?",
+            a: "The policy is a plain, indexable predicate the query planner evaluates alongside the rest of the WHERE clause, not a separate pass over the data — with tenant_id indexed, the cost is the same as adding one more condition an application-layer filter would have added anyway. What changes is who can forget to apply it.",
           },
           {
-            q: "Is integration cheaper than building new software?",
-            a: "Almost always. You're reusing tools you already pay for and only building the connections between them. That's why integration projects start at around ₱42,000, well below a full custom build.",
+            q: "What if a query genuinely needs to read across tenants, for an internal admin view?",
+            a: "That's a separate, explicitly provisioned role with its own narrow policy — created and reviewed as its own decision, never the same role the tenant-facing application authenticates as.",
           },
           {
-            q: "How long does a system integration take?",
-            a: "Most integrations ship in two to twelve weeks. A simple two-system connection is on the short end; a multi-system suite with messy historical data takes longer. A Discovery Audit gives you a firm timeline before any build begins.",
+            q: "Is this specific to Postgres?",
+            a: "The mechanism — a session-scoped setting, a bleed-guard, a non-bypassing role — is Postgres row-level security specifically. The underlying principle isn't: isolation enforced at the data layer and proven by a positive control applies to any database offering a comparable row-security feature.",
           },
         ],
       },
@@ -525,10 +419,302 @@ export const posts: Post[] = [
         type: "links",
         heading: "Related",
         items: [
-          { label: "System Integration service", href: "/services/system-integration" },
-          { label: "What custom software costs in the Philippines", href: "/blog/custom-software-development-cost-philippines" },
+          { label: "AI Software Development service", href: "/services/ai-software-development" },
+          { label: "Custom Platforms service", href: "/services/custom-software" },
           { label: "How we work", href: "/how-we-work" },
-          { label: "Book a Discovery Audit", href: "/contact" },
+          { label: "Get in touch", href: "/contact" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "grounding-guards-llm-refuse-invent-numbers",
+    title: "Why \"Don't Make Up Numbers\" Doesn't Work as an LLM Instruction",
+    metaTitle: "LLM Grounding Guard: How to Stop a Model From Inventing Numbers",
+    description:
+      "A system prompt telling a model not to hallucinate is not a control. Here's how a grounding guard actually rejects ungrounded numbers, unit by unit, and why the CI check has to share code with the runtime guard.",
+    keywords: [
+      "LLM grounding guard",
+      "LLM security audit",
+      "AI hallucination prevention",
+      "grounded LLM output",
+      "LLM output validation",
+    ],
+    date: "2026-06-23",
+    dateLabel: "June 23, 2026",
+    excerpt:
+      "A model that's told not to invent numbers can ignore that instruction silently. Here's how a grounding guard checks every number against what the system actually computed, and rejects the rest.",
+    readMinutes: 8,
+    body: [
+      {
+        type: "p",
+        text: "Tell a model \"only state numbers you're certain about\" and it will comply exactly as well as it complies with every other instruction embedded in a prompt: most of the time, until the one time it doesn't, with no way to tell which response that was without checking. An instruction is a request the model can silently ignore. A grounding guard is code the model's output has to pass through regardless of what the model decided to do, and that difference is the entire reason one of them is a security property and the other is a hope.",
+      },
+      {
+        type: "h2",
+        text: "The failure mode isn't obviously wrong",
+      },
+      {
+        type: "p",
+        text: "The dangerous hallucination isn't the model claiming something absurd — that gets caught immediately. It's the model narrating a real, structured result and getting one figure inside it wrong: a percentage off by a plausible margin, a count close enough to the right one that nobody double-checks it, a total that reads exactly like something the system would say if it were true. Fluent, structured, contextually appropriate, and unverified — that's the output a grounding guard exists to catch, because it's the one a human reviewer is least likely to.",
+      },
+      {
+        type: "h2",
+        text: "What a grounding guard actually validates",
+      },
+      {
+        type: "p",
+        text: "Before generation, the deterministic engine — the part of the system that actually queried the database, ran the calculation, or fetched the record — produces its own fact set: every number and named quantity it can stand behind, computed the ordinary way, with no model involved. After the model drafts its response, the guard extracts every numeric claim in that draft and checks each one against the fact set the engine actually produced for this exact request. A number that matches passes through. A number that doesn't — one the model introduced, rounded past an acceptable tolerance, or attached to the wrong quantity — fails, and the response doesn't ship as drafted.",
+      },
+      {
+        type: "h2",
+        text: "Why a percentage and a raw count can't share a bucket",
+      },
+      {
+        type: "p",
+        text: "The naive version of this check flattens every numeric token into one pool and asks \"does this number appear anywhere in the facts.\" That's how a hallucinated percentage slips through. Take a concrete case: the deterministic engine computed a raw count — say, twelve — somewhere in the response, the model wrote \"12%\" instead of plain \"12,\" and a check that isn't unit-aware sees the digits match and calls it grounded, when the engine never computed that quantity as a percentage of anything at all. Every extracted claim has to carry its unit — percentage, currency, plain count, ratio — and get checked only against the subset of the fact set computed in that same unit. A raw count of twelve and a percentage of twelve are different claims about the world, and treating them as interchangeable because they share a digit is exactly the gap a careless implementation leaves open.",
+      },
+      {
+        type: "h2",
+        text: "The fallback is deterministic copy, not a second roll of the dice",
+      },
+      {
+        type: "p",
+        text: "When a claim fails the check, re-prompting the model and hoping for a better answer just spends latency on the same failure mode — nothing about a second generation makes the model more likely to know a number it didn't know the first time. The guard instead substitutes deterministic fallback copy: a template sentence built directly from the fact set the engine already computed, with no model-generated text anywhere near the numeric claim. The user still gets an accurate answer; it's assembled by code that can't hallucinate instead of prose that might.",
+      },
+      {
+        type: "h2",
+        text: "Keeping the CI check honest",
+      },
+      {
+        type: "p",
+        text: "A grounding guard is only as good as the assumption that the thing verifying it in CI actually matches the thing running in production, and that assumption breaks quietly the moment someone patches the runtime extraction logic — to handle a new currency format, say — and forgets a CI fixture test was its own hand-rolled copy of the same regex. The fix is to make that impossible rather than disciplined: the CI evaluation suite imports the exact extraction and matching functions the runtime guard calls, and runs them against a fixture set of adversarial model outputs — plausible wrong numbers, right numbers in the wrong unit, rounding at the edge of tolerance — on every change to either. There's no second implementation to drift out of sync with the first, because there's only one implementation.",
+      },
+      {
+        type: "h2",
+        text: "What this means for an LLM security audit",
+      },
+      {
+        type: "p",
+        text: "An auditor asking \"how do you know the model didn't make that up\" wants a mechanism, not an assurance. The answer is the extraction and matching code itself, the fact set it checked against for a specific logged request, and the CI fixtures proving the check catches the failure modes it claims to catch — evidence that exists independently of anyone's confidence in the model, because none of it relies on the model at all.",
+      },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "Can't you just fine-tune the model to stop hallucinating numbers?",
+            a: "Fine-tuning can reduce how often it happens; it can't make the guarantee absolute, because the model is still generating text probabilistically rather than looking up a fact. A grounding guard checks the output regardless of how well-trained the model is, which is what turns \"less often\" into \"never ships to the user.\"",
+          },
+          {
+            q: "Does this slow down every response?",
+            a: "The check runs against a small, already-computed fact set for that request, not a live database query, so it adds a bounded validation pass rather than another model call — a fraction of the cost of the generation step it's checking.",
+          },
+          {
+            q: "What happens to the rest of the response when one number fails?",
+            a: "It's a design choice made per system: some guards reject the whole response and re-render it from deterministic copy, others replace only the failing claim in place. Either way, nothing ungrounded reaches the user — the difference is how much of the model's original phrasing survives around it.",
+          },
+        ],
+      },
+      {
+        type: "links",
+        heading: "Related",
+        items: [
+          { label: "AI Software Development service", href: "/services/ai-software-development" },
+          { label: "AI MVP Development service", href: "/services/ai-mvp-development" },
+          { label: "How we work", href: "/how-we-work" },
+          { label: "Get in touch", href: "/contact" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "server-side-citations-never-parse-model-prose",
+    title: "Why Citations Have to Come From Retrieval, Never From the Model's Own Text",
+    metaTitle: "Server-Side Citations for RAG: Never Parse Model Prose",
+    description:
+      "Asking a model to cite its own sources and parsing that text is trusting the same fallible process twice. How server-side citations, page-bounded chunking, and fuzzy offset matching fix it.",
+    keywords: [
+      "RAG citations",
+      "production RAG system",
+      "RAG hallucination",
+      "citation grounding",
+      "retrieval augmented generation",
+    ],
+    date: "2026-06-30",
+    dateLabel: "June 30, 2026",
+    excerpt:
+      "Parsing citations out of a model's own prose trusts the same fallible process twice. Here's why citations have to be built from what retrieval actually returned, not from what the model claims it used.",
+    readMinutes: 8,
+    body: [
+      {
+        type: "p",
+        text: "The easy way to add citations to a RAG system is to ask the model to append them — \"cite the document and page you used\" — and parse that text afterward into clickable links. It's also the wrong way, because it makes the citation exactly as trustworthy as the prose it's attached to. A model that can misstate a fact can misstate which document it came from, on which page, with the same fluent confidence either way, and a citation nobody can verify is worse than no citation, because it looks like proof.",
+      },
+      {
+        type: "h2",
+        text: "The source of truth exists before the model ever runs",
+      },
+      {
+        type: "p",
+        text: "By the time generation starts, the retrieval step has already returned an exact list of what the model is working from: specific chunk records, each carrying a chunk id, a document id, a tenant id, a page number, and a character span, selected before a single output token exists. That list is the only trustworthy account of what was actually available to answer from, because it was produced by a deterministic lookup, not a language model narrating its own process. Citations get built from that list, filtered to the current tenant, and rendered independently of whatever the model's prose does or doesn't mention — a response with no citation markers in its text still shows the right sources, because the sources were never derived from the text in the first place.",
+      },
+      {
+        type: "h2",
+        text: "Why this closes an isolation gap, not just an accuracy one",
+      },
+      {
+        type: "p",
+        text: "Parsing citations out of model prose creates a second path into an isolation problem the data layer was supposed to have already closed. A document engineered to include a plausible-looking reference to some other identifier — planted specifically to be echoed back — can get repeated by the model verbatim, and a system that trusts that echoed text at citation-render time might resolve it into a link without re-checking who's allowed to see it, because the decision came from the model's output instead of the system's own retrieval record. When citations are built exclusively from the chunk list retrieval already fetched and already scoped to the current tenant, there's no second decision point for a poisoned document to hijack — the model's prose is never consulted to decide what gets linked.",
+      },
+      {
+        type: "h2",
+        text: "Chunking has to respect page boundaries, or the citation contract breaks",
+      },
+      {
+        type: "p",
+        text: "A citation that resolves to \"page 4\" only means something if every chunk maps to exactly one page. Chunk a document by fixed character count without regard to page breaks, and a single chunk can straddle pages 4 and 5 — at which point \"the answer came from this chunk\" no longer has one correct page number to show the reader, only a range to guess between. Chunking within page boundaries — never letting a chunk span two pages, splitting on the page break even when it produces an uneven chunk — keeps the page-and-span pair unambiguous by construction. It's a constraint applied once at index time, and it's what makes every later citation resolvable to a single, exact location instead of something a rendering layer has to reconcile after the fact.",
+      },
+      {
+        type: "h2",
+        text: "Offsets drift, so citations match fuzzily, not exactly",
+      },
+      {
+        type: "p",
+        text: "Extraction pipelines rarely produce character offsets that line up perfectly with the document as a person actually sees it rendered. Ligatures collapse into single characters, hyphenated line breaks get rejoined or split differently than the source, and OCR introduces small character-level noise — all of which shift a chunk's stored span by a handful of characters relative to where that text visually sits on the page. Treat a stored offset as exact and a citation link will occasionally land one line above or below the sentence it's supposed to highlight. The fix is to re-anchor at click time with approximate string matching — searching for the stored text near the stored offset rather than trusting the offset outright — so a citation lands on the actual sentence even when the extraction pipeline's numbering has drifted slightly from the rendered page.",
+      },
+      {
+        type: "h2",
+        text: "What this adds up to in a production RAG system",
+      },
+      {
+        type: "p",
+        text: "None of these are exotic techniques — a chunk list from retrieval, a page-respecting index, a fuzzy re-anchor at render time. What they add up to is a citation a user can click and verify against the actual source, every time, instead of a citation that's right until the one time the model's version of events and the system's don't agree, and nothing downstream catches the difference because nothing downstream ever checked.",
+      },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "Does asking the model to include citation markers still serve any purpose?",
+            a: "It can help the model stay on-topic and reference the right chunk in its own reasoning, but the markers themselves never build the final citation link — that always comes from the retrieval-time chunk list, so a marker the model gets wrong or omits doesn't change what the user sees cited.",
+          },
+          {
+            q: "What happens if the model's answer doesn't match any retrieved chunk at all?",
+            a: "That's a signal the response isn't grounded in retrieval, and it's handled the same way an ungrounded number is: surfaced as a low-confidence or fallback response rather than shown with citations that don't correspond to anything actually retrieved.",
+          },
+          {
+            q: "Is page-bounded chunking worse for retrieval quality than fixed-size chunking?",
+            a: "It constrains chunk boundaries, not chunk content — target chunk size within a page stays a free choice, a chunk just never crosses into the next one. The retrieval-quality trade-off is negligible next to what it buys: every chunk id maps to exactly one page, permanently.",
+          },
+        ],
+      },
+      {
+        type: "links",
+        heading: "Related",
+        items: [
+          { label: "AI Software Development service", href: "/services/ai-software-development" },
+          { label: "System Integration service", href: "/services/system-integration" },
+          { label: "How we work", href: "/how-we-work" },
+          { label: "Get in touch", href: "/contact" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "shipping-production-ai-in-four-weeks",
+    title: "What Actually Happens in a Four-Week AI Build",
+    metaTitle: "AI MVP in Four Weeks: What Actually Ships, Week by Week",
+    description:
+      "Three build weeks, one UAT week, and a hard rule about what a tight timeline is and isn't allowed to cut. What actually happens inside a four-week production AI delivery.",
+    keywords: [
+      "AI MVP development agency",
+      "AI engineering pod",
+      "AI MVP timeline",
+      "AI product delivery process",
+      "fixed-scope AI build",
+    ],
+    date: "2026-07-07",
+    dateLabel: "July 7, 2026",
+    excerpt:
+      "Three weeks of build, one week testing against real users, and a hard line on what a tight deadline is and isn't allowed to cut. Here's what actually happens inside a four-week AI build.",
+    readMinutes: 8,
+    body: [
+      {
+        type: "p",
+        text: "Four weeks is not a marketing number picked because it sounds fast — it's a scope constraint, applied deliberately, before a single line of the build exists. Fix the timeline first and every scoping conversation after that has to answer one real question: what is the one capability that actually fits in three build weeks and a week of testing against real users? That constraint does more to keep a project honest than any amount of planning against an open-ended one, because there's nowhere to hide an unresolved scope disagreement when the calendar won't move.",
+      },
+      {
+        type: "h2",
+        text: "Week one: the decisions that are expensive to reverse later",
+      },
+      {
+        type: "p",
+        text: "The first week is where the decisions that are cheap to change now and expensive to change in week three get made and written down — the data model, which parts of the system are deterministic logic versus a model call, where the isolation boundary sits if more than one tenant will ever use this. None of that is glamorous, and none of it is visible in a demo, which is exactly why it's tempting to defer. Deferring it is how a build looks fine in week two and then spends week three unwinding a decision that should have taken an afternoon in week one.",
+      },
+      {
+        type: "h2",
+        text: "Weeks two and three: one capability, shipped completely",
+      },
+      {
+        type: "p",
+        text: "The build weeks are scoped to one core AI capability, built end to end, rather than five features each half-working — a retrieval pipeline that actually cites its sources correctly beats five integrations that each technically respond. The grounding guard and the tenant-isolation policy go in during these weeks, not after, because retrofitting either one onto a system that's already \"working\" means rebuilding around code that was written assuming neither existed. AI-assisted development is what makes three weeks enough time for this: the architects use it to move through implementation at the pace the timeline demands, while still writing the numbered ADR for every point where the build deviates from the agreed scope and the positive-control test for every isolation policy before it ships — the leverage buys speed on the typing, not a shortcut on the record of what got decided or the proof that it works.",
+      },
+      {
+        type: "h2",
+        text: "Week four: user acceptance testing against real users, not assumptions",
+      },
+      {
+        type: "p",
+        text: "The fourth week hands the system to actual users, not to the team's own sense of whether it's ready. Fixes from that week get folded in before handover, which is the point of holding a week for it rather than shipping straight from the last build day: assumptions about how a real user will actually use the thing are exactly the assumptions a team building it can't see past on its own.",
+      },
+      {
+        type: "h2",
+        text: "What a tight deadline is allowed to cut",
+      },
+      {
+        type: "p",
+        text: "When something threatens to blow the four-week timeline, the answer isn't quiet unpaid overtime and it isn't a silent under-delivery discovered at handover — it's a scoping decision, recorded as a numbered ADR the moment it's made, naming exactly what's being cut and why, agreed before the deadline arrives rather than explained after it's missed. A secondary feature, a nice-to-have integration, a wider set of edge cases than the core capability strictly needs — all fair things to trim under a fixed timeline, as long as cutting them is a decision on the record, not a surprise.",
+      },
+      {
+        type: "h2",
+        text: "What it's never allowed to cut",
+      },
+      {
+        type: "p",
+        text: "Some things don't flex regardless of how the week is going, because removing them changes what's being delivered from a production system into a demo wearing production's clothes. The two architects who scoped the engagement do the actual design and review themselves, start to finish — the work doesn't quietly move to whoever has spare capacity when the schedule tightens. The grounding guard and the isolation tests ship with the core capability, not after it, because a version without them isn't a smaller version of the same system, it's a different, unproven one. And the security review before handover happens regardless of how much slack the timeline has left, because the point of four weeks was never to be fast instead of careful — it was to be both, which is the only version of \"fast\" worth having for a system a real user is going to depend on.",
+      },
+      {
+        type: "h2",
+        text: "Why this holds whether you're the client or the agency reselling the work",
+      },
+      {
+        type: "p",
+        text: "The same structure holds for a founder shipping their first AI feature and for an agency that sold an AI capability to a client and needs a senior pod to actually build it without their own name taking the risk. Either way, the deliverable is the same: a working system, the ADRs behind every deviation from what was scoped, the isolation and grounding guarantees built in from the first commit, and a named team that's reachable after launch — not a black box that either works or doesn't, with no way to ask why.",
+      },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "What happens if the scope turns out to be too big for four weeks once you're in it?",
+            a: "That gets caught in week one, not week three, because the architecture decisions made in week one expose scope problems early. If it still needs trimming mid-build, it's a recorded scope decision made with the client, not a quiet under-delivery discovered at handover.",
+          },
+          {
+            q: "Is four weeks realistic for every kind of AI system?",
+            a: "It's scoped to one core AI capability — a working retrieval system, an agent handling one job end to end. A multi-tenant platform with several tenant-facing roles and a wider integration surface is a different engagement on a longer timeline, not a compressed version of the same four weeks.",
+          },
+          {
+            q: "What do we actually own at the end of four weeks?",
+            a: "The source code, the infrastructure it runs on, and the ADR trail explaining every decision — no dependency on the team that built it to keep it running, and no black box you're trusting instead of auditing.",
+          },
+        ],
+      },
+      {
+        type: "links",
+        heading: "Related",
+        items: [
+          { label: "AI MVP Development service", href: "/services/ai-mvp-development" },
+          { label: "AI Software Development service", href: "/services/ai-software-development" },
+          { label: "How we work", href: "/how-we-work" },
+          { label: "Get in touch", href: "/contact" },
         ],
       },
     ],
