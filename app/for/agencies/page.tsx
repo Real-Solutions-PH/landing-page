@@ -46,7 +46,7 @@ export const metadata: Metadata = {
 const POD_PROOF = [
   {
     icon: Users,
-    title: "Two senior architects, not a bench of juniors",
+    title: "No juniors here — just two senior architects",
     body: "The same two architects who scope your client's engagement build and review it end to end. Nothing gets quietly handed off to whoever has spare capacity when your timeline tightens.",
   },
   {

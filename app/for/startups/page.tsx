@@ -49,7 +49,7 @@ const PROOF_POINTS = [
   {
     icon: Rocket,
     title: "Two architects, no bench",
-    body: "The people who scope the engagement are the same two who write the code, review it, and stay reachable after launch — no project manager relaying your spec to engineers you've never met.",
+    body: "Whoever scopes your engagement is one of the two people who write the code, review it, and stay reachable after launch — no project manager relaying your spec to engineers you've never met.",
   },
   {
     icon: ShieldCheck,
@@ -104,12 +104,12 @@ export default function StartupsPage() {
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
           <div className="space-y-5">
             <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
-              You need something real users can touch before your next investor
-              conversation or customer pilot — not a slide, and not a full-time
-              engineering hire you can&apos;t make before your runway forces the
-              decision. A no-code prototype gets you into the room; it rarely
-              survives the first real user who does something the demo never
-              anticipated.
+              You need something real users can touch before you&apos;re back
+              pitching investors or handing it to a pilot customer — not a
+              slide, and not a full-time engineering hire you can&apos;t make
+              before your runway forces the decision. A no-code prototype gets
+              you into the room; it rarely survives the first real user who
+              does something the demo never anticipated.
             </p>
             <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
               Hiring solves it eventually, if you can find, vet, and onboard the
@@ -124,12 +124,13 @@ export default function StartupsPage() {
               The problem we solve
             </h2>
             <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
-              Founders who tried a no-code AI tool or an agency demo and hit a
-              wall the moment real users showed up — the model invented an
-              answer, the retrieval pointed at the wrong document, or nobody
-              could explain why the system did what it did. A pitch-ready demo
-              and a system a paying customer can depend on are not the same
-              build.
+              Founders who spun up a no-code prototype or paid an agency for a
+              slick demo, then watched it stall the moment a real user did
+              something neither one accounted for — the model fabricated an
+              answer, retrieval pointed at the wrong document, or no one could
+              explain why the system responded the way it did. A polished
+              walkthrough and a system a paying customer can actually rely on
+              are not the same build.
             </p>
           </Card>
         </div>
