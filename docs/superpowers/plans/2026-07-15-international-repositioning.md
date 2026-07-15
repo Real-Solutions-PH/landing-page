@@ -63,6 +63,7 @@ Every task's requirements implicitly include this section. Values are copied ver
 
 **Content layer (source of truth — rewritten)**
 - `CONTEXT.md` — brand/positioning source of truth; every future edit inherits from it. Must change first.
+- `GEMINI.md` — AI-instruction file, sibling to `CONTEXT.md` (spec §7). Repositioned to match CONTEXT.md's audiences and tone; non-positioning instructions (build commands, conventions, design system) preserved. Scanned by the guard alongside `CONTEXT.md`.
 - `lib/services.ts` — `Service` type change (`intl`/`php` → `from`), 4 rewrites, 3 new services.
 - `lib/projects.ts` — reframe 8 existing entries, outcome-led and international.
 - `lib/blog.ts` — 3 rewrites in place, 2 retirements, 4 new authority posts.
@@ -1053,7 +1054,7 @@ Note: `pnpm build` triggers `postbuild` → `scripts/submit-indexnow.mjs`, which
 ```bash
 grep -rniE 'philippines|philippine|filipino|batangas' \
   --include='*.ts' --include='*.tsx' --include='*.md' --include='*.txt' \
-  app components lib public CONTEXT.md \
+  app components lib public CONTEXT.md GEMINI.md \
   | grep -v 'privacy-policy\|terms-of-service\|app/about\|about-section\|about-hero'
 ```
 
@@ -1143,7 +1144,7 @@ git commit -m "chore: verify international repositioning complete"
 | §5.5 pricing | C11, Task 3 step 1, Task 9 |
 | §6.1 clusters | Tasks 3, 4, 8, 11 |
 | §6.2 technical SEO | Tasks 11–13 |
-| §7 source of truth | Task 2 |
+| §7 source of truth | Task 2 (`CONTEXT.md`); `GEMINI.md` added to Task 1's guard scan and repositioned to match — closed as a plan gap on 2026-07-15, not originally assigned to any task |
 | §10 success criteria | Task 1 guard + Task 14 |
 | §11 phasing | Task order |
 | §12 LinkedIn | Task 14 step 6 |

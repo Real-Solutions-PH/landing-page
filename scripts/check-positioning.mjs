@@ -40,7 +40,11 @@ const PH_TERMS = ["philippines", "philippine", "filipino", "batangas", "sme", "s
 const PH_RE = new RegExp(`\\b(${PH_TERMS.join("|")})\\b`, "i");
 
 // C7 — Philippines is permitted on /about (origin, not market) and on legal pages
-// (jurisdiction). A line may opt out for a legally-required schema address.
+// (jurisdiction). A line may opt out of the outside-/about check with the marker below.
+// Two legitimate uses: (1) a legally-required schema/registered address outside those
+// paths, and (2) an AI-instruction or docs file (e.g. CONTEXT.md, GEMINI.md) stating
+// Philippines as an origin fact, not a market claim, for the benefit of future editors.
+// Never use it to silence a marketing-copy violation.
 const PH_ALLOWED_PATHS = ["app/privacy-policy", "app/terms-of-service", "app/about"];
 const PH_ALLOW_MARKER = "positioning-guard:allow-ph";
 
@@ -75,7 +79,7 @@ function collectFiles(dir, exts) {
 
 const violations = [];
 const files = [
-  ...["CONTEXT.md", "lib/services.ts", "lib/projects.ts", "lib/blog.ts", "public/llms.txt"]
+  ...["CONTEXT.md", "GEMINI.md", "lib/services.ts", "lib/projects.ts", "lib/blog.ts", "public/llms.txt"]
     .filter(existsSync),
   ...collectFiles("app", [".tsx", ".ts"]),
   ...collectFiles("components", [".tsx"]),
