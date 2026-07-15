@@ -1110,10 +1110,16 @@ Summarise: what shipped, which project outcome metrics were softened under C5 an
 
 - [ ] **Step 7: Final commit**
 
+Do not use `git add -A` — this repo is public, and a stray guard-test fixture or scratch file
+would be committed permanently. Stage explicitly:
+
 ```bash
-git add -A
+git status --porcelain          # review every path before staging
+git add <specific paths>
 git commit -m "chore: verify international repositioning complete"
 ```
+
+`.superpowers/` is gitignored; if `git status` shows it, stop and fix the ignore rule first.
 
 ---
 
