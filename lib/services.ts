@@ -346,6 +346,234 @@ export const services: Service[] = [
     ],
     relatedProjectIds: ["evolve-talents", "hydroguide", "aura"],
   },
+  {
+    slug: "voice-ai",
+    name: "Voice AI",
+    h1: "Voice AI Agent Development",
+    metaTitle: "Voice AI Development Company | Real Solutions",
+    metaDescription:
+      "We build voice AI agents with real barge-in, one agent core across chat and calls, and cost caps built in from day one — not a demo that stalls on interruption.",
+    keywords: [
+      "voice AI development",
+      "Pipecat voice agent",
+      "conversational AI agency",
+      "voice agent development company",
+      "real-time voice AI development",
+      "low-latency voice agent development",
+      "AI phone agent development",
+    ],
+    tagline:
+      "Voice agents that handle interruption like a human would — barge-in, backchannel audio, and one agent core across every channel.",
+    intro: [
+      "Most voice AI demos work in a quiet room with one polite caller. The moment a real user interrupts mid-sentence, asks a follow-up before the agent finishes talking, or moves from a chat thread to an actual phone call, the illusion breaks — the agent talks over them, stalls mid-answer while retrieval runs, or starts over as if the conversation never happened.",
+      "We build AI-assisted, voice-enabled knowledge assistants and retrieval systems. Streaming STT and TTS run with real barge-in: the moment a caller speaks, in-flight speech and generation cancel against a ~100ms target, instead of finishing the current sentence first. On turns that need retrieval, backchannel audio masks the gap so the agent sounds like it's listening rather than stalling. And it's the same agent regardless of channel — one core carries the retrieval, persona, guardrails, and memory across text, voice-note, and live-call transports; only the transport and turn-taking logic change underneath it.",
+      "Transport is a swappable seam, not a foundation poured in concrete: we start on WebSocket, which needs no media server, and WebRTC is a bounded swap when browser-based calling is needed later — a transport change, not a rewrite of the agent underneath it. Cost is architected in from the start, not bolted on after a spend spike — per-tenant concurrent-call caps, a hard spend cap, a kill switch, and session timeouts, the same discipline we apply to every other engineering guarantee.",
+    ],
+    problem:
+      "Voice AI pilots that work in a demo and break on a real call — talking over an interrupting caller, stalling mid-answer while retrieval runs, or losing the thread the moment a conversation moves from chat to a live call.",
+    features: [
+      "Streaming STT/TTS with real barge-in — in-flight speech and generation cancel against a ~100ms target the moment the caller speaks",
+      "Backchannel audio masks retrieval latency on grounded turns, so the agent sounds like it's listening, not stalling",
+      "One agent core across text, voice-note, and live-call transports — the same retrieval, persona, guardrails, and memory; only transport and turn-taking differ",
+      "Transport built as a swappable seam — WebSocket first with no media server required, WebRTC a bounded swap when browser calling is needed",
+      "Cost architected in from day one — per-tenant concurrent-call caps, a spend cap, a kill switch, and session timeouts",
+      "Provider-agnostic model and STT/TTS layer — swap vendors without rewriting the pipeline",
+    ],
+    deliverables: [
+      "Working voice agent deployed to your infrastructure",
+      "Cost controls configured — concurrency caps, spend cap, kill switch, session timeouts",
+      "Numbered ADRs recording every architectural decision and deviation",
+      "Security review across every surface before handover",
+      "Runbook and 30-day warranty",
+    ],
+    whoFor: [
+      "Founders who need a voice agent that survives a real caller interrupting it, not a chatbot with text-to-speech bolted on",
+      "Teams with an existing text agent who need the same retrieval, guardrails, and memory on a live phone call",
+      "Companies whose voice pilot broke on interruption handling or ran up cost nobody had capped",
+    ],
+    pricing: [
+      { label: "AI MVP Build", from: "$5,000", timeline: "4 weeks" },
+      { label: "Custom Platform", from: "$13,000", timeline: "6–10 weeks" },
+    ],
+    faqs: [
+      {
+        question: "How is this different from a chatbot with text-to-speech added on?",
+        answer:
+          "It's a different architecture, not a different skin. One agent core carries the retrieval, persona, guardrails, and memory across text, voice-note, and live-call transports — the same agent whether a user is typing or calling. Only the transport and turn-taking logic change underneath it.",
+      },
+      {
+        question: "What happens when the caller talks over the agent?",
+        answer:
+          "The in-flight speech and generation cancel — that's real barge-in, working against a ~100ms design target, not a fixed pause the caller has to wait out. On turns that need retrieval, backchannel audio covers the gap so the pause doesn't read as the agent going silent.",
+      },
+      {
+        question: "Do we need WebRTC or a media server to get started?",
+        answer:
+          "No. We start on WebSocket, which needs no media server. WebRTC is a bounded swap if you later need in-browser calling — a transport change, not a rebuild of the agent underneath it.",
+      },
+      {
+        question: "How do you stop a busy day from blowing through our budget?",
+        answer:
+          "Cost is architected in, not monitored after the fact: per-tenant concurrent-call caps, a hard spend cap, a kill switch, and session timeouts are configured before launch, not added after an invoice surprises you.",
+      },
+      {
+        question: "How fast can you ship a voice agent?",
+        answer:
+          "An AI MVP Build starts at $5,000 and runs four weeks for a working voice agent in front of users. A custom, multi-tenant voice platform starts at $13,000 and runs six to ten weeks.",
+      },
+    ],
+    relatedProjectIds: ["aura"],
+  },
+  {
+    slug: "data-pipelines",
+    name: "Data Pipelines",
+    h1: "Data Pipeline Development for AI Systems",
+    metaTitle: "Data Pipeline Development Company | Real Solutions",
+    metaDescription:
+      "We build lineage-carrying data pipelines with deterministic rules first, LLMs only where needed, and blue/green deploys — every row traceable to its source.",
+    keywords: [
+      "data pipeline development",
+      "Dagster consulting",
+      "ETL pipeline agency",
+      "data engineering for AI",
+      "data lineage engineering",
+      "AI data pipeline development company",
+      "ETL development company",
+    ],
+    tagline:
+      "Pipelines where every row traces back to its source feed, run, and timestamp — and every deploy is validated before it goes live.",
+    intro: [
+      "Most \"AI data pipeline\" work is a script that ran fine in a demo and breaks the first time an upstream source changes shape — and when a downstream number looks wrong, there's no way to trace it back to the row, the feed, or the run that produced it.",
+      "We build ingestion with full lineage instead: every canonical row carries its source feed, source document id, run id, and the timestamp it was ingested, so any output can be traced back through every transform to the row that produced it. Deterministic rules run first — most of the pipeline is plain logic, not a model call — and an LLM is invoked only where deterministic rules genuinely can't reach. That model call never sits in the live request path; it runs during scheduled ingestion, where a slow or wrong call can't take down a user-facing request.",
+      "Every model call sits behind read-through caching keyed to the prompt version, so changing a prompt busts the cache instead of silently serving stale output, and every call is cost-logged rather than estimated after the invoice arrives. Records are soft-deleted, never hard-deleted, and a new pipeline version ships through a blue/green swap that only cuts over once its output validates against the version it's replacing.",
+    ],
+    problem:
+      "Data pipelines that break the moment an upstream source changes shape, run a model call inside the live request path where a slow response becomes a user-facing outage, and produce numbers nobody can trace back to the row, feed, or run that made them.",
+    features: [
+      "Scheduled ingestion with full lineage — every canonical row carries its source feed, source document id, run id, and ingest timestamp",
+      "Deterministic rules first — most of the pipeline runs as plain logic; an LLM is invoked only where deterministic rules can't reach",
+      "LLM calls never sit in the live request path — inference runs during scheduled ingestion, not at serve time",
+      "Read-through caching keyed to prompt version, so a prompt change busts the cache instead of silently serving stale output",
+      "Cost logged per model call, not estimated after the invoice arrives",
+      "Soft-delete only, and every pipeline version ships through a blue/green swap validated against the prior version before cutover",
+    ],
+    deliverables: [
+      "Production ingestion pipeline deployed to your infrastructure",
+      "Lineage-carrying schema — every row traceable to source feed, document id, run id, and ingest time",
+      "Numbered ADRs recording every architectural decision and deviation",
+      "Cost and cache-hit logging per model call",
+      "Runbook and 30-day warranty",
+    ],
+    whoFor: [
+      "Teams whose pipeline breaks every time an upstream source changes shape",
+      "Companies that can't trace a downstream number back to the row that produced it",
+      "Teams running model calls inside a live request path that need it moved to scheduled ingestion instead",
+    ],
+    pricing: [{ label: "Custom Platform", from: "$13,000", timeline: "6–10 weeks" }],
+    faqs: [
+      {
+        question: "How do you keep the pipeline from breaking every time a source changes?",
+        answer:
+          "Deterministic rules handle normalization first, so most of the pipeline doesn't depend on a model call at all; an LLM only runs where deterministic logic genuinely can't reach. Combined with full lineage — every row carries its source feed, document id, run id, and ingest time — a break is traceable to the exact row and run that caused it, not a mystery you re-derive from scratch.",
+      },
+      {
+        question: "Where does the LLM actually run?",
+        answer:
+          "During scheduled ingestion, never in a live request path. That means a slow or wrong model call can't turn into a user-facing outage — it's isolated to a batch run that either produces a valid output or gets caught before it reaches anything downstream.",
+      },
+      {
+        question: "How do you control the cost of model calls in the pipeline?",
+        answer:
+          "Read-through caching sits in front of every call, keyed to the prompt version, so a prompt edit busts the cache instead of silently serving stale output. Every call is cost-logged as it happens, not reconstructed from an invoice at the end of the month.",
+      },
+      {
+        question: "What happens when you deploy a new version of the pipeline?",
+        answer:
+          "It ships through a blue/green swap: the new version runs alongside the old, its output is validated against the prior version, and traffic only cuts over once that validation passes. Nothing goes live on the strength of it working in a staging environment alone.",
+      },
+      {
+        question: "Do you ever hard-delete data?",
+        answer:
+          "No — soft-delete only. A row can be marked removed, but the history stays, which matters the day a downstream consumer needs to know what changed and when, not just what the current state is.",
+      },
+    ],
+    relatedProjectIds: ["stocksense", "food-costing-system"],
+  },
+  {
+    slug: "ai-mvp-development",
+    name: "AI MVP Development",
+    h1: "AI MVP Development in 4 Weeks",
+    metaTitle: "AI MVP Development Agency | Real Solutions",
+    metaDescription:
+      "Ship a production AI MVP in 4 weeks — 3 build weeks, 1 UAT week, hypercare and warranty included. From $5,000. Two senior architects, not a bench of juniors.",
+    keywords: [
+      "AI MVP development agency",
+      "build AI agent MVP",
+      "AI prototype development",
+      "MVP development company",
+      "AI MVP development company",
+      "startup AI development agency",
+      "AI agent MVP for startups",
+    ],
+    tagline:
+      "A working AI system in front of real users in four weeks — not a slide deck, and not a bench of juniors between you and the person who wrote the code.",
+    intro: [
+      "Most \"AI MVP\" offers are a pitch deck with a demo bolted on, or a project manager relaying your spec to a bench of engineers a senior only glances at before delivery. A pre-seed or seed founder needs neither. They need something real users can touch, on a timeline that fits a runway, built by people who'll still be reachable the week after it ships.",
+      "We ship in four weeks: three weeks of build, one week of user acceptance testing against your actual users, not our assumptions about them. The two senior architects who scope the engagement are the same two who build it, review it, and stay on through a hypercare period after launch, backed by a 30-day warranty on the work.",
+      "Four weeks is realistic because we build with AI leverage — the same tools and speed we use across every engagement — but leverage without discipline is exactly how a fast build fails a technical diligence call six months later. Every deviation from the agreed scope is a numbered ADR, and the grounding and tenant-isolation guarantees we build everywhere else go in from the first commit, not after your first enterprise prospect asks for a security review.",
+    ],
+    problem:
+      "Pre-seed and seed founders who need a real AI system in front of users before their next investor conversation or customer pilot — not a demo that impresses in a meeting and stalls the moment an actual user touches it.",
+    features: [
+      "Four weeks from kickoff to a working AI system in front of real users — three build weeks, one UAT week",
+      "One core AI capability scoped and shipped completely, not five features shipped halfway",
+      "Grounding guard and tenant isolation built in from the first commit, not retrofitted before a customer's security review",
+      "Two senior architects scope, build, and review the engagement — no bench of juniors between you and the code",
+      "Hypercare support immediately after launch, plus a 30-day warranty on the delivered work",
+      "Numbered ADRs for every deviation from the agreed scope, so what changed and why is never a Slack thread you have to dig up later",
+    ],
+    deliverables: [
+      "Working AI system deployed and in front of real users, not a local demo",
+      "A UAT week run against your actual users, with fixes folded in before handover",
+      "Source code and infrastructure you own outright",
+      "Numbered ADRs and a runbook for what you're inheriting",
+      "Hypercare support window plus a 30-day warranty after launch",
+    ],
+    whoFor: [
+      "Pre-seed to seed founders who need a production AI system before their next round, not a slide",
+      "Non-technical or solo-technical founders who need two senior architects, not a project manager relaying to a team of juniors",
+      "Teams that tried a no-code AI tool or an agency demo and hit a wall the moment real users showed up",
+    ],
+    pricing: [{ label: "AI MVP Build", from: "$5,000", timeline: "4 weeks" }],
+    faqs: [
+      {
+        question: "What exactly do we get in four weeks?",
+        answer:
+          "A working AI system in front of real users, not a demo. The engagement runs three build weeks followed by a UAT week against your actual users, with fixes from that week folded in before handover. You leave with hypercare support and a 30-day warranty on the delivered work.",
+      },
+      {
+        question: "What's not included in the $5,000 MVP build?",
+        answer:
+          "It's one AI capability, scoped and shipped completely — not an open-ended retainer, not unlimited feature requests, and not indefinite free support beyond the hypercare window and 30-day warranty. If what you need is multi-tenant architecture or a compliance-ready platform from day one, that's our Custom Platform engagement, not the MVP build.",
+      },
+      {
+        question: "Why four weeks, and not two or twelve?",
+        answer:
+          "Three weeks is enough to build one AI capability properly when the scope is held to one capability, not five. The fourth week is UAT against real users, not our assumptions about them, so what ships has actually been used before you call it done.",
+      },
+      {
+        question: "Who's actually building this — will we get a bench of junior developers?",
+        answer:
+          "No. The two senior architects who scope the engagement are the same two who build, review, and support it through hypercare. There's no handoff to a team you haven't met.",
+      },
+      {
+        question: "What happens after the MVP ships?",
+        answer:
+          "A hypercare period immediately after launch, then a 30-day warranty on the delivered work. If the MVP validates and you need to scale it into a multi-tenant platform or add compliance-grade guarantees, that becomes a Custom Platform engagement built on what already shipped, not a rewrite.",
+      },
+    ],
+    relatedProjectIds: ["aura", "bath-and-bark"],
+  },
 ];
 
 export function getService(slug: string): Service | undefined {
