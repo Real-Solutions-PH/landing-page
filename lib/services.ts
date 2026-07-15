@@ -45,7 +45,6 @@ export const services: Service[] = [
       "RAG development company",
       "AI agent development",
       "LangGraph developers for hire",
-      "build AI agent MVP",
       "production RAG system",
       "LLM application development",
       "retrieval augmented generation agency",
@@ -106,7 +105,7 @@ export const services: Service[] = [
           "Every model call goes through one provider-agnostic layer, so switching providers is an environment variable, not a refactor. That matters when a compliance requirement forces a specific region or vendor after the build has started.",
       },
     ],
-    relatedProjectIds: ["aura", "artemis"],
+    relatedProjectIds: ["aura", "bath-and-bark"],
   },
   {
     slug: "system-integration",
