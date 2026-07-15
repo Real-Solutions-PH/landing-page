@@ -11,7 +11,7 @@ import { getService } from "@/lib/services";
 export const metadata: Metadata = {
   title: "AI MVP Development for Startup Founders",
   description:
-    "Pre-seed and seed founders ship a production AI MVP in 4 weeks, from $5,000 — RAG, agents, and LangGraph builds by two senior architects, not a bench of juniors.",
+    "Get a production AI MVP in front of real users in 4 weeks, from $5,000. For pre-seed and seed founders who need traction before the next raise, not a demo.",
   keywords: [
     "AI MVP development agency",
     "RAG development company",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI MVP Development for Startup Founders",
     description:
-      "Pre-seed and seed founders ship a production AI MVP in 4 weeks, from $5,000 — RAG, agents, and LangGraph builds by two senior architects, not a bench of juniors.",
+      "Get a production AI MVP in front of real users in 4 weeks, from $5,000. For pre-seed and seed founders who need traction before the next raise, not a demo.",
     url: "https://www.realsolutionsph.com/for/startups",
     siteName: "Real Solutions PH",
     locale: "en_PH",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AI MVP Development for Startup Founders",
     description:
-      "Pre-seed and seed founders ship a production AI MVP in 4 weeks, from $5,000 — RAG, agents, and LangGraph builds by two senior architects, not a bench of juniors.",
+      "Get a production AI MVP in front of real users in 4 weeks, from $5,000. For pre-seed and seed founders who need traction before the next raise, not a demo.",
     images: ["/og-image.png"],
   },
 };
