@@ -279,7 +279,7 @@ In `package.json`, change the `lint` script and add `check:positioning`:
 
 Run: `pnpm check:positioning`
 
-Expected: exit 1 with **259 violations**. This exact baseline was measured against current content during planning:
+Expected: exit 1 with **260 violations**. Baseline measured against current content:
 
 | Code | Count | Meaning |
 |---|---|---|
@@ -288,7 +288,10 @@ Expected: exit 1 with **259 violations**. This exact baseline was measured again
 | C8 | 9 | PHP currency / promo fields |
 | — | 3 | missing `app/for/*` audience pages |
 | C10 | 2 | missing 301s for retired blog slugs |
+| — | 1 | `CONTEXT.md` declares a PH primary market |
 | **C1/C2/C4** | **0** | the live site names no client today — this must stay 0 |
+
+When checking the C1/C2/C4 count, use word boundaries — `grep -cE '\bC1\b|\bC2\b|\bC4\b'`. A bare `C1` substring-matches `C10` and will report phantom hits.
 
 If it passes, or reports materially fewer, the guard is broken — fix the guard before continuing. A guard that under-reports is worse than none, because C1/C2 failures carry uncapped liability.
 
