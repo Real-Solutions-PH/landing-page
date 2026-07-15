@@ -154,10 +154,7 @@ export function ServiceDetail({
               <thead className="bg-secondary/50 text-xs uppercase tracking-wide text-muted-foreground">
                 <tr>
                   <th className="px-4 py-3 font-medium md:px-6">Package</th>
-                  <th className="px-4 py-3 font-medium md:px-6">PH rate</th>
-                  <th className="hidden px-4 py-3 font-medium sm:table-cell md:px-6">
-                    Intl rate
-                  </th>
+                  <th className="px-4 py-3 font-medium md:px-6">From</th>
                   <th className="px-4 py-3 font-medium md:px-6">Timeline</th>
                 </tr>
               </thead>
@@ -168,10 +165,7 @@ export function ServiceDetail({
                       {p.label}
                     </td>
                     <td className="px-4 py-4 text-muted-foreground md:px-6">
-                      {p.php}
-                    </td>
-                    <td className="hidden px-4 py-4 text-muted-foreground sm:table-cell md:px-6">
-                      {p.intl}
+                      {p.from}
                     </td>
                     <td className="px-4 py-4 text-muted-foreground md:px-6">
                       {p.timeline}
