@@ -92,7 +92,7 @@ export function WorkContent() {
             <GradientText>not just demoed</GradientText>
           </>
         }
-        description="AI agents, RAG pipelines, system integrations, custom platforms, and apps — deployed to production for founders, regulated teams, and agencies."
+        description="AI agents, RAG pipelines, system integrations, custom platforms, and apps — deployed to production and still running, not left in a sandbox."
       />
 
       {/* Filter + Grid */}

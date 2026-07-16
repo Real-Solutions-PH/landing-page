@@ -5,12 +5,12 @@ import { CtaSection } from "@/components/sections/cta-section";
 export const metadata: Metadata = {
   title: "AI & Software Portfolio — Case Studies",
   description:
-    "Real Solutions portfolio — AI agents, RAG pipelines, system integrations, custom platforms, and mobile apps shipped for founders, regulated teams, and agencies.",
+    "Real Solutions portfolio — AI agents, RAG pipelines, system integrations, custom platforms, and mobile apps, built across retail, consumer tech, and agritech.",
   alternates: { canonical: "/work" },
   openGraph: {
     title: "AI & Software Portfolio — Case Studies",
     description:
-      "Real Solutions portfolio — AI agents, RAG pipelines, system integrations, custom platforms, and mobile apps shipped for founders, regulated teams, and agencies.",
+      "Real Solutions portfolio — AI agents, RAG pipelines, system integrations, custom platforms, and mobile apps, built across retail, consumer tech, and agritech.",
     url: "https://www.realsolutionsph.com/work",
     siteName: "Real Solutions PH",
     locale: "en_US",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AI & Software Portfolio — Case Studies",
     description:
-      "Real Solutions portfolio — AI agents, RAG pipelines, system integrations, custom platforms, and mobile apps shipped for founders, regulated teams, and agencies.",
+      "Real Solutions portfolio — AI agents, RAG pipelines, system integrations, custom platforms, and mobile apps, built across retail, consumer tech, and agritech.",
     images: ["/api/og-image"],
   },
 };
