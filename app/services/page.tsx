@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       "System integration, custom software, AI development, and web & mobile apps for Philippine SMEs and international clients.",
     url: "https://www.realsolutionsph.com/services",
     siteName: "Real Solutions PH",
-    locale: "en_PH",
+    locale: "en_US",
     type: "website",
     images: [
       {

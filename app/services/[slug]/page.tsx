@@ -28,7 +28,7 @@ export async function generateMetadata({
       description: service.metaDescription,
       url,
       siteName: "Real Solutions PH",
-      locale: "en_PH",
+      locale: "en_US",
       type: "website",
       images: [
         {

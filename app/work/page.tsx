@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       "Real Solutions portfolio — AI agents, RAG pipelines, system integrations, custom platforms, and mobile apps shipped for founders, regulated teams, and agencies.",
     url: "https://www.realsolutionsph.com/work",
     siteName: "Real Solutions PH",
-    locale: "en_PH",
+    locale: "en_US",
     type: "website",
     images: [
       {

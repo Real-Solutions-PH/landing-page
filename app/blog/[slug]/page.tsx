@@ -30,7 +30,7 @@ export async function generateMetadata({
       description: post.description,
       url,
       siteName: "Real Solutions PH",
-      locale: "en_PH",
+      locale: "en_US",
       type: "article",
       publishedTime: post.date,
       images: [

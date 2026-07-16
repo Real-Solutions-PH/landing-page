@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       "Book a scoping call with Real Solutions. We'll scope the build, give you a fixed-price estimate, and tell you plainly whether we're the right fit — no commitment.",
     url: "https://www.realsolutionsph.com/contact",
     siteName: "Real Solutions PH",
-    locale: "en_PH",
+    locale: "en_US",
     type: "website",
     images: [
       {

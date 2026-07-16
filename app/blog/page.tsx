@@ -23,7 +23,7 @@ export const metadata: Metadata = {
       "Practical guides on custom software, system integration, AI, and outsourcing in the Philippines.",
     url: "https://www.realsolutionsph.com/blog",
     siteName: "Real Solutions PH",
-    locale: "en_PH",
+    locale: "en_US",
     type: "website",
     images: [
       {

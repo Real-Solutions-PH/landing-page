@@ -23,7 +23,7 @@ export const metadata: Metadata = {
       "Subcontract the AI work your agency sold to a senior engineering pod — white-label delivery with a numbered ADR trail your client's own reviewer can check.",
     url: "https://www.realsolutionsph.com/for/agencies",
     siteName: "Real Solutions PH",
-    locale: "en_PH",
+    locale: "en_US",
     type: "website",
     images: [
       {

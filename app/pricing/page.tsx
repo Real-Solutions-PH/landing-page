@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "Transparent AI engineering pricing, from $3,000. AI agents, RAG, integration, custom platforms, and AI MVP builds — fixed scope, USD, no upper-bound guesswork.",
     url: "https://www.realsolutionsph.com/pricing",
     siteName: "Real Solutions PH",
-    locale: "en_PH",
+    locale: "en_US",
     type: "website",
     images: [
       {

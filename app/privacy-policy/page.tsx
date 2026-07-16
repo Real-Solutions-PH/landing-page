@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       "How Real Solutions PH collects, uses, and protects your personal data when you use our custom software development and integration services.",
     url: "https://www.realsolutionsph.com/privacy-policy",
     siteName: "Real Solutions PH",
-    locale: "en_PH",
+    locale: "en_US",
     type: "article",
     images: [
       {

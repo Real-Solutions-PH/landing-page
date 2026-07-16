@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       "Meet the engineers behind Real Solutions PH — former startup leaders building production-grade software for Philippine SMEs and international clients.",
     url: "https://www.realsolutionsph.com/about",
     siteName: "Real Solutions PH",
-    locale: "en_PH",
+    locale: "en_US",
     type: "website",
     images: [
       {

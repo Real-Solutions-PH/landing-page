@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       "Two senior architects shipping AI agents, RAG, and custom platforms with grounding guards, tenant isolation, and numbered ADRs — guarantees you can audit.",
     url: "https://www.realsolutionsph.com",
     siteName: "Real Solutions PH",
-    locale: "en_PH",
+    locale: "en_US",
     type: "website",
     images: [
       {

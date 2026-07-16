@@ -20,7 +20,7 @@ export const metadata: Metadata = {
       "Three build weeks, one UAT week against real users, hypercare, and a 30-day warranty — the delivery shape behind every Real Solutions engagement.",
     url: "https://www.realsolutionsph.com/how-we-work",
     siteName: "Real Solutions PH",
-    locale: "en_PH",
+    locale: "en_US",
     type: "website",
     images: [
       {

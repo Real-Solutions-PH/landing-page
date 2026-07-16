@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       "Terms governing use of Real Solutions PH custom software development, system integration, and managed services in the Philippines and internationally.",
     url: "https://www.realsolutionsph.com/terms-of-service",
     siteName: "Real Solutions PH",
-    locale: "en_PH",
+    locale: "en_US",
     type: "article",
     images: [
       {

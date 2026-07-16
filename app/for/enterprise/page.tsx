@@ -24,7 +24,7 @@ export const metadata: Metadata = {
       "Multi-tenant RAG platforms with provable tenant isolation, grounded output, and EU data-residency support — architected for a compliance review, not just a demo.",
     url: "https://www.realsolutionsph.com/for/enterprise",
     siteName: "Real Solutions PH",
-    locale: "en_PH",
+    locale: "en_US",
     type: "website",
     images: [
       {

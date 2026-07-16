@@ -25,7 +25,7 @@ export const metadata: Metadata = {
       "Get a production AI MVP in front of real users in 4 weeks, from $5,000. For pre-seed and seed founders who need traction before the next raise, not a demo.",
     url: "https://www.realsolutionsph.com/for/startups",
     siteName: "Real Solutions PH",
-    locale: "en_PH",
+    locale: "en_US",
     type: "website",
     images: [
       {
