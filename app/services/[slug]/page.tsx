@@ -32,7 +32,7 @@ export async function generateMetadata({
       type: "website",
       images: [
         {
-          url: "/og-image.png",
+          url: "/api/og-image",
           width: 1200,
           height: 630,
           alt: service.h1,
@@ -43,7 +43,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: service.metaTitle,
       description: service.metaDescription,
-      images: ["/og-image.png"],
+      images: ["/api/og-image"],
     },
   };
 }

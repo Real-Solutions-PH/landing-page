@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/api/og-image",
         width: 1200,
         height: 630,
         alt: "Real Solutions Pricing",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: "Pricing — AI Engineering Rates",
     description:
       "Transparent AI engineering pricing, from $3,000. AI agents, RAG, integration, custom platforms, and AI MVP builds — fixed scope, USD, no upper-bound guesswork.",
-    images: ["/og-image.png"],
+    images: ["/api/og-image"],
   },
 };
 

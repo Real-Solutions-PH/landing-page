@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "/og-image.png",
+        url: "/api/og-image",
         width: 1200,
         height: 630,
         alt: "Real Solutions PH Privacy Policy",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Privacy Policy",
     description:
       "How Real Solutions PH collects, uses, and protects your personal data when you use our custom software development and integration services.",
-    images: ["/og-image.png"],
+    images: ["/api/og-image"],
   },
 };
 

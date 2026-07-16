@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/api/og-image",
         width: 1200,
         height: 630,
         alt: "Real Solutions Services",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: "AI Engineering Services — RAG, Voice AI, Integration & More",
     description:
       "Seven services under one senior engineering team: AI agents & RAG, system integration, custom platforms, web & mobile, voice AI, data pipelines, and AI MVP development.",
-    images: ["/og-image.png"],
+    images: ["/api/og-image"],
   },
 };
 

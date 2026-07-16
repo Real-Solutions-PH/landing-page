@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/api/og-image",
         width: 1200,
         height: 630,
         alt: "Real Solutions — AI Systems, Shipped in Weeks",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     title: "Real Solutions — AI Systems, Shipped in Weeks",
     description:
       "Senior AI engineering studio. Production RAG, agents, and voice systems with grounded output and provable tenant isolation — shipped in weeks, not quarters.",
-    images: ["/og-image.png"],
+    images: ["/api/og-image"],
   },
   robots: {
     index: true,
@@ -108,7 +108,7 @@ export default function RootLayout({
                 url: "https://www.realsolutionsph.com",
                 logo: "https://www.realsolutionsph.com/logo/logo-header-light.svg",
                 image:
-                  "https://www.realsolutionsph.com/og-image.png",
+                  "https://www.realsolutionsph.com/api/og-image",
                 description:
                   "Real Solutions is a senior AI engineering studio. Two architects with AI leverage, shipping production-grade AI systems — RAG, agents, and voice AI — in weeks, for startups, regulated enterprise, and agencies worldwide.",
                 areaServed: {

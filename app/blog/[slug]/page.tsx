@@ -35,7 +35,7 @@ export async function generateMetadata({
       publishedTime: post.date,
       images: [
         {
-          url: "/og-image.png",
+          url: "/api/og-image",
           width: 1200,
           height: 630,
           alt: post.title,
@@ -46,7 +46,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: post.metaTitle,
       description: post.description,
-      images: ["/og-image.png"],
+      images: ["/api/og-image"],
     },
   };
 }
@@ -72,7 +72,7 @@ export default async function BlogPostPage({
     dateModified: post.date,
     url: postUrl,
     mainEntityOfPage: postUrl,
-    image: `${baseUrl}/og-image.png`,
+    image: `${baseUrl}/api/og-image`,
     author: {
       "@type": "Organization",
       name: "Real Solutions PH",

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Lock, ShieldCheck, ScrollText, Globe } from "lucide-react";
+import { Lock, ShieldCheck, ScrollText, Globe, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { PageHero, GradientText } from "@/components/sections/page-hero";
-import { FeaturedWorkSection } from "@/components/sections/featured-work-section";
 import { CtaSection } from "@/components/sections/cta-section";
+import { getPost } from "@/lib/blog";
 
 export const metadata: Metadata = {
   title: "Compliance-Ready AI Architecture for Enterprise",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/api/og-image",
         width: 1200,
         height: 630,
         alt: "Compliance-Ready AI Architecture for Enterprise",
@@ -40,9 +40,20 @@ export const metadata: Metadata = {
     title: "Compliance-Ready AI Architecture for Enterprise",
     description:
       "Multi-tenant RAG platforms with provable tenant isolation, grounded output, and EU data-residency support — architected for a compliance review, not just a demo.",
-    images: ["/og-image.png"],
+    images: ["/api/og-image"],
   },
 };
+
+// Client case studies are barred from publication, so these posts — describable
+// without reference to any engagement — are the proof path for this page.
+const RELATED_POST_SLUGS = [
+  "proving-tenant-isolation-postgres-rls",
+  "grounding-guards-llm-refuse-invent-numbers",
+  "server-side-citations-never-parse-model-prose",
+];
+const RELATED_POSTS = RELATED_POST_SLUGS.map(getPost).filter(
+  (post): post is NonNullable<typeof post> => Boolean(post),
+);
 
 const ARCHITECTURE_PROOF = [
   {
@@ -165,7 +176,44 @@ export default function EnterprisePage() {
         </div>
       </section>
 
-      <FeaturedWorkSection />
+      {/* Read the engineering */}
+      <section className="w-full py-16 md:py-24">
+        <div className="container mx-auto px-4 md:px-6 max-w-5xl">
+          <h2 className="mb-3 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+            Read the engineering
+          </h2>
+          <p className="mb-10 max-w-2xl text-sm text-muted-foreground md:text-base">
+            The architecture claims above, worked through in the depth a
+            technical reviewer would actually want — not asserted, shown.
+          </p>
+          <div className="grid gap-4 sm:grid-cols-3">
+            {RELATED_POSTS.map((post) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="group block"
+              >
+                <Card className="flex h-full flex-col gap-3 border-border bg-card p-6 transition-colors group-hover:border-accent/40">
+                  <span className="text-xs text-muted-foreground">
+                    {post.readMinutes} min read
+                  </span>
+                  <h3 className="text-base font-bold leading-snug text-foreground">
+                    {post.title}
+                  </h3>
+                  <p className="flex-1 text-sm leading-relaxed text-muted-foreground">
+                    {post.excerpt}
+                  </p>
+                  <span className="inline-flex items-center gap-1 text-sm font-medium text-accent">
+                    Read article
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </Card>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <CtaSection />
     </main>
   );

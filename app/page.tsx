@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/api/og-image",
         width: 1200,
         height: 630,
         alt: "Real Solutions — AI Engineering Studio",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "AI Engineering Studio — Production AI in Weeks",
     description:
       "Two senior architects shipping AI agents, RAG, and custom platforms with grounding guards, tenant isolation, and numbered ADRs — guarantees you can audit.",
-    images: ["/og-image.png"],
+    images: ["/api/og-image"],
   },
 };
 

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Users, GitBranch, Handshake, FileCheck } from "lucide-react";
+import { Users, GitBranch, Handshake, FileCheck, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { PageHero, GradientText } from "@/components/sections/page-hero";
 import { FeaturedWorkSection } from "@/components/sections/featured-work-section";
 import { CtaSection } from "@/components/sections/cta-section";
+import { getPost } from "@/lib/blog";
 
 export const metadata: Metadata = {
   title: "White-Label AI Engineering Pod for Agencies",
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/api/og-image",
         width: 1200,
         height: 630,
         alt: "White-Label AI Engineering Pod for Agencies",
@@ -39,9 +40,21 @@ export const metadata: Metadata = {
     title: "White-Label AI Engineering Pod for Agencies",
     description:
       "Subcontract the AI work your agency sold to a senior engineering pod — white-label delivery with a numbered ADR trail your client's own reviewer can check.",
-    images: ["/og-image.png"],
+    images: ["/api/og-image"],
   },
 };
+
+// Client case studies are barred from publication, so these posts carry the
+// proof — the discipline (ADRs, positive controls) your client's reviewer
+// would want to see, described without reference to any engagement.
+const RELATED_POST_SLUGS = [
+  "shipping-production-ai-in-four-weeks",
+  "proving-tenant-isolation-postgres-rls",
+  "server-side-citations-never-parse-model-prose",
+];
+const RELATED_POSTS = RELATED_POST_SLUGS.map(getPost).filter(
+  (post): post is NonNullable<typeof post> => Boolean(post),
+);
 
 const POD_PROOF = [
   {
@@ -153,6 +166,45 @@ export default function AgenciesPage() {
                   </p>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Read the engineering */}
+      <section className="w-full py-16 md:py-24">
+        <div className="container mx-auto px-4 md:px-6 max-w-5xl">
+          <h2 className="mb-3 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+            Read the engineering
+          </h2>
+          <p className="mb-10 max-w-2xl text-sm text-muted-foreground md:text-base">
+            The build process and the audit trail behind it — the same
+            record your client&apos;s reviewer would be handed, described
+            without reference to any engagement.
+          </p>
+          <div className="grid gap-4 sm:grid-cols-3">
+            {RELATED_POSTS.map((post) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="group block"
+              >
+                <Card className="flex h-full flex-col gap-3 border-border bg-card p-6 transition-colors group-hover:border-accent/40">
+                  <span className="text-xs text-muted-foreground">
+                    {post.readMinutes} min read
+                  </span>
+                  <h3 className="text-base font-bold leading-snug text-foreground">
+                    {post.title}
+                  </h3>
+                  <p className="flex-1 text-sm leading-relaxed text-muted-foreground">
+                    {post.excerpt}
+                  </p>
+                  <span className="inline-flex items-center gap-1 text-sm font-medium text-accent">
+                    Read article
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>

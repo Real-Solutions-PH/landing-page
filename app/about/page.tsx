@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/api/og-image",
         width: 1200,
         height: 630,
         alt: "About Real Solutions PH",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "About Our Software Engineers",
     description:
       "Meet the two senior architects behind Real Solutions — former startup engineering leads shipping production-grade AI systems for international startups, regulated enterprises, and agencies.",
-    images: ["/og-image.png"],
+    images: ["/api/og-image"],
   },
 };
 

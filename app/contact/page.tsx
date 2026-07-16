@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/api/og-image",
         width: 1200,
         height: 630,
         alt: "Book a Scoping Call — Real Solutions",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "Book a Scoping Call",
     description:
       "Book a scoping call with Real Solutions. We'll scope the build, give you a fixed-price estimate, and tell you plainly whether we're the right fit — no commitment.",
-    images: ["/og-image.png"],
+    images: ["/api/og-image"],
   },
 };
 

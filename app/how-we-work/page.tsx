@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/api/og-image",
         width: 1200,
         height: 630,
         alt: "How Real Solutions Works",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "How We Work — Build, UAT, Hypercare, Warranty",
     description:
       "Three build weeks, one UAT week against real users, hypercare, and a 30-day warranty.",
-    images: ["/og-image.png"],
+    images: ["/api/og-image"],
   },
 };
 

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/api/og-image",
         width: 1200,
         height: 630,
         alt: "Real Solutions Portfolio",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "AI & Software Portfolio — Case Studies",
     description:
       "Real Solutions portfolio — AI agents, RAG pipelines, system integrations, custom platforms, and mobile apps shipped for founders, regulated teams, and agencies.",
-    images: ["/og-image.png"],
+    images: ["/api/og-image"],
   },
 };
 

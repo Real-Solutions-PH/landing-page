@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/api/og-image",
         width: 1200,
         height: 630,
         alt: "Real Solutions Insights",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "Insights — AI Engineering, RAG & Production AI Systems",
     description:
       "Practical guides on shipping production AI: grounding guards, tenant isolation, RAG architecture, and what things actually cost.",
-    images: ["/og-image.png"],
+    images: ["/api/og-image"],
   },
 };
 

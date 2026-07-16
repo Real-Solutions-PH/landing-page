@@ -94,9 +94,8 @@ export function FeaturedWorkSection() {
               Shipped, not just demoed
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              A sample of what we&apos;ve built for founders, regulated
-              teams, and agencies — deployed to production, not left in a
-              sandbox.
+              A sample of production builds across retail, consumer tech,
+              and agritech — deployed and running, not left in a sandbox.
             </p>
           </motion.div>
 

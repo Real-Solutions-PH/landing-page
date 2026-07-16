@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "/og-image.png",
+        url: "/api/og-image",
         width: 1200,
         height: 630,
         alt: "Real Solutions PH Terms of Service",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Terms of Service",
     description:
       "Terms governing use of Real Solutions PH custom software development, system integration, and managed services.",
-    images: ["/og-image.png"],
+    images: ["/api/og-image"],
   },
 };
 
