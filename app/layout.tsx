@@ -5,6 +5,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { services } from "@/lib/services";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -97,45 +98,28 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify([
-              // Organization + ProfessionalService schema
+              // Organization + ProfessionalService schema (LocalBusiness/geo removed —
+              // international positioning, no service-area targeting).
               {
                 "@context": "https://schema.org",
-                "@type": "ProfessionalService",
+                "@type": ["Organization", "ProfessionalService"],
                 "@id": "https://www.realsolutionsph.com/#organization",
-                name: "Real Solutions PH",
+                name: "Real Solutions",
                 url: "https://www.realsolutionsph.com",
                 logo: "https://www.realsolutionsph.com/logo/logo-header-light.svg",
                 image:
                   "https://www.realsolutionsph.com/og-image.png",
                 description:
-                  "Real Solutions PH is a custom software development and system integration company in Batangas, Philippines. We build production-grade software for Philippine SMEs and international clients — prototype-first, fully managed, from discovery to long-term retainer.",
-                priceRange: "₱₱₱",
-                areaServed: [
-                  {
-                    "@type": "Country",
-                    name: "Philippines",
-                  },
-                  {
-                    "@type": "AdministrativeArea",
-                    name: "International",
-                  },
-                ],
-                address: {
-                  "@type": "PostalAddress",
-                  addressLocality: "Batangas",
-                  addressRegion: "Batangas",
-                  addressCountry: "PH",
-                },
-                geo: {
-                  "@type": "GeoCoordinates",
-                  latitude: 13.7565,
-                  longitude: 121.0583,
+                  "Real Solutions is a senior AI engineering studio. Two architects with AI leverage, shipping production-grade AI systems — RAG, agents, and voice AI — in weeks, for startups, regulated enterprise, and agencies worldwide.",
+                areaServed: {
+                  "@type": "Place",
+                  name: "Worldwide",
                 },
                 contactPoint: {
                   "@type": "ContactPoint",
                   contactType: "customer service",
                   email: "executives.realsolutions.ph@gmail.com",
-                  availableLanguage: ["English", "Filipino"],
+                  availableLanguage: ["English"],
                 },
                 founder: [
                   {
@@ -149,112 +133,23 @@ export default function RootLayout({
                     jobTitle: "Co-Founder & AI/Cloud Engineer",
                   },
                 ],
-                knowsAbout: [
-                  "Custom Software Development",
-                  "System Integration",
-                  "API Development",
-                  "Mobile App Development",
-                  "AI Integration",
-                  "Web Application Development",
-                  "POS Integration",
-                  "CRM Integration",
-                  "ERP Integration",
-                  "Business Process Automation",
-                  "Workflow Automation",
-                  "Software Maintenance",
-                ],
+                knowsAbout: services.map((s) => s.name),
                 hasOfferCatalog: {
                   "@type": "OfferCatalog",
-                  name: "Software Development & Integration Services",
-                  itemListElement: [
-                    {
-                      "@type": "Offer",
-                      itemOffered: {
-                        "@type": "Service",
-                        name: "System Integration Development",
-                        description:
-                          "Connect POS, inventory, HR, payroll, CRM, accounting, and e-commerce systems. API and webhook integrations, workflow automation, and operational dashboards for Philippine SMEs.",
-                      },
+                  name: "AI Engineering Services",
+                  itemListElement: services.map((s) => ({
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: s.h1,
+                      description: s.tagline,
                     },
-                    {
-                      "@type": "Offer",
-                      itemOffered: {
-                        "@type": "Service",
-                        name: "Custom Software Development",
-                        description:
-                          "Internal tools, admin panels, portals, industry-specific operational systems, and management platforms. Production-grade custom software for small businesses in the Philippines.",
-                      },
-                    },
-                    {
-                      "@type": "Offer",
-                      itemOffered: {
-                        "@type": "Service",
-                        name: "Website and Web Application Development",
-                        description:
-                          "Marketing websites, lead-generation websites, portals, and web-based operational applications. SEO-optimized and high-performance websites for Philippine businesses.",
-                      },
-                    },
-                    {
-                      "@type": "Offer",
-                      itemOffered: {
-                        "@type": "Service",
-                        name: "Mobile Application Development",
-                        description:
-                          "Customer-facing mobile apps, internal operations apps, staff tools, and cross-platform mobile systems for iOS and Android.",
-                      },
-                    },
-                    {
-                      "@type": "Offer",
-                      itemOffered: {
-                        "@type": "Service",
-                        name: "AI Integration and Custom AI Development",
-                        description:
-                          "AI-assisted internal workflows, document and knowledge assistants, embedded AI chat systems, and AI-powered business automation.",
-                      },
-                    },
-                  ],
+                  })),
                 },
                 sameAs: [
                   "https://www.linkedin.com/company/real-solutions-ph",
                   "https://github.com/Real-Solutions-PH",
                 ],
-              },
-              // LocalBusiness schema for Batangas local SEO
-              {
-                "@context": "https://schema.org",
-                "@type": "LocalBusiness",
-                "@id": "https://www.realsolutionsph.com/#localbusiness",
-                name: "Real Solutions PH",
-                description:
-                  "Custom software development and system integration company in Batangas, Philippines. Affordable software solutions for SMEs.",
-                url: "https://www.realsolutionsph.com",
-                image:
-                  "https://www.realsolutionsph.com/og-image.png",
-                email: "executives.realsolutions.ph@gmail.com",
-                address: {
-                  "@type": "PostalAddress",
-                  addressLocality: "Batangas",
-                  addressRegion: "Batangas",
-                  addressCountry: "PH",
-                },
-                geo: {
-                  "@type": "GeoCoordinates",
-                  latitude: 13.7565,
-                  longitude: 121.0583,
-                },
-                priceRange: "₱₱₱",
-                openingHoursSpecification: {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: [
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday",
-                  ],
-                  opens: "09:00",
-                  closes: "18:00",
-                },
               },
               // WebSite schema with search action
               {
@@ -262,9 +157,9 @@ export default function RootLayout({
                 "@type": "WebSite",
                 "@id": "https://www.realsolutionsph.com/#website",
                 url: "https://www.realsolutionsph.com",
-                name: "Real Solutions PH",
+                name: "Real Solutions",
                 description:
-                  "Custom software development and system integration company in Batangas, Philippines serving Philippine SMEs and international clients.",
+                  "Real Solutions — a senior AI engineering studio shipping production AI systems for startups, regulated enterprise, and agencies worldwide.",
                 publisher: {
                   "@id": "https://www.realsolutionsph.com/#organization",
                 },
@@ -292,81 +187,62 @@ export default function RootLayout({
                   {
                     "@type": "ListItem",
                     position: 2,
+                    name: "Services",
+                    item: "https://www.realsolutionsph.com/services",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 3,
+                    name: "How We Work",
+                    item: "https://www.realsolutionsph.com/how-we-work",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 4,
+                    name: "Work",
+                    item: "https://www.realsolutionsph.com/work",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 5,
+                    name: "Insights",
+                    item: "https://www.realsolutionsph.com/blog",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 6,
                     name: "About",
                     item: "https://www.realsolutionsph.com/about",
                   },
                   {
                     "@type": "ListItem",
-                    position: 3,
-                    name: "Portfolio",
-                    item: "https://www.realsolutionsph.com/work",
-                  },
-                  {
-                    "@type": "ListItem",
-                    position: 4,
+                    position: 7,
                     name: "Pricing",
                     item: "https://www.realsolutionsph.com/pricing",
                   },
                   {
                     "@type": "ListItem",
-                    position: 5,
+                    position: 8,
                     name: "Contact",
                     item: "https://www.realsolutionsph.com/contact",
                   },
-                ],
-              },
-              // FAQ schema for rich snippets
-              {
-                "@context": "https://schema.org",
-                "@type": "FAQPage",
-                mainEntity: [
                   {
-                    "@type": "Question",
-                    name: "How much does custom software development cost in the Philippines?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "At Real Solutions PH, custom software development starts from ₱42,000 (approximately $3,500 USD) for basic systems, and scales based on complexity. System integration projects start from ₱10,000, and managed retainers from ₱3,500/month. We offer transparent pricing with no hidden fees.",
-                    },
+                    "@type": "ListItem",
+                    position: 9,
+                    name: "For Startups",
+                    item: "https://www.realsolutionsph.com/for/startups",
                   },
                   {
-                    "@type": "Question",
-                    name: "What services does Real Solutions PH offer?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "We offer five core services: System Integration Development (connecting POS, inventory, CRM, HR, accounting), Custom Software Systems (admin panels, portals, internal tools), Website & Web Application Development, Mobile App Development (iOS & Android), and AI Integration (chatbots, workflow automation, knowledge assistants).",
-                    },
+                    "@type": "ListItem",
+                    position: 10,
+                    name: "For Enterprise",
+                    item: "https://www.realsolutionsph.com/for/enterprise",
                   },
                   {
-                    "@type": "Question",
-                    name: "How does the software development process work at Real Solutions PH?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "We follow a four-phase delivery model: (1) Build — one AI capability scoped and built over three weeks, (2) UAT — a full week of testing against real users, (3) Hypercare — the same two architects stay reachable right after launch, (4) Warranty — a 30-day warranty on delivered work.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Can you integrate my existing POS, inventory, and accounting systems?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Yes, system integration is our flagship service. We connect POS systems, inventory management, HR/payroll, CRM, accounting software (Xero, QuickBooks), and e-commerce platforms (Shopify, Lazada) into a unified operational system with real-time data sync and automated workflows.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Do you work with international clients outside the Philippines?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Yes, we serve both Philippine SMEs and international clients. International clients benefit from senior Filipino engineering talent at cost-effective rates. We offer USD pricing for international projects, with the same production-grade quality and managed service approach.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Where is Real Solutions PH located?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Real Solutions PH is based in Batangas, Philippines. We operate as a remote-first company, serving clients across the Philippines and internationally. Our founders are former startup engineering leaders with deep expertise in full-stack development, cloud infrastructure, and AI.",
-                    },
+                    "@type": "ListItem",
+                    position: 11,
+                    name: "For Agencies",
+                    item: "https://www.realsolutionsph.com/for/agencies",
                   },
                 ],
               },

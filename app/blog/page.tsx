@@ -7,20 +7,21 @@ import { PageHero, GradientText } from "@/components/sections/page-hero";
 import { posts } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Insights — Software Development in the Philippines",
+  title: "Insights — AI Engineering, RAG & Production AI Systems",
   description:
-    "Practical guides on custom software, system integration, AI, and outsourcing in the Philippines — pricing, process, and how to choose the right software partner.",
+    "Practical guides on shipping production AI: grounding guards, tenant isolation, RAG architecture, voice AI, and what an AI MVP actually costs.",
   keywords: [
-    "software development blog Philippines",
-    "custom software guide Philippines",
-    "software outsourcing Philippines",
-    "software development insights",
+    "AI engineering blog",
+    "RAG architecture guide",
+    "AI MVP cost",
+    "LLM grounding guard",
+    "AI agent development guide",
   ],
   alternates: { canonical: "/blog" },
   openGraph: {
-    title: "Insights — Software Development in the Philippines",
+    title: "Insights — AI Engineering, RAG & Production AI Systems",
     description:
-      "Practical guides on custom software, system integration, AI, and outsourcing in the Philippines.",
+      "Practical guides on shipping production AI: grounding guards, tenant isolation, RAG architecture, and what things actually cost.",
     url: "https://www.realsolutionsph.com/blog",
     siteName: "Real Solutions PH",
     locale: "en_US",
@@ -30,15 +31,15 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Real Solutions PH Insights",
+        alt: "Real Solutions Insights",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Insights — Software Development in the Philippines",
+    title: "Insights — AI Engineering, RAG & Production AI Systems",
     description:
-      "Practical guides on custom software, system integration, AI, and outsourcing in the Philippines.",
+      "Practical guides on shipping production AI: grounding guards, tenant isolation, RAG architecture, and what things actually cost.",
     images: ["/og-image.png"],
   },
 };
@@ -48,7 +49,7 @@ export default function BlogIndexPage() {
   const blogSchema = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    name: "Real Solutions PH Insights",
+    name: "Real Solutions Insights",
     url: `${baseUrl}/blog`,
     blogPost: posts.map((p) => ({
       "@type": "BlogPosting",
@@ -59,22 +60,40 @@ export default function BlogIndexPage() {
     })),
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Insights",
+        item: `${baseUrl}/blog`,
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <main className="flex min-h-screen flex-col w-full bg-background">
         <PageHero
           eyebrow="Insights"
           title={
             <>
-              <GradientText>Software, integration & AI</GradientText> —
-              explained for Philippine businesses
+              <GradientText>AI engineering</GradientText> — explained in
+              plain terms
             </>
           }
-          description="Straight-talking guides on what software actually costs, how to choose a partner, and how to get more out of your systems."
+          description="Practical guides on grounding guards, tenant isolation, RAG architecture, and what an AI MVP actually costs."
         />
 
         <section className="w-full py-16 md:py-24">

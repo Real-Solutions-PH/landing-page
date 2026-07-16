@@ -4,22 +4,23 @@ import { CtaSection } from "@/components/sections/cta-section";
 import { services } from "@/lib/services";
 
 export const metadata: Metadata = {
-  title: "Software Development Services in the Philippines",
+  title: "AI Engineering Services — RAG, Voice AI, Integration & More",
   description:
-    "System integration, custom software, AI development, and web & mobile apps for Philippine SMEs and international clients. Senior engineers, AI-accelerated, fast delivery.",
+    "Seven services under one senior engineering team: AI agents & RAG, system integration, custom platforms, web & mobile, voice AI, data pipelines, and AI MVP development.",
   keywords: [
-    "software development services Philippines",
-    "software company Philippines",
-    "system integration Philippines",
-    "custom software development Philippines",
-    "AI software development Philippines",
-    "web and mobile app development Philippines",
+    "AI engineering services",
+    "RAG development company",
+    "AI agent development",
+    "AI systems integration company",
+    "multi-tenant platform development",
+    "voice AI development",
+    "AI MVP development agency",
   ],
   alternates: { canonical: "/services" },
   openGraph: {
-    title: "Software Development Services in the Philippines",
+    title: "AI Engineering Services — RAG, Voice AI, Integration & More",
     description:
-      "System integration, custom software, AI development, and web & mobile apps for Philippine SMEs and international clients.",
+      "Seven services under one senior engineering team: AI agents & RAG, system integration, custom platforms, web & mobile, voice AI, data pipelines, and AI MVP development.",
     url: "https://www.realsolutionsph.com/services",
     siteName: "Real Solutions PH",
     locale: "en_US",
@@ -29,15 +30,15 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Real Solutions PH Services",
+        alt: "Real Solutions Services",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Software Development Services in the Philippines",
+    title: "AI Engineering Services — RAG, Voice AI, Integration & More",
     description:
-      "System integration, custom software, AI development, and web & mobile apps for Philippine SMEs and international clients.",
+      "Seven services under one senior engineering team: AI agents & RAG, system integration, custom platforms, web & mobile, voice AI, data pipelines, and AI MVP development.",
     images: ["/og-image.png"],
   },
 };
@@ -47,7 +48,7 @@ export default function ServicesPage() {
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Software Development Services",
+    name: "AI Engineering Services",
     itemListElement: services.map((s, i) => ({
       "@type": "ListItem",
       position: i + 1,
@@ -56,11 +57,29 @@ export default function ServicesPage() {
     })),
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: `${baseUrl}/services`,
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <ServicesIndex services={services} />
       <CtaSection />
