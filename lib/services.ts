@@ -38,7 +38,7 @@ export const services: Service[] = [
     slug: "ai-software-development",
     name: "AI Agents & RAG",
     h1: "AI Agent & RAG Development",
-    metaTitle: "AI Agent & RAG Development Company | Real Solutions",
+    metaTitle: "AI Agent & RAG Development Company",
     metaDescription:
       "We build production RAG systems and LLM agents with grounded output, server-side citations, and provable tenant isolation. Shipped in weeks, not quarters.",
     keywords: [
@@ -111,7 +111,7 @@ export const services: Service[] = [
     slug: "system-integration",
     name: "System Integration",
     h1: "AI Systems Integration Services",
-    metaTitle: "AI Systems Integration Company | Real Solutions",
+    metaTitle: "AI Systems Integration Company",
     metaDescription:
       "We wire LLM agents and RAG pipelines into your existing APIs, databases, and internal tools — with tenant isolation and grounding guards on every write path.",
     keywords: [
@@ -190,7 +190,7 @@ export const services: Service[] = [
     slug: "custom-software",
     name: "Custom Platforms",
     h1: "Multi-Tenant Platform Development",
-    metaTitle: "Multi-Tenant Platform Development | Real Solutions",
+    metaTitle: "Multi-Tenant Platform Development",
     metaDescription:
       "We engineer multi-tenant platforms with tenant isolation enforced at the database layer via Postgres RLS — not an app-layer check away from a data breach.",
     keywords: [
@@ -270,7 +270,7 @@ export const services: Service[] = [
     slug: "web-mobile-apps",
     name: "Web & Mobile",
     h1: "Web & Mobile App Development for AI Products",
-    metaTitle: "Web & Mobile Development for AI Products | Real Solutions",
+    metaTitle: "Web & Mobile Development for AI Products",
     metaDescription:
       "Front-ends and apps built for what's running behind them — streamed tokens and citations rendered live, one React Native codebase for iOS and Android.",
     keywords: [
@@ -349,7 +349,7 @@ export const services: Service[] = [
     slug: "voice-ai",
     name: "Voice AI",
     h1: "Voice AI Agent Development",
-    metaTitle: "Voice AI Development Company | Real Solutions",
+    metaTitle: "Voice AI Development Company",
     metaDescription:
       "We build voice AI agents with real barge-in, one agent core across chat and calls, and cost caps built in from day one — not a demo that stalls on interruption.",
     keywords: [
@@ -427,7 +427,7 @@ export const services: Service[] = [
     slug: "data-pipelines",
     name: "Data Pipelines",
     h1: "Data Pipeline Development for AI Systems",
-    metaTitle: "Data Pipeline Development Company | Real Solutions",
+    metaTitle: "Data Pipeline Development Company",
     metaDescription:
       "We build lineage-carrying data pipelines with deterministic rules first, LLMs only where needed, and blue/green deploys — every row traceable to its source.",
     keywords: [
@@ -502,7 +502,7 @@ export const services: Service[] = [
     slug: "ai-mvp-development",
     name: "AI MVP Development",
     h1: "AI MVP Development in 4 Weeks",
-    metaTitle: "AI MVP Development Agency | Real Solutions",
+    metaTitle: "AI MVP Development Agency",
     metaDescription:
       "Ship a production AI MVP in 4 weeks — 3 build weeks, 1 UAT week, hypercare and warranty included. From $5,000. Two senior architects, not a bench of juniors.",
     keywords: [

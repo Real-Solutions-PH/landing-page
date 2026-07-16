@@ -13,55 +13,29 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default:
-      "Real Solutions PH — Custom Software & System Integration",
-    template: "%s | Real Solutions PH",
+    default: "Real Solutions — AI Systems, Shipped in Weeks",
+    template: "%s | Real Solutions",
   },
   description:
-    "Custom software development and system integration in Batangas, Philippines. We connect POS, inventory, CRM, HR, and accounting for SMEs and global clients.",
+    "Senior AI engineering studio. Production RAG, agents, and voice systems with grounded output and provable tenant isolation — shipped in weeks, not quarters.",
   keywords: [
-    // Tier 1: High-intent commercial
-    "custom software development Philippines",
-    "software company Philippines",
-    "system integration Philippines",
-    "software development company Philippines",
-    "outsource software development Philippines",
-    "hire software developers Philippines",
-    "custom software for small business Philippines",
-    "POS integration Philippines",
-    "software outsourcing Philippines",
-    "affordable software development Philippines",
-    // Tier 2: Service-specific
-    "CRM integration Philippines",
-    "inventory management software Philippines",
-    "mobile app development Philippines",
-    "web application development Philippines",
-    "AI integration services Philippines",
-    "API integration services Philippines",
-    "ERP integration Philippines",
-    "business automation Philippines",
-    "managed software services Philippines",
-    "software maintenance Philippines",
-    // Tier 3: Problem-aware
-    "software development cost Philippines",
-    "best software company for SME Philippines",
-    "SME digital transformation Philippines",
-    "business process automation Philippines",
-    "software for Filipino small business",
-    "workflow automation for small business",
-    // Tier 4: Location-based
-    "software company Batangas",
-    "IT company Batangas Philippines",
-    "software developer Philippines",
-    // Tier 5: International outsourcing
-    "outsource software development to Philippines",
-    "Philippine software development rates",
-    "hire Filipino developers",
-    "offshore software development Philippines",
-    "cost-effective software development Asia",
-    "senior software engineers Philippines",
-    // Brand
-    "Real Solutions PH",
+    "AI MVP development agency",
+    "RAG development company",
+    "AI agent development",
+    "LangGraph developers for hire",
+    "build AI agent MVP",
+    "multi-tenant RAG platform",
+    "EU AI data residency",
+    "GDPR compliant AI vendor",
+    "LLM security audit",
+    "white label AI development",
+    "AI engineering pod",
+    "subcontract AI development",
+    "Postgres RLS tenant isolation",
+    "LLM grounding guard",
+    "Pipecat voice agent",
+    "production RAG system",
+    "Real Solutions",
   ],
   metadataBase: new URL("https://www.realsolutionsph.com"),
   alternates: {
@@ -73,20 +47,19 @@ export const metadata: Metadata = {
     apple: "/logo/logo-dark.svg",
   },
   openGraph: {
-    title:
-      "Real Solutions PH — Custom Software & System Integration",
+    title: "Real Solutions — AI Systems, Shipped in Weeks",
     description:
-      "Custom software and system integration in Batangas, Philippines. Connect POS, inventory, CRM, HR, and accounting for SMEs and global clients.",
+      "Senior AI engineering studio. Production RAG, agents, and voice systems with grounded output and provable tenant isolation — shipped in weeks, not quarters.",
     url: "https://www.realsolutionsph.com",
     siteName: "Real Solutions PH",
-    locale: "en_PH",
+    locale: "en_US",
     type: "website",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Real Solutions PH — Custom Software & System Integration",
+        alt: "Real Solutions — AI Systems, Shipped in Weeks",
       },
     ],
   },
@@ -94,10 +67,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@realsolutionsph",
     creator: "@realsolutionsph",
-    title:
-      "Real Solutions PH — Custom Software & System Integration",
+    title: "Real Solutions — AI Systems, Shipped in Weeks",
     description:
-      "Custom software and system integration in Batangas, Philippines. Connect POS, inventory, CRM, HR, and accounting for SMEs and global clients.",
+      "Senior AI engineering studio. Production RAG, agents, and voice systems with grounded output and provable tenant isolation — shipped in weeks, not quarters.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -119,7 +91,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-PH" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth">
       <head>
         <script
           type="application/ld+json"
