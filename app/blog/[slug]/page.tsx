@@ -154,11 +154,11 @@ export default async function BlogPostPage({
                 Want a clear estimate for your project?
               </h2>
               <p className="mx-auto mb-6 max-w-md text-sm text-white/70">
-                Book a Discovery Audit — a workflow audit, solution roadmap, and
-                project estimate in 3–7 days.
+                Book a scoping call — no commitment, just a clear-eyed read on
+                what to build and a fixed-price estimate.
               </p>
               <Button asChild size="lg" className="rounded-full">
-                <Link href="/contact">Book a Discovery Audit</Link>
+                <Link href="/contact">Book a scoping call</Link>
               </Button>
             </div>
           </div>

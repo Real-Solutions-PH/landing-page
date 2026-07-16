@@ -116,8 +116,9 @@ export function PricingSection() {
               Engineering investment, from
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              Indicative &quot;from&quot; pricing so you can plan. Final scope
-              and quote come out of a scoping call.
+              Indicative &quot;from&quot; pricing so you can plan. We confirm
+              the fixed scope and quote once we&apos;ve talked through your
+              build.
             </p>
           </motion.div>
         </div>

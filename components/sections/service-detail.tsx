@@ -142,8 +142,8 @@ export function ServiceDetail({
               Indicative investment
             </h2>
             <p className="mt-2 text-sm text-muted-foreground md:text-base">
-              Transparent ranges so you can plan. Final scope and quote come out
-              of your Discovery Audit.
+              Transparent ranges so you can plan. Final scope and quote are
+              confirmed on your scoping call.
             </p>
           </motion.div>
           <motion.div

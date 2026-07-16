@@ -24,7 +24,7 @@ export function PricingHeroSection() {
           </Badge>
           <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
             AI engineering pricing
-            <br className="hidden sm:block" /> — fixed scope, no PHP, no surprises
+            <br className="hidden sm:block" /> — fixed scope, transparent pricing, no surprises
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-white/60">
             USD &quot;from&quot; pricing with no upper-bound guesswork. Know what

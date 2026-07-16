@@ -60,7 +60,7 @@ export function HeroSection() {
                     />
                   </svg>
                 </span>
-              </span>
+              </span>{" "}
               <span className="mt-3 block">that can&apos;t make things up.</span>
             </h1>
 

@@ -36,10 +36,11 @@ export function AboutSection() {
                 We&apos;re Philippines-based and remote-first, which gives us strong overlap with US-East and EU working hours without the overhead of a Western engineering rate card. {/* positioning-guard:allow-ph */}
               </p>
               <p>
-                That origin shows up as leverage, not as a discount pitch: two
-                senior architects, AI-assisted development, and the same
-                discipline — grounding guards, tenant isolation, numbered ADRs
-                — on every build, regardless of who&apos;s paying for it.
+                That origin shows up as leverage, not as a reason to cut
+                corners: two senior architects, AI-assisted development, and
+                the same discipline — grounding guards, tenant isolation,
+                numbered ADRs — on every build, regardless of who&apos;s
+                paying for it.
               </p>
             </div>
           </motion.div>

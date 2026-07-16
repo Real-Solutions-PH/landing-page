@@ -3,14 +3,14 @@ import { CheckCircle2, Clock, ShieldCheck } from "lucide-react";
 import { ContactSection } from "@/components/sections/contact-section";
 
 export const metadata: Metadata = {
-  title: "Book a Discovery Audit",
+  title: "Book a Scoping Call",
   description:
-    "Book a Discovery Audit with Real Solutions PH. We map your workflow, identify integration opportunities, and deliver a clear roadmap with estimates.",
+    "Book a scoping call with Real Solutions. We'll scope the build, give you a fixed-price estimate, and tell you plainly whether we're the right fit — no commitment.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Book a Discovery Audit",
+    title: "Book a Scoping Call",
     description:
-      "Book a Discovery Audit with Real Solutions PH. We map your workflow, identify integration opportunities, and deliver a clear roadmap with estimates.",
+      "Book a scoping call with Real Solutions. We'll scope the build, give you a fixed-price estimate, and tell you plainly whether we're the right fit — no commitment.",
     url: "https://www.realsolutionsph.com/contact",
     siteName: "Real Solutions PH",
     locale: "en_PH",
@@ -20,15 +20,15 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Book a Discovery Audit — Real Solutions PH",
+        alt: "Book a Scoping Call — Real Solutions",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Book a Discovery Audit",
+    title: "Book a Scoping Call",
     description:
-      "Book a Discovery Audit with Real Solutions PH. We map your workflow, identify integration opportunities, and deliver a clear roadmap with estimates.",
+      "Book a scoping call with Real Solutions. We'll scope the build, give you a fixed-price estimate, and tell you plainly whether we're the right fit — no commitment.",
     images: ["/og-image.png"],
   },
 };
@@ -47,11 +47,12 @@ export default function ContactPage() {
           Get in touch
         </span>
         <h1 className="mt-5 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-          Book a Discovery Audit
+          Book a Scoping Call
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">
-          We map exactly what&apos;s failing in your current workflow and
-          propose a clear path forward — no vague estimates, no wasted budget.
+          Tell us what you&apos;re building. We&apos;ll scope it, give you a
+          fixed-price estimate, and tell you plainly whether we&apos;re the
+          right fit — no commitment.
         </p>
         <ul className="mt-7 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-muted-foreground">
           {TRUST_CHIPS.map((chip) => (

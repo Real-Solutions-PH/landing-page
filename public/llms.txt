@@ -9,7 +9,7 @@
 - Founders: Ervin Piol (Co-Founder & Full-Stack Engineer, local clients & mobile) and Kairus Noah Tecson (Co-Founder & AI/Cloud Engineer, international clients)
 - Differentiator: AI-accelerated, prototype-first delivery system run by senior startup engineers — fast and cost-efficient without sacrificing engineering quality
 - Engagement model: managed software partner (not staff augmentation or freelancers); clients own their code and data
-- Process: Discovery Audit (3–7 days) → Prototype Sprint → MVP Build (3–8 weeks) → Managed Growth
+- Process: Build (3 weeks) → UAT (1 week) → Hypercare → 30-day warranty
 - Contact: executives.realsolutions.ph@gmail.com
 
 ## Services
@@ -27,4 +27,4 @@
 - [Work / Portfolio](https://www.realsolutionsph.com/work): Case studies including Artemis, Evolve Talents, Bath & Bark, Aura, HydroGuide, StockSense.
 - [About](https://www.realsolutionsph.com/about): The engineering team behind Real Solutions PH.
 - [Insights / Blog](https://www.realsolutionsph.com/blog): Guides on software cost, outsourcing, and integration in the Philippines.
-- [Contact](https://www.realsolutionsph.com/contact): Book a Discovery Audit.
+- [Contact](https://www.realsolutionsph.com/contact): Book a scoping call.

@@ -369,7 +369,7 @@ export default function RootLayout({
                     name: "How does the software development process work at Real Solutions PH?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "We follow a 4-step process: (1) Discovery Audit — we map your problem in 3-7 days, (2) Prototype Sprint — see and react to your solution in 1-2 weeks, (3) MVP Build — production-grade software in 3-8 weeks, (4) Managed Growth — ongoing support, maintenance, and feature development on a retainer basis.",
+                      text: "We follow a four-phase delivery model: (1) Build — one AI capability scoped and built over three weeks, (2) UAT — a full week of testing against real users, (3) Hypercare — the same two architects stay reachable right after launch, (4) Warranty — a 30-day warranty on delivered work.",
                     },
                   },
                   {
@@ -394,14 +394,6 @@ export default function RootLayout({
                     acceptedAnswer: {
                       "@type": "Answer",
                       text: "Real Solutions PH is based in Batangas, Philippines. We operate as a remote-first company, serving clients across the Philippines and internationally. Our founders are former startup engineering leaders with deep expertise in full-stack development, cloud infrastructure, and AI.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "What is a Discovery Audit and how much does it cost?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "A Discovery Audit is a paid engagement (₱10,000–₱22,000 for Philippine clients, $700–$1,200 for international clients) where we map your current workflow, identify software opportunities, and deliver a full solution roadmap with project estimates. The audit fee credits toward your MVP build if you proceed.",
                     },
                   },
                 ],

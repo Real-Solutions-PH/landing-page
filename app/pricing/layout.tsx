@@ -23,15 +23,7 @@ const faqSchema = {
       name: "How long does it take to build an MVP in the Philippines?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "MVP builds at Real Solutions PH typically take 3–16 weeks depending on the type of software. Integration MVPs take 2–12 weeks, custom software MVPs take 3–16 weeks, and mobile apps take 6–20 weeks. We always start with a Discovery Audit and Prototype Sprint before full engineering begins.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is a Discovery Audit and how much does it cost?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "A Discovery Audit is a paid engagement where we map your current tools, workflows, integration gaps, and software opportunities. We deliver a workflow audit, solution roadmap, and project estimate. It costs ₱10,000–₱22,000 for Philippine clients and $700–$1,200 for international clients. The fee can be credited toward your MVP build.",
+        text: "MVP builds at Real Solutions PH typically take 3–16 weeks depending on the type of software. Integration MVPs take 2–12 weeks, custom software MVPs take 3–16 weeks, and mobile apps take 6–20 weeks. We always start with a scoping call before full engineering begins.",
       },
     },
     {
