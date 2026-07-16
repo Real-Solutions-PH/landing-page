@@ -28,11 +28,11 @@ export async function generateMetadata({
       description: service.metaDescription,
       url,
       siteName: "Real Solutions PH",
-      locale: "en_PH",
+      locale: "en_US",
       type: "website",
       images: [
         {
-          url: "/og-image.png",
+          url: "/api/og-image",
           width: 1200,
           height: 630,
           alt: service.h1,
@@ -43,7 +43,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: service.metaTitle,
       description: service.metaDescription,
-      images: ["/og-image.png"],
+      images: ["/api/og-image"],
     },
   };
 }
@@ -76,15 +76,12 @@ export default async function ServicePage({
       name: "Real Solutions PH",
       url: baseUrl,
     },
-    areaServed: [
-      { "@type": "Country", name: "Philippines" },
-      { "@type": "AdministrativeArea", name: "International" },
-    ],
+    areaServed: { "@type": "Place", name: "Worldwide" },
     offers: service.pricing.map((p) => ({
       "@type": "Offer",
       name: p.label,
-      priceCurrency: "PHP",
-      description: `${p.label}: ${p.php} (${p.intl}), ${p.timeline}`,
+      priceCurrency: "USD",
+      description: `${p.label}: from ${p.from}, ${p.timeline}`,
     })),
   };
 

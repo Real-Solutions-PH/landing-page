@@ -15,11 +15,11 @@ export const metadata: Metadata = {
       "How Real Solutions PH collects, uses, and protects your personal data when you use our custom software development and integration services.",
     url: "https://www.realsolutionsph.com/privacy-policy",
     siteName: "Real Solutions PH",
-    locale: "en_PH",
+    locale: "en_US",
     type: "article",
     images: [
       {
-        url: "/og-image.png",
+        url: "/api/og-image",
         width: 1200,
         height: 630,
         alt: "Real Solutions PH Privacy Policy",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Privacy Policy",
     description:
       "How Real Solutions PH collects, uses, and protects your personal data when you use our custom software development and integration services.",
-    images: ["/og-image.png"],
+    images: ["/api/og-image"],
   },
 };
 
@@ -168,9 +168,7 @@ export default function PrivacyPolicy() {
               6. Your Legal Rights
             </h2>
             <p>
-              Under applicable data protection laws, including the Philippines
-              Data Privacy Act of 2012 (Republic Act No. 10173), you have the
-              right to:
+              Under applicable data protection laws, including the Philippines Data Privacy Act of 2012 (Republic Act No. 10173), you have the right to: {/* positioning-guard:allow-ph */}
             </p>
             <ul className="list-disc pl-6 space-y-2 mt-4">
               <li>Request access to your personal data.</li>
@@ -243,7 +241,7 @@ export default function PrivacyPolicy() {
             </p>
             <div className="mt-4 p-6 rounded-2xl border border-black/5 bg-black/5 dark:border-white/10 dark:bg-white/5">
               <p className="font-semibold">Real Solutions PH</p>
-              <p>Batangas, Philippines</p>
+              <p>Batangas, Philippines {/* positioning-guard:allow-ph */}</p>
               <p>Email: executives.realsolutions.ph@gmail.com</p>
             </div>
           </section>

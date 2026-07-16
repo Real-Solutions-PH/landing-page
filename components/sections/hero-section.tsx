@@ -2,8 +2,15 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Search, MessageSquare, Workflow, Zap } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+
+const AUDIENCE_LINKS = [
+  { href: "/for/startups", label: "Startups" },
+  { href: "/for/enterprise", label: "Regulated enterprise" },
+  { href: "/for/agencies", label: "Agencies & CTOs" },
+];
 
 export function HeroSection() {
   return (
@@ -23,24 +30,11 @@ export function HeroSection() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="flex flex-col items-start text-left"
           >
-            {/* Social Proof / Badge 
-            <div className="flex items-center gap-3 mb-6">
-              <div className="flex -space-x-1">
-                 <svg className="w-5 h-5 text-muted-foreground" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" /></svg>
-                 <svg className="w-5 h-5 text-muted-foreground" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" /></svg>
-              </div>
-              <div className="flex flex-col">
-                 <span className="text-[11px] uppercase tracking-wide font-semibold text-muted-foreground">Top Rated Integration Partner</span>
-                 <span className="text-xs font-bold text-foreground">1st Place for SME Operations</span>
-              </div>
-            </div>
-            */}
-
             <h1 className="mb-6 text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl xl:text-[3.25rem] leading-[1.2] sm:leading-[1.15] z-20 relative pr-4">
-              Your business software, <br className="hidden sm:block" />
+              Most AI builds break{" "}
               <span className="relative flex mt-3 w-max max-w-full">
                 <span className="relative z-10 px-2 lg:px-4 pb-1 pt-1 text-[#F7FAFC] bg-[#193B76] dark:bg-[#2A5CAA] rounded-sm">
-                  built right,
+                  in production.
                 </span>
                 <span className="absolute -bottom-4 -right-10 text-[#F59E0B] opacity-80 z-20 transform rotate-12 hidden md:block">
                   <svg
@@ -67,15 +61,16 @@ export function HeroSection() {
                     />
                   </svg>
                 </span>
-              </span>
-              <span className="mt-3 block">and managed for you.</span>
+              </span>{" "}
+              <span className="mt-3 block">Ours don&apos;t.</span>
             </h1>
 
             <p className="mb-8 max-w-lg text-sm leading-relaxed text-muted-foreground">
-              Real Solutions PH is a software development company in the
-              Philippines — system integration, custom software, AI, and apps for
-              local SMEs and international clients, delivered by senior engineers
-              at cost-effective rates.
+              You&apos;ve probably been handed an AI demo that fell apart the
+              week real users arrived. We&apos;re a senior AI studio that ships
+              RAG systems, chat and voice agents, data pipelines, and
+              automation — production-grade in three to four weeks, verified by
+              a lead architect at every step and auditable before you sign off.
             </p>
 
             <div className="flex flex-col gap-4 w-full sm:w-auto sm:flex-row">
@@ -85,7 +80,7 @@ export function HeroSection() {
               >
                 <Link href="/contact">
                   <span className="font-semibold text-white">
-                    Book a Discovery Audit
+                    Book a scoping call
                   </span>
                 </Link>
               </Button>
@@ -108,35 +103,29 @@ export function HeroSection() {
 
             <div className="mt-4 flex items-center gap-2 text-sm text-muted-foreground text-left w-full pl-1">
               <span className="font-medium">
-                No commitment. Just clarity on what to build and how to get
-                there.
+                No commitment. Just clarity on what to build and whether
+                we&apos;re the right fit.
               </span>
             </div>
 
-            {/* Avatar Group / Makers 
-            <div className="mt-10 flex items-center gap-5 pt-2 w-full">
-              <div className="flex -space-x-3">
-                {[1, 2, 3, 4, 5].map((i) => (
-                   <div key={i} className={`inline-block h-10 w-10 rounded-full border-2 border-background bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-xs font-bold text-slate-500 overflow-hidden relative shadow-sm`} style={{ zIndex: 10 - i }}>
-                     <div className="w-full h-full bg-gradient-to-br from-slate-200 to-slate-400 dark:from-slate-700 dark:to-slate-900 border border-black/5" />
-                   </div>
-                ))}
-              </div>
-              <div className="flex flex-col">
-                <div className="flex text-[#F59E0B] gap-0.5">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" /></svg>
-                  ))}
-                </div>
-                <span className="text-sm font-medium text-foreground mt-0.5">
-                  <span className="font-bold">50+</span> businesses saving 30+ hrs/week
-                </span>
-              </div>
+            {/* Audience paths */}
+            <div className="mt-8 flex flex-wrap items-center gap-2 w-full border-t border-border/60 pt-6">
+              <span className="text-xs font-semibold uppercase tracking-widest text-muted-foreground/70 mr-1">
+                Built for:
+              </span>
+              {AUDIENCE_LINKS.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="rounded-full border border-border bg-background px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
-            */}
           </motion.div>
 
-          {/* Right Column: Floating Tech Cards */}
+          {/* Right Column: Floating Guarantee Cards */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -150,14 +139,13 @@ export function HeroSection() {
 
               {/* Subtitle bottom */}
               <div className="absolute bottom-8 text-center text-sky-100/70 text-sm font-medium w-full px-12">
-                + all the boring stuff (server maintenance, API limits, error
-                tracking)
+                + all the boring stuff (deploys, monitoring, on-call)
               </div>
             </div>
 
             {/* Floating Cards content */}
             <div className="relative z-10 w-full h-full flex items-center justify-center">
-              {/* Card 1: Xero / Accounting */}
+              {/* Card 1: Grounding Guard */}
               <motion.div
                 animate={{ y: [0, -12, 0] }}
                 transition={{
@@ -167,27 +155,27 @@ export function HeroSection() {
                 }}
                 className="absolute top-[8%] left-[-2%] lg:left-[-8%] bg-white dark:bg-slate-900 rounded-xl p-3 shadow-xl border border-slate-200 dark:border-slate-800 flex items-start gap-3 w-52"
               >
-                <div className="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center flex-shrink-0 text-blue-600 dark:text-blue-400 font-black text-xl">
-                  X
+                <div className="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center flex-shrink-0 text-blue-600 dark:text-blue-400">
+                  <Search className="w-5 h-5" />
                 </div>
                 <div className="flex flex-col">
                   <span className="font-bold text-slate-900 dark:text-white text-sm leading-none mb-1.5">
-                    Xero / QBo
+                    RAG Systems
                   </span>
                   <ul className="text-xs text-slate-500 dark:text-slate-400 space-y-1">
                     <li className="flex items-center gap-1.5">
                       <div className="w-1 h-1 rounded-full bg-blue-400" />{" "}
-                      Automated invoices
+                      Grounded retrieval
                     </li>
                     <li className="flex items-center gap-1.5">
                       <div className="w-1 h-1 rounded-full bg-blue-400" />{" "}
-                      Payroll sync
+                      Server-side citations
                     </li>
                   </ul>
                 </div>
               </motion.div>
 
-              {/* Card 2: Shopify / E-Commerce */}
+              {/* Card 2: Tenant Isolation */}
               <motion.div
                 animate={{ y: [0, 8, 0] }}
                 transition={{
@@ -198,27 +186,27 @@ export function HeroSection() {
                 }}
                 className="absolute top-[22%] right-[-5%] lg:right-[-12%] bg-white dark:bg-slate-900 rounded-xl p-3 shadow-xl border border-slate-200 dark:border-slate-800 flex items-start gap-3 w-52"
               >
-                <div className="w-10 h-10 rounded-lg bg-emerald-100 dark:bg-emerald-900/50 flex items-center justify-center flex-shrink-0 text-emerald-600 dark:text-emerald-400 font-black text-xl">
-                  S
+                <div className="w-10 h-10 rounded-lg bg-emerald-100 dark:bg-emerald-900/50 flex items-center justify-center flex-shrink-0 text-emerald-600 dark:text-emerald-400">
+                  <MessageSquare className="w-5 h-5" />
                 </div>
                 <div className="flex flex-col">
                   <span className="font-bold text-slate-900 dark:text-white text-sm leading-none mb-1.5">
-                    Shopify / Lazada
+                    Chat & Voice Agents
                   </span>
                   <ul className="text-xs text-slate-500 dark:text-slate-400 space-y-1">
                     <li className="flex items-center gap-1.5">
                       <div className="w-1 h-1 rounded-full bg-emerald-400" />{" "}
-                      Multi-channel orders
+                      Chat + voice-cloned
                     </li>
                     <li className="flex items-center gap-1.5">
                       <div className="w-1 h-1 rounded-full bg-emerald-400" />{" "}
-                      Inventory deducts
+                      Real-time barge-in
                     </li>
                   </ul>
                 </div>
               </motion.div>
 
-              {/* Card 3: POS */}
+              {/* Card 3: Server-Side Citations */}
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{
@@ -229,27 +217,27 @@ export function HeroSection() {
                 }}
                 className="absolute bottom-[25%] left-[-5%] lg:left-[-12%] bg-white dark:bg-slate-900 rounded-xl p-3 shadow-xl border border-slate-200 dark:border-slate-800 flex items-start gap-3 w-52"
               >
-                <div className="w-10 h-10 rounded-lg bg-purple-100 dark:bg-purple-900/50 flex items-center justify-center flex-shrink-0 text-purple-600 dark:text-purple-400 font-black text-xl">
-                  P
+                <div className="w-10 h-10 rounded-lg bg-purple-100 dark:bg-purple-900/50 flex items-center justify-center flex-shrink-0 text-purple-600 dark:text-purple-400">
+                  <Workflow className="w-5 h-5" />
                 </div>
                 <div className="flex flex-col">
                   <span className="font-bold text-slate-900 dark:text-white text-sm leading-none mb-1.5">
-                    Local POS
+                    Data Pipelines
                   </span>
                   <ul className="text-xs text-slate-500 dark:text-slate-400 space-y-1">
                     <li className="flex items-center gap-1.5">
                       <div className="w-1 h-1 rounded-full bg-purple-400" />{" "}
-                      Daily sales sync
+                      Full lineage tracking
                     </li>
                     <li className="flex items-center gap-1.5">
-                      <div className="w-1 h-1 rounded-full bg-purple-400" /> Tax
-                      compliance
+                      <div className="w-1 h-1 rounded-full bg-purple-400" />{" "}
+                      Deterministic-first
                     </li>
                   </ul>
                 </div>
               </motion.div>
 
-              {/* Card 4: CRM / Hubspot */}
+              {/* Card 4: Numbered ADRs */}
               <motion.div
                 animate={{ y: [0, 15, 0] }}
                 transition={{
@@ -260,21 +248,21 @@ export function HeroSection() {
                 }}
                 className="absolute bottom-[10%] right-[0%] lg:right-[-8%] bg-white dark:bg-slate-900 rounded-xl p-3 shadow-xl border border-slate-200 dark:border-slate-800 flex items-start gap-3 w-52"
               >
-                <div className="w-10 h-10 rounded-lg bg-orange-100 dark:bg-orange-900/50 flex items-center justify-center flex-shrink-0 text-orange-600 dark:text-orange-400 font-black text-xl">
-                  H
+                <div className="w-10 h-10 rounded-lg bg-orange-100 dark:bg-orange-900/50 flex items-center justify-center flex-shrink-0 text-orange-600 dark:text-orange-400">
+                  <Zap className="w-5 h-5" />
                 </div>
                 <div className="flex flex-col">
                   <span className="font-bold text-slate-900 dark:text-white text-sm leading-none mb-1.5">
-                    CRM System
+                    AI Automation
                   </span>
                   <ul className="text-xs text-slate-500 dark:text-slate-400 space-y-1">
                     <li className="flex items-center gap-1.5">
                       <div className="w-1 h-1 rounded-full bg-orange-400" />{" "}
-                      Lead capture
+                      Wired into your stack
                     </li>
                     <li className="flex items-center gap-1.5">
                       <div className="w-1 h-1 rounded-full bg-orange-400" />{" "}
-                      Email followups
+                      Human in the loop
                     </li>
                   </ul>
                 </div>
@@ -362,7 +350,7 @@ export function HeroSection() {
                   ></path>
                 </svg>
                 <div className="font-mono text-[10px] lg:text-xs py-1.5 lg:py-2 px-2.5 lg:px-3 bg-slate-900 border border-[#009FE5]/40 text-[#53E4FE] rounded shadow-xl flex items-center gap-2">
-                  <span className="text-[#009FE5]">$</span> npm start scaling
+                  <span className="text-[#009FE5]">$</span> npm run ship
                 </div>
               </div>
             </div>

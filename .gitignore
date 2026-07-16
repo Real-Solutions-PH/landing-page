@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Subagent-driven-development scratch: briefs, reports, review diffs.
+# Never commit — this repo is public and these artifacts can quote client material.
+.superpowers/

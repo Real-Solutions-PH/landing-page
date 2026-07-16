@@ -16,6 +16,12 @@ const navLinks = [
   { href: "/about", label: "About" },
 ];
 
+const audienceLinks = [
+  { href: "/for/startups", label: "Startups" },
+  { href: "/for/enterprise", label: "Enterprise" },
+  { href: "/for/agencies", label: "Agencies" },
+];
+
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
@@ -92,6 +98,24 @@ export function Navbar() {
                 {label}
               </Link>
             ))}
+            <div className="group relative">
+              <button className="flex items-center gap-1 text-muted-foreground transition-colors hover:text-foreground">
+                For
+              </button>
+              <div className="invisible absolute left-1/2 top-full z-50 w-48 -translate-x-1/2 pt-3 opacity-0 transition-opacity group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                <div className="flex flex-col gap-1 rounded-2xl border border-black/5 bg-white/95 p-2 shadow-xl backdrop-blur-md dark:border-white/10 dark:bg-[#0d1f38]/95">
+                  {audienceLinks.map(({ href, label }) => (
+                    <Link
+                      key={href}
+                      href={href}
+                      className="rounded-xl px-3 py-2 text-sm text-foreground transition-colors hover:bg-accent/10 hover:text-accent"
+                    >
+                      {label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Desktop CTA + Hamburger */}
@@ -101,7 +125,7 @@ export function Navbar() {
               className="hidden rounded-full sm:flex"
               asChild
             >
-              <Link href="/contact">Book a Discovery</Link>
+              <Link href="/contact">Book a scoping call</Link>
             </Button>
             <Button
               variant="ghost"
@@ -157,6 +181,24 @@ export function Navbar() {
             ))}
           </nav>
 
+          <div className="mt-2 border-t border-border pt-2">
+            <p className="px-4 pb-1 pt-2 text-xs font-semibold uppercase tracking-widest text-muted-foreground/70">
+              For
+            </p>
+            <nav className="flex flex-col gap-1">
+              {audienceLinks.map(({ href, label }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  onClick={closeMenu}
+                  className="rounded-xl px-4 py-3 text-base font-medium text-foreground transition-colors hover:bg-accent/10 hover:text-accent active:bg-accent/20"
+                >
+                  {label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
           <div className="mt-4 pt-4 border-t border-border">
             <Button
               variant="default"
@@ -164,7 +206,7 @@ export function Navbar() {
               asChild
             >
               <Link href="/contact" onClick={closeMenu}>
-                Book a Discovery
+                Book a scoping call
               </Link>
             </Button>
           </div>

@@ -2,16 +2,20 @@
 
 ## 1. PROJECT OVERVIEW & AGENT ROLE
 
-You are an expert full-stack engineer and UI/UX developer tasked with building the landing page for **Real Solutions PH**.
+You are an expert full-stack engineer and UI/UX developer tasked with building the landing page for **Real Solutions PH** (legal name Real Solutions PH), a senior AI engineering studio.
 Your primary goal is to write clean, maintainable, production-ready code while strictly adhering to the technical stack, design system, and company branding outlined below. Always be proactive, verify your own work, and think step-by-step.
 
 ## 2. COMPANY CONTEXT & PRODUCT REQUIREMENTS
 
-Always review and reference `CONTEXT.md` for business logic, copywriting, brand tone, section layouts, and target audience definitions.
+Always review and reference `CONTEXT.md` for business logic, copywriting, brand tone, section layouts, and target audience definitions — it is the source of truth for positioning and takes precedence over anything below.
 
-- **Brand Identity:** Professional, direct, solutions-first, technical but accessible.
-- **Core Value Proposition:** Connecting tools and eliminating manual work for SMEs.
-- **Content:** Avoid generic placeholder text. Rely heavily on the copy and structure provided in `CONTEXT.md`.
+- **Brand Identity:** Senior AI engineering studio. Confident, direct, technical — not a startup pitch deck, not a corporate brochure. No buzzword padding.
+- **Core Value Proposition:** Two senior architects, AI leverage, shipping production-grade AI systems — RAG, agents, voice — in weeks, with guarantees (grounding, tenant isolation, audit trail) a buyer can verify, not just a demo.
+- **Primary audiences:** three international buyer segments — never local buyers or a domestic market:
+  1. US/EU pre-seed–seed startup founders who need a production AI MVP shipped in weeks.
+  2. Regulated enterprise — fintech, healthcare, proptech — who need AI systems that survive a compliance review.
+  3. Agencies and CTOs who need a senior AI engineering pod they can subcontract to.
+- **Content:** Avoid generic placeholder text. Rely heavily on the copy and structure provided in `CONTEXT.md`. Never write or imply local-market or domestic-buyer positioning; run `pnpm check:positioning` after any content change to confirm.
 
 ## 3. TECH STACK CONVENTIONS
 

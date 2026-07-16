@@ -7,99 +7,61 @@ import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
   CheckCircle2,
-  Network,
-  AppWindow,
-  Globe,
-  Smartphone,
-  Bot,
   Sparkles,
+  Layers,
+  Repeat,
 } from "lucide-react";
 
 const SERVICES = [
   {
-    icon: Network,
-    title: "System Integration Development",
+    icon: Sparkles,
+    title: "MVP (Minimum Viable Product)",
     description:
-      "Unify your POS, HR, payroll, CRM, and accounting into one real-time pipeline — no more manual re-entry or overnight batch syncs.",
-    priceHint: "Flagship Service",
+      "Any software — AI or not — in production and usable by real users in three to four weeks. Strong cloud architecture from day one, so even an existing user base can migrate in without running into major issues.",
+    priceHint: "$2,000-3,000 · 4 weeks",
+    href: "/services/ai-mvp-development",
     features: [
-      "Same-day data sync across all platforms",
-      "Zero manual data re-entry",
-      "One dashboard for every system",
-      "Works with legacy & modern tools",
+      "Real users on it in 3–4 weeks — production, not a demo",
+      "Architected for millions of users and future phases from day one",
+      "Security and compliant data handling from the first commit",
+      "Hypercare and a warranty at phase end — this is phase 1",
     ],
-    cta: "Book a Discovery Audit",
-    popular: true,
-    highlighted: false,
-    comingSoon: false,
-  },
-  {
-    icon: Bot,
-    title: "AI Integration",
-    description:
-      "Deploy AI that actually plugs into your existing systems — not a standalone chatbot, but intelligence wired into your daily operations.",
-    priceHint: "Future Ready",
-    features: [
-      "AI trained on your company data",
-      "Auto-draft reports & documents",
-      "Smart routing & decision support",
-      "Plugs into your existing tools",
-    ],
-    cta: "Get a Free Estimate",
+    cta: "See the MVP path",
     popular: false,
     highlighted: true,
-    comingSoon: false,
   },
   {
-    icon: AppWindow,
-    title: "Custom Software Systems",
+    icon: Layers,
+    title: "Full Software Implementation",
     description:
-      "Replace your spreadsheet workflows with real software — built around how your team already works, not the other way around.",
-    priceHint: "Scalable Solutions",
+      "The full platform, delivered in phases — each scoped to three to four weeks and priced per phase. Most products mature in three or four, each building on the MVP's multi-tenant foundation.",
+    priceHint: "$6,000 - $8,000",
+    href: "/services",
     features: [
-      "Mirrors your actual workflow",
-      "Role-based access & audit trails",
-      "Scales without rearchitecting",
-      "You own the code & data",
+      "3–4 week phases, ~$2,000–3,000 each; most mature in 3–4",
+      "Multi-tenancy matured: custom domains, branding, operator dashboard",
+      "AI systems: eval + synthetic-data pipelines, feedback capture, prompt versioning",
+      "Mobile apps, plus CRM, ERP, and WhatsApp/Instagram/Facebook integrations",
     ],
-    cta: "Get a Free Estimate",
+    cta: "Explore full builds",
     popular: false,
     highlighted: false,
-    comingSoon: false,
   },
   {
-    icon: Globe,
-    title: "Website & Web Apps",
+    icon: Repeat,
+    title: "Retainer",
     description:
-      "Websites that generate leads while you sleep — conversion-optimized, fast-loading, and wired into your CRM from day one.",
-    priceHint: "Modern Web",
+      "Ongoing support and maintenance for a product we built — keeping what's live healthy and reliable. New features and revamps aren't part of this; those become a change order, or a phase of their own.",
+    priceHint: "$300 / month",
+    href: "/contact",
     features: [
-      "Leads flow straight to your CRM",
-      "Sub-second load times",
-      "Built-in analytics & A/B testing",
-      "Self-serve content editing",
+      "Technical Customer Support",
+      "Continuous Maintenance of the codebase",
+      "Bug fixes and enhancements within 24 hours",
     ],
-    cta: "Get a Free Estimate",
+    cta: "Talk about a retainer",
     popular: false,
     highlighted: false,
-    comingSoon: false,
-  },
-  {
-    icon: Smartphone,
-    title: "Mobile App Development",
-    description:
-      "One codebase, both platforms — with offline support and real-time sync to your backend so field teams stay productive anywhere.",
-    priceHint: "iOS & Android",
-    features: [
-      "Works offline, syncs when online",
-      "Single codebase for iOS & Android",
-      "Real-time backend sync",
-      "Push notifications & deep links",
-    ],
-    cta: "Get a Free Estimate",
-    popular: false,
-    highlighted: false,
-    comingSoon: false,
   },
 ];
 
@@ -144,11 +106,12 @@ export function ServicesSection() {
               Our Services
             </Badge>
             <h2 className="mb-6 text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl">
-              What we build — and why it&apos;s different
+              Three ways to work with us
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              Every service ships production-ready with monitoring, docs, and
-              handoff — not a demo you have to finish yourself.
+              Start with an MVP, commission a full build, or keep us on
+              retainer — every one runs on the same SOP, ships production-ready,
+              and leaves you owning the code.
             </p>
           </motion.div>
 
@@ -174,18 +137,13 @@ export function ServicesSection() {
               >
                 {service.popular && (
                   <div className="absolute -top-3 right-8 rounded-full bg-primary px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-sm">
-                    Most Popular
+                    Flagship
                   </div>
                 )}
                 {service.highlighted && (
                   <div className="absolute -top-3 right-8 rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-500 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-sm flex items-center gap-1">
                     <Sparkles className="h-3 w-3" />
-                    Trending
-                  </div>
-                )}
-                {service.comingSoon && (
-                  <div className="absolute -top-3 right-8 rounded-full bg-accent px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-accent-foreground shadow-sm">
-                    Coming Soon
+                    4 Weeks
                   </div>
                 )}
 
@@ -225,38 +183,16 @@ export function ServicesSection() {
                 </div>
 
                 <div className="pt-6 mt-auto border-t border-border">
-                  {service.comingSoon ? (
-                    <Button
-                      variant={service.popular ? "default" : "outline"}
-                      className="w-full rounded-xl h-12"
-                      disabled={service.comingSoon}
-                    >
+                  <Button
+                    variant={service.popular ? "default" : "outline"}
+                    className="w-full rounded-xl h-12"
+                    asChild
+                  >
+                    <a href={service.href}>
                       {service.cta}
-                    </Button>
-                  ) : (
-                    <Button
-                      variant={service.popular ? "default" : "outline"}
-                      className="w-full rounded-xl h-12"
-                      asChild
-                    >
-                      {service.cta === "Get a Free Estimate" ||
-                      service.cta === "Ask About Retainers" ? (
-                        <a href="/contact">
-                          {service.cta}
-                          <ArrowRight className="ml-2 h-4 w-4" />
-                        </a>
-                      ) : (
-                        <a
-                          href="https://calendly.com/executives-realsolutions-ph/30min"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {service.cta}
-                          <ArrowRight className="ml-2 h-4 w-4" />
-                        </a>
-                      )}
-                    </Button>
-                  )}
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </a>
+                  </Button>
                 </div>
               </motion.div>
             ))}

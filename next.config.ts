@@ -37,6 +37,16 @@ const nextConfig: NextConfig = {
         destination: "/work",
         permanent: true,
       },
+      {
+        source: "/blog/business-process-automation-philippines-sme",
+        destination: "/blog/shipping-production-ai-in-four-weeks",
+        permanent: true,
+      },
+      {
+        source: "/blog/system-integration-small-business-philippines",
+        destination: "/blog/proving-tenant-isolation-postgres-rls",
+        permanent: true,
+      },
     ];
   },
 };

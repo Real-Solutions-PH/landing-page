@@ -3,42 +3,40 @@ import { HeroSection } from "@/components/sections/hero-section";
 import { ProblemSection } from "@/components/sections/problem-section";
 import { ServicesSection } from "@/components/sections/services-section";
 import { ProcessSection } from "@/components/sections/process-section";
+import { OperatingModelSection } from "@/components/sections/operating-model-section";
 import { WhyUsSection } from "@/components/sections/why-us-section";
 import { PortfolioIntroSection } from "@/components/sections/portfolio-intro-section";
 import { TeamSection } from "@/components/sections/team-section";
 import { CtaSection } from "@/components/sections/cta-section";
 
 export const metadata: Metadata = {
-  title:
-    "Custom Software Development & System Integration PH",
+  title: "AI Engineering Studio — Production AI in Weeks",
   description:
-    "Real Solutions PH builds custom software and connects POS, inventory, CRM, HR, and accounting for Philippine SMEs and international clients.",
+    "Two senior architects shipping AI agents, RAG, and custom platforms with grounding guards, tenant isolation, and numbered ADRs — guarantees you can audit.",
   alternates: { canonical: "/" },
   openGraph: {
-    title:
-      "Custom Software Development & System Integration PH",
+    title: "AI Engineering Studio — Production AI in Weeks",
     description:
-      "Real Solutions PH builds custom software and connects POS, inventory, CRM, HR, and accounting for Philippine SMEs and international clients.",
+      "Two senior architects shipping AI agents, RAG, and custom platforms with grounding guards, tenant isolation, and numbered ADRs — guarantees you can audit.",
     url: "https://www.realsolutionsph.com",
     siteName: "Real Solutions PH",
-    locale: "en_PH",
+    locale: "en_US",
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/api/og-image",
         width: 1200,
         height: 630,
-        alt: "Real Solutions PH — Custom Software & System Integration",
+        alt: "Real Solutions PH — AI Engineering Studio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Custom Software Development & System Integration PH",
+    title: "AI Engineering Studio — Production AI in Weeks",
     description:
-      "Real Solutions PH builds custom software and connects POS, inventory, CRM, HR, and accounting for Philippine SMEs and international clients.",
-    images: ["/og-image.png"],
+      "Two senior architects shipping AI agents, RAG, and custom platforms with grounding guards, tenant isolation, and numbered ADRs — guarantees you can audit.",
+    images: ["/api/og-image"],
   },
 };
 
@@ -49,6 +47,7 @@ export default function Home() {
       <ProblemSection />
       <ServicesSection />
       <ProcessSection />
+      <OperatingModelSection />
       <WhyUsSection />
       <PortfolioIntroSection />
       <TeamSection />

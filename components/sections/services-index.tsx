@@ -14,11 +14,11 @@ export function ServicesIndex({ services }: { services: Service[] }) {
         eyebrow="Our Services"
         title={
           <>
-            Software development services{" "}
-            <GradientText>in the Philippines</GradientText>
+            Senior AI{" "}
+            <GradientText>engineering services</GradientText>
           </>
         }
-        description="From system integration to custom software, AI, and apps — built by senior engineers, accelerated by AI, and delivered fast and cost-efficiently for Philippine SMEs and international clients."
+        description="AI agents, RAG, integration, custom platforms, and apps — scoped, built, and reviewed by the same two senior architects on every engagement."
       />
 
       <section className="w-full py-16 md:py-24">

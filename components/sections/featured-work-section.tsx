@@ -91,11 +91,11 @@ export function FeaturedWorkSection() {
               Our Work
             </Badge>
             <h2 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-              Real integrations, real results
+              Shipped, not just demoed
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              Here&apos;s a sample of what we&apos;ve built for Philippine and
-              SEA businesses.
+              A sample of production builds across retail, consumer tech,
+              and agritech — deployed and running, not left in a sandbox.
             </p>
           </motion.div>
 
@@ -119,12 +119,12 @@ export function FeaturedWorkSection() {
                     {project.images && project.images.length > 0 ? (
                       <ProjectImageCarousel
                         images={project.images}
-                        alt={`${project.title} — Real Solutions PH, Philippines`}
+                        alt={`${project.title} — built by Real Solutions PH`}
                       />
                     ) : project.image ? (
                       <Image
                         src={project.image}
-                        alt={`${project.title} — Real Solutions PH, Philippines`}
+                        alt={`${project.title} — built by Real Solutions PH`}
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />

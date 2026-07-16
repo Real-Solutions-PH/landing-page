@@ -29,7 +29,7 @@ export function ServiceDetail({
       <PageHero eyebrow={service.name} title={service.h1} description={service.tagline}>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <Button asChild size="lg" className="rounded-full">
-            <Link href="/contact">Book a Discovery Audit</Link>
+            <Link href="/contact">Book a scoping call</Link>
           </Button>
           <Button
             asChild
@@ -142,8 +142,8 @@ export function ServiceDetail({
               Indicative investment
             </h2>
             <p className="mt-2 text-sm text-muted-foreground md:text-base">
-              Transparent ranges so you can plan. Final scope and quote come out
-              of your Discovery Audit.
+              Transparent ranges so you can plan. Final scope and quote are
+              confirmed on your scoping call.
             </p>
           </motion.div>
           <motion.div
@@ -154,10 +154,7 @@ export function ServiceDetail({
               <thead className="bg-secondary/50 text-xs uppercase tracking-wide text-muted-foreground">
                 <tr>
                   <th className="px-4 py-3 font-medium md:px-6">Package</th>
-                  <th className="px-4 py-3 font-medium md:px-6">PH rate</th>
-                  <th className="hidden px-4 py-3 font-medium sm:table-cell md:px-6">
-                    Intl rate
-                  </th>
+                  <th className="px-4 py-3 font-medium md:px-6">From</th>
                   <th className="px-4 py-3 font-medium md:px-6">Timeline</th>
                 </tr>
               </thead>
@@ -168,10 +165,7 @@ export function ServiceDetail({
                       {p.label}
                     </td>
                     <td className="px-4 py-4 text-muted-foreground md:px-6">
-                      {p.php}
-                    </td>
-                    <td className="hidden px-4 py-4 text-muted-foreground sm:table-cell md:px-6">
-                      {p.intl}
+                      {p.from}
                     </td>
                     <td className="px-4 py-4 text-muted-foreground md:px-6">
                       {p.timeline}
@@ -259,11 +253,12 @@ export function ServiceDetail({
               Ready to scope your {service.name.toLowerCase()} project?
             </h2>
             <p className="mx-auto mb-8 max-w-xl text-sm text-muted-foreground md:text-base">
-              Book a Discovery Audit. In 3–7 days you get a workflow audit, a
-              solution roadmap, and a clear project estimate — no guesswork.
+              Start with a scoping call. You leave knowing the timeline, the
+              fixed price, and whether it&apos;s a fit — before you commit to
+              anything.
             </p>
             <Button asChild size="lg" className="rounded-full">
-              <Link href="/contact">Book a Discovery Audit</Link>
+              <Link href="/contact">Book a scoping call</Link>
             </Button>
           </motion.div>
         </div>

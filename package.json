@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
+    "lint": "eslint && node scripts/check-positioning.mjs",
+    "check:positioning": "node scripts/check-positioning.mjs",
     "postbuild": "node scripts/submit-indexnow.mjs"
   },
   "dependencies": {

@@ -4,23 +4,23 @@ import { PricingSection } from "@/components/sections/pricing-section";
 import { CtaSection } from "@/components/sections/cta-section";
 
 export const metadata: Metadata = {
-  title: "Pricing — Software Development Rates",
+  title: "Pricing — AI Engineering Rates",
   description:
-    "Transparent software development pricing. Custom software, integration, AI, mobile apps, and retainers for Philippine SMEs and international clients.",
+    "Transparent AI engineering pricing, from $3,000. AI agents, RAG, integration, custom platforms, and AI MVP builds — fixed scope, USD, no upper-bound guesswork.",
   alternates: { canonical: "/pricing" },
   // Page is intentionally hidden from nav; keep it out of the index until relaunched.
   robots: { index: false, follow: true },
   openGraph: {
-    title: "Pricing — Software Development Rates",
+    title: "Pricing — AI Engineering Rates",
     description:
-      "Transparent software development pricing. Custom software, integration, AI, mobile apps, and retainers for Philippine SMEs and international clients.",
+      "Transparent AI engineering pricing, from $3,000. AI agents, RAG, integration, custom platforms, and AI MVP builds — fixed scope, USD, no upper-bound guesswork.",
     url: "https://www.realsolutionsph.com/pricing",
     siteName: "Real Solutions PH",
-    locale: "en_PH",
+    locale: "en_US",
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/api/og-image",
         width: 1200,
         height: 630,
         alt: "Real Solutions PH Pricing",
@@ -29,10 +29,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pricing — Software Development Rates",
+    title: "Pricing — AI Engineering Rates",
     description:
-      "Transparent software development pricing. Custom software, integration, AI, mobile apps, and retainers for Philippine SMEs and international clients.",
-    images: ["/og-image.png"],
+      "Transparent AI engineering pricing, from $3,000. AI agents, RAG, integration, custom platforms, and AI MVP builds — fixed scope, USD, no upper-bound guesswork.",
+    images: ["/api/og-image"],
   },
 };
 

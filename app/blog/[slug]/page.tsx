@@ -30,12 +30,12 @@ export async function generateMetadata({
       description: post.description,
       url,
       siteName: "Real Solutions PH",
-      locale: "en_PH",
+      locale: "en_US",
       type: "article",
       publishedTime: post.date,
       images: [
         {
-          url: "/og-image.png",
+          url: "/api/og-image",
           width: 1200,
           height: 630,
           alt: post.title,
@@ -46,7 +46,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: post.metaTitle,
       description: post.description,
-      images: ["/og-image.png"],
+      images: ["/api/og-image"],
     },
   };
 }
@@ -72,7 +72,7 @@ export default async function BlogPostPage({
     dateModified: post.date,
     url: postUrl,
     mainEntityOfPage: postUrl,
-    image: `${baseUrl}/og-image.png`,
+    image: `${baseUrl}/api/og-image`,
     author: {
       "@type": "Organization",
       name: "Real Solutions PH",
@@ -154,11 +154,11 @@ export default async function BlogPostPage({
                 Want a clear estimate for your project?
               </h2>
               <p className="mx-auto mb-6 max-w-md text-sm text-white/70">
-                Book a Discovery Audit — a workflow audit, solution roadmap, and
-                project estimate in 3–7 days.
+                Book a scoping call — no commitment, just a clear-eyed read on
+                what to build and a fixed-price estimate.
               </p>
               <Button asChild size="lg" className="rounded-full">
-                <Link href="/contact">Book a Discovery Audit</Link>
+                <Link href="/contact">Book a scoping call</Link>
               </Button>
             </div>
           </div>

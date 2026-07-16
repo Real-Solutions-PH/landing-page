@@ -81,7 +81,7 @@ export function PortfolioIntroSection() {
   return (
     <section
       id="portfolio"
-      className="relative w-full overflow-hidden bg-[#F7FAFC] dark:bg-[#081526] py-20 sm:py-28"
+      className="relative w-full overflow-hidden bg-background py-20 sm:py-28"
     >
       {/* Background accent blobs */}
       <div className="pointer-events-none absolute inset-0 z-0">
@@ -108,9 +108,9 @@ export function PortfolioIntroSection() {
             See what we&apos;ve built
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Real integrations, real results. Every project here eliminated
-            manual work and gave business owners back hours they didn&apos;t
-            know they were losing.
+            Systems deployed to production, not left as a sandboxed demo —
+            each one built by the same two architects who&apos;d scope
+            yours.
           </p>
         </motion.div>
 
@@ -135,12 +135,12 @@ export function PortfolioIntroSection() {
                   {project.images && project.images.length > 0 ? (
                     <ProjectImageCarousel
                       images={project.images}
-                      alt={`${project.title} — Real Solutions PH, Philippines`}
+                      alt={`${project.title} — built by Real Solutions PH`}
                     />
                   ) : project.image ? (
                     <Image
                       src={project.image}
-                      alt={`${project.title} — Real Solutions PH, Philippines`}
+                      alt={`${project.title} — built by Real Solutions PH`}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />

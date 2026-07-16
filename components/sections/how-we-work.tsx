@@ -6,16 +6,14 @@ import {
   Check,
   X,
   Zap,
-  DollarSign,
   ShieldCheck,
-  Search,
-  Sparkles,
   Code2,
-  TrendingUp,
+  ClipboardCheck,
+  HeartHandshake,
+  Sparkles,
   ArrowRight,
   Clock,
   Users,
-  Rocket,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -29,65 +27,65 @@ const fadeUp = {
 };
 
 const HERO_STATS = [
-  { icon: Clock, label: "Discovery", value: "3–7 days" },
-  { icon: Rocket, label: "MVP delivery", value: "3–8 weeks" },
-  { icon: Users, label: "Team", value: "Senior-only" },
+  { icon: Code2, label: "Build", value: "3 weeks" },
+  { icon: ClipboardCheck, label: "UAT", value: "1 week" },
+  { icon: ShieldCheck, label: "Warranty", value: "30 days" },
 ];
 
 const PHASES = [
   {
     step: "01",
-    icon: Search,
-    name: "Discovery Audit",
-    title: "We map your problem before writing a single line of code",
+    icon: Code2,
+    name: "Build",
+    title: "One AI capability, scoped and built completely",
     description:
-      "A paid discovery session where we audit your current tools, workflows, integration gaps, and pain points. You get a workflow audit, solution roadmap, and project estimate — in 3 to 7 days.",
-    duration: "3–7 days",
+      "The architecture gets decided before a line of code ships, and the grounding guard and isolation policy are part of that architecture — not a patch added later.",
+    duration: "3 weeks",
   },
   {
     step: "02",
-    icon: Sparkles,
-    name: "Prototype Sprint",
-    title: "See and react to your solution before production begins",
+    icon: ClipboardCheck,
+    name: "UAT",
+    title: "Tested against your real users, not our assumptions",
     description:
-      "A high-speed design sprint driven by AI. We build a live, interactive prototype you can view and use in real-time on the cloud, allowing for rapid iterations before any core engineering begins.",
-    duration: "1–2 weeks",
+      "A full week of user acceptance testing. Fixes from what actually breaks get folded in before handover, not left for a version two.",
+    duration: "1 week",
   },
   {
     step: "03",
-    icon: Code2,
-    name: "MVP Build",
-    title: "Production-grade software, engineered properly from day one",
+    icon: HeartHandshake,
+    name: "Hypercare",
+    title: "We stay reachable right after launch",
     description:
-      "Production-ready MVP using proper engineering practices — architecture review, CI/CD pipelines, secure implementation, automated testing, and cloud deployment. Delivered in 3 to 8 weeks.",
-    duration: "3–8 weeks",
+      "The two architects who built it are the two people you reach if something needs attention the week it ships.",
+    duration: "Post-launch",
   },
   {
     step: "04",
-    icon: TrendingUp,
-    name: "Managed Growth",
-    title: "We stay after launch — your system keeps improving",
+    icon: ShieldCheck,
+    name: "Warranty",
+    title: "A 30-day warranty on delivered work",
     description:
-      "Ongoing partnership after launch. We keep your system stable with bug fixes, monitoring, and support — plus continuous feature development, new integrations, and roadmap advisory.",
-    duration: "Ongoing",
+      "Nothing that changes along the way disappears into a chat log — each change gets its own numbered record, dated and traceable after the fact.",
+    duration: "30 days",
   },
 ];
 
 const ADVANTAGES = [
   {
     icon: Zap,
-    title: "AI-accelerated engineering",
-    body: "Senior engineers paired with AI tooling, internal templates, and design systems compress weeks of work into days — without the quality trade-offs of vibe-coded software.",
-  },
-  {
-    icon: DollarSign,
-    title: "Lean cost structure",
-    body: "Reusable internal frameworks and an optimized delivery system mean we charge a fraction of what enterprise agencies and international shops charge for the same scope.",
+    title: "AI-assisted development, paired with discipline",
+    body: "AI leverage is where the speed comes from; the discipline is what keeps it from turning into vibe-coding — a numbered record for every scope change, security review before handover, not after.",
   },
   {
     icon: ShieldCheck,
-    title: "Senior-only team",
-    body: "Every build is led by head-of-engineering and lead-engineer level talent from startups — no offshore juniors learning on your budget.",
+    title: "Provable guarantees, not promises",
+    body: "Tenant isolation is enforced with Postgres row-level security and proven with positive-control tests — not asserted in a README.",
+  },
+  {
+    icon: Users,
+    title: "Two architects, no bench",
+    body: "Whoever scopes the engagement is also one of the two people at the keyboard — through the build, the UAT week, and hypercare after launch.",
   },
 ];
 
@@ -100,12 +98,12 @@ const COMPARISON: {
   agency: Cell;
   inhouse: Cell;
 }[] = [
-  { feature: "Fast MVP delivery", rsp: true, diy: true, agency: false, inhouse: false },
-  { feature: "Production-grade engineering", rsp: true, diy: false, agency: true, inhouse: true },
-  { feature: "Competitive cost", rsp: true, diy: true, agency: false, inhouse: false },
-  { feature: "Built around your workflow", rsp: true, diy: false, agency: "partial", inhouse: true },
-  { feature: "You own the code & data", rsp: true, diy: false, agency: "partial", inhouse: true },
-  { feature: "Maintained after launch", rsp: true, diy: false, agency: "partial", inhouse: true },
+  { feature: "Ships in weeks, not quarters", rsp: true, diy: true, agency: false, inhouse: false },
+  { feature: "Grounding guard from day one", rsp: true, diy: false, agency: "partial", inhouse: "partial" },
+  { feature: "Tenant isolation proven, not asserted", rsp: true, diy: false, agency: "partial", inhouse: "partial" },
+  { feature: "Every deviation recorded as a numbered ADR", rsp: true, diy: false, agency: false, inhouse: "partial" },
+  { feature: "You own the code & schema outright", rsp: true, diy: false, agency: "partial", inhouse: true },
+  { feature: "Hypercare + 30-day warranty after launch", rsp: true, diy: false, agency: "partial", inhouse: true },
   { feature: "No hiring & management overhead", rsp: true, diy: true, agency: true, inhouse: false },
 ];
 
@@ -178,21 +176,21 @@ export function HowWeWork() {
               How We Work
             </Badge>
             <h1 className="mb-6 text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl leading-[1.15]">
-              An AI-optimized system for building software{" "}
+              Three weeks to build.{" "}
               <span className="bg-gradient-to-r from-sky-300 via-accent to-sky-400 bg-clip-text text-transparent">
-                fast and affordably
+                One week to prove it.
               </span>
             </h1>
             <p className="mx-auto max-w-2xl text-base text-white/70 sm:text-lg">
-              Real Solutions PH runs a prototype-first, AI-accelerated delivery
-              system led by senior startup engineers. It&apos;s how we ship
-              production-grade software faster and cheaper than agencies — local
-              or international — without cutting corners.
+              A senior-architect delivery system: three build weeks, one UAT
+              week against real users, hypercare, and a 30-day warranty —
+              accelerated by AI-assisted development and checked by numbered
+              ADRs on every build.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Button asChild size="lg" className="rounded-full">
                 <Link href="/contact">
-                  Book a Discovery Audit
+                  Book a scoping call
                   <ArrowRight className="ml-1.5 h-4 w-4" />
                 </Link>
               </Button>
@@ -236,7 +234,7 @@ export function HowWeWork() {
         </div>
       </section>
 
-      {/* Why faster & cheaper */}
+      {/* Why the guarantees don't slow us down */}
       <section className="w-full py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6 max-w-5xl">
           <motion.div {...fadeUp} className="mb-12 max-w-2xl">
@@ -247,14 +245,13 @@ export function HowWeWork() {
               Why we&apos;re different
             </Badge>
             <h2 className="mb-4 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-              Why we&apos;re faster and more affordable
+              Why the guarantees don&apos;t slow us down
             </h2>
             <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
-              We don&apos;t deliver fast and cheap by hiring juniors or skipping
-              engineering. We do it by running an optimized system: senior
-              engineers amplified by AI, reusable internal frameworks, and a
-              prototype-first process that kills misalignment before it costs
-              money.
+              We don&apos;t move fast by skipping engineering discipline. Two
+              senior architects use AI-assisted development for velocity, and
+              the same guardrails — grounding guards, tenant isolation,
+              numbered ADRs — go in from the first commit on every build.
             </p>
           </motion.div>
           <div className="grid gap-5 md:grid-cols-3">
@@ -310,11 +307,11 @@ export function HowWeWork() {
               The Process
             </Badge>
             <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl">
-              Four phases from problem to maintained software
+              Four phases from build to maintained software
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-sm text-muted-foreground md:text-base">
-              Each phase has a defined deliverable and timeline. You always know
-              what comes next.
+              Each phase has a defined deliverable and timeline. You always
+              know what comes next.
             </p>
           </motion.div>
 
@@ -380,9 +377,9 @@ export function HowWeWork() {
               The smarter middle ground
             </h2>
             <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
-              Between cobbling together DIY tools, hiring a traditional agency,
-              and building your own in-house team — here&apos;s how a managed
-              partnership with Real Solutions PH compares.
+              Between cobbling together no-code AI tools, hiring a traditional
+              agency, and building your own in-house team — here&apos;s how an
+              engagement with Real Solutions PH compares.
             </p>
           </motion.div>
           <motion.div
@@ -407,7 +404,7 @@ export function HowWeWork() {
                       </span>
                     </th>
                     <th className="px-4 py-4 text-center font-medium md:px-6">
-                      DIY Tools
+                      No-Code AI Tools
                     </th>
                     <th className="px-4 py-4 text-center font-medium md:px-6">
                       Traditional Agency
@@ -488,14 +485,13 @@ export function HowWeWork() {
               <Users className="h-6 w-6" />
             </span>
             <h2 className="mb-4 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-              Run by senior startup engineers
+              Run by two architects, not a bench
             </h2>
             <p className="mx-auto mb-6 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
-              Real Solutions PH was founded by former startup engineering leaders
-              who&apos;ve shipped production software at head-of-engineering and
-              lead-engineer level. We understand both clean architecture and
-              business reality — builders who deliver, not just consultants who
-              advise.
+              Real Solutions PH was founded by two former heads of engineering at
+              an AI startup — the same two people who scope, build, and
+              review every engagement. We understand both clean architecture
+              and what a compliance review actually asks for.
             </p>
             <Button asChild variant="outline" className="rounded-full">
               <Link href="/about">
@@ -541,16 +537,17 @@ export function HowWeWork() {
                   Get Started
                 </Badge>
                 <h2 className="mx-auto mb-4 max-w-2xl text-2xl font-bold tracking-tight text-white sm:text-3xl md:text-4xl">
-                  See the system applied to your business
+                  See this applied to your build
                 </h2>
                 <p className="mx-auto mb-8 max-w-xl text-sm text-white/70 md:text-base">
-                  Start with a Discovery Audit. We map your workflow and hand you
-                  a roadmap and estimate in 3–7 days.
+                  Start with a scoping call. We&apos;ll tell you plainly
+                  whether four weeks is realistic for what you&apos;re
+                  building.
                 </p>
                 <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
                   <Button asChild size="lg" className="rounded-full">
                     <Link href="/contact">
-                      Book a Discovery Audit
+                      Book a scoping call
                       <ArrowRight className="ml-1.5 h-4 w-4" />
                     </Link>
                   </Button>

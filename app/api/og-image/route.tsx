@@ -82,8 +82,8 @@ export async function GET(request: Request) {
               marginBottom: "28px",
             }}
           >
-            <span style={{ display: "flex" }}>Your business</span>
-            <span style={{ display: "flex" }}>software,</span>
+            <span style={{ display: "flex" }}>Production AI</span>
+            <span style={{ display: "flex" }}>systems,</span>
             <div
               style={{
                 display: "flex",
@@ -102,7 +102,7 @@ export async function GET(request: Request) {
                   borderRadius: "12px",
                 }}
               >
-                built right,
+                shipped in weeks,
               </span>
               <span
                 style={{ display: "flex", color: "#facc15", fontSize: "36px" }}
@@ -111,7 +111,7 @@ export async function GET(request: Request) {
               </span>
             </div>
             <span style={{ display: "flex", marginTop: "8px" }}>
-              and managed for you.
+              guarantees you can audit.
             </span>
           </div>
 
@@ -126,8 +126,8 @@ export async function GET(request: Request) {
               maxWidth: "460px",
             }}
           >
-            Production-grade custom software and system integrations for SMEs.
-            Fully built, scalable, and maintained.
+            AI agents, RAG, and platforms built with grounding guards and
+            numbered ADRs.
           </div>
 
           {/* URL footer */}

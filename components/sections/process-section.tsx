@@ -7,43 +7,68 @@ import {
   type FeatureCarouselStep,
   type FeatureCarouselImageSet,
 } from "@/components/ui/animated-feature-carousel";
-import { Search, Zap, Code, TrendingUp } from "lucide-react";
+import {
+  FileText,
+  FlaskConical,
+  Rocket,
+  ClipboardCheck,
+  HeartHandshake,
+  ShieldCheck,
+} from "lucide-react";
 
 const steps: readonly FeatureCarouselStep[] = [
   {
     id: "1",
-    name: "Discovery Audit",
-    title: "We map your problem before writing a single line of code",
+    name: "Proposal",
+    title: "Software architecture & project overview",
     description:
-      "A paid discovery session where we audit your current tools, workflows, integration gaps, and pain points. You get a workflow audit, solution roadmap, and project estimate — in 3 to 7 days.",
-    icon: Search,
+      "Before any code: the architecture, the tradeoffs behind it, and a project overview you sign off on. You approve the plan and the cost design first — nothing gets built on assumptions.",
+    icon: FileText,
   },
   {
     id: "2",
-    name: "Prototype Sprint",
-    title: "See and react to your solution before production begins",
+    name: "POC",
+    title: "Prove the riskiest part first",
     description:
-      "A high-speed design sprint driven by AI. We build a live, interactive prototype you can view and use in real-time on the cloud, allowing for rapid iterations before any core engineering begins.",
-    icon: Zap,
+      "The one assumption that changes everything if it fails gets proven on its own — a focused proof of concept, before a full build rests on top of it.",
+    icon: FlaskConical,
   },
   {
     id: "3",
-    name: "MVP Build",
-    title: "Production-grade software, engineered properly from day one",
+    name: "MVP",
+    title: "One capability, built complete",
     description:
-      "Production-ready MVP using proper engineering practices — architecture review, CI/CD pipelines, secure implementation, automated testing, and cloud deployment. Delivered in 3 to 8 weeks.",
-    icon: Code,
+      "The core capability, scoped tight and shipped whole — grounding guards and tenant isolation in from the first commit, not a checklist run before handover.",
+    icon: Rocket,
   },
   {
     id: "4",
-    name: "Managed Growth",
-    title: "We stay after launch — your system keeps improving",
+    name: "UAT",
+    title: "Tested against your real users, not our assumptions",
     description:
-      "Ongoing partnership after launch. We keep your system stable with bug fixes, monitoring, and support — plus continuous feature development, new integrations, and roadmap advisory.",
-    icon: TrendingUp,
+      "A full pass of user acceptance testing against actual users. Fixes from what actually breaks get folded in before handover, not left for a version two.",
+    icon: ClipboardCheck,
+  },
+  {
+    id: "5",
+    name: "Hypercare",
+    title: "We stay reachable right after launch",
+    description:
+      "A lead architect stays on the week it ships to handle whatever needs attention — the person who built it, not a support ticket queue.",
+    icon: HeartHandshake,
+  },
+  {
+    id: "6",
+    name: "Warranty",
+    title: "A 30-day warranty on delivered work",
+    description:
+      "Any change to what was agreed gets its own dated, numbered record — nothing you'd have to reconstruct from a chat log later.",
+    icon: ShieldCheck,
   },
 ];
 
+// ponytail: 4 known-good URLs reused to fill 6 slots — real unsplash IDs I can't
+// verify would risk 404s. Swap in 6 distinct assets when they exist.
 const images: FeatureCarouselImageSet = {
   alt: "How Real Solutions PH works",
   images: [
@@ -51,6 +76,8 @@ const images: FeatureCarouselImageSet = {
     "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=1740&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1740&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?q=80&w=1740&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1740&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=1740&auto=format&fit=crop",
   ],
 };
 
@@ -75,12 +102,12 @@ export function ProcessSection() {
               How It Works
             </Badge>
             <h2 className="mb-6 text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl">
-              Simple, transparent process
+              A predictable shape, proposal to warranty
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              Prototype first. Build second. Never waste budget on the wrong
-              thing. We&apos;ve refined our delivery into four clear phases so
-              you always know what&apos;s happening.
+              Six phases from a signed architecture proposal to a 30-day
+              warranty. The build — proposal through UAT — lands in three to
+              four weeks; hypercare and the warranty run after you&apos;re live.
             </p>
           </motion.div>
         </div>

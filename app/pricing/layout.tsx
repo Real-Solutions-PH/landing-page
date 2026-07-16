@@ -1,53 +1,57 @@
+// Questions mirror the anchors on this page's visible pricing cards (see
+// components/sections/pricing-section.tsx) — USD "from" pricing only, no upper
+// bound, no PHP (spec C8/C11). Below-anchor tiers (Discovery Audit, retainers)
+// were removed from the site, not repriced, so their Q&A is not restated here.
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
     {
       "@type": "Question",
-      name: "How much does custom software development cost in the Philippines?",
+      name: "How much does it cost to build an AI MVP?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "At Real Solutions PH, custom software development starts from ₱63,000 for a simple business tool up to ₱1,050,000+ for an advanced business platform. International rates range from $6,000 to $75,000+. Pricing depends on scope, number of modules, and complexity.",
+        text: "An AI MVP build starts from $5,000 and runs four weeks: three weeks of build, one week of user acceptance testing against real users, followed by hypercare and a 30-day warranty. Final cost depends on the scope of the AI capability and how much of the surrounding product needs to be built alongside it.",
       },
     },
     {
       "@type": "Question",
-      name: "How much does system integration cost in the Philippines?",
+      name: "How much does it cost to add an AI feature to a product we already run?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "System integration projects at Real Solutions PH start from ₱42,000 for a 1–2 system integration (e.g., POS + accounting) up to ₱455,000+ for an advanced suite connecting 6+ systems. International rates range from $3,500 to $32,000+.",
+        text: "An AI feature add-on — one capability such as RAG search or a grounded assistant, embedded into an existing product — starts from $5,000 and runs 2–4 weeks.",
       },
     },
     {
       "@type": "Question",
-      name: "How long does it take to build an MVP in the Philippines?",
+      name: "How much does it cost to integrate AI into our existing systems?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "MVP builds at Real Solutions PH typically take 3–16 weeks depending on the type of software. Integration MVPs take 2–12 weeks, custom software MVPs take 3–16 weeks, and mobile apps take 6–20 weeks. We always start with a Discovery Audit and Prototype Sprint before full engineering begins.",
+        text: "Wiring an AI agent or retrieval pipeline into a CRM, ticketing queue, ERP, or internal API starts from $3,500 and runs 2–4 weeks, with full read/write access rather than a read-only chat window bolted to the side.",
       },
     },
     {
       "@type": "Question",
-      name: "What is a Discovery Audit and how much does it cost?",
+      name: "How much does a custom multi-tenant platform cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A Discovery Audit is a paid engagement where we map your current tools, workflows, integration gaps, and software opportunities. We deliver a workflow audit, solution roadmap, and project estimate. It costs ₱10,000–₱22,000 for Philippine clients and $700–$1,200 for international clients. The fee can be credited toward your MVP build.",
+        text: "A custom platform with tenant isolation enforced at the database layer starts from $13,000 and runs 6–10 weeks. You own the code and schema outright, with no vendor lock-in.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you offer ongoing software maintenance and support?",
+      name: "How much does a website, client portal, or web app cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Real Solutions PH offers managed retainer plans after launch. The Care Plan covers bug fixes, monitoring, and security patches starting from ₱3,500/month (PH) or $600/month (International). The Growth Plan adds monthly feature development starting from ₱9,800/month (PH) or $1,600/month (International).",
+        text: "A marketing site, client portal, or SaaS front-end starts from $3,000 and runs 1–3 weeks.",
       },
     },
     {
       "@type": "Question",
-      name: "Is it cheaper to outsource software development to the Philippines?",
+      name: "Is pricing fixed, or does it change once you scope the project?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Hiring a senior engineering team in the Philippines is significantly more cost-effective than equivalent talent in the US, UK, or Australia — often at 30–60% of the cost — without sacrificing quality. Real Solutions PH founders are former lead engineers and heads of engineering at an AI startup, bringing senior-level expertise at Philippine rates.",
+        text: "The figures above are 'from' pricing anchors, not final quotes — they're floors, not averages. We confirm a fixed scope and a fixed price in USD after a scoping call, and the number moves up from the anchor depending on complexity, never down.",
       },
     },
   ],
