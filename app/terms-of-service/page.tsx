@@ -7,12 +7,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
-    "Terms governing use of Real Solutions PH custom software development, system integration, and managed services in the Philippines and internationally.",
+    "Terms governing use of Real Solutions PH custom software development, system integration, and managed services.",
   alternates: { canonical: "/terms-of-service" },
   openGraph: {
     title: "Terms of Service",
     description:
-      "Terms governing use of Real Solutions PH custom software development, system integration, and managed services in the Philippines and internationally.",
+      "Terms governing use of Real Solutions PH custom software development, system integration, and managed services.",
     url: "https://www.realsolutionsph.com/terms-of-service",
     siteName: "Real Solutions PH",
     locale: "en_US",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Terms of Service",
     description:
-      "Terms governing use of Real Solutions PH custom software development, system integration, and managed services in the Philippines and internationally.",
+      "Terms governing use of Real Solutions PH custom software development, system integration, and managed services.",
     images: ["/og-image.png"],
   },
 };
@@ -72,9 +72,9 @@ export default function TermsOfService() {
             </h2>
             <p>
               Real Solutions PH provides custom software integrations,
-              automation solutions, and technical consulting services for small
-              and medium-sized enterprises (SMEs). Our services include but are
-              not limited to:
+              automation solutions, and technical consulting services for
+              startups, regulated enterprises, and agencies. Our services
+              include but are not limited to:
             </p>
             <ul className="list-disc pl-6 space-y-2 mt-4">
               <li>Integration Audits and Roadmaps.</li>
@@ -194,11 +194,7 @@ export default function TermsOfService() {
               6. Governing Law
             </h2>
             <p>
-              These Terms of Service shall be governed by and construed in
-              accordance with the laws of the Republic of the Philippines. Any
-              disputes arising under or in connection with these terms shall be
-              subject to the exclusive jurisdiction of the courts located in
-              Batangas, Philippines.
+              These Terms of Service shall be governed by and construed in accordance with the laws of the Republic of the Philippines. Any disputes arising under or in connection with these terms shall be subject to the exclusive jurisdiction of the courts located in Batangas, Philippines. {/* positioning-guard:allow-ph */}
             </p>
           </section>
 
@@ -212,7 +208,7 @@ export default function TermsOfService() {
             </p>
             <div className="mt-4 p-6 rounded-2xl border border-black/5 bg-black/5 dark:border-white/10 dark:bg-white/5">
               <p className="font-semibold">Real Solutions PH</p>
-              <p>Batangas, Philippines</p>
+              <p>Batangas, Philippines {/* positioning-guard:allow-ph */}</p>
               <p>Email: executives.realsolutions.ph@gmail.com</p>
             </div>
           </section>

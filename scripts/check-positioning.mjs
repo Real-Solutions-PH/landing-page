@@ -7,6 +7,12 @@
 //
 // C1/C2 are contractual bars with uncapped liability. A failure here blocks release.
 // Violations report the FILE and the CODE, never the matched term.
+//
+// C6/C7 (see below) are the PH-market-targeting checks: C6 scans SEO-facing fields
+// (lib/services.ts and every app/**/*.tsx page's `export const metadata` block) for
+// PH buyer terms; C7 scans every file's raw text for a "Philippines" mention that
+// isn't explicitly marked with the allow-ph marker. Neither check exempts a path —
+// a passing repo is one where every surviving mention is visibly justified inline.
 
 import { readFileSync, existsSync, readdirSync, statSync } from "node:fs";
 import { createHash } from "node:crypto";
@@ -34,18 +40,27 @@ const PRECLEARED = [
   "We build AI-assisted, voice-enabled knowledge assistants and retrieval systems",
 ];
 
-// C6 — PH buyer targeting. Word-boundary matched: "sme" as a substring hits
-// "assessment", which is a legitimate word in this copy.
+// C6 — PH buyer targeting in SEO-facing fields: h1/metaTitle/metaDescription/keywords
+// in lib/services.ts, and title/description/keywords inside `export const metadata`
+// blocks across app/**/*.tsx (see C6b below). Word-boundary matched: "sme" as a
+// substring hits "assessment", which is a legitimate word in this copy.
 const PH_TERMS = ["philippines", "philippine", "filipino", "batangas", "sme", "smes"];
 const PH_RE = new RegExp(`\\b(${PH_TERMS.join("|")})\\b`, "i");
 
-// C7 — Philippines is permitted on /about (origin, not market) and on legal pages
-// (jurisdiction). A line may opt out of the outside-/about check with the marker below.
-// Two legitimate uses: (1) a legally-required schema/registered address outside those
-// paths, and (2) an AI-instruction or docs file (e.g. CONTEXT.md, GEMINI.md) stating
-// Philippines as an origin fact, not a market claim, for the benefit of future editors.
+// C7 — every "Philippines" mention, anywhere in the repo, must carry the marker below
+// on the exact line it appears on. There is no path-based exemption: a mention that
+// can't name its own justification inline isn't one this guard can tell apart from a
+// market claim, so any *new* unmarked mention fails the build. Established legitimate
+// uses of the marker, all applied inline:
+//   - a legally-required registered address or governing-law/jurisdiction clause
+//     (app/privacy-policy, app/terms-of-service)
+//   - documentation/AI-instruction files stating Philippines as an origin fact, not a
+//     market claim, for the benefit of future editors (CONTEXT.md, GEMINI.md)
+//   - a legacy blog slug kept verbatim for URL stability (lib/blog.ts)
+//   - origin-framing marketing copy on /about — a cost-structure fact for a
+//     seed-stage founder, not a claim that the business serves that market
+//     (components/sections/about-hero-section.tsx, about-section.tsx)
 // Never use it to silence a marketing-copy violation.
-const PH_ALLOWED_PATHS = ["app/privacy-policy", "app/terms-of-service", "app/about"];
 const PH_ALLOW_MARKER = "positioning-guard:allow-ph";
 
 const words = (text) =>
@@ -102,11 +117,9 @@ for (const file of files) {
     }
   }
 
-  if (!PH_ALLOWED_PATHS.some((p) => file.startsWith(p))) {
-    for (const [i, l] of raw.split("\n").entries()) {
-      if (/philippines|philippine|filipino|batangas/i.test(l) && !l.includes(PH_ALLOW_MARKER)) {
-        violations.push(`${file}:${i + 1}: C7 Philippines outside /about (add "${PH_ALLOW_MARKER}" if legally required)`);
-      }
+  for (const [i, l] of raw.split("\n").entries()) {
+    if (/philippines|philippine|filipino|batangas/i.test(l) && !l.includes(PH_ALLOW_MARKER)) {
+      violations.push(`${file}:${i + 1}: C7 Philippines mention without "${PH_ALLOW_MARKER}" marker`);
     }
   }
 }
@@ -121,6 +134,27 @@ if (existsSync("lib/services.ts")) {
   const kw = svc.match(/keywords:\s*\[[\s\S]*?\]/g) ?? [];
   for (const block of kw) {
     if (PH_RE.test(block)) violations.push(`lib/services.ts: C6 PH targeting in keywords`);
+  }
+}
+
+// C6b — PH targeting in page-level metadata. Legal pages may legitimately state PH
+// jurisdiction in *body* copy (that's C7's job, gated by the marker above), but their
+// `export const metadata` block — title/description/keywords, including nested
+// openGraph/twitter fields — must never carry a market claim. No marker exemption
+// here: metadata should simply never mention Philippines/SMEs, full stop.
+for (const file of collectFiles("app", [".tsx"])) {
+  const raw = readFileSync(file, "utf8");
+  const match = raw.match(/export const metadata[\s\S]*?\n};/);
+  if (!match) continue;
+  const startLine = raw.slice(0, match.index).split("\n").length;
+  for (const [i, l] of match[0].split("\n").entries()) {
+    if (/^\s*(title|description):/.test(l) && PH_RE.test(l)) {
+      violations.push(`${file}:${startLine + i}: C6 PH targeting in page metadata`);
+    }
+  }
+  const kw = match[0].match(/keywords:\s*\[[\s\S]*?\]/g) ?? [];
+  for (const block of kw) {
+    if (PH_RE.test(block)) violations.push(`${file}: C6 PH targeting in page metadata keywords`);
   }
 }
 

@@ -7,12 +7,12 @@ import { CtaSection } from "@/components/sections/cta-section";
 export const metadata: Metadata = {
   title: "About Our Software Engineers",
   description:
-    "Meet the engineers behind Real Solutions PH — former startup leaders building production-grade software for Philippine SMEs and international clients.",
+    "Meet the two senior architects behind Real Solutions — former startup engineering leads shipping production-grade AI systems for international startups, regulated enterprises, and agencies.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About Our Software Engineers",
     description:
-      "Meet the engineers behind Real Solutions PH — former startup leaders building production-grade software for Philippine SMEs and international clients.",
+      "Meet the two senior architects behind Real Solutions — former startup engineering leads shipping production-grade AI systems for international startups, regulated enterprises, and agencies.",
     url: "https://www.realsolutionsph.com/about",
     siteName: "Real Solutions PH",
     locale: "en_US",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Our Software Engineers",
     description:
-      "Meet the engineers behind Real Solutions PH — former startup leaders building production-grade software for Philippine SMEs and international clients.",
+      "Meet the two senior architects behind Real Solutions — former startup engineering leads shipping production-grade AI systems for international startups, regulated enterprises, and agencies.",
     images: ["/og-image.png"],
   },
 };
