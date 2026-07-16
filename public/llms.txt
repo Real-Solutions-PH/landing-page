@@ -1,11 +1,13 @@
-# Real Solutions
+# Real Solutions PH
 
-> Real Solutions is a senior AI engineering studio. Two architects with AI leverage, shipping production-grade AI systems in weeks — with guarantees you can audit. We build for three international audiences: pre-seed/seed startup founders who need a production AI MVP shipped fast, regulated enterprise teams (fintech, healthcare, proptech) who need AI systems that survive a compliance review, and agencies and CTOs who need a senior engineering pod to subcontract to. Every engagement is scoped, built, and reviewed by the same two senior architects — never handed off to a bench of juniors.
+> Real Solutions PH is a senior AI engineering studio shipping production-grade AI systems in three to four weeks — with guarantees you can audit. AI runs every step of the build; a lead architect verifies every output before it moves to the next step. We build for three international audiences: pre-seed/seed startup founders who need a production AI MVP shipped fast, regulated enterprise teams (fintech, healthcare, proptech) who need AI systems that survive a compliance review, and agencies and CTOs who need a senior engineering pod to subcontract to. Every engagement is scoped, built, and reviewed by the lead architects who take it on — never handed off to a bench of juniors.
 
 ## Key facts
 
-- Company: Real Solutions
-- Founders: Ervin Piol and Kairus Noah Tecson — former lead full-stack engineers and heads of engineering at an AI startup. Two senior architects, not a team of juniors managed by a senior.
+- Company: Real Solutions PH
+- Founders: Ervin Piol and Kairus Noah Tecson — former lead full-stack engineers and heads of engineering at an AI startup. Lead-level architects who scope, build, and review every engagement personally, not a team of juniors managed by a senior.
+- Operating model: AI runs every step of the build; a lead architect verifies every output before it moves to the next step. Architecture, system design, cost design and its tradeoffs, and security boundaries stay human. Nothing an AI produces reaches client code unverified — which is what holds the three-to-four-week timeline without trading away quality, cost, or security.
+- Track record: the founders have built AI systems professionally for three years, including systems built to hold up under binding regulatory frameworks such as the EU AI Act.
 - Differentiator: provable engineering guarantees, not demos — a grounding guard that rejects any model output citing a number the deterministic engine didn't produce; server-side citations built only from chunks actually retrieved; tenant isolation enforced at the database layer via Postgres row-level security with a bleed-guard; honest "we don't know" instead of a guess; every deviation from spec recorded as a numbered ADR.
 - Engagement model: managed AI engineering partner (not staff augmentation or freelancers); clients own their code and data
 - Process: three build weeks → one UAT week against real users → hypercare → 30-day warranty
@@ -29,6 +31,6 @@
 - [For Agencies](https://www.realsolutionsph.com/for/agencies): A white-label senior AI engineering pod agencies subcontract to, with a numbered ADR trail their client's own reviewer can check.
 - [Services](https://www.realsolutionsph.com/services): All seven services under one senior engineering team.
 - [Work / Portfolio](https://www.realsolutionsph.com/work): Case studies in AI agents, RAG pipelines, system integrations, custom platforms, and mobile apps.
-- [About](https://www.realsolutionsph.com/about): The two architects behind Real Solutions.
+- [About](https://www.realsolutionsph.com/about): The architects behind Real Solutions PH, and how the studio operates.
 - [Insights / Blog](https://www.realsolutionsph.com/blog): Guides on grounding guards, tenant isolation, RAG architecture, voice AI, and real AI build pricing.
 - [Contact](https://www.realsolutionsph.com/contact): Book a scoping call.

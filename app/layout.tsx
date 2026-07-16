@@ -14,8 +14,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Real Solutions — AI Systems, Shipped in Weeks",
-    template: "%s | Real Solutions",
+    default: "Real Solutions PH — AI Systems, Shipped in Weeks",
+    template: "%s | Real Solutions PH",
   },
   description:
     "Senior AI engineering studio. Production RAG, agents, and voice systems with grounded output and provable tenant isolation — shipped in weeks, not quarters.",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     "LLM grounding guard",
     "Pipecat voice agent",
     "production RAG system",
-    "Real Solutions",
+    "Real Solutions PH",
   ],
   metadataBase: new URL("https://www.realsolutionsph.com"),
   alternates: {
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     apple: "/logo/logo-dark.svg",
   },
   openGraph: {
-    title: "Real Solutions — AI Systems, Shipped in Weeks",
+    title: "Real Solutions PH — AI Systems, Shipped in Weeks",
     description:
       "Senior AI engineering studio. Production RAG, agents, and voice systems with grounded output and provable tenant isolation — shipped in weeks, not quarters.",
     url: "https://www.realsolutionsph.com",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
         url: "/api/og-image",
         width: 1200,
         height: 630,
-        alt: "Real Solutions — AI Systems, Shipped in Weeks",
+        alt: "Real Solutions PH — AI Systems, Shipped in Weeks",
       },
     ],
   },
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@realsolutionsph",
     creator: "@realsolutionsph",
-    title: "Real Solutions — AI Systems, Shipped in Weeks",
+    title: "Real Solutions PH — AI Systems, Shipped in Weeks",
     description:
       "Senior AI engineering studio. Production RAG, agents, and voice systems with grounded output and provable tenant isolation — shipped in weeks, not quarters.",
     images: ["/api/og-image"],
@@ -104,13 +104,13 @@ export default function RootLayout({
                 "@context": "https://schema.org",
                 "@type": ["Organization", "ProfessionalService"],
                 "@id": "https://www.realsolutionsph.com/#organization",
-                name: "Real Solutions",
+                name: "Real Solutions PH",
                 url: "https://www.realsolutionsph.com",
                 logo: "https://www.realsolutionsph.com/logo/logo-header-light.svg",
                 image:
                   "https://www.realsolutionsph.com/api/og-image",
                 description:
-                  "Real Solutions is a senior AI engineering studio. Two architects with AI leverage, shipping production-grade AI systems — RAG, agents, and voice AI — in weeks, for startups, regulated enterprise, and agencies worldwide.",
+                  "Real Solutions PH is a senior AI engineering studio shipping production-grade AI systems — RAG, agents, and voice AI — in three to four weeks. AI runs every step of the build; a lead architect verifies every output, with grounding guards, provable tenant isolation, and numbered ADRs. For startups, regulated enterprise, and agencies worldwide.",
                 areaServed: {
                   "@type": "Place",
                   name: "Worldwide",
@@ -157,9 +157,9 @@ export default function RootLayout({
                 "@type": "WebSite",
                 "@id": "https://www.realsolutionsph.com/#website",
                 url: "https://www.realsolutionsph.com",
-                name: "Real Solutions",
+                name: "Real Solutions PH",
                 description:
-                  "Real Solutions — a senior AI engineering studio shipping production AI systems for startups, regulated enterprise, and agencies worldwide.",
+                  "Real Solutions PH — a senior AI engineering studio shipping production AI systems for startups, regulated enterprise, and agencies worldwide.",
                 publisher: {
                   "@id": "https://www.realsolutionsph.com/#organization",
                 },

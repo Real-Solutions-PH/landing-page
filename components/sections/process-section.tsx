@@ -7,35 +7,58 @@ import {
   type FeatureCarouselStep,
   type FeatureCarouselImageSet,
 } from "@/components/ui/animated-feature-carousel";
-import { Code2, ClipboardCheck, HeartHandshake, ShieldCheck } from "lucide-react";
+import {
+  FileText,
+  FlaskConical,
+  Rocket,
+  ClipboardCheck,
+  HeartHandshake,
+  ShieldCheck,
+} from "lucide-react";
 
 const steps: readonly FeatureCarouselStep[] = [
   {
     id: "1",
-    name: "Build",
-    title: "One AI capability, scoped and built completely",
+    name: "Proposal",
+    title: "Software architecture & project overview",
     description:
-      "Three build weeks, one capability held to scope. Grounding and isolation are part of the design from day one, not a checklist run before handover.",
-    icon: Code2,
+      "Before any code: the architecture, the tradeoffs behind it, and a project overview you sign off on. You approve the plan and the cost design first — nothing gets built on assumptions.",
+    icon: FileText,
   },
   {
     id: "2",
-    name: "UAT",
-    title: "Tested against your real users, not our assumptions",
+    name: "POC",
+    title: "Prove the riskiest part first",
     description:
-      "One full week of user acceptance testing. Fixes from what actually breaks get folded in before handover, not left for a version two.",
-    icon: ClipboardCheck,
+      "The one assumption that changes everything if it fails gets proven on its own — a focused proof of concept, before a full build rests on top of it.",
+    icon: FlaskConical,
   },
   {
     id: "3",
-    name: "Hypercare",
-    title: "We stay reachable right after launch",
+    name: "MVP",
+    title: "One capability, built complete",
     description:
-      "The two architects who built it are the two people you reach if something needs attention the week it ships — not a support ticket queue.",
-    icon: HeartHandshake,
+      "The core capability, scoped tight and shipped whole — grounding guards and tenant isolation in from the first commit, not a checklist run before handover.",
+    icon: Rocket,
   },
   {
     id: "4",
+    name: "UAT",
+    title: "Tested against your real users, not our assumptions",
+    description:
+      "A full pass of user acceptance testing against actual users. Fixes from what actually breaks get folded in before handover, not left for a version two.",
+    icon: ClipboardCheck,
+  },
+  {
+    id: "5",
+    name: "Hypercare",
+    title: "We stay reachable right after launch",
+    description:
+      "A lead architect stays on the week it ships to handle whatever needs attention — the person who built it, not a support ticket queue.",
+    icon: HeartHandshake,
+  },
+  {
+    id: "6",
     name: "Warranty",
     title: "A 30-day warranty on delivered work",
     description:
@@ -44,13 +67,17 @@ const steps: readonly FeatureCarouselStep[] = [
   },
 ];
 
+// ponytail: 4 known-good URLs reused to fill 6 slots — real unsplash IDs I can't
+// verify would risk 404s. Swap in 6 distinct assets when they exist.
 const images: FeatureCarouselImageSet = {
-  alt: "How Real Solutions works",
+  alt: "How Real Solutions PH works",
   images: [
     "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1740&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=1740&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1740&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?q=80&w=1740&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1740&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=1740&auto=format&fit=crop",
   ],
 };
 
@@ -75,12 +102,12 @@ export function ProcessSection() {
               How It Works
             </Badge>
             <h2 className="mb-6 text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl">
-              A predictable four-week shape
+              A predictable shape, proposal to warranty
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              Three weeks to build, one week to test against real users, then
-              we stay on. No sales-funnel phases — just a build with the
-              guarantees already built in.
+              Six phases from a signed architecture proposal to a 30-day
+              warranty. The build — proposal through UAT — lands in three to
+              four weeks; hypercare and the warranty run after you&apos;re live.
             </p>
           </motion.div>
         </div>

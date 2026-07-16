@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/sections/hero-section";
 import { ProblemSection } from "@/components/sections/problem-section";
 import { ServicesSection } from "@/components/sections/services-section";
 import { ProcessSection } from "@/components/sections/process-section";
+import { OperatingModelSection } from "@/components/sections/operating-model-section";
 import { WhyUsSection } from "@/components/sections/why-us-section";
 import { PortfolioIntroSection } from "@/components/sections/portfolio-intro-section";
 import { TeamSection } from "@/components/sections/team-section";
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
         url: "/api/og-image",
         width: 1200,
         height: 630,
-        alt: "Real Solutions — AI Engineering Studio",
+        alt: "Real Solutions PH — AI Engineering Studio",
       },
     ],
   },
@@ -46,6 +47,7 @@ export default function Home() {
       <ProblemSection />
       <ServicesSection />
       <ProcessSection />
+      <OperatingModelSection />
       <WhyUsSection />
       <PortfolioIntroSection />
       <TeamSection />

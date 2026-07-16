@@ -379,7 +379,7 @@ export function HowWeWork() {
             <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
               Between cobbling together no-code AI tools, hiring a traditional
               agency, and building your own in-house team — here&apos;s how an
-              engagement with Real Solutions compares.
+              engagement with Real Solutions PH compares.
             </p>
           </motion.div>
           <motion.div
@@ -399,7 +399,7 @@ export function HowWeWork() {
                           Best fit
                         </span>
                         <span className="font-semibold text-foreground">
-                          Real Solutions
+                          Real Solutions PH
                         </span>
                       </span>
                     </th>
@@ -488,7 +488,7 @@ export function HowWeWork() {
               Run by two architects, not a bench
             </h2>
             <p className="mx-auto mb-6 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
-              Real Solutions was founded by two former heads of engineering at
+              Real Solutions PH was founded by two former heads of engineering at
               an AI startup — the same two people who scope, build, and
               review every engagement. We understand both clean architecture
               and what a compliance review actually asks for.

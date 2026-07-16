@@ -4,7 +4,7 @@ import { HowWeWork } from "@/components/sections/how-we-work";
 export const metadata: Metadata = {
   title: "How We Work — Build, UAT, Hypercare, Warranty",
   description:
-    "How Real Solutions ships AI systems: three build weeks, one UAT week against real users, a hypercare window, and a 30-day warranty — run by two senior architects.",
+    "How Real Solutions PH ships AI systems: three build weeks, one UAT week against real users, a hypercare window, and a 30-day warranty — run by two senior architects.",
   keywords: [
     "AI development process",
     "AI MVP delivery timeline",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "How We Work — Build, UAT, Hypercare, Warranty",
     description:
-      "Three build weeks, one UAT week against real users, hypercare, and a 30-day warranty — the delivery shape behind every Real Solutions engagement.",
+      "Three build weeks, one UAT week against real users, hypercare, and a 30-day warranty — the delivery shape behind every Real Solutions PH engagement.",
     url: "https://www.realsolutionsph.com/how-we-work",
     siteName: "Real Solutions PH",
     locale: "en_US",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         url: "/api/og-image",
         width: 1200,
         height: 630,
-        alt: "How Real Solutions Works",
+        alt: "How Real Solutions PH Works",
       },
     ],
   },
@@ -45,7 +45,7 @@ export default function HowWeWorkPage() {
   const howToSchema = {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    name: "How Real Solutions builds AI systems",
+    name: "How Real Solutions PH builds AI systems",
     description:
       "A senior-architect delivery system: three build weeks, one UAT week, hypercare, and a 30-day warranty, accelerated by AI-assisted development.",
     step: [

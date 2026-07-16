@@ -26,7 +26,7 @@ export function AboutSection() {
             </h2>
             <div className="flex flex-col gap-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Real Solutions is a senior AI engineering studio founded by
+                Real Solutions PH is a senior AI engineering studio founded by
                 two former heads of engineering at an AI startup. Every
                 engagement — scoping, build, and review — runs through the
                 same two people, not a bench of engineers you&apos;ll never

@@ -49,7 +49,7 @@ export function CtaSection() {
   return (
     <section
       id="contact"
-      className="relative w-full overflow-hidden bg-zinc-50 py-16 dark:bg-zinc-950 sm:py-24"
+      className="relative w-full overflow-hidden bg-background py-16 sm:py-24"
     >
       <div className="container mx-auto px-4 md:px-6 max-w-7xl">
         <motion.div

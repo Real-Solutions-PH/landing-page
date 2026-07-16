@@ -11,20 +11,20 @@ export function Footer() {
               <div className="relative h-10 w-48">
                 <Image
                   src="/logo/logo-header-light-transparent 1.svg"
-                  alt="Real Solutions"
+                  alt="Real Solutions PH"
                   fill
                   className="object-contain object-left dark:hidden"
                 />
                 <Image
                   src="/logo/logo-header-dark-transparent 1.svg"
-                  alt="Real Solutions"
+                  alt="Real Solutions PH"
                   fill
                   className="object-contain object-left hidden dark:block"
                 />
               </div>
             </Link>
             <p className="max-w-xs text-sm text-muted-foreground">
-              Real Solutions is a senior AI engineering studio — two
+              Real Solutions PH is a senior AI engineering studio — two
               architects shipping production-grade AI systems with
               guarantees you can audit.
             </p>

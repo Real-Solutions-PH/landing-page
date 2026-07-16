@@ -119,12 +119,12 @@ export function FeaturedWorkSection() {
                     {project.images && project.images.length > 0 ? (
                       <ProjectImageCarousel
                         images={project.images}
-                        alt={`${project.title} — built by Real Solutions`}
+                        alt={`${project.title} — built by Real Solutions PH`}
                       />
                     ) : project.image ? (
                       <Image
                         src={project.image}
-                        alt={`${project.title} — built by Real Solutions`}
+                        alt={`${project.title} — built by Real Solutions PH`}
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />

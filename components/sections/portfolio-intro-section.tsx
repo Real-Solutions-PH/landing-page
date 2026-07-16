@@ -81,7 +81,7 @@ export function PortfolioIntroSection() {
   return (
     <section
       id="portfolio"
-      className="relative w-full overflow-hidden bg-[#F7FAFC] dark:bg-[#081526] py-20 sm:py-28"
+      className="relative w-full overflow-hidden bg-background py-20 sm:py-28"
     >
       {/* Background accent blobs */}
       <div className="pointer-events-none absolute inset-0 z-0">
@@ -135,12 +135,12 @@ export function PortfolioIntroSection() {
                   {project.images && project.images.length > 0 ? (
                     <ProjectImageCarousel
                       images={project.images}
-                      alt={`${project.title} — built by Real Solutions`}
+                      alt={`${project.title} — built by Real Solutions PH`}
                     />
                   ) : project.image ? (
                     <Image
                       src={project.image}
-                      alt={`${project.title} — built by Real Solutions`}
+                      alt={`${project.title} — built by Real Solutions PH`}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />

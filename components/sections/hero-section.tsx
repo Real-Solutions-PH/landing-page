@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Search, MessageSquare, Workflow, Zap } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -30,10 +31,10 @@ export function HeroSection() {
             className="flex flex-col items-start text-left"
           >
             <h1 className="mb-6 text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl xl:text-[3.25rem] leading-[1.2] sm:leading-[1.15] z-20 relative pr-4">
-              We build{" "}
+              Most AI builds break{" "}
               <span className="relative flex mt-3 w-max max-w-full">
                 <span className="relative z-10 px-2 lg:px-4 pb-1 pt-1 text-[#F7FAFC] bg-[#193B76] dark:bg-[#2A5CAA] rounded-sm">
-                  AI systems
+                  in production.
                 </span>
                 <span className="absolute -bottom-4 -right-10 text-[#F59E0B] opacity-80 z-20 transform rotate-12 hidden md:block">
                   <svg
@@ -61,14 +62,15 @@ export function HeroSection() {
                   </svg>
                 </span>
               </span>{" "}
-              <span className="mt-3 block">that can&apos;t make things up.</span>
+              <span className="mt-3 block">Ours don&apos;t.</span>
             </h1>
 
             <p className="mb-8 max-w-lg text-sm leading-relaxed text-muted-foreground">
-              Two senior architects, AI leverage, and production AI systems
-              shipped in weeks — grounding guards, tenant isolation, and
-              numbered ADRs your compliance team can actually audit before you
-              sign off.
+              You&apos;ve probably been handed an AI demo that fell apart the
+              week real users arrived. We&apos;re a senior AI studio that ships
+              RAG systems, chat and voice agents, data pipelines, and
+              automation — production-grade in three to four weeks, verified by
+              a lead architect at every step and auditable before you sign off.
             </p>
 
             <div className="flex flex-col gap-4 w-full sm:w-auto sm:flex-row">
@@ -153,21 +155,21 @@ export function HeroSection() {
                 }}
                 className="absolute top-[8%] left-[-2%] lg:left-[-8%] bg-white dark:bg-slate-900 rounded-xl p-3 shadow-xl border border-slate-200 dark:border-slate-800 flex items-start gap-3 w-52"
               >
-                <div className="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center flex-shrink-0 text-blue-600 dark:text-blue-400 font-black text-xl">
-                  G
+                <div className="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center flex-shrink-0 text-blue-600 dark:text-blue-400">
+                  <Search className="w-5 h-5" />
                 </div>
                 <div className="flex flex-col">
                   <span className="font-bold text-slate-900 dark:text-white text-sm leading-none mb-1.5">
-                    Grounding Guard
+                    RAG Systems
                   </span>
                   <ul className="text-xs text-slate-500 dark:text-slate-400 space-y-1">
                     <li className="flex items-center gap-1.5">
                       <div className="w-1 h-1 rounded-full bg-blue-400" />{" "}
-                      Rejects invented numbers
+                      Grounded retrieval
                     </li>
                     <li className="flex items-center gap-1.5">
                       <div className="w-1 h-1 rounded-full bg-blue-400" />{" "}
-                      Deterministic fallback
+                      Server-side citations
                     </li>
                   </ul>
                 </div>
@@ -184,21 +186,21 @@ export function HeroSection() {
                 }}
                 className="absolute top-[22%] right-[-5%] lg:right-[-12%] bg-white dark:bg-slate-900 rounded-xl p-3 shadow-xl border border-slate-200 dark:border-slate-800 flex items-start gap-3 w-52"
               >
-                <div className="w-10 h-10 rounded-lg bg-emerald-100 dark:bg-emerald-900/50 flex items-center justify-center flex-shrink-0 text-emerald-600 dark:text-emerald-400 font-black text-xl">
-                  I
+                <div className="w-10 h-10 rounded-lg bg-emerald-100 dark:bg-emerald-900/50 flex items-center justify-center flex-shrink-0 text-emerald-600 dark:text-emerald-400">
+                  <MessageSquare className="w-5 h-5" />
                 </div>
                 <div className="flex flex-col">
                   <span className="font-bold text-slate-900 dark:text-white text-sm leading-none mb-1.5">
-                    Tenant Isolation
+                    Chat & Voice Agents
                   </span>
                   <ul className="text-xs text-slate-500 dark:text-slate-400 space-y-1">
                     <li className="flex items-center gap-1.5">
                       <div className="w-1 h-1 rounded-full bg-emerald-400" />{" "}
-                      Postgres RLS enforced
+                      Chat + voice-cloned
                     </li>
                     <li className="flex items-center gap-1.5">
                       <div className="w-1 h-1 rounded-full bg-emerald-400" />{" "}
-                      Bleed-guard tested
+                      Real-time barge-in
                     </li>
                   </ul>
                 </div>
@@ -215,21 +217,21 @@ export function HeroSection() {
                 }}
                 className="absolute bottom-[25%] left-[-5%] lg:left-[-12%] bg-white dark:bg-slate-900 rounded-xl p-3 shadow-xl border border-slate-200 dark:border-slate-800 flex items-start gap-3 w-52"
               >
-                <div className="w-10 h-10 rounded-lg bg-purple-100 dark:bg-purple-900/50 flex items-center justify-center flex-shrink-0 text-purple-600 dark:text-purple-400 font-black text-xl">
-                  C
+                <div className="w-10 h-10 rounded-lg bg-purple-100 dark:bg-purple-900/50 flex items-center justify-center flex-shrink-0 text-purple-600 dark:text-purple-400">
+                  <Workflow className="w-5 h-5" />
                 </div>
                 <div className="flex flex-col">
                   <span className="font-bold text-slate-900 dark:text-white text-sm leading-none mb-1.5">
-                    Server-Side Citations
+                    Data Pipelines
                   </span>
                   <ul className="text-xs text-slate-500 dark:text-slate-400 space-y-1">
                     <li className="flex items-center gap-1.5">
                       <div className="w-1 h-1 rounded-full bg-purple-400" />{" "}
-                      Built from retrieved chunks
+                      Full lineage tracking
                     </li>
                     <li className="flex items-center gap-1.5">
                       <div className="w-1 h-1 rounded-full bg-purple-400" />{" "}
-                      Never parsed from prose
+                      Deterministic-first
                     </li>
                   </ul>
                 </div>
@@ -246,21 +248,21 @@ export function HeroSection() {
                 }}
                 className="absolute bottom-[10%] right-[0%] lg:right-[-8%] bg-white dark:bg-slate-900 rounded-xl p-3 shadow-xl border border-slate-200 dark:border-slate-800 flex items-start gap-3 w-52"
               >
-                <div className="w-10 h-10 rounded-lg bg-orange-100 dark:bg-orange-900/50 flex items-center justify-center flex-shrink-0 text-orange-600 dark:text-orange-400 font-black text-xl">
-                  A
+                <div className="w-10 h-10 rounded-lg bg-orange-100 dark:bg-orange-900/50 flex items-center justify-center flex-shrink-0 text-orange-600 dark:text-orange-400">
+                  <Zap className="w-5 h-5" />
                 </div>
                 <div className="flex flex-col">
                   <span className="font-bold text-slate-900 dark:text-white text-sm leading-none mb-1.5">
-                    Numbered ADRs
+                    AI Automation
                   </span>
                   <ul className="text-xs text-slate-500 dark:text-slate-400 space-y-1">
                     <li className="flex items-center gap-1.5">
                       <div className="w-1 h-1 rounded-full bg-orange-400" />{" "}
-                      Every deviation recorded
+                      Wired into your stack
                     </li>
                     <li className="flex items-center gap-1.5">
                       <div className="w-1 h-1 rounded-full bg-orange-400" />{" "}
-                      Sign-off attached
+                      Human in the loop
                     </li>
                   </ul>
                 </div>
@@ -318,14 +320,14 @@ export function HeroSection() {
               >
                 <Image
                   src="/logo/logo-light-transparent.svg"
-                  alt="Real Solutions"
+                  alt="Real Solutions PH"
                   width={80}
                   height={80}
                   className="w-full h-full object-contain dark:hidden"
                 />
                 <Image
                   src="/logo/logo-dark-transparent.svg"
-                  alt="Real Solutions"
+                  alt="Real Solutions PH"
                   width={80}
                   height={80}
                   className="hidden w-full h-full object-contain dark:block"

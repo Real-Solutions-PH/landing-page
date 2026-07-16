@@ -5,12 +5,12 @@ import { ContactSection } from "@/components/sections/contact-section";
 export const metadata: Metadata = {
   title: "Book a Scoping Call",
   description:
-    "Book a scoping call with Real Solutions. We'll scope the build, give you a fixed-price estimate, and tell you plainly whether we're the right fit — no commitment.",
+    "Book a scoping call with Real Solutions PH. We'll scope the build, give you a fixed-price estimate, and tell you plainly whether we're the right fit — no commitment.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Book a Scoping Call",
     description:
-      "Book a scoping call with Real Solutions. We'll scope the build, give you a fixed-price estimate, and tell you plainly whether we're the right fit — no commitment.",
+      "Book a scoping call with Real Solutions PH. We'll scope the build, give you a fixed-price estimate, and tell you plainly whether we're the right fit — no commitment.",
     url: "https://www.realsolutionsph.com/contact",
     siteName: "Real Solutions PH",
     locale: "en_US",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         url: "/api/og-image",
         width: 1200,
         height: 630,
-        alt: "Book a Scoping Call — Real Solutions",
+        alt: "Book a Scoping Call — Real Solutions PH",
       },
     ],
   },
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Book a Scoping Call",
     description:
-      "Book a scoping call with Real Solutions. We'll scope the build, give you a fixed-price estimate, and tell you plainly whether we're the right fit — no commitment.",
+      "Book a scoping call with Real Solutions PH. We'll scope the build, give you a fixed-price estimate, and tell you plainly whether we're the right fit — no commitment.",
     images: ["/api/og-image"],
   },
 };

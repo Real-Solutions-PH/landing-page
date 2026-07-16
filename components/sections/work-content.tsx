@@ -147,7 +147,7 @@ export function WorkContent() {
                     {project.images && project.images.length > 0 ? (
                       <ProjectImageCarousel
                         images={project.images}
-                        alt={`${project.title} — software project by Real Solutions`}
+                        alt={`${project.title} — software project by Real Solutions PH`}
                         imageClassName={
                           project.imageFit === "contain"
                             ? "object-contain"
@@ -157,7 +157,7 @@ export function WorkContent() {
                     ) : project.image ? (
                       <Image
                         src={project.image}
-                        alt={`${project.title} — software project by Real Solutions`}
+                        alt={`${project.title} — software project by Real Solutions PH`}
                         fill
                         className={`transition-transform duration-500 group-hover:scale-105 ${
                           project.imageFit === "contain"

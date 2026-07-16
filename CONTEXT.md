@@ -1,8 +1,8 @@
-This document contains all context an AI software engineer needs to write brand-accurate copy for Real Solutions. Read it fully before writing a single line of site copy. Every later content task — services, projects, blog, page copy — inherits its tone and positioning from this file.
+This document contains all context an AI software engineer needs to write brand-accurate copy for Real Solutions PH. Read it fully before writing a single line of site copy. Every later content task — services, projects, blog, page copy — inherits its tone and positioning from this file.
 
 # 1. Company
 
-Display brand: Real Solutions
+Display brand: Real Solutions PH
 Legal name: Real Solutions PH
 Domain: realsolutionsph.com (unchanged — a domain change would forfeit existing search authority for no gain)
 Type: Senior AI engineering studio
@@ -11,7 +11,7 @@ Type: Senior AI engineering studio
 
 Philippines-based, remote-first — stated here as an origin fact, not a market claim. <!-- positioning-guard:allow-ph -->
 
-Real Solutions does not sell into that domestic market and does not target local buyers anywhere in marketing copy. This file may state the origin plainly. On the live site, only `/about` may surface it — framed as a cost-structure advantage for a seed-stage founder, not as a location the business serves. Every other page, meta tag, and keyword omits it entirely.
+Real Solutions PH does not sell into that domestic market and does not target local buyers anywhere in marketing copy. This file may state the origin plainly. On the live site, only `/about` may surface it — framed as a cost-structure advantage for a seed-stage founder, not as a location the business serves. Every other page, meta tag, and keyword omits it entirely.
 
 # 3. Founders
 
@@ -29,13 +29,21 @@ Three international audiences. Every page, service, and piece of content is buil
 
 Use verbatim wherever a positioning statement is needed:
 
-> Real Solutions is a senior AI engineering studio. Two architects with AI leverage, shipping production-grade AI systems in weeks — with guarantees you can audit.
+> Real Solutions PH is a senior AI engineering studio. AI runs every step of the build and a lead architect verifies every output — shipping production-grade AI systems in three to four weeks, with guarantees you can audit.
+
+## 5a. Headcount — a supporting fact, never the lead
+
+The studio is two lead-level architects, and that is not hidden anywhere: `/about` and the homepage team section state it plainly, and a buyer who asks gets a straight answer. But it must never be the *lead* claim in a hero, meta description, JSON-LD, or `llms.txt` summary.
+
+The reason is market, not modesty. Senior-led delivery has converged into table stakes across boutique consulting — "you'll have senior people on your engagement" is now the floor, not the ceiling, so it distinguishes nothing. Two-person boutiques are also a recognized, unremarkable model (a boutique is conventionally two to eight senior consultants with no junior bench), and enterprise procurement screens for financial health, security, and single-point-of-failure continuity — never headcount. Blurring the number would fail that screen anyway, because diligence finds it.
+
+So: lead with the operating model in Section 7. Let the headcount land later as the supporting fact that explains why there is no handoff. Never imply a larger team than two — an implied bench a buyer later discovers is worse than the count itself ever was.
 
 # 6. Differentiator — Provable Guarantees, Not Demos
 
 Every AI vendor claims "we build AI." Every one of the three audiences above has already been burned by a demo that doesn't survive contact with production — a chatbot that invents a number, a RAG pipeline that leaks another tenant's document, a system nobody can explain when compliance asks how it decided something. That is the actual pain: not "can you build AI," but "can you prove it won't break."
 
-Real Solutions' answer is five engineering practices. Each is real, each is RSPH's own — not a client's — and each is describable without reference to any engagement:
+Real Solutions PH’s answer is five engineering practices. Each is real, each is RSPH's own — not a client's — and each is describable without reference to any engagement:
 
 1. **Grounding guard** — LLM output citing a number the deterministic engine did not produce is rejected; deterministic fallback copy is emitted instead. The CI fixture eval imports the same primitives as the runtime guard, so the check and the guard cannot drift apart.
 2. **Server-side citations** — citations are constructed from chunk ids that were actually retrieved, never parsed from model prose, so a poisoned document cannot exfiltrate across tenants.
@@ -45,7 +53,15 @@ Real Solutions' answer is five engineering practices. Each is real, each is RSPH
 
 # 7. AI-Assisted Development
 
-Real Solutions' architects use AI-assisted development — including tools like Claude Code — to move at the speed the positioning promises. The value is not the tool; it's what the two architects do around it: architecture decisions, code review, integration, and deployment. That is the whole claim.
+This is the lead claim — the thing that goes in heroes, meta, and summaries where the headcount used to sit.
+
+AI runs at every step of how the studio operates. Every output it produces is verified by a lead architect before it moves to the next step. The division of labor is the point: AI handles volume — implementation drafts, regression sweeps, test scaffolding, first-pass docs — while the judgment work stays human: architecture, system design, cost design and its tradeoffs, security boundaries, and the review before handover.
+
+That division is what the copy should argue, because it is where the tooling actually falls short. AI writes plausible code all day; it does not weigh what a design costs to run at month twelve, decide where a tenant boundary has to sit, or know which tradeoff will be regretted later. Those calls come from engineers who have had to live with them. That is why the timeline holds without trading away quality, cost, or security — and it is a sharper claim than seniority, which every competitor now also asserts.
+
+The value is not the tool; it's what the architects do around it: architecture decisions, code review, integration, and deployment. That is the whole claim.
+
+Never call the framework "the best" — or any other unearned superlative (see Section 8). Argue it structurally, through the division of labor and the verification gate, and let the reader conclude it. The framework's internal SOP is confidential and must never appear on the site in any form, in whole or in part.
 
 Never mention AI-assisted development unpaired. Every mention in copy must sit next to one of the discipline artifacts from Section 6 — an ADR, a grounding guard, a positive-control test, a security review. "We use AI to build fast" alone reads as vibe-coding to an enterprise buyer. "We use AI to build fast, and every deviation from spec is a numbered ADR" reads as what it is.
 
@@ -64,16 +80,30 @@ The only client-derived strings cleared for public use — counterparty-authored
 - "We develop AI-assisted fintech monitoring and real-time risk-management systems"
 - "We build AI-assisted, voice-enabled knowledge assistants and retrieval systems"
 
+**The founders' former employer may not be named.** The AI startup both founders worked at is referenced only as "an AI startup" — never by name, anywhere on the site. Individual past projects that either founder worked on personally, at that employer or anywhere else, may not be named or described either.
+
+This bounds how the founders' track record is written. The three years of AI experience and the regulatory exposure (including the EU AI Act) are **founder background** and must be framed as such — "the founders have built AI systems under binding regulatory frameworks including the EU AI Act" is accurate; "Real Solutions PH delivered EU AI Act systems" is not, and would also violate the Section 6 rule that RSPH's claims are RSPH's own, never borrowed from a client or an employer. Keep that line clean.
+
 No unverifiable metrics, anywhere. Claims describe capability and method, not results. Do not invent client counts, revenue figures, uptime percentages, or satisfaction scores. If a number cannot be pointed to a source, it does not ship.
 
 # 10. Services
 
-Seven services, all under `/services/[slug]`. Flagship is AI, not integration.
+Two layers, and they must not be conflated.
+
+**Engagement shapes (how the homepage sells).** The homepage services section offers three ways to work with us, not a menu of seven. Keep it lean:
+
+1. **AI MVP** — one capability, proposal→UAT in 3–4 weeks, from $5,000. The startups audience's primary conversion path; the emphasized card.
+2. **Full Software Implementation** — the whole system (platform + integrations + front-ends), architected and built end to end, from $13,000.
+3. **Retainer** — a senior pod on standing capacity for continuous work. No fixed price; scoped per client.
+
+**Capabilities (how buyers find us in search).** The seven `/services/[slug]` pages stay live as the SEO/landing surface — each holds its own keywords, metadata, JSON-LD offer, and llms.txt line. The three shapes above link into them; do not retire or 301 them. Flagship capability is AI, not integration.
 
 1. `ai-software-development` — AI Agents & RAG. **Flagship.**
-2. `system-integration` — System Integration. Reframed: connecting AI systems to existing infrastructure, not POS/payroll integration.
+2. `system-integration` — System Integration. Connecting AI systems to existing infrastructure, not POS/payroll integration.
 3. `custom-software` — Custom Platforms. Multi-tenant platform engineering.
 4. `web-mobile-apps` — Web & Mobile. Front-ends and apps built over AI backends.
 5. `voice-ai` — Voice AI.
 6. `data-pipelines` — Data Pipelines.
 7. `ai-mvp-development` — AI MVP Development. The startups audience's primary conversion path.
+
+Timeline shape (whole company): Proposal → POC → MVP → UAT → Hypercare → Warranty. Proposal through UAT lands in 3–4 weeks; hypercare and the 30-day warranty run after launch. Do not attach per-phase week counts — that math isn't fixed and inventing it violates Section 9.

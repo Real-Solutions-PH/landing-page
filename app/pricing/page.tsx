@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         url: "/api/og-image",
         width: 1200,
         height: 630,
-        alt: "Real Solutions Pricing",
+        alt: "Real Solutions PH Pricing",
       },
     ],
   },

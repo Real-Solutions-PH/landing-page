@@ -71,19 +71,19 @@ export function Navbar() {
             <div className="relative h-8 w-12 flex items-center justify-center">
               <Image
                 src="/logo/logo-light-transparent.svg"
-                alt="Real Solutions"
+                alt="Real Solutions PH"
                 fill
                 className="object-contain dark:hidden"
               />
               <Image
                 src="/logo/logo-dark-transparent.svg"
-                alt="Real Solutions"
+                alt="Real Solutions PH"
                 fill
                 className="object-contain hidden dark:block"
               />
             </div>
             <span className="font-bold tracking-tight text-foreground sm:inline-block">
-              Real Solutions
+              Real Solutions PH
             </span>
           </Link>
 

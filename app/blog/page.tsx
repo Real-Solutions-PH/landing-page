@@ -31,7 +31,7 @@ export const metadata: Metadata = {
         url: "/api/og-image",
         width: 1200,
         height: 630,
-        alt: "Real Solutions Insights",
+        alt: "Real Solutions PH Insights",
       },
     ],
   },
@@ -49,7 +49,7 @@ export default function BlogIndexPage() {
   const blogSchema = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    name: "Real Solutions Insights",
+    name: "Real Solutions PH Insights",
     url: `${baseUrl}/blog`,
     blogPost: posts.map((p) => ({
       "@type": "BlogPosting",

@@ -11,7 +11,7 @@ export function AboutHeroSection() {
       title={
         <>
           The architects behind
-          <br className="hidden sm:block" /> <GradientText>Real Solutions</GradientText>
+          <br className="hidden sm:block" /> <GradientText>Real Solutions PH</GradientText>
         </>
       }
       description={

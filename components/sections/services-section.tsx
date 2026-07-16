@@ -7,98 +7,61 @@ import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
   CheckCircle2,
-  Bot,
-  Network,
-  AppWindow,
-  Globe,
   Sparkles,
+  Layers,
+  Repeat,
 } from "lucide-react";
 
 const SERVICES = [
   {
-    icon: Bot,
-    title: "AI Agents & RAG",
-    description:
-      "Grounded retrieval and LLM agents wired into production — not a demo that falls apart the week real users show up.",
-    priceHint: "Flagship — from $5,000",
-    href: "/services/ai-software-development",
-    features: [
-      "Hybrid dense + full-text retrieval",
-      "Server-side citations, never parsed from prose",
-      "Grounding guard rejects invented numbers",
-      "Provider-agnostic — swap models via env var",
-    ],
-    cta: "See the AI service",
-    popular: true,
-    highlighted: false,
-  },
-  {
-    icon: Network,
-    title: "System Integration",
-    description:
-      "Your agent reads and writes against the CRM, ERP, and ticketing queue it needs to act on — not a chat widget floating beside your stack.",
-    priceHint: "From $3,500",
-    href: "/services/system-integration",
-    features: [
-      "Read/write into your CRM, ERP, ticketing",
-      "Tenant isolation enforced at the data layer",
-      "Grounding guard on every write path",
-      "Works with legacy and modern APIs",
-    ],
-    cta: "Explore service",
-    popular: false,
-    highlighted: false,
-  },
-  {
-    icon: AppWindow,
-    title: "Custom Platforms",
-    description:
-      "Multi-tenant platforms where isolation is a database guarantee, not a permissions check you're hoping holds.",
-    priceHint: "From $13,000",
-    href: "/services/custom-software",
-    features: [
-      "Postgres RLS isolation, not app-layer checks",
-      "Positive-control isolation tests",
-      "You own the code and schema outright",
-      "Interactive prototype before core build",
-    ],
-    cta: "Explore service",
-    popular: false,
-    highlighted: false,
-  },
-  {
-    icon: Globe,
-    title: "Web & Mobile",
-    description:
-      "Interfaces built to match a live backend — token-by-token rendering and inline sourcing, instead of a spinner until the answer is done.",
-    priceHint: "From $3,000",
-    href: "/services/web-mobile-apps",
-    features: [
-      "Streaming token and tool-call rendering",
-      "Inline citations, not buried in prose",
-      "One React Native codebase, iOS + Android",
-      "Sub-second loads, clean semantic markup",
-    ],
-    cta: "Explore service",
-    popular: false,
-    highlighted: false,
-  },
-  {
     icon: Sparkles,
-    title: "AI MVP Development",
+    title: "MVP (Minimum Viable Product)",
     description:
-      "One capability, scoped tightly and shipped completely on a four-week clock — built by the same two people who scope it.",
-    priceHint: "From $5,000, 4 weeks",
+      "Any software — AI or not — in production and usable by real users in three to four weeks. Strong cloud architecture from day one, so even an existing user base can migrate in without running into major issues.",
+    priceHint: "$2,000-3,000 · 4 weeks",
     href: "/services/ai-mvp-development",
     features: [
-      "Three build weeks, one UAT week",
-      "Two senior architects — no bench of juniors",
-      "Grounding + isolation from the first commit",
-      "Hypercare plus a 30-day warranty",
+      "Real users on it in 3–4 weeks — production, not a demo",
+      "Architected for millions of users and future phases from day one",
+      "Security and compliant data handling from the first commit",
+      "Hypercare and a warranty at phase end — this is phase 1",
     ],
-    cta: "Explore service",
+    cta: "See the MVP path",
     popular: false,
     highlighted: true,
+  },
+  {
+    icon: Layers,
+    title: "Full Software Implementation",
+    description:
+      "The full platform, delivered in phases — each scoped to three to four weeks and priced per phase. Most products mature in three or four, each building on the MVP's multi-tenant foundation.",
+    priceHint: "$6,000 - $8,000",
+    href: "/services",
+    features: [
+      "3–4 week phases, ~$2,000–3,000 each; most mature in 3–4",
+      "Multi-tenancy matured: custom domains, branding, operator dashboard",
+      "AI systems: eval + synthetic-data pipelines, feedback capture, prompt versioning",
+      "Mobile apps, plus CRM, ERP, and WhatsApp/Instagram/Facebook integrations",
+    ],
+    cta: "Explore full builds",
+    popular: false,
+    highlighted: false,
+  },
+  {
+    icon: Repeat,
+    title: "Retainer",
+    description:
+      "Ongoing support and maintenance for a product we built — keeping what's live healthy and reliable. New features and revamps aren't part of this; those become a change order, or a phase of their own.",
+    priceHint: "$300 / month",
+    href: "/contact",
+    features: [
+      "Technical Customer Support",
+      "Continuous Maintenance of the codebase",
+      "Bug fixes and enhancements within 24 hours",
+    ],
+    cta: "Talk about a retainer",
+    popular: false,
+    highlighted: false,
   },
 ];
 
@@ -143,11 +106,12 @@ export function ServicesSection() {
               Our Services
             </Badge>
             <h2 className="mb-6 text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl">
-              What we build — and why it&apos;s different
+              Three ways to work with us
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              Every service ships production-ready with monitoring, docs, and
-              handoff — not a demo you have to finish yourself.
+              Start with an MVP, commission a full build, or keep us on
+              retainer — every one runs on the same SOP, ships production-ready,
+              and leaves you owning the code.
             </p>
           </motion.div>
 

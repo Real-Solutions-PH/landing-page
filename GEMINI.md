@@ -1,8 +1,8 @@
-# AI Agent Instructions for Real Solutions (GEMINI.md)
+# AI Agent Instructions for Real Solutions PH (GEMINI.md)
 
 ## 1. PROJECT OVERVIEW & AGENT ROLE
 
-You are an expert full-stack engineer and UI/UX developer tasked with building the landing page for **Real Solutions** (legal name Real Solutions PH), a senior AI engineering studio.
+You are an expert full-stack engineer and UI/UX developer tasked with building the landing page for **Real Solutions PH** (legal name Real Solutions PH), a senior AI engineering studio.
 Your primary goal is to write clean, maintainable, production-ready code while strictly adhering to the technical stack, design system, and company branding outlined below. Always be proactive, verify your own work, and think step-by-step.
 
 ## 2. COMPANY CONTEXT & PRODUCT REQUIREMENTS
