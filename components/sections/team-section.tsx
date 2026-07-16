@@ -18,29 +18,29 @@ interface Founder {
 const FOUNDERS: Founder[] = [
   {
     name: "Ervin Piol",
-    role: "Local Clients, BD, Full-stack & Mobile",
+    role: "Co-Founder — Full-Stack & Mobile Engineering",
     image: "/founder-profiles/ervin-piol-profile.png",
     description:
-      "Ervin specializes in full-stack and mobile engineering, bridging technical solutions with business development and client relations for local SMEs.",
+      "Former lead full-stack engineer and head of engineering at an AI startup. Scopes, builds, and reviews every engagement personally — full-stack and mobile architecture end to end.",
     expertise: [
-      "Full-Stack Dev",
-      "Mobile App Dev",
-      "Client Relations",
-      "Business Development",
+      "Full-Stack Engineering",
+      "Mobile Engineering",
+      "Architecture",
+      "Client Delivery",
     ],
     website: "https://ervinpiol.realsolutionsph.com/",
   },
   {
     name: "Kairus Noah Tecson",
-    role: "International Clients, Cloud & AI Engineering",
+    role: "Co-Founder — Cloud & AI Engineering",
     image: "/founder-profiles/kairus-tecson-profile.png",
     description:
-      "Kairus leads architecture, cloud, and AI engineering, focusing on scalable infrastructure and advanced integrations for both local and international clients.",
+      "Former lead full-stack engineer and head of engineering at an AI startup. Leads AI architecture and cloud infrastructure — the grounding guards and isolation guarantees behind every build.",
     expertise: [
       "AI Engineering",
       "Cloud Infrastructure",
       "Architecture",
-      "International Clients",
+      "RAG & Agents",
     ],
     website: "https://www.schadenkai.space/",
   },
@@ -111,12 +111,12 @@ export function TeamSection() {
               The Team
             </Badge>
             <h2 className="mb-6 text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl">
-              Built by engineers
+              Built by two architects, not a bench
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              You won&apos;t be talking to an account manager who forwards your
-              queries to an offshore sweatshop. You work directly with the
-              architects.
+              You won&apos;t be handed off to an account manager relaying your
+              spec to engineers you&apos;ve never met. You work directly with
+              the two people who scope, build, and review the system.
             </p>
           </motion.div>
 

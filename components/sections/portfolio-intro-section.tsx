@@ -108,9 +108,9 @@ export function PortfolioIntroSection() {
             See what we&apos;ve built
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Real integrations, real results. Every project here eliminated
-            manual work and gave business owners back hours they didn&apos;t
-            know they were losing.
+            Systems deployed to production, not left as a sandboxed demo —
+            each one built by the same two architects who&apos;d scope
+            yours.
           </p>
         </motion.div>
 
@@ -135,12 +135,12 @@ export function PortfolioIntroSection() {
                   {project.images && project.images.length > 0 ? (
                     <ProjectImageCarousel
                       images={project.images}
-                      alt={`${project.title} — Real Solutions PH, Philippines`}
+                      alt={`${project.title} — built by Real Solutions`}
                     />
                   ) : project.image ? (
                     <Image
                       src={project.image}
-                      alt={`${project.title} — Real Solutions PH, Philippines`}
+                      alt={`${project.title} — built by Real Solutions`}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />

@@ -2,22 +2,22 @@ import type { Metadata } from "next";
 import { HowWeWork } from "@/components/sections/how-we-work";
 
 export const metadata: Metadata = {
-  title: "How We Work — AI-Optimized Software Delivery",
+  title: "How We Work — Build, UAT, Hypercare, Warranty",
   description:
-    "How Real Solutions PH builds software fast and affordably: a prototype-first, AI-accelerated delivery system led by senior startup engineers for Philippine SMEs and global clients.",
+    "How Real Solutions ships AI systems: three build weeks, one UAT week against real users, a hypercare window, and a 30-day warranty — run by two senior architects.",
   keywords: [
-    "affordable software development Philippines",
-    "fast software development",
+    "AI development process",
+    "AI MVP delivery timeline",
     "AI-accelerated software development",
+    "senior AI engineering studio",
     "software development process",
-    "prototype-first development",
-    "cheap custom software Philippines",
+    "4 week AI MVP build",
   ],
   alternates: { canonical: "/how-we-work" },
   openGraph: {
-    title: "How We Work — AI-Optimized Software Delivery",
+    title: "How We Work — Build, UAT, Hypercare, Warranty",
     description:
-      "A prototype-first, AI-accelerated delivery system led by senior startup engineers — how we ship production-grade software faster and cheaper than agencies.",
+      "Three build weeks, one UAT week against real users, hypercare, and a 30-day warranty — the delivery shape behind every Real Solutions engagement.",
     url: "https://www.realsolutionsph.com/how-we-work",
     siteName: "Real Solutions PH",
     locale: "en_PH",
@@ -27,15 +27,15 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "How Real Solutions PH Works",
+        alt: "How Real Solutions Works",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "How We Work — AI-Optimized Software Delivery",
+    title: "How We Work — Build, UAT, Hypercare, Warranty",
     description:
-      "A prototype-first, AI-accelerated delivery system led by senior startup engineers.",
+      "Three build weeks, one UAT week against real users, hypercare, and a 30-day warranty.",
     images: ["/og-image.png"],
   },
 };
@@ -45,33 +45,33 @@ export default function HowWeWorkPage() {
   const howToSchema = {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    name: "How Real Solutions PH builds software",
+    name: "How Real Solutions builds AI systems",
     description:
-      "A prototype-first, AI-accelerated delivery system for building production-grade software fast and affordably.",
+      "A senior-architect delivery system: three build weeks, one UAT week, hypercare, and a 30-day warranty, accelerated by AI-assisted development.",
     step: [
       {
         "@type": "HowToStep",
         position: 1,
-        name: "Discovery Audit",
-        text: "We audit your current tools, workflows, integration gaps, and pain points and deliver a workflow audit, solution roadmap, and project estimate in 3 to 7 days.",
+        name: "Build",
+        text: "The build window holds to a single scoped capability — the data model and integration points get decided before anything else, with the grounding and isolation policy part of that same decision.",
       },
       {
         "@type": "HowToStep",
         position: 2,
-        name: "Prototype Sprint",
-        text: "An AI-driven design sprint produces a live, interactive prototype you can use and react to before any core engineering begins.",
+        name: "UAT",
+        text: "A dedicated testing week where the people who'll actually use the system try to break it, and whatever they find gets fixed before anyone calls it done.",
       },
       {
         "@type": "HowToStep",
         position: 3,
-        name: "MVP Build",
-        text: "A production-ready MVP using proper engineering practices — architecture review, CI/CD, automated testing, and cloud deployment — delivered in 3 to 8 weeks.",
+        name: "Hypercare",
+        text: "The two architects who built the system stay reachable immediately after launch to handle whatever needs attention the week it ships.",
       },
       {
         "@type": "HowToStep",
         position: 4,
-        name: "Managed Growth",
-        text: "Ongoing partnership after launch with bug fixes, monitoring, support, continuous feature development, and roadmap advisory.",
+        name: "Warranty",
+        text: "A dated warranty period follows launch, and any scope change along the way is logged as its own numbered record rather than a chat message.",
       },
     ],
   };

@@ -6,39 +6,39 @@ import { Check, X } from "lucide-react";
 
 const comparisonData = [
   {
-    title: "DIY AI Tools",
+    title: "No-Code / DIY AI Tools",
     items: [
-      "Fast to set up. Fragile when operations depend on it.",
-      "Disconnected automations create more hidden failure points.",
-      "No real ownership, no clear long-term system design.",
+      "Fast to prototype. No grounding guard, so it invents answers the moment real data gets messy.",
+      "No isolation guarantee the day more than one tenant touches it.",
+      "No one owns the architecture six months in.",
     ],
     highlight: false,
   },
   {
-    title: "Traditional Agencies",
+    title: "Agency Demo",
     items: [
-      "Project delivered, then support becomes uncertain.",
-      "Often optimized for output, not operational fit.",
-      "You still carry the burden of keeping the system useful.",
+      "Ships a demo, then support becomes a ticket queue.",
+      "Rarely built with tenant isolation or an audit trail from day one.",
+      "You inherit the guardrails after the fact, if at all.",
     ],
     highlight: false,
   },
   {
-    title: "In-House Team",
+    title: "In-House Hire",
     items: [
-      "Full control, but high hiring and management cost.",
-      "Slower to assemble than most SMEs expect.",
-      "You take on delivery, architecture, and retention risk.",
+      "Full control, but months of hiring before a line of code ships.",
+      "You absorb the retention and delivery risk alone.",
+      "Onboarding a senior architect takes longer than most builds.",
     ],
     highlight: false,
   },
   {
-    title: "Real Solutions PH",
+    title: "Real Solutions",
     items: [
-      "We do fast prototype before full build, reducing waste and misalignment in a short amount of time.",
-      "We deliver production-grade software and stay to maintain it.",
-      "Senior engineers paired with AI, internal templates, and design systems keep builds lean — so you get competitive pricing and fast MVP delivery without sacrificing quality.",
-      "You get a tailored system and a long-term technical partner.",
+      "AI leverage is why two people can move like a bigger team — and it never substitutes for discipline: scope changes get a decision record, not a Slack thread.",
+      "Grounding guard and Postgres RLS isolation go in from the first commit, proven with positive-control tests, not asserted in a README.",
+      "A security review runs across every surface before handover — standard on every build, not a line item you have to negotiate for.",
+      "You own the code and the architecture outright.",
     ],
     highlight: true,
   },
@@ -63,13 +63,13 @@ export function WhyUsSection() {
               The Real Solutions Difference
             </Badge>
             <h2 className="mb-6 max-w-4xl text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl">
-              The smarter middle ground between DIY tools, vendors, and building
-              your own team.
+              The smarter middle ground between a no-code prototype, an agency
+              demo, and hiring a full team.
             </h2>
             <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
-              Real Solutions PH gives SMEs a managed path from operational
-              problem to stable software — tailored to the business, backed by
-              real engineering, and maintained after launch.
+              Two senior architects with AI leverage — the speed comes from
+              the tooling, the discipline comes from the ADRs, grounding
+              guards, and security reviews that ship with every build.
             </p>
           </motion.div>
         </div>

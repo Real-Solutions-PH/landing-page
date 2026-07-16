@@ -14,6 +14,10 @@ type FormValues = {
   problem: string;
 };
 
+// Field is still named "tools" to stay wire-compatible with /api/contact,
+// but on this international-facing CTA it collects company/project context,
+// not a list of back-office tools.
+
 export function CtaSection() {
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
@@ -57,20 +61,20 @@ export function CtaSection() {
         >
           <div className="flex max-w-md flex-col text-left text-white">
             <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-              Ready to connect your business?
+              Start with a scoping call.
             </h2>
             <p className="mb-8 text-lg text-primary-foreground/80">
-              Stop letting manual data entry hold your business back. Start with
-              a Discovery Audit — we map your problem and show you exactly what
-              to build.
+              Tell the two architects who&apos;d build it what you need, and
+              they&apos;ll tell you plainly what it takes — no sales deck, no
+              pressure to sign anything.
             </p>
             <div className="flex items-center gap-4 text-sm font-medium">
               <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20">
                 📞
               </span>
               <span>
-                No commitment. Just clarity on what to build and how to get
-                there.
+                No obligation — just a straight answer on scope, timeline,
+                and price.
               </span>
             </div>
           </div>
@@ -85,8 +89,8 @@ export function CtaSection() {
                   We got your message!
                 </h3>
                 <p className="text-sm text-zinc-500">
-                  We&apos;ll reach out within 1 business day to set up your free
-                  discovery call.
+                  We&apos;ll reach out within 1 business day to schedule your
+                  scoping call.
                 </p>
                 <Button
                   variant="outline"
@@ -107,7 +111,7 @@ export function CtaSection() {
                   </label>
                   <Input
                     id="name"
-                    placeholder="Juan Dela Cruz"
+                    placeholder="Ada Lovelace"
                     className="rounded-xl h-12"
                     {...register("name", { required: true })}
                   />
@@ -120,12 +124,12 @@ export function CtaSection() {
 
                 <div className="grid gap-2">
                   <label htmlFor="email" className="text-sm font-medium">
-                    Email Address
+                    Work Email
                   </label>
                   <Input
                     id="email"
                     type="email"
-                    placeholder="juan@company.com"
+                    placeholder="ada@company.com"
                     className="rounded-xl h-12"
                     {...register("email", {
                       required: true,
@@ -141,11 +145,11 @@ export function CtaSection() {
 
                 <div className="grid gap-2">
                   <label htmlFor="tools" className="text-sm font-medium">
-                    Tools you use (e.g., Shopify, Xero)
+                    Company or project
                   </label>
                   <Input
                     id="tools"
-                    placeholder="Shopify, Xero, POS..."
+                    placeholder="Where you work, or what you're building"
                     className="rounded-xl h-12"
                     {...register("tools")}
                   />
@@ -153,17 +157,17 @@ export function CtaSection() {
 
                 <div className="grid gap-2">
                   <label htmlFor="problem" className="text-sm font-medium">
-                    Biggest operational problem?
+                    What are you building?
                   </label>
                   <Textarea
                     id="problem"
-                    placeholder="Tell us what's broken or takes too much time..."
+                    placeholder="A RAG agent, an integration, an MVP — and what has to hold up under real users or a review..."
                     className="rounded-xl min-h-[100px] resize-none"
                     {...register("problem", { required: true })}
                   />
                   {errors.problem && (
                     <p className="text-xs text-red-500">
-                      Please describe your problem.
+                      Please describe what you&apos;re building.
                     </p>
                   )}
                 </div>
@@ -183,7 +187,7 @@ export function CtaSection() {
                   >
                     {status === "loading"
                       ? "Sending…"
-                      : "Get Your Free Estimate"}
+                      : "Request a scoping call"}
                   </Button>
 
                   <div className="relative flex items-center py-1">

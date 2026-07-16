@@ -7,99 +7,98 @@ import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
   CheckCircle2,
+  Bot,
   Network,
   AppWindow,
   Globe,
-  Smartphone,
-  Bot,
   Sparkles,
 } from "lucide-react";
 
 const SERVICES = [
   {
-    icon: Network,
-    title: "System Integration Development",
+    icon: Bot,
+    title: "AI Agents & RAG",
     description:
-      "Unify your POS, HR, payroll, CRM, and accounting into one real-time pipeline — no more manual re-entry or overnight batch syncs.",
-    priceHint: "Flagship Service",
+      "Grounded retrieval and LLM agents wired into production — not a demo that falls apart the week real users show up.",
+    priceHint: "Flagship — from $5,000",
+    href: "/services/ai-software-development",
     features: [
-      "Same-day data sync across all platforms",
-      "Zero manual data re-entry",
-      "One dashboard for every system",
-      "Works with legacy & modern tools",
+      "Hybrid dense + full-text retrieval",
+      "Server-side citations, never parsed from prose",
+      "Grounding guard rejects invented numbers",
+      "Provider-agnostic — swap models via env var",
     ],
-    cta: "Book a Discovery Audit",
+    cta: "See the AI service",
     popular: true,
     highlighted: false,
-    comingSoon: false,
   },
   {
-    icon: Bot,
-    title: "AI Integration",
+    icon: Network,
+    title: "System Integration",
     description:
-      "Deploy AI that actually plugs into your existing systems — not a standalone chatbot, but intelligence wired into your daily operations.",
-    priceHint: "Future Ready",
+      "Your agent reads and writes against the CRM, ERP, and ticketing queue it needs to act on — not a chat widget floating beside your stack.",
+    priceHint: "From $3,500",
+    href: "/services/system-integration",
     features: [
-      "AI trained on your company data",
-      "Auto-draft reports & documents",
-      "Smart routing & decision support",
-      "Plugs into your existing tools",
+      "Read/write into your CRM, ERP, ticketing",
+      "Tenant isolation enforced at the data layer",
+      "Grounding guard on every write path",
+      "Works with legacy and modern APIs",
     ],
-    cta: "Get a Free Estimate",
+    cta: "Explore service",
     popular: false,
-    highlighted: true,
-    comingSoon: false,
+    highlighted: false,
   },
   {
     icon: AppWindow,
-    title: "Custom Software Systems",
+    title: "Custom Platforms",
     description:
-      "Replace your spreadsheet workflows with real software — built around how your team already works, not the other way around.",
-    priceHint: "Scalable Solutions",
+      "Multi-tenant platforms where isolation is a database guarantee, not a permissions check you're hoping holds.",
+    priceHint: "From $13,000",
+    href: "/services/custom-software",
     features: [
-      "Mirrors your actual workflow",
-      "Role-based access & audit trails",
-      "Scales without rearchitecting",
-      "You own the code & data",
+      "Postgres RLS isolation, not app-layer checks",
+      "Positive-control isolation tests",
+      "You own the code and schema outright",
+      "Interactive prototype before core build",
     ],
-    cta: "Get a Free Estimate",
+    cta: "Explore service",
     popular: false,
     highlighted: false,
-    comingSoon: false,
   },
   {
     icon: Globe,
-    title: "Website & Web Apps",
+    title: "Web & Mobile",
     description:
-      "Websites that generate leads while you sleep — conversion-optimized, fast-loading, and wired into your CRM from day one.",
-    priceHint: "Modern Web",
+      "Interfaces built to match a live backend — token-by-token rendering and inline sourcing, instead of a spinner until the answer is done.",
+    priceHint: "From $3,000",
+    href: "/services/web-mobile-apps",
     features: [
-      "Leads flow straight to your CRM",
-      "Sub-second load times",
-      "Built-in analytics & A/B testing",
-      "Self-serve content editing",
+      "Streaming token and tool-call rendering",
+      "Inline citations, not buried in prose",
+      "One React Native codebase, iOS + Android",
+      "Sub-second loads, clean semantic markup",
     ],
-    cta: "Get a Free Estimate",
+    cta: "Explore service",
     popular: false,
     highlighted: false,
-    comingSoon: false,
   },
   {
-    icon: Smartphone,
-    title: "Mobile App Development",
+    icon: Sparkles,
+    title: "AI MVP Development",
     description:
-      "One codebase, both platforms — with offline support and real-time sync to your backend so field teams stay productive anywhere.",
-    priceHint: "iOS & Android",
+      "One capability, scoped tightly and shipped completely on a four-week clock — built by the same two people who scope it.",
+    priceHint: "From $5,000, 4 weeks",
+    href: "/services/ai-mvp-development",
     features: [
-      "Works offline, syncs when online",
-      "Single codebase for iOS & Android",
-      "Real-time backend sync",
-      "Push notifications & deep links",
+      "Three build weeks, one UAT week",
+      "Two senior architects — no bench of juniors",
+      "Grounding + isolation from the first commit",
+      "Hypercare plus a 30-day warranty",
     ],
-    cta: "Get a Free Estimate",
+    cta: "Explore service",
     popular: false,
-    highlighted: false,
-    comingSoon: false,
+    highlighted: true,
   },
 ];
 
@@ -174,18 +173,13 @@ export function ServicesSection() {
               >
                 {service.popular && (
                   <div className="absolute -top-3 right-8 rounded-full bg-primary px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-sm">
-                    Most Popular
+                    Flagship
                   </div>
                 )}
                 {service.highlighted && (
                   <div className="absolute -top-3 right-8 rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-500 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-sm flex items-center gap-1">
                     <Sparkles className="h-3 w-3" />
-                    Trending
-                  </div>
-                )}
-                {service.comingSoon && (
-                  <div className="absolute -top-3 right-8 rounded-full bg-accent px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-accent-foreground shadow-sm">
-                    Coming Soon
+                    4 Weeks
                   </div>
                 )}
 
@@ -225,38 +219,16 @@ export function ServicesSection() {
                 </div>
 
                 <div className="pt-6 mt-auto border-t border-border">
-                  {service.comingSoon ? (
-                    <Button
-                      variant={service.popular ? "default" : "outline"}
-                      className="w-full rounded-xl h-12"
-                      disabled={service.comingSoon}
-                    >
+                  <Button
+                    variant={service.popular ? "default" : "outline"}
+                    className="w-full rounded-xl h-12"
+                    asChild
+                  >
+                    <a href={service.href}>
                       {service.cta}
-                    </Button>
-                  ) : (
-                    <Button
-                      variant={service.popular ? "default" : "outline"}
-                      className="w-full rounded-xl h-12"
-                      asChild
-                    >
-                      {service.cta === "Get a Free Estimate" ||
-                      service.cta === "Ask About Retainers" ? (
-                        <a href="/contact">
-                          {service.cta}
-                          <ArrowRight className="ml-2 h-4 w-4" />
-                        </a>
-                      ) : (
-                        <a
-                          href="https://calendly.com/executives-realsolutions-ph/30min"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {service.cta}
-                          <ArrowRight className="ml-2 h-4 w-4" />
-                        </a>
-                      )}
-                    </Button>
-                  )}
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </a>
+                  </Button>
                 </div>
               </motion.div>
             ))}

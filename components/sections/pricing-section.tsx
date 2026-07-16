@@ -17,14 +17,14 @@ const PRICING_TIERS: PricingTier[] = [
     from: "$3,000",
     timeline: "1–3 weeks",
     description:
-      "Marketing sites, client portals, and SaaS front-ends — sub-second loads and clean semantic markup, built to sit over what's running behind them.",
+      "Marketing sites, client portals, and SaaS front-ends built fast to load and easy for search engines to parse — the front door to whatever backend runs behind them.",
   },
   {
     name: "Integration",
     from: "$3,500",
     timeline: "2–4 weeks",
     description:
-      "Wire AI agents and RAG pipelines into your CRM, ticketing, ERP, or internal APIs — read/write, not a bolt-on chatbot.",
+      "Connect an AI agent or retrieval pipeline to the CRM, ticketing queue, ERP, or internal API it needs to act on — full read/write, not a chat window bolted to the side.",
   },
   {
     name: "AI Feature Add-on",
@@ -38,14 +38,14 @@ const PRICING_TIERS: PricingTier[] = [
     from: "$5,000",
     timeline: "4 weeks",
     description:
-      "A working AI system in front of real users in four weeks: three build weeks, one UAT week, hypercare and a 30-day warranty included.",
+      "One AI capability built and proven with real users on a four-week clock — three weeks to build, a week of UAT, then hypercare and a 30-day warranty.",
   },
   {
     name: "Custom Platform",
     from: "$13,000",
     timeline: "6–10 weeks",
     description:
-      "Multi-tenant platforms engineered so one customer's data structurally cannot reach another's — not a permissions check away from a breach.",
+      "A full multi-tenant build with isolation enforced at the database layer — you own the code and schema outright, with no vendor lock-in.",
   },
 ];
 
@@ -117,7 +117,7 @@ export function PricingSection() {
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
               Indicative &quot;from&quot; pricing so you can plan. Final scope
-              and quote come out of a Discovery Audit.
+              and quote come out of a scoping call.
             </p>
           </motion.div>
         </div>

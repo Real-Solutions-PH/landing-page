@@ -22,28 +22,24 @@ export function AboutSection() {
               Our Story
             </Badge>
             <h2 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl">
-              A software company in the Philippines built for real business
-              problems
+              Two architects, one AI engineering studio
             </h2>
             <div className="flex flex-col gap-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Real Solutions PH is a custom software and system integration
-                company based in Batangas, Philippines. Founded by former
-                startup engineering leaders, we build production-grade software
-                for Philippine SMEs and international clients who need serious
-                engineering — not freelancer-grade workarounds.
+                Real Solutions is a senior AI engineering studio founded by
+                two former heads of engineering at an AI startup. Every
+                engagement — scoping, build, and review — runs through the
+                same two people, not a bench of engineers you&apos;ll never
+                meet.
               </p>
               <p>
-                For SMEs in the Philippines and abroad, building operational
-                software hasn&apos;t been easy. You&apos;re forced to choose
-                between exorbitant enterprise consultancies, cheap freelancers
-                who leave behind unstable code, or fragile no-code workarounds
-                that break at scale.
+                We&apos;re Philippines-based and remote-first, which gives us strong overlap with US-East and EU working hours without the overhead of a Western engineering rate card. {/* positioning-guard:allow-ph */}
               </p>
               <p>
-                We started Real Solutions PH to eliminate those trade-offs.
-                Senior engineers, Philippine rates, production-grade output —
-                accessible to the businesses that need it most.
+                That origin shows up as leverage, not as a discount pitch: two
+                senior architects, AI-assisted development, and the same
+                discipline — grounding guards, tenant isolation, numbered ADRs
+                — on every build, regardless of who&apos;s paying for it.
               </p>
             </div>
           </motion.div>
@@ -63,10 +59,9 @@ export function AboutSection() {
                 Our Mission
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                To make tailored business software practical, fast, and
-                convenient for SMEs. We aim to remove the technical friction so
-                owners can focus on running their business, not debugging their
-                spreadsheets.
+                To ship AI systems that survive contact with real users and
+                real audits — not demos that impress in a meeting and stall
+                the moment a customer has to rely on them.
               </p>
             </motion.div>
 
@@ -84,9 +79,9 @@ export function AboutSection() {
                 Our Vision
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                To become a leading managed software and systems integration
-                partner for Philippine SMEs and selected international clients,
-                then evolve into a hybrid service-plus-product company.
+                To be the senior engineering pod that startups, regulated
+                enterprises, and agencies subcontract to when the AI work
+                actually has to hold up.
               </p>
             </motion.div>
           </div>

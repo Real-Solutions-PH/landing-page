@@ -11,26 +11,32 @@ export function Footer() {
               <div className="relative h-10 w-48">
                 <Image
                   src="/logo/logo-header-light-transparent 1.svg"
-                  alt="Real Solutions PH"
+                  alt="Real Solutions"
                   fill
                   className="object-contain object-left dark:hidden"
                 />
                 <Image
                   src="/logo/logo-header-dark-transparent 1.svg"
-                  alt="Real Solutions PH"
+                  alt="Real Solutions"
                   fill
                   className="object-contain object-left hidden dark:block"
                 />
               </div>
             </Link>
             <p className="max-w-xs text-sm text-muted-foreground">
-              Real Solutions PH is a prototype-first managed software partner
-              for SMEs that need production-grade custom software and
-              integrations.
+              Real Solutions is a senior AI engineering studio — two
+              architects shipping production-grade AI systems with
+              guarantees you can audit.
             </p>
           </div>
           <div className="flex flex-col gap-2">
             <h4 className="font-semibold">Services</h4>
+            <Link
+              href="/services/ai-software-development"
+              className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4"
+            >
+              AI Agents &amp; RAG
+            </Link>
             <Link
               href="/services/system-integration"
               className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4"
@@ -41,19 +47,13 @@ export function Footer() {
               href="/services/custom-software"
               className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4"
             >
-              Custom Software
-            </Link>
-            <Link
-              href="/services/ai-software-development"
-              className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4"
-            >
-              AI Development
+              Custom Platforms
             </Link>
             <Link
               href="/services/web-mobile-apps"
               className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4"
             >
-              Web &amp; Mobile Apps
+              Web &amp; Mobile
             </Link>
             <Link
               href="/services"
@@ -98,7 +98,7 @@ export function Footer() {
               href="/contact"
               className="text-sm text-muted-foreground hover:text-foreground hover:underline underline-offset-4"
             >
-              Book a Discovery
+              Book a scoping call
             </Link>
           </div>
           <div className="flex flex-col gap-2">
@@ -125,7 +125,7 @@ export function Footer() {
             </p>
             <address className="not-italic text-xs text-muted-foreground/70">
               <span>Real Solutions PH</span> &middot;{" "}
-              <span>Batangas, Philippines</span> &middot;{" "}
+              <span>Remote-first</span> &middot;{" "}
               <a
                 href="mailto:executives.realsolutions.ph@gmail.com"
                 className="hover:text-foreground transition-colors"

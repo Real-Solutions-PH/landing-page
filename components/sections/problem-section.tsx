@@ -2,143 +2,66 @@
 
 import {
   motion,
-  useInView,
-  useMotionValue,
-  useTransform,
-  animate,
   AnimatePresence,
 } from "framer-motion";
-import { useRef, useEffect, useState, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Badge } from "@/components/ui/badge";
+import { Ban, ShieldAlert, FileQuestion, AlertTriangle } from "lucide-react";
 
 /* ── DATA ── */
 
-const STATS = [
+const PAIN_POINTS = [
   {
-    value: 82,
-    suffix: "%",
-    label: "of small businesses fail due to poor cash flow management",
-    // Source: U.S. Bank study, cited by SCORE
-    // Link: https://www.score.org/resource/blog-post/1-reason-small-businesses-fail-and-how-avoid-it
+    icon: AlertTriangle,
+    title: "The demo that can't survive an audit",
+    body: "It answers every question in the pitch. The first time a reviewer asks how it decided something, there's no answer — because nobody built one.",
   },
   {
-    value: 35.9,
-    suffix: "%",
-    label: "online shopping scam rate in PH — the highest in all of Asia",
-    // Source: 2023 Asia Scam Report (GASA & Gogolook), confirmed by CICC Philippines
-    // Link: https://www.philstar.com/headlines/2023/11/24/2313809/survey-philippines-has-highest-e-shopping-scam-rate-in-asia
+    icon: Ban,
+    title: "No way to prove it didn't invent a figure",
+    body: "A number shows up in the output. Nothing traces it back to a system that actually produced it.",
   },
   {
-    value: 30,
-    suffix: "%",
-    label: "of freelancer revenue lost to late or uncollected payments every year",
-    // Source: Indie dev/freelancer survey via Hacker News; Creditsafe bad debt report
-    // Link: https://news.ycombinator.com/item?id=46197005
+    icon: ShieldAlert,
+    title: "No way to prove tenant separation",
+    body: "Two customers share the same database, and isolation is an application-level check someone could forget — not a guarantee.",
+  },
+  {
+    icon: FileQuestion,
+    title: "No record of why it was built this way",
+    body: "The person who made the call is gone six months later, and so is the reasoning behind it.",
   },
 ];
 
 const PAIN_STORIES = [
   {
     quote:
-      "We are having trouble handling orders from customers — they send via Viber, email, even handwritten notes.",
+      "The chatbot demoed perfectly. Then a real user asked it something specific, and it answered with a number that didn't exist anywhere in our data.",
     emphasis:
-      "We need two people just to consolidate everything before we can start fulfilling.",
-    source: "Food supplier owner, r/BusinessPH",
-  },
-  {
-    quote: "Manual pa kami nagbibilang/tally at the end of shift.",
-    emphasis: "It's wasting time — and we still make mistakes.",
-    source: "Caf\u00e9 owner, Philippines",
+      "We had no way to prove where that number came from — because it didn't come from anywhere real.",
+    source: "Founder, pre-seed AI startup",
   },
   {
     quote:
-      "Leads were coming in. Quotes were being sent out. Tapos biglang wala na.",
+      "Compliance asked how the model decided to flag that case. The honest answer was: the LLM said so.",
     emphasis:
-      "No follow-up system, no conversion tracking, no idea kung saan nalalaglag.",
-    source: "Manufacturing business owner, r/BusinessPH",
+      "A system that can't explain itself doesn't survive a regulated review.",
+    source: "Engineering lead, fintech AI pilot",
   },
   {
     quote:
-      "My sales look big but I honestly don't know what I'm actually making per product.",
-    emphasis: "Hindi ko alam kung kumikita ba talaga ako o lugi na.",
-    source: "Shopee/Facebook seller, small business Philippines",
+      "Two customers were sharing infrastructure, and isolation was a WHERE clause somebody could forget to add.",
+    emphasis:
+      "One missed filter away from one tenant reading another's data — and no test that would have caught it.",
+    source: "CTO, multi-tenant SaaS team",
   },
   {
     quote:
-      "I own three branches now but I still have to go to each one personally to know what's happening.",
-    emphasis:
-      "Each branch manager just tells me 'okay naman' — I have no way to verify.",
-    source: "Multi-branch franchise owner, Philippines",
-  },
-  {
-    quote:
-      "We have technicians going out every day but I honestly don't know if the jobs are getting done right.",
-    emphasis:
-      "I find out something went wrong only when the customer calls to complain.",
-    source: "Machine servicing business, r/BusinessPH",
-  },
-  {
-    quote:
-      "50% of outsourced projects either fail outright or just fail to meet expectations.",
-    emphasis:
-      "Saving money becomes the primary goal — so owners pick the cheapest option and get burned.",
-    source: "Magellan Solutions research on SME outsourcing failures",
-  },
-  {
-    quote:
-      "I kept hearing about AI creating applications and thought it was all I needed.",
-    emphasis:
-      "I could have avoided two years of spreadsheet chaos if I had known sooner.",
-    source: "Non-technical business owner, r/GrowthHacking",
+      "We subcontracted the AI build our agency had already sold. Nobody could tell us why half the architecture decisions were made.",
+    emphasis: "No ADRs, no record — just a codebase and a deadline.",
+    source: "Delivery lead, agency partner",
   },
 ];
-
-/* ── ANIMATED COUNTER (compact) ── */
-
-function AnimatedCounter({
-  value,
-  suffix,
-  label,
-}: {
-  value: number;
-  suffix: string;
-  label: string;
-}) {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
-  const count = useMotionValue(0);
-  const decimals = value % 1 !== 0 ? 1 : 0;
-  const rounded = useTransform(count, (v) =>
-    decimals ? parseFloat(v.toFixed(decimals)) : Math.round(v),
-  );
-  const [display, setDisplay] = useState<number>(0);
-
-  useEffect(() => {
-    if (isInView) {
-      const controls = animate(count, value, {
-        duration: 2,
-        ease: "easeOut",
-      });
-      const unsubscribe = rounded.on("change", (v) => setDisplay(v));
-      return () => {
-        controls.stop();
-        unsubscribe();
-      };
-    }
-  }, [isInView, value, count, rounded]);
-
-  return (
-    <div ref={ref} className="text-center">
-      <span className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-        {display}
-        {suffix}
-      </span>
-      <p className="mt-1 text-xs leading-snug text-muted-foreground sm:text-sm">
-        {label}
-      </p>
-    </div>
-  );
-}
 
 /* ── AUTO-ROTATING QUOTE WITH STAGED REVEAL ── */
 
@@ -272,7 +195,7 @@ export function ProblemSection() {
     <section className="relative flex min-h-screen w-full items-center overflow-hidden bg-zinc-50 dark:bg-zinc-950 py-24 lg:py-0">
       <div className="container relative mx-auto max-w-7xl px-4 md:px-6">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          {/* ── LEFT COLUMN: Header + Stats ── */}
+          {/* ── LEFT COLUMN: Header + Pain Points ── */}
           <div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -295,11 +218,11 @@ export function ProblemSection() {
               transition={{ duration: 0.8, delay: 0.1 }}
               className="mb-4 text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl"
             >
-              They work hard every single day.
+              It works in the demo.
               <br />
-              But the systems are{" "}
+              Production asks{" "}
               <span className="relative inline-block px-2 lg:px-4 pb-1 pt-1 text-[#F7FAFC] bg-[#193B76] dark:bg-[#2A5CAA] rounded-sm">
-                working against them.
+                harder questions.
               </span>
             </motion.h2>
 
@@ -310,21 +233,35 @@ export function ProblemSection() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="mb-10 max-w-lg text-base text-muted-foreground sm:text-lg"
             >
-              Filipino business owners aren&apos;t failing because they lack
-              talent or drive. They&apos;re failing because they have no tools
-              built for how they actually work.
+              Every AI vendor can ship something that works in a meeting. The
+              teams we talk to have already shipped a version that impressed
+              everyone right up until a real user, a compliance reviewer, or a
+              security audit asked it a question the demo never had to
+              answer.
             </motion.p>
 
-            {/* Stats row */}
+            {/* Pain point grid */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="grid grid-cols-3 gap-4"
+              className="grid grid-cols-1 gap-3 sm:grid-cols-2"
             >
-              {STATS.map((stat, i) => (
-                <AnimatedCounter key={i} {...stat} />
+              {PAIN_POINTS.map((point, i) => (
+                <div
+                  key={i}
+                  className="flex items-start gap-3 rounded-xl border border-border bg-card/60 p-4"
+                >
+                  <span className="mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-destructive/10 text-destructive">
+                    <point.icon className="h-4 w-4" />
+                  </span>
+                  <div>
+                    <p className="text-sm font-semibold leading-snug text-foreground">
+                      {point.title}
+                    </p>
+                  </div>
+                </div>
               ))}
             </motion.div>
 
@@ -336,14 +273,15 @@ export function ProblemSection() {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="mt-10 text-sm font-medium text-muted-foreground sm:text-base"
             >
-              The problem isn&apos;t the people.{" "}
+              The question was never whether AI can do the work.{" "}
               <span className="font-semibold text-foreground">
-                It&apos;s the absence of software that fits their world.
+                It&apos;s whether anyone can prove it did the work safely —
+                and that&apos;s the part most builds skip.
               </span>
             </motion.p>
           </div>
 
-          {/* ── RIGHT COLUMN: Rotating Quotes ── */}
+          {/* ── RIGHT COLUMN: Rotating Pain Vignettes ── */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -358,7 +296,7 @@ export function ProblemSection() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="mb-6 text-center text-sm font-semibold uppercase tracking-wider text-muted-foreground"
             >
-              Real voices. Real struggles.
+              What we hear before teams call us
             </motion.p>
             <RotatingQuotes />
           </motion.div>

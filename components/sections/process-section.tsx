@@ -7,45 +7,45 @@ import {
   type FeatureCarouselStep,
   type FeatureCarouselImageSet,
 } from "@/components/ui/animated-feature-carousel";
-import { Search, Zap, Code, TrendingUp } from "lucide-react";
+import { Code2, ClipboardCheck, HeartHandshake, ShieldCheck } from "lucide-react";
 
 const steps: readonly FeatureCarouselStep[] = [
   {
     id: "1",
-    name: "Discovery Audit",
-    title: "We map your problem before writing a single line of code",
+    name: "Build",
+    title: "One AI capability, scoped and built completely",
     description:
-      "A paid discovery session where we audit your current tools, workflows, integration gaps, and pain points. You get a workflow audit, solution roadmap, and project estimate — in 3 to 7 days.",
-    icon: Search,
+      "Three build weeks, one capability held to scope. Grounding and isolation are part of the design from day one, not a checklist run before handover.",
+    icon: Code2,
   },
   {
     id: "2",
-    name: "Prototype Sprint",
-    title: "See and react to your solution before production begins",
+    name: "UAT",
+    title: "Tested against your real users, not our assumptions",
     description:
-      "A high-speed design sprint driven by AI. We build a live, interactive prototype you can view and use in real-time on the cloud, allowing for rapid iterations before any core engineering begins.",
-    icon: Zap,
+      "One full week of user acceptance testing. Fixes from what actually breaks get folded in before handover, not left for a version two.",
+    icon: ClipboardCheck,
   },
   {
     id: "3",
-    name: "MVP Build",
-    title: "Production-grade software, engineered properly from day one",
+    name: "Hypercare",
+    title: "We stay reachable right after launch",
     description:
-      "Production-ready MVP using proper engineering practices — architecture review, CI/CD pipelines, secure implementation, automated testing, and cloud deployment. Delivered in 3 to 8 weeks.",
-    icon: Code,
+      "The two architects who built it are the two people you reach if something needs attention the week it ships — not a support ticket queue.",
+    icon: HeartHandshake,
   },
   {
     id: "4",
-    name: "Managed Growth",
-    title: "We stay after launch — your system keeps improving",
+    name: "Warranty",
+    title: "A 30-day warranty on delivered work",
     description:
-      "Ongoing partnership after launch. We keep your system stable with bug fixes, monitoring, and support — plus continuous feature development, new integrations, and roadmap advisory.",
-    icon: TrendingUp,
+      "Any change to what was agreed gets its own dated, numbered record — nothing you'd have to reconstruct from a chat log later.",
+    icon: ShieldCheck,
   },
 ];
 
 const images: FeatureCarouselImageSet = {
-  alt: "How Real Solutions PH works",
+  alt: "How Real Solutions works",
   images: [
     "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1740&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=1740&auto=format&fit=crop",
@@ -75,12 +75,12 @@ export function ProcessSection() {
               How It Works
             </Badge>
             <h2 className="mb-6 text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl">
-              Simple, transparent process
+              A predictable four-week shape
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              Prototype first. Build second. Never waste budget on the wrong
-              thing. We&apos;ve refined our delivery into four clear phases so
-              you always know what&apos;s happening.
+              Three weeks to build, one week to test against real users, then
+              we stay on. No sales-funnel phases — just a build with the
+              guarantees already built in.
             </p>
           </motion.div>
         </div>

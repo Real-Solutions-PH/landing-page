@@ -9,16 +9,14 @@ import { TeamSection } from "@/components/sections/team-section";
 import { CtaSection } from "@/components/sections/cta-section";
 
 export const metadata: Metadata = {
-  title:
-    "Custom Software Development & System Integration PH",
+  title: "AI Engineering Studio — Production AI in Weeks",
   description:
-    "Real Solutions PH builds custom software and connects POS, inventory, CRM, HR, and accounting for Philippine SMEs and international clients.",
+    "Two senior architects shipping AI agents, RAG, and custom platforms with grounding guards, tenant isolation, and numbered ADRs — guarantees you can audit.",
   alternates: { canonical: "/" },
   openGraph: {
-    title:
-      "Custom Software Development & System Integration PH",
+    title: "AI Engineering Studio — Production AI in Weeks",
     description:
-      "Real Solutions PH builds custom software and connects POS, inventory, CRM, HR, and accounting for Philippine SMEs and international clients.",
+      "Two senior architects shipping AI agents, RAG, and custom platforms with grounding guards, tenant isolation, and numbered ADRs — guarantees you can audit.",
     url: "https://www.realsolutionsph.com",
     siteName: "Real Solutions PH",
     locale: "en_PH",
@@ -28,16 +26,15 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Real Solutions PH — Custom Software & System Integration",
+        alt: "Real Solutions — AI Engineering Studio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Custom Software Development & System Integration PH",
+    title: "AI Engineering Studio — Production AI in Weeks",
     description:
-      "Real Solutions PH builds custom software and connects POS, inventory, CRM, HR, and accounting for Philippine SMEs and international clients.",
+      "Two senior architects shipping AI agents, RAG, and custom platforms with grounding guards, tenant isolation, and numbered ADRs — guarantees you can audit.",
     images: ["/og-image.png"],
   },
 };

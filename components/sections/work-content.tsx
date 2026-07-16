@@ -87,12 +87,12 @@ export function WorkContent() {
         titleClassName="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl leading-[1.1]"
         title={
           <>
-            Custom software projects —
+            Projects that shipped —
             <br className="hidden sm:block" />{" "}
-            <GradientText>Built in the Philippines</GradientText>
+            <GradientText>not just demoed</GradientText>
           </>
         }
-        description="Real-world software solutions for Philippine SMEs and international clients. System integrations, custom platforms, mobile apps, and AI — all production-grade."
+        description="AI agents, RAG pipelines, system integrations, custom platforms, and apps — deployed to production for founders, regulated teams, and agencies."
       />
 
       {/* Filter + Grid */}
@@ -147,7 +147,7 @@ export function WorkContent() {
                     {project.images && project.images.length > 0 ? (
                       <ProjectImageCarousel
                         images={project.images}
-                        alt={`${project.title} — custom software project by Real Solutions PH, Philippines`}
+                        alt={`${project.title} — software project by Real Solutions`}
                         imageClassName={
                           project.imageFit === "contain"
                             ? "object-contain"
@@ -157,7 +157,7 @@ export function WorkContent() {
                     ) : project.image ? (
                       <Image
                         src={project.image}
-                        alt={`${project.title} — custom software project by Real Solutions PH, Philippines`}
+                        alt={`${project.title} — software project by Real Solutions`}
                         fill
                         className={`transition-transform duration-500 group-hover:scale-105 ${
                           project.imageFit === "contain"

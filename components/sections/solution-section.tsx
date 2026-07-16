@@ -2,32 +2,38 @@
 
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
-import { Blocks, Code2, HeartHandshake, Zap } from "lucide-react";
+import { ShieldCheck, Search, Lock, HelpCircle, GitBranch } from "lucide-react";
 
 const PILLARS = [
   {
-    title: "One system. All your tools.",
+    title: "Grounding guard",
     description:
-      "We connect your POS, inventory, online shop, HR, payroll, and accounting into a single coherent flow.",
-    icon: Blocks,
+      "A number that doesn't trace back to something the system actually computed never reaches the user — code writes the fallback sentence instead of the model.",
+    icon: ShieldCheck,
   },
   {
-    title: "We build it. You use it.",
+    title: "Server-side citations",
     description:
-      "No DIY automation that breaks. No wasted AI credits. A team of engineers who deliver production-grade work.",
-    icon: Code2,
+      "Our retrieval step builds each citation, not the model's own prose. A poisoned document has no path into another tenant's answer.",
+    icon: Search,
   },
   {
-    title: "Senior-level engineering. Philippine rates.",
+    title: "Provable tenant isolation",
     description:
-      "60–70% less than hiring a Western agency — without compromising code quality, security, or delivery.",
-    icon: Zap,
+      "Row-level security enforced in Postgres, with a bleed-guard at the data layer: a bug returns nothing, never someone else's row.",
+    icon: Lock,
   },
   {
-    title: "We keep it running.",
+    title: "Honest uncertainty",
     description:
-      "Monthly retainers for monitoring, maintenance, and continuous improvement. Integration isn't a one-time job.",
-    icon: HeartHandshake,
+      "When the data doesn't support an answer, the system says so instead of estimating one. Nothing ships that outruns what it can back up.",
+    icon: HelpCircle,
+  },
+  {
+    title: "Recorded deviations",
+    description:
+      "Any departure from spec becomes a numbered decision record — which clause it breaks from, and who approved the exception.",
+    icon: GitBranch,
   },
 ];
 
@@ -69,11 +75,12 @@ export function SolutionSection() {
               The Solution
             </Badge>
             <h2 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-              Why Real Solutions PH?
+              Five guarantees, not a demo
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              We don&apos;t just sell you a new software tool. We engineer a
-              cohesive system out of the ones you already have.
+              We don&apos;t ask you to trust that the AI works. We engineer
+              five specific guarantees so you — or your compliance team — can
+              check for yourselves.
             </p>
           </motion.div>
 
@@ -82,7 +89,7 @@ export function SolutionSection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="grid w-full max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-4"
+            className="grid w-full max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-3"
           >
             {PILLARS.map((pillar, index) => {
               const Icon = pillar.icon;

@@ -29,7 +29,7 @@ export function ServiceDetail({
       <PageHero eyebrow={service.name} title={service.h1} description={service.tagline}>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <Button asChild size="lg" className="rounded-full">
-            <Link href="/contact">Book a Discovery Audit</Link>
+            <Link href="/contact">Book a scoping call</Link>
           </Button>
           <Button
             asChild
@@ -253,11 +253,12 @@ export function ServiceDetail({
               Ready to scope your {service.name.toLowerCase()} project?
             </h2>
             <p className="mx-auto mb-8 max-w-xl text-sm text-muted-foreground md:text-base">
-              Book a Discovery Audit. In 3–7 days you get a workflow audit, a
-              solution roadmap, and a clear project estimate — no guesswork.
+              Start with a scoping call. You leave knowing the timeline, the
+              fixed price, and whether it&apos;s a fit — before you commit to
+              anything.
             </p>
             <Button asChild size="lg" className="rounded-full">
-              <Link href="/contact">Book a Discovery Audit</Link>
+              <Link href="/contact">Book a scoping call</Link>
             </Button>
           </motion.div>
         </div>

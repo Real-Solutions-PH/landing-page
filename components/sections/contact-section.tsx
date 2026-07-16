@@ -31,18 +31,18 @@ type FormValues = {
 const STEPS = [
   {
     icon: Route,
-    title: "Discovery Audit",
-    body: "We map exactly what's failing in your current workflow and where the time leaks are.",
+    title: "Scoping call",
+    body: "Two senior architects review what you need built and where it has to hold up — technically, and under a compliance review.",
   },
   {
     icon: ShieldCheck,
-    title: "Clear roadmap + fixed estimate",
-    body: "You get a concrete path forward — scope, timeline, and price. No vague guesses.",
+    title: "Fixed scope and quote",
+    body: "You get a concrete timeline and a fixed price before you commit — not an open-ended retainer.",
   },
   {
     icon: Send,
-    title: "We build & integrate",
-    body: "Prototype-first delivery that connects your tools and ships to production.",
+    title: "We build, test, and stay on",
+    body: "Build weeks, a UAT week against real users, then hypercare and a 30-day warranty.",
   },
 ];
 
@@ -119,11 +119,12 @@ export function ContactSection() {
             </span>
 
             <h2 className="mt-5 text-3xl font-bold tracking-tight sm:text-4xl">
-              Let&apos;s map your workflow
+              Tell us what you&apos;re building
             </h2>
             <p className="mt-3 max-w-md text-base text-white/70">
-              Start with a paid Discovery Audit. We pinpoint what&apos;s broken
-              and hand you a clear, costed roadmap — no wasted budget.
+              A scoping call with the two architects who&apos;d actually build
+              it — what it needs to do, and what has to be provable before you
+              ship it.
             </p>
 
             {/* what happens next */}
@@ -172,7 +173,7 @@ export function ContactSection() {
               </li>
               <li className="flex items-center gap-3 text-white/80">
                 <MapPin className="h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
-                Batangas, Philippines
+                Remote-first, strong overlap with US-East &amp; EU hours
               </li>
               <li className="flex items-center gap-3 text-white/80">
                 <Clock className="h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
@@ -236,8 +237,8 @@ export function ContactSection() {
               </span>
               <h3 className="text-xl font-bold">We got your message!</h3>
               <p className="max-w-xs text-sm text-muted-foreground">
-                We&apos;ll reach out within 1 business day to set up your
-                Discovery Audit.
+                We&apos;ll reach out within 1 business day to schedule your
+                scoping call.
               </p>
               <Button
                 variant="outline"
@@ -256,7 +257,7 @@ export function ContactSection() {
             >
               <div className="mb-1">
                 <h3 className="text-xl font-bold tracking-tight">
-                  Tell us what to fix
+                  Tell us what you need
                 </h3>
                 <p className="mt-1 text-sm text-muted-foreground">
                   Fields marked{" "}
@@ -272,7 +273,7 @@ export function ContactSection() {
               >
                 <Input
                   id="name"
-                  placeholder="Juan Dela Cruz"
+                  placeholder="Ada Lovelace"
                   autoComplete="name"
                   className="h-12 rounded-xl"
                   aria-required="true"
@@ -284,7 +285,7 @@ export function ContactSection() {
 
               <Field
                 id="email"
-                label="Email address"
+                label="Work email"
                 required
                 error={errors.email?.message}
               >
@@ -292,7 +293,7 @@ export function ContactSection() {
                   id="email"
                   type="email"
                   inputMode="email"
-                  placeholder="juan@company.com"
+                  placeholder="ada@company.com"
                   autoComplete="email"
                   className="h-12 rounded-xl"
                   aria-required="true"
@@ -310,13 +311,13 @@ export function ContactSection() {
 
               <Field
                 id="tools"
-                label="Tools you use"
+                label="Company or project"
                 hint="Optional"
                 error={errors.tools?.message}
               >
                 <Input
                   id="tools"
-                  placeholder="Shopify, Xero, POS…"
+                  placeholder="Where you work, or what you're building…"
                   className="h-12 rounded-xl"
                   {...register("tools")}
                 />
@@ -324,19 +325,19 @@ export function ContactSection() {
 
               <Field
                 id="problem"
-                label="Biggest operational problem"
+                label="What are you building, and what has to hold up?"
                 required
                 error={errors.problem?.message}
               >
                 <Textarea
                   id="problem"
-                  placeholder="Tell us what's broken or takes too much time…"
+                  placeholder="e.g. a support agent over our ticket queue — needs grounded answers and no cross-tenant leaks…"
                   className="min-h-[110px] resize-none rounded-xl"
                   aria-required="true"
                   aria-invalid={!!errors.problem}
                   aria-describedby={errors.problem ? "problem-error" : undefined}
                   {...register("problem", {
-                    required: "Please describe your problem.",
+                    required: "Please describe what you're building.",
                   })}
                 />
               </Field>
@@ -363,7 +364,7 @@ export function ContactSection() {
                   </>
                 ) : (
                   <>
-                    Get your free estimate
+                    Request a scoping call
                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
                   </>
                 )}

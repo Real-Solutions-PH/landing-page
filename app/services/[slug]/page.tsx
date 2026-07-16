@@ -76,10 +76,7 @@ export default async function ServicePage({
       name: "Real Solutions PH",
       url: baseUrl,
     },
-    areaServed: [
-      { "@type": "Country", name: "Philippines" },
-      { "@type": "AdministrativeArea", name: "International" },
-    ],
+    areaServed: { "@type": "Place", name: "Worldwide" },
     offers: service.pricing.map((p) => ({
       "@type": "Offer",
       name: p.label,
