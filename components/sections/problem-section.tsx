@@ -94,7 +94,7 @@ function RotatingQuotes() {
 
   return (
     <div className="relative flex w-full flex-col items-center justify-center">
-      <div className="relative w-full max-w-md min-h-[380px] sm:min-h-[340px]">
+      <div className="w-full max-w-md">
         <AnimatePresence mode="wait">
           <motion.div
             key={active}
@@ -102,7 +102,7 @@ function RotatingQuotes() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, filter: "blur(4px)" }}
             transition={{ duration: 0.4 }}
-            className="absolute inset-0 rounded-2xl border border-border bg-card/60 p-8 backdrop-blur-sm sm:p-10"
+            className="flex min-h-[340px] flex-col rounded-2xl border border-border bg-card/60 p-8 backdrop-blur-sm sm:p-10"
           >
             {/* Large decorative quote mark */}
             <div className="mb-1 select-none font-serif text-6xl leading-none text-foreground/10">
@@ -142,7 +142,7 @@ function RotatingQuotes() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 1.5 }}
-              className="flex items-center gap-3"
+              className="mt-auto flex items-center gap-3"
             >
               <div className="h-px w-6 bg-muted-foreground/30" />
               <p className="text-xs font-medium tracking-wide text-muted-foreground">
