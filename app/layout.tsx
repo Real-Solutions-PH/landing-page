@@ -125,12 +125,12 @@ export default function RootLayout({
                   {
                     "@type": "Person",
                     name: "Ervin Piol",
-                    jobTitle: "Co-Founder & Full-Stack Engineer",
+                    jobTitle: "Co-Founder & CEO",
                   },
                   {
                     "@type": "Person",
                     name: "Kairus Noah Tecson",
-                    jobTitle: "Co-Founder & AI/Cloud Engineer",
+                    jobTitle: "Co-Founder & CTO",
                   },
                 ],
                 knowsAbout: services.map((s) => s.name),

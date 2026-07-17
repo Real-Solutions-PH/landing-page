@@ -18,29 +18,31 @@ interface Founder {
 const FOUNDERS: Founder[] = [
   {
     name: "Ervin Piol",
-    role: "Co-Founder — Full-Stack & Mobile Engineering",
+    role: "Co-Founder & CEO — Full-Stack & Mobile Engineering",
     image: "/founder-profiles/ervin-piol-profile.png",
     description:
-      "Former lead full-stack engineer and head of engineering at an AI startup. Scopes, builds, and reviews every engagement personally — full-stack and mobile architecture end to end.",
+      "Former lead full-stack engineer at an AI startup, now CEO. He owns client relationships end to end — reaching out to local and international clients, client care, and delivery — and builds across full-stack, mobile, UX design, DevOps, cloud, and database engineering.",
     expertise: [
       "Full-Stack Engineering",
       "Mobile Engineering",
-      "Architecture",
+      "UX Design",
+      "Cloud & DevOps",
+      "Database Engineering",
       "Client Delivery",
     ],
     website: "https://ervinpiol.realsolutionsph.com/",
   },
   {
     name: "Kairus Noah Tecson",
-    role: "Co-Founder — Cloud & AI Engineering",
+    role: "Co-Founder & CTO — Cloud & AI Engineering",
     image: "/founder-profiles/kairus-tecson-profile.png",
     description:
-      "Former lead full-stack engineer and head of engineering at an AI startup. Leads AI architecture and cloud infrastructure — the grounding guards and isolation guarantees behind every build.",
+      "Former lead full-stack engineer and head of engineering at an AI startup, now CTO. He owns architecture, implementation plans, and infrastructure, and leads AI and data engineering across every build.",
     expertise: [
-      "AI Engineering",
-      "Cloud Infrastructure",
       "Architecture",
-      "RAG & Agents",
+      "AI Engineering",
+      "Data Engineering",
+      "Cloud Infrastructure",
     ],
     website: "https://www.schadenkai.space/",
   },
