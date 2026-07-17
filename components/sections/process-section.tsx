@@ -67,17 +67,16 @@ const steps: readonly FeatureCarouselStep[] = [
   },
 ];
 
-// ponytail: 4 known-good URLs reused to fill 6 slots — real unsplash IDs I can't
-// verify would risk 404s. Swap in 6 distinct assets when they exist.
+// One image per phase, in step order: Proposal, POC, MVP, UAT, Hypercare, Warranty.
 const images: FeatureCarouselImageSet = {
   alt: "How Real Solutions PH works",
   images: [
-    "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1740&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=1740&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1740&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?q=80&w=1740&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1740&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=1740&auto=format&fit=crop",
+    "/process/proposal.png",
+    "/process/proof_of_concept.png",
+    "/process/mvp.png",
+    "/process/uat.png",
+    "/process/hypercare.png",
+    "/process/warranty.png",
   ],
 };
 

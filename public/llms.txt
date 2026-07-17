@@ -5,7 +5,7 @@
 ## Key facts
 
 - Company: Real Solutions PH
-- Founders: Ervin Piol and Kairus Noah Tecson — former lead full-stack engineers and heads of engineering at an AI startup. Lead-level architects who scope, build, and review every engagement personally, not a team of juniors managed by a senior.
+- Founders: Ervin Piol (CEO) and Kairus Noah Tecson (CTO) — former lead full-stack engineers at an AI startup, where Kairus also served as head of engineering. Lead-level architects who scope, build, and review every engagement personally, not a team of juniors managed by a senior. Ervin owns full-stack, mobile, UX, DevOps, cloud, and database engineering plus client relationships; Kairus owns architecture, infrastructure, and AI and data engineering.
 - Operating model: AI runs every step of the build; a lead architect verifies every output before it moves to the next step. Architecture, system design, cost design and its tradeoffs, and security boundaries stay human. Nothing an AI produces reaches client code unverified — which is what holds the three-to-four-week timeline without trading away quality, cost, or security.
 - Track record: the founders have built AI systems professionally for three years, including systems built to hold up under binding regulatory frameworks such as the EU AI Act.
 - Differentiator: provable engineering guarantees, not demos — a grounding guard that rejects any model output citing a number the deterministic engine didn't produce; server-side citations built only from chunks actually retrieved; tenant isolation enforced at the database layer via Postgres row-level security with a bleed-guard; honest "we don't know" instead of a guess; every deviation from spec recorded as a numbered ADR.
