@@ -19,9 +19,145 @@ export type Project = {
   coverGradient: string;
   /** Tailoring image fit, especially useful for portrait screenshots */
   imageFit?: "cover" | "contain";
+  /**
+   * Engagement is under NDA. The card renders sector-level detail only: no client
+   * name, no live link, and an abstract cover in place of product screenshots.
+   */
+  confidential?: boolean;
 };
 
 export const PROJECTS: Project[] = [
+  // ---------------------------------------------------------------------------
+  // Client engagements under NDA. Ordered first, and featured on the home page.
+  //
+  // Everything below is deliberately sector-level: no client or product name, no
+  // live URL, no commercial terms, no dates, and none of the client-owned design
+  // (schemas, thresholds, pricing models, vendor choices) that makes each build
+  // worth paying for. Covers are abstract artwork standing in for the market, not
+  // product screenshots. Anything more specific needs written client sign-off
+  // before it goes on a public page.
+  // ---------------------------------------------------------------------------
+  {
+    id: "risk-monitoring-platform",
+    title: "AI-Assisted Risk Monitoring Platform",
+    clientType: "FinTech / Risk Management",
+    // Lead sentence is the counterparty-cleared line from CONTEXT.md §9 — verbatim,
+    // unembellished. Everything after it describes how we work, not the client's system.
+    description:
+      "We develop AI-assisted fintech monitoring and real-time risk-management systems. This engagement is under a publication bar, so the line above is the whole of what can be said about it. The build ran the way every engagement here does: architecture decisions written down as ADRs, and a lead architect reviewing each step before it moved on.",
+    outcome: "Delivered under a publication bar — the detail stays with the client",
+    tags: ["AI Agents", "Data Pipelines", "Real-Time Monitoring", "Backend"],
+    service: "Custom Platforms",
+    featured: true,
+    accentColor: "sky",
+    letter: "R",
+    coverGradient: "from-sky-700 via-blue-600 to-cyan-400",
+    image: "/projects/cover-risk-monitoring.png",
+    confidential: true,
+  },
+  {
+    id: "prime-property-intelligence",
+    title: "Prime Property Market Intelligence",
+    clientType: "PropTech / Market Intelligence",
+    description:
+      "Confidential engagement in high-end residential real estate. An automated valuation engine paired with per-property intelligence pages: comparable-sales analysis that recomputes as new transactions land, vision-assisted adjustment from listing imagery, and generated valuation memos an analyst can stand behind in front of a client.",
+    outcome:
+      "Valuations an analyst can defend, recomputed as new comparable sales land",
+    tags: ["AI Agents", "RAG", "Data Pipelines", "Web App"],
+    service: "AI Agents & RAG",
+    featured: true,
+    accentColor: "amber",
+    letter: "P",
+    coverGradient: "from-zinc-900 via-slate-800 to-amber-500",
+    image: "/projects/cover-prime-property.png",
+    confidential: true,
+  },
+  {
+    id: "voice-knowledge-assistant",
+    title: "Voice-Enabled Knowledge Assistant",
+    clientType: "Voice AI / Retrieval",
+    // Lead sentence is the counterparty-cleared line from CONTEXT.md §9 — verbatim,
+    // unembellished. Everything after it describes how we work, not the client's system.
+    description:
+      "We build AI-assisted, voice-enabled knowledge assistants and retrieval systems. This engagement is under a publication bar, so the line above is the whole of what can be said about it. The build ran the way every engagement here does: architecture decisions written down as ADRs, and a lead architect reviewing each step before it moved on.",
+    outcome: "Delivered under a publication bar — the detail stays with the client",
+    tags: ["Voice AI", "RAG", "AI Agents"],
+    service: "Voice AI",
+    featured: true,
+    accentColor: "purple",
+    letter: "V",
+    coverGradient: "from-violet-700 via-purple-600 to-fuchsia-400",
+    image: "/projects/cover-voice-assistant.png",
+    confidential: true,
+  },
+  {
+    id: "data-sovereign-chat-platform",
+    title: "Data-Sovereign AI Chat Platform",
+    clientType: "B2B SaaS / Regulated Markets",
+    description:
+      "Confidential engagement where data residency is the product, not a footnote. A multi-tenant AI chat platform with isolation enforced in the database rather than in application code, a provider-abstraction layer so each tenant's model runs in a region its buyer will accept, per-tenant usage and cost tracking from day one, and erasure that reaches the embeddings and not just the rows.",
+    outcome:
+      "Tenant isolation enforced in the database, with each tenant's model pinned to an approved region",
+    tags: ["RAG", "Compliance", "Web App", "Backend"],
+    service: "AI Agents & RAG",
+    featured: true,
+    accentColor: "blue",
+    letter: "D",
+    coverGradient: "from-blue-800 via-blue-600 to-teal-400",
+    image: "/projects/cover-sovereign-chat.png",
+    confidential: true,
+  },
+  {
+    id: "family-activity-marketplace",
+    title: "Family Activity Marketplace",
+    clientType: "Marketplace / Consumer",
+    description:
+      "Confidential engagement taking a consumer marketplace for children's holiday programmes off a prototyping tool and onto infrastructure the founders own. Discovery and side-by-side comparison, planning across several children, cart and checkout against providers' own registration systems, waitlists and released-spot handoffs — with the handling of family data treated as foundational rather than a later hardening pass.",
+    outcome:
+      "Checkout runs against providers' own registration systems instead of linking families out",
+    tags: ["Marketplace", "Web App", "Backend", "Data Pipelines"],
+    service: "Custom Platforms",
+    featured: true,
+    accentColor: "green",
+    letter: "F",
+    coverGradient: "from-green-800 via-emerald-600 to-lime-400",
+    image: "/projects/cover-family-marketplace.png",
+    confidential: true,
+  },
+  {
+    id: "guest-concierge-platform",
+    title: "Guest Concierge & Commission Platform",
+    clientType: "Hospitality / Short-Stay Rentals",
+    description:
+      "Confidential engagement that added a concierge layer alongside an existing rental marketplace we integrated with rather than replaced. A stay becomes a timed sequence of offers on the messaging channel guests actually read, and every booking that follows is attributed back through an append-only commission ledger — so a statement pulled months later regenerates identically instead of being re-estimated.",
+    outcome:
+      "Commission a client can defend rather than estimate — a months-old statement regenerates identically",
+    tags: ["Web App", "System Integration", "Backend", "Marketplace"],
+    service: "System Integration",
+    featured: true,
+    accentColor: "emerald",
+    letter: "G",
+    coverGradient: "from-teal-800 via-emerald-600 to-cyan-300",
+    image: "/projects/cover-guest-concierge.png",
+    confidential: true,
+  },
+  {
+    id: "solar-assessment-dashboard",
+    title: "Residential Solar Assessment Dashboard",
+    clientType: "CleanTech / Residential Solar",
+    description:
+      "Confidential engagement that finalised a solar assessment product already live in front of homeowners. An on-site survey flow that survives poor signal, a portfolio command centre, and a customer dashboard — plus a deterministic, versioned rules engine the client edits from an admin console, so the thresholds and wording behind every recommendation stay a client-owned asset instead of something buried in code.",
+    outcome:
+      "Every threshold and finding versioned with an author, and owned by the client rather than buried in code",
+    tags: ["Web App", "Dashboard", "System Integration", "Backend"],
+    service: "Custom Platforms",
+    featured: true,
+    accentColor: "orange",
+    letter: "S",
+    coverGradient: "from-slate-800 via-orange-600 to-amber-400",
+    image: "/projects/cover-solar-dashboard.png",
+    confidential: true,
+  },
   {
     id: "artemis",
     title: "Artemis — Smart Waste Management Platform",
@@ -209,6 +345,7 @@ export const PROJECTS: Project[] = [
       "/projects/stocksense-3.png",
     ],
   },
+
 ];
 
 export const ACCENT_CLASSES: Record<

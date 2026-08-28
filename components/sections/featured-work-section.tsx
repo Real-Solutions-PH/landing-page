@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ArrowUpRight, TrendingUp } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Lock, TrendingUp } from "lucide-react";
 import { PROJECTS, ACCENT_CLASSES } from "@/lib/projects";
 import { ProjectImageCarousel } from "@/components/ui/project-image-carousel";
 
@@ -142,6 +142,12 @@ export function FeaturedWorkSection() {
                       <span className="rounded-full bg-white/15 border border-white/20 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
                         {project.clientType}
                       </span>
+                      {project.confidential && (
+                        <span className="flex items-center gap-1 rounded-full bg-white/15 border border-white/20 px-2.5 py-1 text-[10px] font-semibold text-white backdrop-blur-sm">
+                          <Lock className="h-3 w-3" />
+                          Under NDA
+                        </span>
+                      )}
                       {project.url && (
                         <a
                           href={project.url}
