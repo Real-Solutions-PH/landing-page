@@ -14,11 +14,21 @@ interface ComparisonRow {
   rsp: Cell;
 }
 
-const COLUMNS = [
+type ColKey = "rsp" | "diy" | "agency" | "inhouse";
+
+/**
+ * Every option, in comparison order. The mobile card layout lists all four;
+ * the desktop table pulls Real Solutions PH out into its own emphasized
+ * column and renders the rest from COLUMNS.
+ */
+const ALL_COLUMNS: { key: ColKey; label: string }[] = [
+  { key: "rsp", label: "Real Solutions PH" },
   { key: "diy", label: "No-Code / DIY" },
   { key: "agency", label: "Agency Demo" },
   { key: "inhouse", label: "In-House Hire" },
-] as const;
+];
+
+const COLUMNS = ALL_COLUMNS.slice(1);
 
 const ROWS: ComparisonRow[] = [
   { feature: "Ships in weeks, not quarters", diy: true, agency: false, inhouse: false, rsp: true },
@@ -92,13 +102,60 @@ export function WhyUsSection() {
           </motion.div>
         </div>
 
-        {/* Comparison table */}
+        {/* Comparison — stacked cards on phones, table from md up.
+            The table needs ~720px to stay legible, so below that it becomes
+            one card per capability rather than a horizontal scroll. */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7 }}
-          className="overflow-x-auto rounded-[24px] border border-border bg-white dark:bg-card shadow-[0_8px_30px_rgba(0,0,0,0.04)]"
+          className="flex flex-col gap-3 md:hidden"
+        >
+          {ROWS.map((row) => (
+            <div
+              key={row.feature}
+              className="overflow-hidden rounded-2xl border border-border bg-white shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:bg-card"
+            >
+              <p className="border-b border-border/70 bg-zinc-50/80 px-4 py-3 text-sm font-semibold leading-snug text-foreground dark:bg-white/5">
+                {row.feature}
+              </p>
+              <ul className="divide-y divide-border/60">
+                {ALL_COLUMNS.map((col) => {
+                  const isRsp = col.key === "rsp";
+                  return (
+                    <li
+                      key={col.key}
+                      className={`flex items-center justify-between gap-3 px-4 py-2.5 ${
+                        isRsp ? "bg-primary/5 dark:bg-primary/10" : ""
+                      }`}
+                    >
+                      <span
+                        className={`text-sm leading-snug ${
+                          isRsp
+                            ? "font-semibold text-foreground"
+                            : "text-muted-foreground"
+                        }`}
+                      >
+                        {col.label}
+                      </span>
+                      <span className="flex w-16 shrink-0 justify-center">
+                        <CellMark value={row[col.key]} emphasized={isRsp} />
+                      </span>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          ))}
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.7 }}
+          className="hidden overflow-x-auto rounded-[24px] border border-border bg-white shadow-[0_8px_30px_rgba(0,0,0,0.04)] md:block dark:bg-card"
         >
           <table className="w-full min-w-[720px] border-collapse text-left">
             <thead>
@@ -108,8 +165,10 @@ export function WhyUsSection() {
                     What you actually get
                   </span>
                 </th>
-                <th className="px-4 pb-4 pt-3 text-center align-bottom">
-                  <div className="mx-1 flex flex-col items-center gap-1.5 rounded-t-2xl bg-primary px-3 py-3 text-white shadow-[0_10px_30px_rgba(25,59,118,0.25)]">
+                {/* p-0 so the cap sits flush on the tinted column below it and
+                    matches its width — the two read as one highlighted column. */}
+                <th className="p-0 text-center align-bottom">
+                  <div className="flex flex-col items-center gap-1.5 rounded-t-2xl bg-primary px-3 py-3 text-white shadow-[0_10px_30px_rgba(25,59,118,0.25)]">
                     <Link2 className="h-4 w-4" />
                     <span className="text-sm font-bold tracking-tight">
                       Real Solutions PH
@@ -140,8 +199,8 @@ export function WhyUsSection() {
                   </th>
                   <td
                     className={`px-4 py-4 text-center bg-primary/5 dark:bg-primary/10 border-x border-primary/20 ${
-                      i === ROWS.length - 1 ? "rounded-b-2xl border-b" : ""
-                    }`}
+                      i === 0 ? "border-t border-primary/20" : ""
+                    } ${i === ROWS.length - 1 ? "rounded-b-2xl border-b" : ""}`}
                   >
                     <CellMark value={row.rsp} emphasized />
                   </td>
