@@ -19,6 +19,16 @@ export type Post = {
   /** Short card excerpt */
   excerpt: string;
   readMinutes: number;
+  /** Single category the /blog filter tabs group on */
+  topic: string;
+  /** Short labels rendered on the card, mirroring the portfolio cards */
+  tags: string[];
+  /** One line the reader leaves with — the card's stat row */
+  takeaway: string;
+  /** Key into ACCENT_CLASSES, used to tint the takeaway icon */
+  accentColor: string;
+  /** Public-relative path to the 1200x630 cover, e.g. /blog/cover-x.png */
+  coverImage: string;
   body: Block[];
 };
 
@@ -43,6 +53,12 @@ export const posts: Post[] = [
     excerpt:
       "Real 'from' pricing for a production AI MVP in 2026 — feature add-ons, full builds, and multi-tenant platforms — plus what actually moves the number.",
     readMinutes: 7,
+    topic: "Pricing",
+    tags: ["Pricing", "AI MVP", "Scoping"],
+    takeaway:
+      "Real pricing floors, and the five things that move them",
+    accentColor: "sky",
+    coverImage: "/blog/cover-ai-mvp-cost.png",
     body: [
       {
         type: "p",
@@ -143,6 +159,12 @@ export const posts: Post[] = [
     excerpt:
       "Remote engineering is normal now. The question isn't where your AI team sits — it's how you verify the work when you can't watch it happen.",
     readMinutes: 6,
+    topic: "Delivery",
+    tags: ["Delivery", "Remote Teams", "Verification"],
+    takeaway:
+      "How to verify engineering work you can't watch happen",
+    accentColor: "blue",
+    coverImage: "/blog/cover-offshore-verification.png",
     body: [
       {
         type: "p",
@@ -253,6 +275,12 @@ export const posts: Post[] = [
     excerpt:
       "Most AI demos fall apart the week they meet real users. Here's the engineering practice that makes the difference between a demo and a system that survives production.",
     readMinutes: 6,
+    topic: "Production AI",
+    tags: ["Production AI", "Reliability", "Architecture"],
+    takeaway:
+      "What separates a demo from a system that survives users",
+    accentColor: "emerald",
+    coverImage: "/blog/cover-production-ai.png",
     body: [
       {
         type: "p",
@@ -345,6 +373,12 @@ export const posts: Post[] = [
     excerpt:
       "A tenant_id filter is a convention every engineer has to remember, forever. Here's how a session variable, a bleed-guard, and a positive-control test turn isolation into something the database enforces instead.",
     readMinutes: 9,
+    topic: "Security",
+    tags: ["Security", "Postgres", "Multi-Tenancy"],
+    takeaway:
+      "Isolation the database enforces, not a filter you remember",
+    accentColor: "purple",
+    coverImage: "/blog/cover-tenant-isolation.png",
     body: [
       {
         type: "p",
@@ -445,6 +479,12 @@ export const posts: Post[] = [
     excerpt:
       "A model that's told not to invent numbers can ignore that instruction silently. Here's how a grounding guard checks every number against what the system actually computed, and rejects the rest.",
     readMinutes: 8,
+    topic: "Grounding",
+    tags: ["Grounding", "LLM Output", "Evals"],
+    takeaway:
+      "Every number checked against what the engine actually computed",
+    accentColor: "amber",
+    coverImage: "/blog/cover-grounding-guard.png",
     body: [
       {
         type: "p",
@@ -545,6 +585,12 @@ export const posts: Post[] = [
     excerpt:
       "Parsing citations out of a model's own prose trusts the same fallible process twice. Here's why citations have to be built from what retrieval actually returned, not from what the model claims it used.",
     readMinutes: 8,
+    topic: "Retrieval",
+    tags: ["RAG", "Citations", "Retrieval"],
+    takeaway:
+      "Citations built from retrieval, never parsed from model prose",
+    accentColor: "green",
+    coverImage: "/blog/cover-server-side-citations.png",
     body: [
       {
         type: "p",
@@ -637,6 +683,12 @@ export const posts: Post[] = [
     excerpt:
       "Three weeks of build, one week testing against real users, and a hard line on what a tight deadline is and isn't allowed to cut. Here's what actually happens inside a four-week AI build.",
     readMinutes: 8,
+    topic: "Delivery",
+    tags: ["Delivery", "Process", "AI MVP"],
+    takeaway:
+      "Three weeks building, one week against real users",
+    accentColor: "orange",
+    coverImage: "/blog/cover-four-week-build.png",
     body: [
       {
         type: "p",

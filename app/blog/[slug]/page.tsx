@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
@@ -35,7 +36,7 @@ export async function generateMetadata({
       publishedTime: post.date,
       images: [
         {
-          url: "/api/og-image",
+          url: post.coverImage,
           width: 1200,
           height: 630,
           alt: post.title,
@@ -46,7 +47,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: post.metaTitle,
       description: post.description,
-      images: ["/api/og-image"],
+      images: [post.coverImage],
     },
   };
 }
@@ -72,7 +73,7 @@ export default async function BlogPostPage({
     dateModified: post.date,
     url: postUrl,
     mainEntityOfPage: postUrl,
-    image: `${baseUrl}/api/og-image`,
+    image: `${baseUrl}${post.coverImage}`,
     author: {
       "@type": "Organization",
       name: "Real Solutions PH",
@@ -147,6 +148,17 @@ export default async function BlogPostPage({
             <h1 className="mb-10 text-3xl font-bold tracking-tight text-foreground sm:text-4xl leading-[1.2]">
               {post.title}
             </h1>
+            <div className="relative mb-10 aspect-[1200/630] w-full overflow-hidden rounded-2xl border border-black/5 dark:border-white/10">
+              <Image
+                src={post.coverImage}
+                alt={`${post.title} — an article by Real Solutions PH`}
+                fill
+                priority
+                sizes="(min-width: 768px) 768px, 100vw"
+                className="object-cover"
+              />
+            </div>
+
             <PostBody blocks={post.body} />
 
             <div className="mt-12 rounded-2xl border border-border bg-[#102A52] p-8 text-center">
