@@ -59,11 +59,21 @@ export function AboutSection() {
                 </span>
                 Our Mission
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                To ship AI systems that survive contact with real users and
-                real audits — not demos that impress in a meeting and stall
-                the moment a customer has to rely on them.
-              </p>
+              <div className="flex flex-col gap-4 text-muted-foreground leading-relaxed">
+                <p>
+                  To make AI-assisted development the way software actually
+                  gets built: shipped fast, and traceable, secure, accurate,
+                  and scalable enough to survive an audit — on every
+                  engagement, not only the ones that happen to go well.
+                </p>
+                <p>
+                  AI carries the volume; a lead architect carries the
+                  judgment. Used that way it amplifies an engineering role
+                  rather than replacing it — which is what makes this a studio
+                  where an engineer&apos;s existing expertise compounds,
+                  against our workflow, our tools, and our SOPs.
+                </p>
+              </div>
             </motion.div>
 
             <motion.div
@@ -79,11 +89,16 @@ export function AboutSection() {
                 </span>
                 Our Vision
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                To be the senior engineering pod that startups, regulated
-                enterprises, and agencies subcontract to when the AI work
-                actually has to hold up.
-              </p>
+              <div className="flex flex-col gap-4 text-muted-foreground leading-relaxed">
+                <p>
+                  To make that standard the default — first for the startups,
+                  regulated enterprises, and agencies who subcontract to us
+                  when the AI work actually has to hold up.
+                </p>
+                <p>
+                  And in the long run, closer to home: the same engineering brought to businesses across the Philippines, upgrading what local companies are able to build and run. {/* positioning-guard:allow-ph — long-term aspiration stated on /about only, per CONTEXT.md §2; every other page, meta tag and keyword stays international */}
+                </p>
+              </div>
             </motion.div>
           </div>
         </div>

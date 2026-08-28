@@ -13,6 +13,14 @@ Philippines-based, remote-first — stated here as an origin fact, not a market 
 
 Real Solutions PH does not sell into that domestic market and does not target local buyers anywhere in marketing copy. This file may state the origin plainly. On the live site, only `/about` may surface it — framed as a cost-structure advantage for a seed-stage founder, not as a location the business serves. Every other page, meta tag, and keyword omits it entirely.
 
+## 2a. The domestic market as a long-term aspiration
+
+One deliberate carve-out, added on the founders' instruction: the Vision card on `/about` states a long-term aim to bring the same engineering standard to businesses in that domestic market. It is written as an aspiration — where the studio wants to arrive — never as a market it currently serves or solicits.
+
+The carve-out is exactly that narrow. It does not license a second mention anywhere else. Every rule above still binds: no other page, no meta tag, no keyword, no JSON-LD entry, no `llms.txt` line, no service or blog copy. The primary market in Section 4 is unchanged, and copy must still be written for those three international audiences — a reader of any page other than `/about` should see nothing that reads as domestic targeting.
+
+If this ever becomes a market the studio actually sells into, that is a repositioning decision with its own scope — CONTEXT.md Sections 2 and 4, the C6/C7 guard rules in `scripts/check-positioning.mjs`, service metadata, keywords, and `llms.txt` all have to move together. Do not let it happen by copy drift, one sentence at a time.
+
 # 3. Founders
 
 Ervin Piol and Kairus Noah Tecson — former lead full-stack engineers and heads of engineering at an AI startup. Two senior architects, not a team of juniors managed by a senior: every engagement is scoped, built, and reviewed by the same two people.
