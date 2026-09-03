@@ -65,6 +65,7 @@ export const PROJECTS: Project[] = [
     letter: "P",
     coverGradient: "from-purple-700 via-violet-600 to-indigo-400",
     image: "/projects/polymath-cover.svg",
+    confidential: true,
   },
   // ---------------------------------------------------------------------------
   // Client engagements under NDA. Ordered next, and featured on the home page.
