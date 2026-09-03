@@ -165,40 +165,6 @@ export const PROJECTS: Project[] = [
     confidential: true,
   },
   {
-    id: "guest-concierge-platform",
-    title: "Guest Concierge & Commission Platform",
-    clientType: "Hospitality / Short-Stay Rentals",
-    description:
-      "Confidential engagement that added a concierge layer alongside an existing rental marketplace we integrated with rather than replaced. A stay becomes a timed sequence of offers on the messaging channel guests actually read, and every booking that follows is attributed back through an append-only commission ledger — so a statement pulled months later regenerates identically instead of being re-estimated.",
-    outcome:
-      "Commission a client can defend rather than estimate — a months-old statement regenerates identically",
-    tags: ["Web App", "System Integration", "Backend", "Marketplace"],
-    service: "System Integration",
-    featured: true,
-    accentColor: "emerald",
-    letter: "G",
-    coverGradient: "from-teal-800 via-emerald-600 to-cyan-300",
-    image: "/projects/cover-guest-concierge.png",
-    confidential: true,
-  },
-  {
-    id: "solar-assessment-dashboard",
-    title: "Residential Solar Assessment Dashboard",
-    clientType: "CleanTech / Residential Solar",
-    description:
-      "Confidential engagement that finalised a solar assessment product already live in front of homeowners. An on-site survey flow that survives poor signal, a portfolio command centre, and a customer dashboard — plus a deterministic, versioned rules engine the client edits from an admin console, so the thresholds and wording behind every recommendation stay a client-owned asset instead of something buried in code.",
-    outcome:
-      "Every threshold and finding versioned with an author, and owned by the client rather than buried in code",
-    tags: ["Web App", "Dashboard", "System Integration", "Backend"],
-    service: "Custom Platforms",
-    featured: true,
-    accentColor: "orange",
-    letter: "S",
-    coverGradient: "from-slate-800 via-orange-600 to-amber-400",
-    image: "/projects/cover-solar-dashboard.png",
-    confidential: true,
-  },
-  {
     id: "artemis",
     title: "Artemis — Smart Waste Management Platform",
     clientType: "Waste Management / IoT",
