@@ -27,8 +27,47 @@ export type Project = {
 };
 
 export const PROJECTS: Project[] = [
+  // Public, shipped projects
+  {
+    id: "guardian-care",
+    title: "Guardian Care — Solar Assessment & Monitoring",
+    clientType: "CleanTech / Residential Solar",
+    description:
+      "Solar assessment and monitoring platform that transforms on-site solar visits into actionable findings. Features an offline-ready on-site assessment flow, a command centre for portfolio management, homeowner portal for energy insights, and a versioned rules engine for audit-trail transparency. Every finding is traced to the exact threshold that triggered it.",
+    outcome:
+      "From doorstep to dashboard — on-site assessments stay offline-ready, with every finding audited and traced to a rule",
+    tags: ["Web App", "Dashboard", "Solar Tech", "Real-Time Monitoring"],
+    service: "Custom Platforms",
+    featured: true,
+    accentColor: "green",
+    letter: "G",
+    coverGradient: "from-slate-800 via-green-600 to-emerald-400",
+    image: "/projects/cover-guardian-care.png",
+    images: [
+      "/projects/cover-guardian-care.png",
+      "/projects/guardian-care-dashboard.png",
+      "/projects/guardian-care-portal.png",
+    ],
+    url: "https://guardian-care-web.vercel.app/",
+  },
+  {
+    id: "polymath",
+    title: "Polymath — Personal Knowledge & Recall System",
+    clientType: "EdTech / Personal Learning",
+    description:
+      "A personal knowledge and spaced-repetition system spanning eight study fields (AI hardware, software, biohacking, neuroscience, biochemistry, electrical engineering, business/sales, and research methodology). Captures material from multiple sources, enables retrieval via voice and text with citations back to the exact passage, and uses layered questioning (recall → explain → apply) with automatic weak-area detection. Integrates research literature feeds to resurface forgotten concepts and material from underperforming topics.",
+    outcome:
+      "Daily capture → ask → recall loop running end-to-end with weak-area detection and research-literature tracking across eight fields",
+    tags: ["Web App", "AI Agents", "Voice AI", "Spaced Repetition", "Knowledge Management"],
+    service: "AI MVP Development",
+    featured: true,
+    accentColor: "purple",
+    letter: "P",
+    coverGradient: "from-purple-700 via-violet-600 to-indigo-400",
+    image: "/projects/polymath-cover.svg",
+  },
   // ---------------------------------------------------------------------------
-  // Client engagements under NDA. Ordered first, and featured on the home page.
+  // Client engagements under NDA. Ordered next, and featured on the home page.
   //
   // Everything below is deliberately sector-level: no client or product name, no
   // live URL, no commercial terms, no dates, and none of the client-owned design

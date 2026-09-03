@@ -1,0 +1,99 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4c1d95;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#6d28d9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#312e81;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a78bfa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#818cf8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGradient)"/>
+
+  <!-- Floating knowledge nodes in background -->
+  <circle cx="150" cy="100" r="40" fill="#a78bfa" opacity="0.15"/>
+  <circle cx="1050" cy="650" r="50" fill="#818cf8" opacity="0.15"/>
+  <circle cx="100" cy="700" r="35" fill="#ddd6fe" opacity="0.1"/>
+  <circle cx="1150" cy="150" r="45" fill="#c4b5fd" opacity="0.12"/>
+
+  <!-- Central concept: Brain with layered knowledge -->
+  <g transform="translate(600, 400)">
+    <!-- Brain outline -->
+    <circle cx="0" cy="0" r="120" fill="none" stroke="url(#ringGradient)" stroke-width="3" opacity="0.8"/>
+
+    <!-- Concentric learning layers -->
+    <circle cx="0" cy="0" r="95" fill="none" stroke="#c4b5fd" stroke-width="2" opacity="0.6"/>
+    <circle cx="0" cy="0" r="70" fill="none" stroke="#a78bfa" stroke-width="2" opacity="0.6"/>
+    <circle cx="0" cy="0" r="45" fill="none" stroke="#818cf8" stroke-width="2" opacity="0.6"/>
+
+    <!-- Center dot -->
+    <circle cx="0" cy="0" r="15" fill="#fbbf24" opacity="0.9"/>
+
+    <!-- Knowledge pathways -->
+    <path d="M -80 -50 Q -40 -80 0 -100" stroke="#a78bfa" stroke-width="2.5" fill="none" opacity="0.7"/>
+    <path d="M 80 -50 Q 40 -80 0 -100" stroke="#818cf8" stroke-width="2.5" fill="none" opacity="0.7"/>
+    <path d="M 80 50 Q 40 80 0 100" stroke="#c4b5fd" stroke-width="2.5" fill="none" opacity="0.7"/>
+    <path d="M -80 50 Q -40 80 0 100" stroke="#ddd6fe" stroke-width="2.5" fill="none" opacity="0.7"/>
+
+    <!-- Voice wave indicators -->
+    <circle cx="-100" cy="0" r="8" fill="#fbbf24" opacity="0.8"/>
+    <path d="M -115 0 Q -125 -8 -130 0 Q -125 8 -115 0" stroke="#fbbf24" stroke-width="1.5" fill="none" opacity="0.6"/>
+    <path d="M -145 0 Q -160 -12 -170 0 Q -160 12 -145 0" stroke="#fbbf24" stroke-width="1.5" fill="none" opacity="0.4"/>
+  </g>
+
+  <!-- Eight study fields as orbital elements -->
+  <g id="fields">
+    <!-- Field nodes positioned around the center -->
+    <!-- AI Hardware -->
+    <circle cx="200" cy="150" r="22" fill="#818cf8" opacity="0.8"/>
+    <text x="200" y="160" font-family="system-ui" font-size="11" fill="white" text-anchor="middle" font-weight="600">AI HW</text>
+
+    <!-- AI Software -->
+    <circle cx="1000" cy="150" r="22" fill="#a78bfa" opacity="0.8"/>
+    <text x="1000" y="160" font-family="system-ui" font-size="11" fill="white" text-anchor="middle" font-weight="600">AI SW</text>
+
+    <!-- Neuroscience -->
+    <circle cx="1000" cy="650" r="22" fill="#c4b5fd" opacity="0.8"/>
+    <text x="1000" y="662" font-family="system-ui" font-size="11" fill="#1f1f2e" text-anchor="middle" font-weight="600">Brain</text>
+
+    <!-- Biochemistry -->
+    <circle cx="200" cy="650" r="22" fill="#ddd6fe" opacity="0.8"/>
+    <text x="200" y="662" font-family="system-ui" font-size="11" fill="#1f1f2e" text-anchor="middle" font-weight="600">Bio</text>
+
+    <!-- Biohacking -->
+    <circle cx="80" cy="400" r="22" fill="#818cf8" opacity="0.8"/>
+    <text x="80" y="410" font-family="system-ui" font-size="10" fill="white" text-anchor="middle" font-weight="600">Hack</text>
+
+    <!-- Electrical Engineering -->
+    <circle cx="1120" cy="400" r="22" fill="#a78bfa" opacity="0.8"/>
+    <text x="1120" y="410" font-family="system-ui" font-size="10" fill="white" text-anchor="middle" font-weight="600">EE</text>
+
+    <!-- Business/Sales -->
+    <circle cx="350" cy="80" r="22" fill="#c4b5fd" opacity="0.8"/>
+    <text x="350" y="92" font-family="system-ui" font-size="10" fill="#1f1f2e" text-anchor="middle" font-weight="600">Biz</text>
+
+    <!-- Research Methodology -->
+    <circle cx="850" cy="80" r="22" fill="#ddd6fe" opacity="0.8"/>
+    <text x="850" y="92" font-family="system-ui" font-size="10" fill="#1f1f2e" text-anchor="middle" font-weight="600">Research</text>
+  </g>
+
+  <!-- Connection lines from fields to center -->
+  <g stroke="#a78bfa" stroke-width="1.5" opacity="0.4">
+    <line x1="222" y1="172" x2="540" y2="340"/>
+    <line x1="978" y1="172" x2="660" y2="340"/>
+    <line x1="978" y1="628" x2="660" y2="460"/>
+    <line x1="222" y1="628" x2="540" y2="460"/>
+    <line x1="102" y1="400" x2="480" y2="400"/>
+    <line x1="1098" y1="400" x2="720" y2="400"/>
+    <line x1="372" y1="102" x2="570" y2="310"/>
+    <line x1="828" y1="102" x2="630" y2="310"/>
+  </g>
+
+  <!-- Top label -->
+  <text x="600" y="750" font-family="system-ui" font-size="28" fill="white" text-anchor="middle" font-weight="700">Polymath</text>
+  <text x="600" y="780" font-family="system-ui" font-size="14" fill="#c4b5fd" text-anchor="middle">Personal Knowledge Recall System</text>
+</svg>
