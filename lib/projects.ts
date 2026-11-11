@@ -48,7 +48,7 @@ export const PROJECTS: Project[] = [
       "/projects/guardian-care-dashboard.png",
       "/projects/guardian-care-portal.png",
     ],
-    url: "https://guardian-care-web.vercel.app/",
+    url: "https://guardian-care.realsolutionsph.com/",
   },
   {
     id: "polymath",
